@@ -9,8 +9,15 @@ import path from "node:path";
 import vm from "node:vm";
 
 const SITE = "https://richwithreason.com";
-const shell = fs.readFileSync("index.html", "utf8");
+import crypto from "node:crypto";
 const js = fs.readFileSync("assets/site.js", "utf8");
+const css = fs.readFileSync("assets/site.css", "utf8");
+const ver = s => crypto.createHash("sha1").update(s).digest("hex").slice(0, 8);
+// Stamp asset links with a content hash so browsers never run a stale copy after an update.
+const shell = fs.readFileSync("index.html", "utf8")
+  .replace(/\/assets\/site\.js(\?v=\w+)?/, `/assets/site.js?v=${ver(js)}`)
+  .replace(/\/assets\/site\.css(\?v=\w+)?/, `/assets/site.css?v=${ver(css)}`);
+fs.writeFileSync("index.html", shell);
 
 // Pull CATS and ARTICLES out of site.js without running the page code.
 const dataSrc = js.slice(0, js.indexOf("const bySlug"));
