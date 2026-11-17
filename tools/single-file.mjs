@@ -2,8 +2,9 @@
 // for the copy kept in the claude.ai "Rich With Reason" project (rich-with-reason.html).
 //   node tools/single-file.mjs /path/to/rich-with-reason.html
 import fs from "node:fs";
+import path from "node:path";
 const out = process.argv[2];
-if (!out || out.startsWith(process.cwd())) throw new Error("Pass an output path outside the repo");
+if (!out || !path.relative(process.cwd(), path.resolve(out)).startsWith("..")) throw new Error("Pass an output path outside the repo");
 const css = fs.readFileSync("assets/site.css", "utf8"), js = fs.readFileSync("assets/site.js", "utf8");
 const html = fs.readFileSync("index.html", "utf8")
   .replace(/<link rel="stylesheet" href="\/assets\/site\.css[^"]*">/, () => `<style>\n${css}</style>`)
