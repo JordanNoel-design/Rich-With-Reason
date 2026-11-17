@@ -3388,23 +3388,73 @@ document.addEventListener("click",e=>{
 });
 $("#burger").onclick = ()=>$("#menu").classList.toggle("open");
 
-// Newsletter (demo — connect to Wix Forms / email marketing when live)
+// Newsletter: signups go to the "The Weekly Reason signup" form on the Rich With Reason Wix site,
+// which creates/updates the contact and subscribes their email (Wix Email Marketing audience).
+// WIX_CLIENT_ID is the site's public headless client id (not a secret; it only mints visitor tokens).
+const WIX = {
+  clientId: "bd6b5e41-1016-4400-b98c-d667515c8ae9",
+  formId: "208dca30-0514-429d-90a8-734ff9f132e4",
+  f: { first: "first_name_9abc", email: "email_3fe8", topics: "topics_4fd6", subscribe: "subscribe_bda9" },
+  topicNames: { "banking-credit":"Banking & Credit", "financial-freedom":"Financial Freedom", "personal-finance":"Personal Finance", "investing":"Investing", "insurance":"Insurance", "cryptocurrency":"Cryptocurrency" }
+};
+async function wixToken(){
+  const key = "rwr-wix-visitor", now = Date.now();
+  let t = null; try { t = JSON.parse(localStorage.getItem(key)); } catch(_){}
+  if(t && t.expiresAt - 60000 > now) return t.accessToken;
+  const mint = async body => {
+    const r = await fetch("https://www.wixapis.com/oauth2/token", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(Object.assign({ clientId: WIX.clientId }, body)) });
+    if(!r.ok) throw new Error("auth " + r.status);
+    const d = await r.json();
+    return { accessToken: d.access_token, refreshToken: d.refresh_token, expiresAt: now + d.expires_in*1000 };
+  };
+  let fresh = null;
+  if(t && t.refreshToken){ try { fresh = await mint({ grantType:"refresh_token", refreshToken: t.refreshToken }); } catch(_){} }
+  if(!fresh) fresh = await mint({ grantType:"anonymous" });
+  try { localStorage.setItem(key, JSON.stringify(fresh)); } catch(_){}
+  return fresh.accessToken;
+}
+async function subscribe({ email, name, topics }){
+  const values = { [WIX.f.email]: email, [WIX.f.subscribe]: true };
+  if(name) values[WIX.f.first] = name;
+  const t = (topics||[]).map(s=>WIX.topicNames[s]).filter(Boolean);
+  if(t.length) values[WIX.f.topics] = t;
+  const r = await fetch("https://www.wixapis.com/form-submission-service/v4/submissions", {
+    method:"POST", headers:{ "Content-Type":"application/json", Authorization: await wixToken() },
+    body: JSON.stringify({ submission: { formId: WIX.formId, submissions: values } })
+  });
+  if(!r.ok) throw new Error("submit " + r.status);
+  return r.json();
+}
 const okEmail = v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const SUBMIT_ERR = "Something went wrong. Please try again in a moment.";
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),3200); }
-$("#nlForm").addEventListener("submit",e=>{
+$("#nlForm").addEventListener("submit",async e=>{
   e.preventDefault();
+  const form=e.currentTarget, btn=form.querySelector("button[type=submit]"), err=$("#nlErr");
   const email=$("#nlEmail").value.trim(), name=$("#nlName").value.trim();
-  if(!okEmail(email)){ $("#nlErr").style.display="block"; $("#nlEmail").focus(); return; }
-  $("#nlErr").style.display="none";
-  $("#okName").textContent = name ? ", "+name : "";
-  $("#nlFields").style.display="none"; $("#nlOk").style.display="block";
+  if(!okEmail(email)){ err.textContent="Please enter a valid email address."; err.style.display="block"; $("#nlEmail").focus(); return; }
+  err.style.display="none"; btn.disabled=true; btn.textContent="Subscribing…";
+  try {
+    const topics=[...form.querySelectorAll('#chips input:checked')].map(i=>i.value);
+    await subscribe({ email, name, topics });
+    $("#okName").textContent = name ? ", "+name : "";
+    $("#nlFields").style.display="none"; $("#nlOk").style.display="block";
+  } catch(_){
+    err.textContent=SUBMIT_ERR; err.style.display="block";
+  } finally { btn.disabled=false; btn.textContent="Subscribe to The Weekly Reason"; }
 });
-function sideSubmit(e){
+async function sideSubmit(e){
   e.preventDefault();
-  const inp=e.target.querySelector("input");
+  const f=e.currentTarget, inp=f.querySelector("input"), btn=f.querySelector("button");
   if(!okEmail(inp.value.trim())){ inp.style.borderColor="#b3261e"; inp.focus(); return; }
-  e.target.innerHTML = `<p style="font-weight:600;color:var(--green);margin-top:10px">✓ You're subscribed! First issue arrives Sunday.</p>`;
-  toast("Welcome to The Weekly Reason 📬");
+  btn.disabled=true; btn.textContent="Subscribing…";
+  try {
+    await subscribe({ email: inp.value.trim(), topics: f.dataset.topic ? [f.dataset.topic] : [] });
+    f.innerHTML = `<p style="font-weight:600;color:var(--green);margin-top:10px">✓ You're subscribed! First issue arrives Sunday.</p>`;
+    toast("Welcome to The Weekly Reason 📬");
+  } catch(_){
+    btn.disabled=false; btn.textContent="Subscribe free"; toast(SUBMIT_ERR);
+  }
 }
 
 // Compound calculator
