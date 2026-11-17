@@ -47,7 +47,7 @@ list in the "Issue log" at the bottom of this file.
 
 | When (US Eastern) | What happens | Who |
 |---|---|---|
-| Friday, about 10 am | Claude researches the week and creates the issue as a **draft campaign** in Wix Email Marketing (Rich With Reason site), then adds it to the Issue log below. | Claude (scheduled task) |
+| Friday, about 12:40 pm | Claude researches the week and creates the issue as a **draft campaign** in Wix Email Marketing (Rich With Reason site), then adds it to the Issue log below. | Claude (scheduled task) |
 | Friday–Saturday | Owner opens the draft in Wix, reads it, edits anything, and sends a test email to themselves. | Owner |
 | Sunday, 7 am | The issue goes out to all subscribers. Owner schedules this in Wix (Schedule → Sunday 7:00 am) or sends it manually. | Owner |
 | Monday | Optional: owner checks opens and clicks in Wix and tells Claude what worked, so future drafts improve. | Owner |
