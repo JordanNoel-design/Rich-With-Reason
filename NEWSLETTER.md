@@ -106,6 +106,7 @@ Sponsored sections are labelled "Sponsored" where they appear.
   (trigger: "The Weekly Reason signup" form submitted → send the welcome email to that contact).
   It's a promotional email, so it respects unsubscribes. The owner turns it on or off in
   Wix → Automations; Claude never switches it on without being asked.
+- **Welcome email guides:** 2026-11-17 — https://richwithreason.com/personal-finance/the-50-30-20-budget-explained-with-examples/ · https://richwithreason.com/banking-credit/how-credit-scores-are-actually-calculated/ · https://richwithreason.com/investing/how-to-start-investing-with-100/ (refreshed automatically on the 1st of each month to the newest published guides)
 - **Unsubscribes and bounces:** handled by Wix. Never re-subscribe someone who unsubscribed,
   even if they appear in another list.
 - **Privacy:** subscriber emails are never sold, shared, pasted into chats, or stored anywhere
