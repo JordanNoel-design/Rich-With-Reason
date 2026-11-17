@@ -22,5 +22,5 @@ Site notes:
 - Articles live in `ARTICLES` and topics in `CATS` inside `assets/site.js`.
 - Layout, head tags and home page sections live in `tools/shell.html`. `index.html`, topic/article
   folders, `404.html`, `sitemap.xml` and `robots.txt` are generated; don't hand-edit them.
-- The site is registered with Google Search Console; its verification tag in `tools/shell.html`
-  must stay in place.
+- The site is verified in Google Search Console by `google326d43f13534df04.html` in the repo root.
+  Never delete or change that file.
