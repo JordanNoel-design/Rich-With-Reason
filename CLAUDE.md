@@ -24,3 +24,8 @@ Site notes:
   folders, `404.html`, `sitemap.xml` and `robots.txt` are generated; don't hand-edit them.
 - The site is verified in Google Search Console by `google326d43f13534df04.html` in the repo root.
   Never delete or change that file.
+
+Newsletter:
+- The Weekly Reason rules live in `NEWSLETTER.md`. Follow them for every issue.
+- Claude only ever creates draft campaigns in Wix Email Marketing. Never send, schedule,
+  publish or test-send a campaign, and never send any email on the owner's behalf.
