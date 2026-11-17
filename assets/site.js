@@ -3364,12 +3364,15 @@ function setMeta(title,desc){
 }
 function show(p){ document.querySelectorAll(".page").forEach(x=>x.classList.remove("on")); $("#page-"+p).classList.add("on"); }
 // Clean URLs: turn old "#/..." links into real paths and drop stray "?..." / "#" bits
-(function(){
+function cleanUrl(){
   let p = location.pathname, h = location.hash;
   if(h.startsWith("#/")){ p = "/" + h.slice(2).split("/").filter(Boolean).join("/") + "/"; h = ""; if(p==="//") p="/"; }
-  if(location.search || h==="#" || h==="#/" || p!==location.pathname) history.replaceState(null,"",p+(h&&h!=="#"&&h!=="#/"?h:""));
-})();
+  if(h==="#") h = "";
+  if(location.search || p!==location.pathname || h!==location.hash) history.replaceState(null,"",p+h);
+}
+cleanUrl();
 window.addEventListener("popstate",route);
+window.addEventListener("hashchange",()=>{ if(location.hash.startsWith("#/")){ cleanUrl(); route(); } });
 document.addEventListener("click",e=>{
   const a = e.target.closest("[data-scroll]");
   if(a){ e.preventDefault(); $("#newsletter").scrollIntoView({behavior:"smooth"}); $("#menu").classList.remove("open"); }
