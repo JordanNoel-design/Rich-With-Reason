@@ -102,8 +102,10 @@ Sponsored sections are labelled "Sponsored" where they appear.
   dashboard → Forms → The Weekly Reason signup → Submissions). For now every subscriber gets the
   same issue, and the "Best of the blog" section mixes topics. When the list is big enough, the
   owner can segment by topic.
-- **Welcome email:** optional, set up by the owner in Wix Automations (trigger: "The Weekly
-  Reason signup" form submitted). Claude doesn't create automations that email people.
+- **Welcome email:** Wix automation "Welcome email for new Weekly Reason subscribers"
+  (trigger: "The Weekly Reason signup" form submitted → send the welcome email to that contact).
+  It's a promotional email, so it respects unsubscribes. The owner turns it on or off in
+  Wix → Automations; Claude never switches it on without being asked.
 - **Unsubscribes and bounces:** handled by Wix. Never re-subscribe someone who unsubscribed,
   even if they appear in another list.
 - **Privacy:** subscriber emails are never sold, shared, pasted into chats, or stored anywhere
