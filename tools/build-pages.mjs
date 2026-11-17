@@ -93,7 +93,7 @@ const ctx = {};
 vm.runInNewContext(js.slice(0, js.indexOf("const bySlug")) + "\nthis.CATS = CATS; this.ARTICLES = ARTICLES;", ctx);
 const { CATS, ARTICLES } = ctx;
 const slugify = t => t.toLowerCase().replace(/&/g, " and ").replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-const HOME_DESC = "Clear, honest guides on banking, credit, investing, insurance and crypto.";
+const HOME_DESC = "Clear, honest guides on banking, credit, investing and insurance.";
 
 // Clear out previously generated topic folders so removed articles disappear.
 for (const c of CATS) fs.rmSync(c.slug, { recursive: true, force: true });

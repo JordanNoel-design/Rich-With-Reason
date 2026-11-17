@@ -65,7 +65,7 @@ Every issue includes, in the footer:
 
 > **Not financial advice.** The Weekly Reason is for education and information only. It isn't
 > financial, investment, tax, insurance or legal advice. Consider talking with a licensed
-> professional about your situation. Investing and cryptocurrency involve risk, including loss
+> professional about your situation. Investing involves risk, including loss
 > of principal.
 
 When an issue contains any affiliate or sponsored link, it also includes, near the top and in the
