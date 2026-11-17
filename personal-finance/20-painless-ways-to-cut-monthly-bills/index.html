@@ -36,7 +36,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"></ul>
+    <ul class="menu" id="menu"><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/trending/" data-slug="trending">Trending Posts</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li><a href="/cryptocurrency/" data-slug="cryptocurrency">Cryptocurrency</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -45,113 +45,98 @@
 <main id="app">
   <!-- HOME -->
   <div class="page" id="page-home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Financial education, minus the jargon</div>
-          <h1>Build wealth <em>with reason</em>, not with guesswork.</h1>
-          <p class="lead">Clear, honest guides on banking, credit, investing, insurance and crypto — written so you can understand the decision in front of you and make it with confidence.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
-            <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
-          </div>
-          <div class="trust">
-            <div><strong>7</strong>money topics</div>
-            <div><strong>5 min</strong>weekly newsletter</div>
-            <div><strong>$0</strong>always free to read</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <span class="tag">💡 BUZZWORD OF THE WEEK</span>
-          <h3>Sinking Fund</h3>
-          <p>The money word everyone's using, explained in 30 seconds.</p>
-          <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:24px">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Explore by topic</div><h2>What do you want to get better at?</h2></div>
-        </div>
-        <div class="cats" id="catTiles"></div>
-      </div>
-    </section>
-
-    <section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">🔥 Trending posts</div><h2>What readers are talking about</h2></div>
-          <a href="/trending/" class="link-more">See all trending →</a>
-        </div>
-        <div class="trend-wrap">
-          <a href="/trending/the-3-account-system-that-makes-saving-automatic/" class="feature">
-            <div class="eyebrow">Editor's pick · Financial Freedom</div>
-            <h3>The 3-account system that makes saving automatic</h3>
-            <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
-            <div style="margin-top:18px"><span class="btn btn-gold">Read the guide →</span></div>
-          </a>
-          <ol class="tlist" id="trendList"></ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Latest articles</div><h2>Fresh from the blog</h2></div>
-        </div>
-        <div class="grid-3" id="latestGrid"></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders to see how monthly investing compounds over time.</p></div></div>
-        <div class="tool">
-          <div>
-            <label>Monthly contribution <span class="val" id="vM">$300</span></label>
-            <input type="range" id="m" min="25" max="2000" step="25" value="300">
-            <label>Years invested <span class="val" id="vY">20</span></label>
-            <input type="range" id="y" min="1" max="40" value="20">
-            <label>Average annual return <span class="val" id="vR">7%</span></label>
-            <input type="range" id="r" min="1" max="12" step="0.5" value="7">
-            <p style="font-size:.78rem;color:#7b8a82;margin-top:14px">Illustration only. Returns aren't guaranteed and real markets go up and down.</p>
-          </div>
-          <div class="result">
-            <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-            <div class="big" id="fv">$0</div>
-            <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b id="contrib">$0</b> · growth adds <b id="growth" style="color:var(--green)">$0</b></div>
-            <div class="bars" id="bars"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="eyebrow">Sneak peek</div><h2>Here's what lands in your inbox</h2><p style="margin:6px auto 0">Every Sunday morning. Read it with your coffee.</p></div></div>
-        <div class="issue">
-          <div class="issue-head"><span><b>From:</b> The Weekly Reason</span><span>Issue #12 · Sunday</span></div>
-          <div class="issue-body">
-            <h3>Your money, this week ☕</h3>
-            <div class="issue-block"><b>💡 Buzzword Brief</b><p><strong>Sinking fund</strong> — what it is, why it beats a credit card for expected costs, and how to start one with $25.</p></div>
-            <div class="issue-block"><b>📈 One market thing</b><p>A plain-English look at the week's biggest money headline and what (if anything) it means for you.</p></div>
-            <div class="issue-block"><b>✅ One action</b><p>A five-minute task that moves your finances forward — this week: check whether your savings account beats inflation.</p></div>
-            <div class="issue-block"><b>📚 Best of the blog</b><p>Three posts worth your time, hand-picked across banking, investing and insurance.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
 
   <!-- ARTICLE (rendered by JS) -->
-  <div class="page" id="page-art"></div>
+  <div class="page on" id="page-art">
+  <div class="art-hero" style="background:linear-gradient(135deg,#7a4b12,#7a4b12dd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/personal-finance/">Personal Finance</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">💼 Personal Finance</span>
+      <h1>20 painless ways to cut monthly bills</h1>
+      <p class="dek">You don't need to give up everything you enjoy to save money. These 20 moves trim recurring bills, most in under an hour, and the savings repeat every month.</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>Nov 17, 2026</span><span>7 min read</span></div>
+    </div>
+  </div>
+  <article class="article">
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>Recurring bills are the best place to save. Cut once and you save every month.</li>
+<li>Start with the biggest bills: insurance, phone, internet and subscriptions.</li>
+<li>Send every dollar you save to a goal, or it will quietly get spent.</li>
+</ul></div>
+
+<p>Cutting your latte saves a few dollars. Cutting a bill saves money every single month without any willpower. Here are 20 ways to lower recurring costs, grouped by category. Pick the five that fit you best and do them this week.</p>
+
+<h2>Subscriptions and memberships</h2>
+<ol>
+<li><strong>Audit every subscription.</strong> Look through three months of bank and card statements. Most people find at least one subscription they forgot about.</li>
+<li><strong>Rotate streaming services.</strong> Keep one or two at a time. Binge a show, cancel and switch next month.</li>
+<li><strong>Switch to annual plans</strong> for services you'll definitely keep. They're often 15% to 20% cheaper than paying monthly.</li>
+<li><strong>Check for bundles and perks.</strong> Your phone plan, credit card or another subscription may already include a streaming service or cloud storage you're paying for separately.</li>
+<li><strong>Use your library.</strong> Many libraries offer free e-books, audiobooks, movies and even online courses.</li>
+</ol>
+
+<h2>Phone and internet</h2>
+<ol start="6">
+<li><strong>Try a prepaid or budget carrier.</strong> Many smaller carriers run on the same major networks for much less.</li>
+<li><strong>Right-size your data.</strong> Check how much you actually use. Many people pay for unlimited data and use a fraction of it.</li>
+<li><strong>Call your internet provider.</strong> Ask about current promotions or mention competitor prices. Retention departments often have discounts.</li>
+<li><strong>Return rented equipment.</strong> Buying your own modem and router can pay for itself within a year.</li>
+<li><strong>Check for low-income programs.</strong> Many internet providers offer discounted plans for qualifying households.</li>
+</ol>
+
+<h2>Insurance</h2>
+<ol start="11">
+<li><strong>Shop your car insurance every year.</strong> Rates for the same coverage can vary a lot between companies.</li>
+<li><strong>Raise your deductibles,</strong> if your emergency fund can cover them. Going from a $250 to a $1,000 deductible can noticeably lower premiums.</li>
+<li><strong>Bundle home or renters and auto</strong> with one insurer for a multi-policy discount.</li>
+<li><strong>Ask about discounts:</strong> safe driver, good student, low mileage, paperless billing, paying in full and safe-driving tracking apps.</li>
+</ol>
+
+<h2>Utilities and home</h2>
+<ol start="15">
+<li><strong>Use a smart or programmable thermostat.</strong> Turning it back a few degrees while you sleep or are away adds up.</li>
+<li><strong>Switch to LED bulbs</strong> and use smart power strips to stop "vampire" power drain.</li>
+<li><strong>Check for utility programs.</strong> Many utilities offer free energy audits, rebates or budget billing to smooth out seasonal spikes.</li>
+</ol>
+
+<h2>Debt and banking</h2>
+<ol start="18">
+<li><strong>Ask for a lower credit card APR.</strong> If you've paid on time, call and ask. It sometimes works, and it costs nothing to try.</li>
+<li><strong>Look at refinancing</strong> high-interest loans or moving card balances to a 0% balance transfer offer.</li>
+<li><strong>Stop paying bank fees.</strong> Switch to a no-fee checking account, opt out of overdraft coverage and set low-balance alerts.</li>
+</ol>
+
+<div class="callout"><strong>How much could you save?</strong> Cancelling two subscriptions ($25), switching phone plans ($30) and shopping your car insurance ($40) adds up to about $95 a month, or more than $1,100 a year. Invested, that's real money over time.</div>
+
+<h2>A simple script for negotiating</h2>
+<p>Negotiating feels awkward, but it's often the fastest win. Try this:</p>
+<p><em>"Hi, I've been a customer for [X] years. I'm reviewing my budget and I've seen lower prices from [competitor]. Are there any promotions or plans that could lower my bill? If not, I'd like to know my options for cancelling."</em></p>
+<p>Be polite, be ready to actually switch, and ask to speak with the retention or loyalty department.</p>
+
+<h2>Make the savings stick</h2>
+<ol>
+<li><strong>Track your wins.</strong> Write down each bill you cut and how much you're saving.</li>
+<li><strong>Redirect the money immediately.</strong> Increase an automatic transfer to savings or debt by the same amount.</li>
+<li><strong>Set a yearly reminder.</strong> Prices creep up. Review your bills every year.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>You don't have to give up what you love to save money. Cut the bills you don't notice, negotiate the ones you need and send every saved dollar to a goal. An hour of work this week can pay you back every month for years.</p>
+
+<p class="art-note">Savings vary by provider and location. This article is for education only and isn't financial advice.</p>
+</article>
+  <div class="art-more"><div class="eyebrow" style="color:#7a4b12">Keep reading</div><h2 style="margin:6px 0 20px">More personal finance guides</h2><div class="grid-3"><a class="card" href="/personal-finance/the-50-30-20-budget-explained-with-examples/"><div class="thumb" style="background:#fbf3dd"><span class="pill" style="color:#7a4b12">Personal Finance</span>💼</div>
+  <div class="card-body"><h3>The 50/30/20 budget, explained with examples</h3><p>Three buckets, one paycheck, no spreadsheet obsession. Here's how the 50/30/20 budget works, with real numbers, and how to adjust it when life doesn't fit the formula.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/personal-finance/how-much-should-be-in-your-emergency-fund/"><div class="thumb" style="background:#fbf3dd"><span class="pill" style="color:#7a4b12">Personal Finance</span>💼</div>
+  <div class="card-body"><h3>How much should be in your emergency fund?</h3><p>Three months? Six? A year? The right answer depends on how stable your income is and who depends on you. Here's how to find your number and build it.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/personal-finance/sinking-funds-the-stress-free-way-to-save/"><div class="thumb" style="background:#fbf3dd"><span class="pill" style="color:#7a4b12">Personal Finance</span>💼</div>
+  <div class="card-body"><h3>Sinking funds: the stress-free way to save</h3><p>Most "surprise" expenses aren't surprises at all: holidays, car registration, annual subscriptions. A sinking fund turns them into small monthly amounts so they never hit hard again.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>5 min read</span></div></div></a></div></div></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -175,7 +160,7 @@
             <input type="text" id="nlName" placeholder="First name">
             <input type="email" id="nlEmail" placeholder="Email address" required>
             <div class="err" id="nlErr">Please enter a valid email address.</div>
-            <div class="chips" id="chips"></div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="banking-credit"><span>🏦 Banking & Credit</span></label><label><input type="checkbox" value="financial-freedom"><span>🕊️ Financial Freedom</span></label><label><input type="checkbox" value="personal-finance"><span>💼 Personal Finance</span></label><label><input type="checkbox" value="investing"><span>📈 Investing</span></label><label><input type="checkbox" value="insurance"><span>🛡️ Insurance</span></label><label><input type="checkbox" value="cryptocurrency"><span>🪙 Cryptocurrency</span></label></div>
             <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
             <div class="fine">Free forever. We never sell your email.</div>
           </div>
@@ -197,7 +182,7 @@
         <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
-      <div><h4>Topics</h4><ul id="footCats"></ul></div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/trending/">Trending Posts</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/cryptocurrency/">Cryptocurrency</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/">About</a></li><li><a href="/">How we make money</a></li><li><a href="/">Editorial standards</a></li><li><a href="/">Contact</a></li></ul></div>
     </div>
@@ -209,6 +194,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=17386163"></script>
+<script src="/assets/site.js?v=21764ee4"></script>
 </body>
 </html>

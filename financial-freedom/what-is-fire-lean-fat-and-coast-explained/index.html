@@ -36,7 +36,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"></ul>
+    <ul class="menu" id="menu"><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/trending/" data-slug="trending">Trending Posts</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li><a href="/cryptocurrency/" data-slug="cryptocurrency">Cryptocurrency</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -45,113 +45,104 @@
 <main id="app">
   <!-- HOME -->
   <div class="page" id="page-home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Financial education, minus the jargon</div>
-          <h1>Build wealth <em>with reason</em>, not with guesswork.</h1>
-          <p class="lead">Clear, honest guides on banking, credit, investing, insurance and crypto — written so you can understand the decision in front of you and make it with confidence.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
-            <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
-          </div>
-          <div class="trust">
-            <div><strong>7</strong>money topics</div>
-            <div><strong>5 min</strong>weekly newsletter</div>
-            <div><strong>$0</strong>always free to read</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <span class="tag">💡 BUZZWORD OF THE WEEK</span>
-          <h3>Sinking Fund</h3>
-          <p>The money word everyone's using, explained in 30 seconds.</p>
-          <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:24px">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Explore by topic</div><h2>What do you want to get better at?</h2></div>
-        </div>
-        <div class="cats" id="catTiles"></div>
-      </div>
-    </section>
-
-    <section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">🔥 Trending posts</div><h2>What readers are talking about</h2></div>
-          <a href="/trending/" class="link-more">See all trending →</a>
-        </div>
-        <div class="trend-wrap">
-          <a href="/trending/the-3-account-system-that-makes-saving-automatic/" class="feature">
-            <div class="eyebrow">Editor's pick · Financial Freedom</div>
-            <h3>The 3-account system that makes saving automatic</h3>
-            <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
-            <div style="margin-top:18px"><span class="btn btn-gold">Read the guide →</span></div>
-          </a>
-          <ol class="tlist" id="trendList"></ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Latest articles</div><h2>Fresh from the blog</h2></div>
-        </div>
-        <div class="grid-3" id="latestGrid"></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders to see how monthly investing compounds over time.</p></div></div>
-        <div class="tool">
-          <div>
-            <label>Monthly contribution <span class="val" id="vM">$300</span></label>
-            <input type="range" id="m" min="25" max="2000" step="25" value="300">
-            <label>Years invested <span class="val" id="vY">20</span></label>
-            <input type="range" id="y" min="1" max="40" value="20">
-            <label>Average annual return <span class="val" id="vR">7%</span></label>
-            <input type="range" id="r" min="1" max="12" step="0.5" value="7">
-            <p style="font-size:.78rem;color:#7b8a82;margin-top:14px">Illustration only. Returns aren't guaranteed and real markets go up and down.</p>
-          </div>
-          <div class="result">
-            <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-            <div class="big" id="fv">$0</div>
-            <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b id="contrib">$0</b> · growth adds <b id="growth" style="color:var(--green)">$0</b></div>
-            <div class="bars" id="bars"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="eyebrow">Sneak peek</div><h2>Here's what lands in your inbox</h2><p style="margin:6px auto 0">Every Sunday morning. Read it with your coffee.</p></div></div>
-        <div class="issue">
-          <div class="issue-head"><span><b>From:</b> The Weekly Reason</span><span>Issue #12 · Sunday</span></div>
-          <div class="issue-body">
-            <h3>Your money, this week ☕</h3>
-            <div class="issue-block"><b>💡 Buzzword Brief</b><p><strong>Sinking fund</strong> — what it is, why it beats a credit card for expected costs, and how to start one with $25.</p></div>
-            <div class="issue-block"><b>📈 One market thing</b><p>A plain-English look at the week's biggest money headline and what (if anything) it means for you.</p></div>
-            <div class="issue-block"><b>✅ One action</b><p>A five-minute task that moves your finances forward — this week: check whether your savings account beats inflation.</p></div>
-            <div class="issue-block"><b>📚 Best of the blog</b><p>Three posts worth your time, hand-picked across banking, investing and insurance.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
 
   <!-- ARTICLE (rendered by JS) -->
-  <div class="page" id="page-art"></div>
+  <div class="page on" id="page-art">
+  <div class="art-hero" style="background:linear-gradient(135deg,#0f5b3f,#0f5b3fdd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/financial-freedom/">Financial Freedom</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">🕊️ Financial Freedom</span>
+      <h1>What is FIRE? Lean, Fat and Coast explained</h1>
+      <p class="dek">FIRE stands for Financial Independence, Retire Early. It isn't one plan but a family of them. Here's how each version works and who it fits.</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>Nov 17, 2026</span><span>6 min read</span></div>
+    </div>
+  </div>
+  <article class="article">
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>FIRE means saving and investing aggressively until your investments can cover your living costs, so work becomes optional.</li>
+<li>The most common target is about <strong>25 times your yearly spending</strong>.</li>
+<li>Lean, Fat, Coast and Barista FIRE are different trade-offs between how much you spend and how soon you're free.</li>
+</ul></div>
+
+<p>The FIRE movement started with a simple idea that sounds radical: if you save a big share of your income and invest it, you can reach the point where your investments pay your bills decades before traditional retirement age. Some people use that freedom to stop working completely. Many more use it to work on their own terms.</p>
+
+<h2>The core math</h2>
+<p>Most FIRE plans are built on the "4% rule," a rule of thumb from retirement research. It suggests that a diversified portfolio can support yearly withdrawals of about 4% of its starting value, adjusted for inflation, for around 30 years. Flip that around and you get the classic target:</p>
+<div class="callout"><strong>FI number = your yearly spending × 25</strong><br>Spend $40,000 a year? Your target is about $1,000,000. Spend $30,000? About $750,000.</div>
+<p>That's why FIRE is as much about spending as earning. Every dollar you cut from your yearly costs lowers your target by $25 <em>and</em> frees up another dollar to invest.</p>
+
+<h2>The four main flavors</h2>
+
+<h3>Lean FIRE</h3>
+<p><strong>What it is:</strong> Reaching independence on a minimalist budget, often well under the typical household's spending.</p>
+<p><strong>Pros:</strong> A smaller target means you can get there fastest.</p>
+<p><strong>Cons:</strong> Thin margin for surprises like medical bills, a new roof or inflation. Lean FIRE works best for people who genuinely enjoy a simple life, not for those white-knuckling it.</p>
+
+<h3>Fat FIRE</h3>
+<p><strong>What it is:</strong> Independence with a comfortable or generous budget, often $100,000 a year or more.</p>
+<p><strong>Pros:</strong> Plenty of cushion, and room for travel, hobbies and helping family.</p>
+<p><strong>Cons:</strong> A target of $2.5 million or more usually takes a high income, a long runway or both.</p>
+
+<h3>Coast FIRE</h3>
+<p><strong>What it is:</strong> You've saved enough that, <em>without adding another dollar</em>, your investments should grow to your full retirement number by a traditional retirement age. You still work to pay today's bills, but you no longer need to save for retirement.</p>
+<p><strong>Example:</strong> If you want $1 million (in today's dollars) at 65 and expect about 5% growth after inflation, you'd need roughly $181,000 invested at age 30 to "coast" there.</p>
+<p><strong>Pros:</strong> Huge pressure relief. You can take a lower-paying job you love, work part-time or take a career break.</p>
+
+<h3>Barista FIRE</h3>
+<p><strong>What it is:</strong> Your investments cover part of your costs, and part-time or flexible work covers the rest. The name comes from the idea of a part-time job that also offers health insurance.</p>
+<p><strong>Pros:</strong> You leave full-time work years earlier than with full FIRE, and the work you keep can add structure and social connection.</p>
+
+<table class="weights">
+<thead><tr><th>Version</th><th>Yearly spending</th><th>Target (×25)</th><th>Still working?</th></tr></thead>
+<tbody>
+<tr><td>Lean</td><td>$35,000</td><td>$875,000</td><td>Optional</td></tr>
+<tr><td>Classic</td><td>$60,000</td><td>$1.5 million</td><td>Optional</td></tr>
+<tr><td>Fat</td><td>$120,000</td><td>$3 million</td><td>Optional</td></tr>
+<tr><td>Coast</td><td>Any</td><td>Enough to grow into it</td><td>Yes, but no need to save</td></tr>
+<tr><td>Barista</td><td>Any</td><td>Partial</td><td>Part-time</td></tr>
+</tbody></table>
+
+<h2>What makes FIRE work</h2>
+<ol>
+<li><strong>A high savings rate.</strong> This is the single biggest lever. Someone saving 50% of their take-home pay can reach independence in roughly 17 years, compared with about 37 years at a 20% savings rate (assuming 5% growth after inflation).</li>
+<li><strong>Low-cost, diversified investing.</strong> Most FIRE followers use broad index funds with tiny fees.</li>
+<li><strong>Using tax-advantaged accounts.</strong> 401(k)s, IRAs and HSAs cut your tax bill while you build wealth.</li>
+<li><strong>Growing your income.</strong> Raises, job changes and side income speed things up more than extreme frugality alone.</li>
+</ol>
+
+<h2>The challenges nobody should skip</h2>
+<ul>
+<li><strong>Health insurance before 65.</strong> Without an employer plan, you'll likely use the ACA marketplace. Budget for it carefully.</li>
+<li><strong>Getting to your retirement money early.</strong> Withdrawals from 401(k)s and IRAs before 59½ usually come with a 10% penalty, though there are legal workarounds, such as withdrawing Roth contributions (not earnings) or using certain IRS-approved payment plans. Early retirees often keep a taxable brokerage account as a "bridge."</li>
+<li><strong>Longer time horizons.</strong> A 40- or 50-year retirement is longer than the 30 years the 4% rule was built for. Many early retirees plan with a lower withdrawal rate, around 3.25% to 3.5%, or stay flexible with their spending.</li>
+<li><strong>The human side.</strong> Some people find that the hardest part of early retirement is purpose, not money. Plan what you're retiring <em>to</em>.</li>
+</ul>
+
+<h2>How to start, even if early retirement isn't your goal</h2>
+<ol>
+<li>Track your spending for one month to find your real yearly number.</li>
+<li>Multiply by 25 to see your rough FI number.</li>
+<li>Calculate your savings rate: what you save and invest divided by your take-home pay.</li>
+<li>Raise it by a few points, and then automate it.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>You don't have to retire at 40 to benefit from FIRE thinking. Knowing your number, spending on purpose and investing the gap gives you options, whether that's retiring early, switching careers or simply sleeping better.</p>
+
+<p class="art-note">Examples are simplified and assume steady returns. Real markets go up and down, and your situation may differ. This article is for education only and isn't financial advice.</p>
+</article>
+  <div class="art-more"><div class="eyebrow" style="color:#0f5b3f">Keep reading</div><h2 style="margin:6px 0 20px">More financial freedom guides</h2><div class="grid-3"><a class="card" href="/financial-freedom/the-4-rule-in-plain-english/"><div class="thumb" style="background:#e7f2ec"><span class="pill" style="color:#0f5b3f">Financial Freedom</span>🕊️</div>
+  <div class="card-body"><h3>The 4% rule in plain English</h3><p>It's the most famous number in retirement planning, and the most misunderstood. Here's what the 4% rule actually says, where it came from and how experts see it today.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/financial-freedom/12-side-hustles-you-can-start-this-weekend/"><div class="thumb" style="background:#e7f2ec"><span class="pill" style="color:#0f5b3f">Financial Freedom</span>🕊️</div>
+  <div class="card-body"><h3>12 side hustles you can start this weekend</h3><p>No big investment, no business degree. Here are 12 realistic ways to earn extra money starting this weekend, plus the tax basics most people miss.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>7 min read</span></div></div></a><a class="card" href="/financial-freedom/how-to-calculate-your-financial-independence-number/"><div class="thumb" style="background:#e7f2ec"><span class="pill" style="color:#0f5b3f">Financial Freedom</span>🕊️</div>
+  <div class="card-body"><h3>How to calculate your financial independence number</h3><p>Your FI number is the amount of invested money that could cover your living costs for life. Here's how to work out yours in about 15 minutes.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a></div></div></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -175,7 +166,7 @@
             <input type="text" id="nlName" placeholder="First name">
             <input type="email" id="nlEmail" placeholder="Email address" required>
             <div class="err" id="nlErr">Please enter a valid email address.</div>
-            <div class="chips" id="chips"></div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="banking-credit"><span>🏦 Banking & Credit</span></label><label><input type="checkbox" value="financial-freedom"><span>🕊️ Financial Freedom</span></label><label><input type="checkbox" value="personal-finance"><span>💼 Personal Finance</span></label><label><input type="checkbox" value="investing"><span>📈 Investing</span></label><label><input type="checkbox" value="insurance"><span>🛡️ Insurance</span></label><label><input type="checkbox" value="cryptocurrency"><span>🪙 Cryptocurrency</span></label></div>
             <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
             <div class="fine">Free forever. We never sell your email.</div>
           </div>
@@ -197,7 +188,7 @@
         <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
-      <div><h4>Topics</h4><ul id="footCats"></ul></div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/trending/">Trending Posts</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/cryptocurrency/">Cryptocurrency</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/">About</a></li><li><a href="/">How we make money</a></li><li><a href="/">Editorial standards</a></li><li><a href="/">Contact</a></li></ul></div>
     </div>
@@ -209,6 +200,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=17386163"></script>
+<script src="/assets/site.js?v=21764ee4"></script>
 </body>
 </html>

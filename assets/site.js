@@ -3351,7 +3351,10 @@ function route(){
   $("#menu").classList.remove("open");
   if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); setMeta(t+" — Rich With Reason", (ARTICLES[aslug]||{}).dek); }
   else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
-  else { show("home"); setMeta("Rich With Reason — Money, Explained With Reason", "Clear, honest guides on banking, credit, investing, insurance and crypto."); }
+  else {
+    // Topic/article pages are built without the home sections; load the real home page.
+    const ph = $("#page-home"); if(ph && ph.children && !ph.children.length){ location.reload(); return; }
+    show("home"); setMeta("Rich With Reason — Money, Explained With Reason", "Clear, honest guides on banking, credit, investing, insurance and crypto."); }
   window.scrollTo({top:0,behavior:"instant"});
 }
 function setMeta(title,desc){

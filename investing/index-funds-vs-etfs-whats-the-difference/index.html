@@ -36,7 +36,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"></ul>
+    <ul class="menu" id="menu"><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/trending/" data-slug="trending">Trending Posts</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li><a href="/cryptocurrency/" data-slug="cryptocurrency">Cryptocurrency</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -45,113 +45,101 @@
 <main id="app">
   <!-- HOME -->
   <div class="page" id="page-home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Financial education, minus the jargon</div>
-          <h1>Build wealth <em>with reason</em>, not with guesswork.</h1>
-          <p class="lead">Clear, honest guides on banking, credit, investing, insurance and crypto — written so you can understand the decision in front of you and make it with confidence.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
-            <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
-          </div>
-          <div class="trust">
-            <div><strong>7</strong>money topics</div>
-            <div><strong>5 min</strong>weekly newsletter</div>
-            <div><strong>$0</strong>always free to read</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <span class="tag">💡 BUZZWORD OF THE WEEK</span>
-          <h3>Sinking Fund</h3>
-          <p>The money word everyone's using, explained in 30 seconds.</p>
-          <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:24px">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Explore by topic</div><h2>What do you want to get better at?</h2></div>
-        </div>
-        <div class="cats" id="catTiles"></div>
-      </div>
-    </section>
-
-    <section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">🔥 Trending posts</div><h2>What readers are talking about</h2></div>
-          <a href="/trending/" class="link-more">See all trending →</a>
-        </div>
-        <div class="trend-wrap">
-          <a href="/trending/the-3-account-system-that-makes-saving-automatic/" class="feature">
-            <div class="eyebrow">Editor's pick · Financial Freedom</div>
-            <h3>The 3-account system that makes saving automatic</h3>
-            <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
-            <div style="margin-top:18px"><span class="btn btn-gold">Read the guide →</span></div>
-          </a>
-          <ol class="tlist" id="trendList"></ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Latest articles</div><h2>Fresh from the blog</h2></div>
-        </div>
-        <div class="grid-3" id="latestGrid"></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders to see how monthly investing compounds over time.</p></div></div>
-        <div class="tool">
-          <div>
-            <label>Monthly contribution <span class="val" id="vM">$300</span></label>
-            <input type="range" id="m" min="25" max="2000" step="25" value="300">
-            <label>Years invested <span class="val" id="vY">20</span></label>
-            <input type="range" id="y" min="1" max="40" value="20">
-            <label>Average annual return <span class="val" id="vR">7%</span></label>
-            <input type="range" id="r" min="1" max="12" step="0.5" value="7">
-            <p style="font-size:.78rem;color:#7b8a82;margin-top:14px">Illustration only. Returns aren't guaranteed and real markets go up and down.</p>
-          </div>
-          <div class="result">
-            <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-            <div class="big" id="fv">$0</div>
-            <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b id="contrib">$0</b> · growth adds <b id="growth" style="color:var(--green)">$0</b></div>
-            <div class="bars" id="bars"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="eyebrow">Sneak peek</div><h2>Here's what lands in your inbox</h2><p style="margin:6px auto 0">Every Sunday morning. Read it with your coffee.</p></div></div>
-        <div class="issue">
-          <div class="issue-head"><span><b>From:</b> The Weekly Reason</span><span>Issue #12 · Sunday</span></div>
-          <div class="issue-body">
-            <h3>Your money, this week ☕</h3>
-            <div class="issue-block"><b>💡 Buzzword Brief</b><p><strong>Sinking fund</strong> — what it is, why it beats a credit card for expected costs, and how to start one with $25.</p></div>
-            <div class="issue-block"><b>📈 One market thing</b><p>A plain-English look at the week's biggest money headline and what (if anything) it means for you.</p></div>
-            <div class="issue-block"><b>✅ One action</b><p>A five-minute task that moves your finances forward — this week: check whether your savings account beats inflation.</p></div>
-            <div class="issue-block"><b>📚 Best of the blog</b><p>Three posts worth your time, hand-picked across banking, investing and insurance.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
 
   <!-- ARTICLE (rendered by JS) -->
-  <div class="page" id="page-art"></div>
+  <div class="page on" id="page-art">
+  <div class="art-hero" style="background:linear-gradient(135deg,#3b3a8f,#3b3a8fdd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/investing/">Investing</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">📈 Investing</span>
+      <h1>Index funds vs. ETFs: what's the difference?</h1>
+      <p class="dek">They're often described as rivals, but an ETF can be an index fund, and many index funds come in both forms. Here's what actually separates them and how to choose.</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>Nov 17, 2026</span><span>6 min read</span></div>
+    </div>
+  </div>
+  <article class="article">
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>An <strong>index fund</strong> is a strategy: it tracks a market index instead of picking stocks.</li>
+<li>An <strong>ETF</strong> is a wrapper: a fund that trades on the stock market like a share.</li>
+<li>Many popular ETFs <em>are</em> index funds. The real choice is usually between an index <strong>mutual fund</strong> and an index <strong>ETF</strong>, and both can be excellent.</li>
+</ul></div>
+
+<p>If you've started reading about investing, you've probably seen advice like "just buy index funds" next to "ETFs are the best way to start." It sounds like two competing options. They aren't, exactly. Once you see how the terms fit together, the choice gets much simpler.</p>
+
+<h2>What is an index fund?</h2>
+<p>An index fund owns all, or a representative sample, of the investments in a market index, such as the S&amp;P 500 (500 large U.S. companies) or a "total market" index covering thousands of stocks. It doesn't try to beat the market. It tries to <em>be</em> the market.</p>
+<p>Why that's powerful:</p>
+<ul>
+<li><strong>Low costs.</strong> There are no expensive analysts picking stocks. In 2025 the average index equity mutual fund cost investors just 0.05% a year, according to the Investment Company Institute.</li>
+<li><strong>Instant diversification.</strong> One fund can hold hundreds or thousands of companies.</li>
+<li><strong>Strong long-term results.</strong> Over long periods, most actively managed funds fail to beat their index after fees.</li>
+</ul>
+
+<h2>What is an ETF?</h2>
+<p>An exchange-traded fund is a fund that trades on a stock exchange throughout the day, just like an individual stock. Most ETFs track an index, so they're index funds too. Some ETFs are actively managed, and some track narrow or complex strategies.</p>
+
+<h2>The real comparison: index mutual fund vs. index ETF</h2>
+<table class="weights">
+<thead><tr><th></th><th>Index mutual fund</th><th>Index ETF</th></tr></thead>
+<tbody>
+<tr><td>How you buy</td><td>Directly from the fund company or a brokerage, at one price after the market closes</td><td>Like a stock, at the market price during the trading day</td></tr>
+<tr><td>Minimum investment</td><td>Sometimes $1,000 to $3,000; some are $0</td><td>The price of one share, or $1 with fractional shares</td></tr>
+<tr><td>Automatic investing</td><td>Easy: invest exact dollar amounts on a schedule</td><td>Depends on the brokerage; many now allow it</td></tr>
+<tr><td>Costs</td><td>Very low for broad index funds</td><td>Very low for broad index ETFs</td></tr>
+<tr><td>Tax efficiency (taxable accounts)</td><td>Good</td><td>Usually better, thanks to how ETFs are built</td></tr>
+<tr><td>Moving to another brokerage</td><td>Some funds are only available at one company</td><td>Can be held at almost any brokerage</td></tr>
+</tbody></table>
+
+<h3>Why ETFs tend to be more tax-efficient</h3>
+<p>When mutual fund investors cash out, the fund sometimes has to sell holdings, which can create capital gains distributions for <em>everyone</em> in the fund. ETFs usually handle redemptions in a way that avoids selling, so they distribute fewer taxable gains. This only matters in a regular taxable brokerage account. In a 401(k) or IRA, it doesn't matter.</p>
+
+<h2>Which one should you choose?</h2>
+<h3>Choose an index ETF if…</h3>
+<ul>
+<li>You're investing in a regular taxable brokerage account.</li>
+<li>You're starting small and want to buy with any amount.</li>
+<li>You want flexibility to move your account to any brokerage.</li>
+</ul>
+<h3>Choose an index mutual fund if…</h3>
+<ul>
+<li>You want to automatically invest an exact dollar amount every payday.</li>
+<li>You're investing inside a 401(k), where mutual funds are often the only option.</li>
+<li>You like not seeing prices bounce around during the day. It removes the temptation to trade.</li>
+</ul>
+<div class="callout"><strong>Honest answer:</strong> For a long-term investor, the difference between a low-cost S&amp;P 500 index mutual fund and a low-cost S&amp;P 500 index ETF is tiny. Picking a broad, cheap fund and investing consistently matters far more than which wrapper it comes in.</div>
+
+<h2>What to look for in any index fund or ETF</h2>
+<ol>
+<li><strong>Expense ratio:</strong> For broad U.S. stock index funds, look for well under 0.20%, ideally under 0.10%.</li>
+<li><strong>What it tracks:</strong> Broad indexes (total market, S&amp;P 500, total international, total bond) are best for most people.</li>
+<li><strong>Size and trading volume:</strong> For ETFs, larger, heavily traded funds usually have tighter bid-ask spreads (the small gap between buying and selling prices).</li>
+<li><strong>Tracking:</strong> A good fund stays very close to its index's return.</li>
+</ol>
+
+<h2>Watch out for these</h2>
+<ul>
+<li><strong>Leveraged and inverse ETFs</strong> (often labeled 2x, 3x or "short"). They're built for short-term trading and can lose value over time even if the market goes nowhere.</li>
+<li><strong>Very narrow themes,</strong> such as a single trend or technology. They're more concentrated and often more expensive.</li>
+<li><strong>Overtrading.</strong> Being able to trade ETFs all day is a feature, not an invitation.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>"Index fund" describes <em>what</em> a fund owns. "ETF" describes <em>how</em> you buy it. For most people, a broad, low-cost index fund, in either form, is one of the best investing tools available. Pick the one that fits your account, then focus on investing regularly.</p>
+
+<p class="art-note">Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't investment advice.</p>
+</article>
+  <div class="art-more"><div class="eyebrow" style="color:#3b3a8f">Keep reading</div><h2 style="margin:6px 0 20px">More investing guides</h2><div class="grid-3"><a class="card" href="/investing/roth-ira-vs-traditional-ira-simply-explained/"><div class="thumb" style="background:#ecebfa"><span class="pill" style="color:#3b3a8f">Investing</span>📈</div>
+  <div class="card-body"><h3>Roth IRA vs. traditional IRA, simply explained</h3><p>Both help you save for retirement with big tax advantages. The difference is when you pay the tax: now or later. Here's how to pick, with 2026 limits.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/investing/how-to-start-investing-with-100/"><div class="thumb" style="background:#ecebfa"><span class="pill" style="color:#3b3a8f">Investing</span>📈</div>
+  <div class="card-body"><h3>How to start investing with $100</h3><p>You don't need thousands of dollars to start investing. With $100 and the right first steps, you can own a slice of thousands of companies by this afternoon.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/investing/what-is-an-expense-ratio-and-why-it-matters/"><div class="thumb" style="background:#ecebfa"><span class="pill" style="color:#3b3a8f">Investing</span>📈</div>
+  <div class="card-body"><h3>What is an expense ratio and why it matters</h3><p>It's a fee you never see on a bill, and that's exactly why it's easy to ignore. Over a lifetime of investing, the difference between a cheap fund and an expensive one can reach tens of thousands of dollars.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>5 min read</span></div></div></a></div></div></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -175,7 +163,7 @@
             <input type="text" id="nlName" placeholder="First name">
             <input type="email" id="nlEmail" placeholder="Email address" required>
             <div class="err" id="nlErr">Please enter a valid email address.</div>
-            <div class="chips" id="chips"></div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="banking-credit"><span>🏦 Banking & Credit</span></label><label><input type="checkbox" value="financial-freedom"><span>🕊️ Financial Freedom</span></label><label><input type="checkbox" value="personal-finance"><span>💼 Personal Finance</span></label><label><input type="checkbox" value="investing"><span>📈 Investing</span></label><label><input type="checkbox" value="insurance"><span>🛡️ Insurance</span></label><label><input type="checkbox" value="cryptocurrency"><span>🪙 Cryptocurrency</span></label></div>
             <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
             <div class="fine">Free forever. We never sell your email.</div>
           </div>
@@ -197,7 +185,7 @@
         <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
-      <div><h4>Topics</h4><ul id="footCats"></ul></div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/trending/">Trending Posts</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/cryptocurrency/">Cryptocurrency</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/">About</a></li><li><a href="/">How we make money</a></li><li><a href="/">Editorial standards</a></li><li><a href="/">Contact</a></li></ul></div>
     </div>
@@ -209,6 +197,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=17386163"></script>
+<script src="/assets/site.js?v=21764ee4"></script>
 </body>
 </html>

@@ -36,7 +36,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"></ul>
+    <ul class="menu" id="menu"><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/trending/" data-slug="trending">Trending Posts</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li><a href="/cryptocurrency/" data-slug="cryptocurrency">Cryptocurrency</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -45,113 +45,109 @@
 <main id="app">
   <!-- HOME -->
   <div class="page" id="page-home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Financial education, minus the jargon</div>
-          <h1>Build wealth <em>with reason</em>, not with guesswork.</h1>
-          <p class="lead">Clear, honest guides on banking, credit, investing, insurance and crypto — written so you can understand the decision in front of you and make it with confidence.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
-            <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
-          </div>
-          <div class="trust">
-            <div><strong>7</strong>money topics</div>
-            <div><strong>5 min</strong>weekly newsletter</div>
-            <div><strong>$0</strong>always free to read</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <span class="tag">💡 BUZZWORD OF THE WEEK</span>
-          <h3>Sinking Fund</h3>
-          <p>The money word everyone's using, explained in 30 seconds.</p>
-          <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:24px">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Explore by topic</div><h2>What do you want to get better at?</h2></div>
-        </div>
-        <div class="cats" id="catTiles"></div>
-      </div>
-    </section>
-
-    <section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">🔥 Trending posts</div><h2>What readers are talking about</h2></div>
-          <a href="/trending/" class="link-more">See all trending →</a>
-        </div>
-        <div class="trend-wrap">
-          <a href="/trending/the-3-account-system-that-makes-saving-automatic/" class="feature">
-            <div class="eyebrow">Editor's pick · Financial Freedom</div>
-            <h3>The 3-account system that makes saving automatic</h3>
-            <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
-            <div style="margin-top:18px"><span class="btn btn-gold">Read the guide →</span></div>
-          </a>
-          <ol class="tlist" id="trendList"></ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Latest articles</div><h2>Fresh from the blog</h2></div>
-        </div>
-        <div class="grid-3" id="latestGrid"></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders to see how monthly investing compounds over time.</p></div></div>
-        <div class="tool">
-          <div>
-            <label>Monthly contribution <span class="val" id="vM">$300</span></label>
-            <input type="range" id="m" min="25" max="2000" step="25" value="300">
-            <label>Years invested <span class="val" id="vY">20</span></label>
-            <input type="range" id="y" min="1" max="40" value="20">
-            <label>Average annual return <span class="val" id="vR">7%</span></label>
-            <input type="range" id="r" min="1" max="12" step="0.5" value="7">
-            <p style="font-size:.78rem;color:#7b8a82;margin-top:14px">Illustration only. Returns aren't guaranteed and real markets go up and down.</p>
-          </div>
-          <div class="result">
-            <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-            <div class="big" id="fv">$0</div>
-            <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b id="contrib">$0</b> · growth adds <b id="growth" style="color:var(--green)">$0</b></div>
-            <div class="bars" id="bars"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="eyebrow">Sneak peek</div><h2>Here's what lands in your inbox</h2><p style="margin:6px auto 0">Every Sunday morning. Read it with your coffee.</p></div></div>
-        <div class="issue">
-          <div class="issue-head"><span><b>From:</b> The Weekly Reason</span><span>Issue #12 · Sunday</span></div>
-          <div class="issue-body">
-            <h3>Your money, this week ☕</h3>
-            <div class="issue-block"><b>💡 Buzzword Brief</b><p><strong>Sinking fund</strong> — what it is, why it beats a credit card for expected costs, and how to start one with $25.</p></div>
-            <div class="issue-block"><b>📈 One market thing</b><p>A plain-English look at the week's biggest money headline and what (if anything) it means for you.</p></div>
-            <div class="issue-block"><b>✅ One action</b><p>A five-minute task that moves your finances forward — this week: check whether your savings account beats inflation.</p></div>
-            <div class="issue-block"><b>📚 Best of the blog</b><p>Three posts worth your time, hand-picked across banking, investing and insurance.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
 
   <!-- ARTICLE (rendered by JS) -->
-  <div class="page" id="page-art"></div>
+  <div class="page on" id="page-art">
+  <div class="art-hero" style="background:linear-gradient(135deg,#0f5b3f,#0f5b3fdd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/financial-freedom/">Financial Freedom</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">🕊️ Financial Freedom</span>
+      <h1>12 side hustles you can start this weekend</h1>
+      <p class="dek">No big investment, no business degree. Here are 12 realistic ways to earn extra money starting this weekend, plus the tax basics most people miss.</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>Nov 17, 2026</span><span>7 min read</span></div>
+    </div>
+  </div>
+  <article class="article">
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>The best side hustle uses skills or things you already have, so you can start fast and cheap.</li>
+<li>Even $300 to $500 a month, if you invest it, can change your long-term finances.</li>
+<li>Side income is taxable. Set aside 25% to 30% of what you earn for taxes.</li>
+</ul></div>
+
+<p>A side hustle is one of the fastest ways to speed up any money goal, whether that's paying off debt, building an emergency fund or investing toward financial freedom. Investing an extra $300 a month for 10 years at 5% growth after inflation adds up to about $45,000. Here are 12 options you can realistically start in a weekend, grouped by what they need from you.</p>
+
+<h2>Use your time and energy</h2>
+
+<h3>1. Pet sitting and dog walking</h3>
+<p>Apps like Rover and Wag connect you with local pet owners, or you can just tell your neighbors. Startup cost: basically nothing. Best for animal lovers with flexible hours.</p>
+
+<h3>2. Food and grocery delivery</h3>
+<p>Sign up with a delivery app and work whenever you want. Approval can take a few days, so apply now. Remember that gas and wear on your car come out of your earnings, so track your mileage.</p>
+
+<h3>3. Odd jobs and errands</h3>
+<p>Furniture assembly, moving help, yard work and mounting TVs are always in demand. Post on TaskRabbit or Nextdoor, or ask friends to spread the word.</p>
+
+<h3>4. House cleaning or car detailing</h3>
+<p>The supplies cost under $100, and repeat clients turn this into steady monthly income. Before-and-after photos make great marketing.</p>
+
+<h2>Use your skills</h2>
+
+<h3>5. Tutoring</h3>
+<p>Help students with math, reading, test prep or a language you speak well. Sessions can be online, so your market isn't limited to your town.</p>
+
+<h3>6. Freelance writing, editing or design</h3>
+<p>Small businesses always need help with website copy, social posts, flyers and logos. Start with two or three samples, even ones you made for practice, and pitch local businesses or freelance marketplaces.</p>
+
+<h3>7. Virtual assistant work</h3>
+<p>Managing inboxes and calendars, entering data and booking travel can all be done remotely. If you're organized and good with common office software, this is a natural fit.</p>
+
+<h3>8. Teach what you know</h3>
+<p>Cooking, guitar, fitness, Excel, photography: if you're good at something, someone wants to learn it. Start with one small class or a one-on-one session.</p>
+
+<h2>Use your stuff</h2>
+
+<h3>9. Sell things you no longer use</h3>
+<p>Clothes, electronics, furniture and baby gear sell well on Facebook Marketplace, eBay and Poshmark. It's a one-time boost, but it often funds your next hustle.</p>
+
+<h3>10. Flip thrift and yard-sale finds</h3>
+<p>Once you've learned what sells by clearing out your own closet, buy underpriced items and resell them. Focus on one niche you know, like sneakers, vintage clothes or tools.</p>
+
+<h3>11. Rent out what sits idle</h3>
+<p>Peer-to-peer platforms let you rent out your car, parking space, storage space or camera gear. Read the insurance terms carefully before you list anything.</p>
+
+<h3>12. Sell simple digital products</h3>
+<p>Printable planners, budget spreadsheets, templates or a short guide on something you know can sell on platforms like Etsy over and over. It takes up-front work, but there's no inventory.</p>
+
+<div class="callout"><strong>Pick your hustle in 3 questions:</strong> What am I already good at? What do people already ask me for help with? How many hours a week do I realistically have? The best fit is usually where all three overlap.</div>
+
+<h2>The tax basics (don't skip this)</h2>
+<ul>
+<li><strong>All side income is taxable,</strong> whether or not you get a tax form for it.</li>
+<li><strong>Self-employment tax applies.</strong> If you net $400 or more from self-employment in a year, you generally owe self-employment tax (about 15.3% for Social Security and Medicare) on top of income tax.</li>
+<li><strong>Know the forms.</strong> For 2026, payment apps and marketplaces generally only send a Form 1099-K if you receive more than $20,000 <em>and</em> more than 200 transactions. Businesses that pay you directly send a 1099-NEC once they pay you $2,000 or more. Not getting a form doesn't mean the income is tax-free.</li>
+<li><strong>Set money aside.</strong> Move 25% to 30% of every payment into a separate savings account for taxes.</li>
+<li><strong>Pay quarterly if you need to.</strong> If you'll owe $1,000 or more for the year, the IRS generally expects quarterly estimated payments.</li>
+<li><strong>Track your expenses.</strong> Supplies, a portion of your phone bill and business mileage may be deductible, which lowers what you owe.</li>
+</ul>
+
+<h2>Make the money actually matter</h2>
+<p>Side hustle income tends to disappear into everyday spending unless you give it a job. Open a separate account for it, set aside the tax portion, and then send the rest straight to your goal: extra debt payments, your emergency fund or an investment account.</p>
+
+<h2>Your weekend plan</h2>
+<ol>
+<li><strong>Saturday morning:</strong> Choose one hustle using the three questions above.</li>
+<li><strong>Saturday afternoon:</strong> Create your profile or listing, or tell 10 people you're offering the service.</li>
+<li><strong>Sunday:</strong> Open a separate savings account for side income and taxes.</li>
+<li><strong>Next week:</strong> Do your first job, ask for a review, and decide what to do with your first $100.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>The best side hustle is the one you'll actually start. Keep it simple, take care of the taxes and point every extra dollar at a goal. That's how a few weekend hours turn into real financial progress.</p>
+
+<p class="art-note">Platform rules, pay and availability vary by location. Tax rules summarized here are general and for 2026; check with a tax professional about your situation. This article is for education only.</p>
+</article>
+  <div class="art-more"><div class="eyebrow" style="color:#0f5b3f">Keep reading</div><h2 style="margin:6px 0 20px">More financial freedom guides</h2><div class="grid-3"><a class="card" href="/financial-freedom/what-is-fire-lean-fat-and-coast-explained/"><div class="thumb" style="background:#e7f2ec"><span class="pill" style="color:#0f5b3f">Financial Freedom</span>🕊️</div>
+  <div class="card-body"><h3>What is FIRE? Lean, Fat and Coast explained</h3><p>FIRE stands for Financial Independence, Retire Early. It isn't one plan but a family of them. Here's how each version works and who it fits.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/financial-freedom/the-4-rule-in-plain-english/"><div class="thumb" style="background:#e7f2ec"><span class="pill" style="color:#0f5b3f">Financial Freedom</span>🕊️</div>
+  <div class="card-body"><h3>The 4% rule in plain English</h3><p>It's the most famous number in retirement planning, and the most misunderstood. Here's what the 4% rule actually says, where it came from and how experts see it today.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/financial-freedom/how-to-calculate-your-financial-independence-number/"><div class="thumb" style="background:#e7f2ec"><span class="pill" style="color:#0f5b3f">Financial Freedom</span>🕊️</div>
+  <div class="card-body"><h3>How to calculate your financial independence number</h3><p>Your FI number is the amount of invested money that could cover your living costs for life. Here's how to work out yours in about 15 minutes.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a></div></div></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -175,7 +171,7 @@
             <input type="text" id="nlName" placeholder="First name">
             <input type="email" id="nlEmail" placeholder="Email address" required>
             <div class="err" id="nlErr">Please enter a valid email address.</div>
-            <div class="chips" id="chips"></div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="banking-credit"><span>🏦 Banking & Credit</span></label><label><input type="checkbox" value="financial-freedom"><span>🕊️ Financial Freedom</span></label><label><input type="checkbox" value="personal-finance"><span>💼 Personal Finance</span></label><label><input type="checkbox" value="investing"><span>📈 Investing</span></label><label><input type="checkbox" value="insurance"><span>🛡️ Insurance</span></label><label><input type="checkbox" value="cryptocurrency"><span>🪙 Cryptocurrency</span></label></div>
             <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
             <div class="fine">Free forever. We never sell your email.</div>
           </div>
@@ -197,7 +193,7 @@
         <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
-      <div><h4>Topics</h4><ul id="footCats"></ul></div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/trending/">Trending Posts</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/cryptocurrency/">Cryptocurrency</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/">About</a></li><li><a href="/">How we make money</a></li><li><a href="/">Editorial standards</a></li><li><a href="/">Contact</a></li></ul></div>
     </div>
@@ -209,6 +205,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=17386163"></script>
+<script src="/assets/site.js?v=21764ee4"></script>
 </body>
 </html>

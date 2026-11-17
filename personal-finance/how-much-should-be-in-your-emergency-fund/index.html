@@ -36,7 +36,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"></ul>
+    <ul class="menu" id="menu"><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/trending/" data-slug="trending">Trending Posts</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li><a href="/cryptocurrency/" data-slug="cryptocurrency">Cryptocurrency</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -45,113 +45,115 @@
 <main id="app">
   <!-- HOME -->
   <div class="page" id="page-home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Financial education, minus the jargon</div>
-          <h1>Build wealth <em>with reason</em>, not with guesswork.</h1>
-          <p class="lead">Clear, honest guides on banking, credit, investing, insurance and crypto — written so you can understand the decision in front of you and make it with confidence.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
-            <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
-          </div>
-          <div class="trust">
-            <div><strong>7</strong>money topics</div>
-            <div><strong>5 min</strong>weekly newsletter</div>
-            <div><strong>$0</strong>always free to read</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <span class="tag">💡 BUZZWORD OF THE WEEK</span>
-          <h3>Sinking Fund</h3>
-          <p>The money word everyone's using, explained in 30 seconds.</p>
-          <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:24px">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Explore by topic</div><h2>What do you want to get better at?</h2></div>
-        </div>
-        <div class="cats" id="catTiles"></div>
-      </div>
-    </section>
-
-    <section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">🔥 Trending posts</div><h2>What readers are talking about</h2></div>
-          <a href="/trending/" class="link-more">See all trending →</a>
-        </div>
-        <div class="trend-wrap">
-          <a href="/trending/the-3-account-system-that-makes-saving-automatic/" class="feature">
-            <div class="eyebrow">Editor's pick · Financial Freedom</div>
-            <h3>The 3-account system that makes saving automatic</h3>
-            <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
-            <div style="margin-top:18px"><span class="btn btn-gold">Read the guide →</span></div>
-          </a>
-          <ol class="tlist" id="trendList"></ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Latest articles</div><h2>Fresh from the blog</h2></div>
-        </div>
-        <div class="grid-3" id="latestGrid"></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders to see how monthly investing compounds over time.</p></div></div>
-        <div class="tool">
-          <div>
-            <label>Monthly contribution <span class="val" id="vM">$300</span></label>
-            <input type="range" id="m" min="25" max="2000" step="25" value="300">
-            <label>Years invested <span class="val" id="vY">20</span></label>
-            <input type="range" id="y" min="1" max="40" value="20">
-            <label>Average annual return <span class="val" id="vR">7%</span></label>
-            <input type="range" id="r" min="1" max="12" step="0.5" value="7">
-            <p style="font-size:.78rem;color:#7b8a82;margin-top:14px">Illustration only. Returns aren't guaranteed and real markets go up and down.</p>
-          </div>
-          <div class="result">
-            <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-            <div class="big" id="fv">$0</div>
-            <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b id="contrib">$0</b> · growth adds <b id="growth" style="color:var(--green)">$0</b></div>
-            <div class="bars" id="bars"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="eyebrow">Sneak peek</div><h2>Here's what lands in your inbox</h2><p style="margin:6px auto 0">Every Sunday morning. Read it with your coffee.</p></div></div>
-        <div class="issue">
-          <div class="issue-head"><span><b>From:</b> The Weekly Reason</span><span>Issue #12 · Sunday</span></div>
-          <div class="issue-body">
-            <h3>Your money, this week ☕</h3>
-            <div class="issue-block"><b>💡 Buzzword Brief</b><p><strong>Sinking fund</strong> — what it is, why it beats a credit card for expected costs, and how to start one with $25.</p></div>
-            <div class="issue-block"><b>📈 One market thing</b><p>A plain-English look at the week's biggest money headline and what (if anything) it means for you.</p></div>
-            <div class="issue-block"><b>✅ One action</b><p>A five-minute task that moves your finances forward — this week: check whether your savings account beats inflation.</p></div>
-            <div class="issue-block"><b>📚 Best of the blog</b><p>Three posts worth your time, hand-picked across banking, investing and insurance.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
 
   <!-- ARTICLE (rendered by JS) -->
-  <div class="page" id="page-art"></div>
+  <div class="page on" id="page-art">
+  <div class="art-hero" style="background:linear-gradient(135deg,#7a4b12,#7a4b12dd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/personal-finance/">Personal Finance</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">💼 Personal Finance</span>
+      <h1>How much should be in your emergency fund?</h1>
+      <p class="dek">Three months? Six? A year? The right answer depends on how stable your income is and who depends on you. Here's how to find your number and build it.</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>Nov 17, 2026</span><span>6 min read</span></div>
+    </div>
+  </div>
+  <article class="article">
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>Start with a <strong>$1,000 to $2,000</strong> starter fund, then build up to <strong>3 to 6 months of essential expenses</strong>.</li>
+<li>Aim higher, 6 to 12 months, if your income is irregular, you're the only earner or you work in an unstable industry.</li>
+<li>Keep it in a high-yield savings account that's separate from your checking account.</li>
+</ul></div>
+
+<p>An emergency fund is the most boring part of personal finance, and the most important. It's what turns a job loss, a car repair or a surprise medical bill from a crisis into an inconvenience. Without one, emergencies usually land on a credit card at 20%+ interest, and the debt can follow you for years.</p>
+
+<h2>Step 1: Calculate your essential monthly expenses</h2>
+<p>Your emergency fund should cover what you <em>must</em> pay, not your full lifestyle. Add up:</p>
+<ul>
+<li>Rent or mortgage</li>
+<li>Utilities, phone and internet</li>
+<li>Groceries</li>
+<li>Transportation</li>
+<li>Insurance premiums</li>
+<li>Minimum debt payments</li>
+<li>Childcare and essential medical costs</li>
+</ul>
+<p>Leave out dining out, travel and shopping. In a real emergency, those get cut first.</p>
+
+<h2>Step 2: Pick your number of months</h2>
+<table class="weights">
+<thead><tr><th>Your situation</th><th>Target</th></tr></thead>
+<tbody>
+<tr><td>Stable salaried job, dual income, no kids</td><td class="pct">3 months</td></tr>
+<tr><td>Stable job, single income or kids</td><td class="pct">4–6 months</td></tr>
+<tr><td>Commission, freelance, gig or seasonal income</td><td class="pct">6–12 months</td></tr>
+<tr><td>Self-employed or business owner</td><td class="pct">6–12 months</td></tr>
+<tr><td>Older home or older car, health issues</td><td class="pct">Add 1–2 months</td></tr>
+<tr><td>Near retirement or in a specialized field</td><td class="pct">6+ months</td></tr>
+</tbody></table>
+<p>Ask yourself: <em>If I lost my income tomorrow, how long would it realistically take to replace it?</em> That's a good guide to how many months you need.</p>
+
+<h2>Step 3: Do the math</h2>
+<div class="callout"><strong>Example:</strong> Marcus has essential expenses of $3,200 a month. He has a stable job, but he's the only earner for his family of three, so he picks 5 months. <strong>His target: $3,200 × 5 = $16,000.</strong></div>
+<p>If that number feels huge, that's normal. Nobody builds it overnight. Break it into milestones.</p>
+
+<h2>Build it in stages</h2>
+<ol>
+<li><strong>Starter fund: $1,000 to $2,000.</strong> This covers the most common emergencies, like car repairs, an urgent vet bill or a broken appliance. Build this first, even while paying down debt.</li>
+<li><strong>One month of essentials.</strong> Now a short gap in income won't wreck you.</li>
+<li><strong>Three months.</strong> You're protected against most job changes and medical surprises.</li>
+<li><strong>Your full target.</strong> Then shift your savings toward investing and other goals.</li>
+</ol>
+
+<h2>Where to keep it</h2>
+<p>Your emergency fund has two jobs: be <strong>safe</strong> and be <strong>available</strong>. Earning a return is a distant third.</p>
+<ul>
+<li><strong>Best:</strong> A high-yield savings account at an FDIC-insured bank or NCUA-insured credit union. The top accounts paid around 4% APY in late 2026, far above the national average.</li>
+<li><strong>Also fine:</strong> A money market account. For a large fund, consider a mix, such as a "CD ladder" or Treasury bills for the portion you're unlikely to need right away.</li>
+<li><strong>Avoid:</strong> Stocks or crypto. Emergencies and market crashes often arrive together, such as when layoffs hit during a recession.</li>
+</ul>
+<p>Keep it at a <em>different</em> bank from your checking account. One or two days of transfer time is just enough friction to stop "emergency" pizza.</p>
+
+<h2>What counts as an emergency?</h2>
+<p>A simple test: is it <strong>unexpected</strong>, <strong>necessary</strong> and <strong>urgent</strong>?</p>
+<ul>
+<li>✓ Job loss or reduced hours</li>
+<li>✓ Medical or dental bills</li>
+<li>✓ Essential car or home repairs</li>
+<li>✓ Emergency travel for family</li>
+<li>✗ Holiday gifts, vacations or annual insurance premiums. These are predictable, so plan for them with <em>sinking funds</em> instead.</li>
+</ul>
+
+<h2>How to build it faster</h2>
+<ul>
+<li><strong>Automate it.</strong> Set a transfer for payday, even $25 or $50.</li>
+<li><strong>Use windfalls.</strong> Put tax refunds, bonuses or side hustle income straight in.</li>
+<li><strong>Cancel and redirect.</strong> Cut one or two subscriptions and send that money to savings.</li>
+<li><strong>Round up.</strong> Many banks offer round-up features that move spare change into savings.</li>
+</ul>
+
+<h2>Should you invest or build the emergency fund first?</h2>
+<p>A common order: (1) build a starter fund, (2) get your full employer 401(k) match, (3) pay off high-interest debt, (4) finish your full emergency fund, and (5) invest more. The match is free money, so don't skip it while you build savings.</p>
+
+<h2>After you use it</h2>
+<p>That's exactly what it's for, so don't feel guilty. Once the emergency is handled, pause extra goals and rebuild the fund before moving on.</p>
+
+<h2>The bottom line</h2>
+<p>Start with $1,000, work toward 3 to 6 months of essential expenses and keep the money safe and separate. It won't make you rich, but it will protect everything else you're building.</p>
+
+<p class="art-note">Rates mentioned are approximate as of November 2026. This article is for education only and isn't financial advice.</p>
+</article>
+  <div class="art-more"><div class="eyebrow" style="color:#7a4b12">Keep reading</div><h2 style="margin:6px 0 20px">More personal finance guides</h2><div class="grid-3"><a class="card" href="/personal-finance/the-50-30-20-budget-explained-with-examples/"><div class="thumb" style="background:#fbf3dd"><span class="pill" style="color:#7a4b12">Personal Finance</span>💼</div>
+  <div class="card-body"><h3>The 50/30/20 budget, explained with examples</h3><p>Three buckets, one paycheck, no spreadsheet obsession. Here's how the 50/30/20 budget works, with real numbers, and how to adjust it when life doesn't fit the formula.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/personal-finance/sinking-funds-the-stress-free-way-to-save/"><div class="thumb" style="background:#fbf3dd"><span class="pill" style="color:#7a4b12">Personal Finance</span>💼</div>
+  <div class="card-body"><h3>Sinking funds: the stress-free way to save</h3><p>Most "surprise" expenses aren't surprises at all: holidays, car registration, annual subscriptions. A sinking fund turns them into small monthly amounts so they never hit hard again.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>5 min read</span></div></div></a><a class="card" href="/personal-finance/tax-refunds-vs-adjusting-your-withholding/"><div class="thumb" style="background:#fbf3dd"><span class="pill" style="color:#7a4b12">Personal Finance</span>💼</div>
+  <div class="card-body"><h3>Tax refunds vs. adjusting your withholding</h3><p>A big tax refund feels like a bonus, but it's really your own money coming back late. Here's how to decide whether to keep the refund or put that money in your paycheck instead.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a></div></div></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -175,7 +177,7 @@
             <input type="text" id="nlName" placeholder="First name">
             <input type="email" id="nlEmail" placeholder="Email address" required>
             <div class="err" id="nlErr">Please enter a valid email address.</div>
-            <div class="chips" id="chips"></div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="banking-credit"><span>🏦 Banking & Credit</span></label><label><input type="checkbox" value="financial-freedom"><span>🕊️ Financial Freedom</span></label><label><input type="checkbox" value="personal-finance"><span>💼 Personal Finance</span></label><label><input type="checkbox" value="investing"><span>📈 Investing</span></label><label><input type="checkbox" value="insurance"><span>🛡️ Insurance</span></label><label><input type="checkbox" value="cryptocurrency"><span>🪙 Cryptocurrency</span></label></div>
             <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
             <div class="fine">Free forever. We never sell your email.</div>
           </div>
@@ -197,7 +199,7 @@
         <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
-      <div><h4>Topics</h4><ul id="footCats"></ul></div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/trending/">Trending Posts</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/cryptocurrency/">Cryptocurrency</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/">About</a></li><li><a href="/">How we make money</a></li><li><a href="/">Editorial standards</a></li><li><a href="/">Contact</a></li></ul></div>
     </div>
@@ -209,6 +211,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=17386163"></script>
+<script src="/assets/site.js?v=21764ee4"></script>
 </body>
 </html>

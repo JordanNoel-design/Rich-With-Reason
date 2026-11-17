@@ -36,7 +36,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"></ul>
+    <ul class="menu" id="menu"><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/trending/" data-slug="trending">Trending Posts</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li><a href="/cryptocurrency/" data-slug="cryptocurrency">Cryptocurrency</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -45,113 +45,90 @@
 <main id="app">
   <!-- HOME -->
   <div class="page" id="page-home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Financial education, minus the jargon</div>
-          <h1>Build wealth <em>with reason</em>, not with guesswork.</h1>
-          <p class="lead">Clear, honest guides on banking, credit, investing, insurance and crypto — written so you can understand the decision in front of you and make it with confidence.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
-            <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
-          </div>
-          <div class="trust">
-            <div><strong>7</strong>money topics</div>
-            <div><strong>5 min</strong>weekly newsletter</div>
-            <div><strong>$0</strong>always free to read</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <span class="tag">💡 BUZZWORD OF THE WEEK</span>
-          <h3>Sinking Fund</h3>
-          <p>The money word everyone's using, explained in 30 seconds.</p>
-          <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:24px">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Explore by topic</div><h2>What do you want to get better at?</h2></div>
-        </div>
-        <div class="cats" id="catTiles"></div>
-      </div>
-    </section>
-
-    <section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">🔥 Trending posts</div><h2>What readers are talking about</h2></div>
-          <a href="/trending/" class="link-more">See all trending →</a>
-        </div>
-        <div class="trend-wrap">
-          <a href="/trending/the-3-account-system-that-makes-saving-automatic/" class="feature">
-            <div class="eyebrow">Editor's pick · Financial Freedom</div>
-            <h3>The 3-account system that makes saving automatic</h3>
-            <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
-            <div style="margin-top:18px"><span class="btn btn-gold">Read the guide →</span></div>
-          </a>
-          <ol class="tlist" id="trendList"></ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Latest articles</div><h2>Fresh from the blog</h2></div>
-        </div>
-        <div class="grid-3" id="latestGrid"></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders to see how monthly investing compounds over time.</p></div></div>
-        <div class="tool">
-          <div>
-            <label>Monthly contribution <span class="val" id="vM">$300</span></label>
-            <input type="range" id="m" min="25" max="2000" step="25" value="300">
-            <label>Years invested <span class="val" id="vY">20</span></label>
-            <input type="range" id="y" min="1" max="40" value="20">
-            <label>Average annual return <span class="val" id="vR">7%</span></label>
-            <input type="range" id="r" min="1" max="12" step="0.5" value="7">
-            <p style="font-size:.78rem;color:#7b8a82;margin-top:14px">Illustration only. Returns aren't guaranteed and real markets go up and down.</p>
-          </div>
-          <div class="result">
-            <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-            <div class="big" id="fv">$0</div>
-            <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b id="contrib">$0</b> · growth adds <b id="growth" style="color:var(--green)">$0</b></div>
-            <div class="bars" id="bars"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="eyebrow">Sneak peek</div><h2>Here's what lands in your inbox</h2><p style="margin:6px auto 0">Every Sunday morning. Read it with your coffee.</p></div></div>
-        <div class="issue">
-          <div class="issue-head"><span><b>From:</b> The Weekly Reason</span><span>Issue #12 · Sunday</span></div>
-          <div class="issue-body">
-            <h3>Your money, this week ☕</h3>
-            <div class="issue-block"><b>💡 Buzzword Brief</b><p><strong>Sinking fund</strong> — what it is, why it beats a credit card for expected costs, and how to start one with $25.</p></div>
-            <div class="issue-block"><b>📈 One market thing</b><p>A plain-English look at the week's biggest money headline and what (if anything) it means for you.</p></div>
-            <div class="issue-block"><b>✅ One action</b><p>A five-minute task that moves your finances forward — this week: check whether your savings account beats inflation.</p></div>
-            <div class="issue-block"><b>📚 Best of the blog</b><p>Three posts worth your time, hand-picked across banking, investing and insurance.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
 
   <!-- ARTICLE (rendered by JS) -->
-  <div class="page" id="page-art"></div>
+  <div class="page on" id="page-art">
+  <div class="art-hero" style="background:linear-gradient(135deg,#b3401f,#b3401fdd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/trending/">Trending Posts</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">🔥 Trending Posts</span>
+      <h1>Reader Q: Should I pay off debt or invest first?</h1>
+      <p class="dek">It's one of the most common money questions we get. The answer depends mostly on one number, your interest rate, plus a few rules that come first. Here's the framework.</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>Nov 17, 2026</span><span>6 min read</span></div>
+    </div>
+  </div>
+  <article class="article">
+<div class="tldr"><b>The short version</b>
+<ul>
+<li><strong>Always get your employer 401(k) match first.</strong> It's an instant return you can't get anywhere else.</li>
+<li><strong>Pay off high-interest debt</strong> (roughly 8% and up, like credit cards) before investing beyond the match.</li>
+<li><strong>For low-interest debt</strong> (roughly under 5%), investing usually makes more sense. In between, splitting your money is reasonable.</li>
+</ul></div>
+
+<p><em>"I have about $500 extra each month. I've got $6,000 on a credit card, a car loan at 6% and student loans at 4.5%. Should I pay those off first or start investing?"</em></p>
+<p>Great question, and a common one. There's no single answer, but there is a clear framework. It comes down to comparing the <strong>guaranteed return</strong> of paying off debt with the <strong>expected (but not guaranteed) return</strong> of investing.</p>
+
+<h2>Paying off debt is a guaranteed return</h2>
+<p>Every dollar you put toward a credit card charging 24% is like earning 24% risk-free, because that's interest you'll never pay. No investment reliably offers that. Stocks have historically averaged somewhere around 7% to 10% a year over long periods, but with big ups and downs and no guarantees.</p>
+
+<h2>The priority order</h2>
+<ol>
+<li><strong>Build a starter emergency fund</strong> ($1,000 to $2,000). Without it, the next surprise goes right back on the credit card.</li>
+<li><strong>Get your full employer 401(k) match.</strong> A 50% or 100% match on your contributions is an immediate return that beats paying off almost any debt.</li>
+<li><strong>Pay off high-interest debt</strong>: credit cards, payday loans and most personal loans above roughly 8%.</li>
+<li><strong>Build your full emergency fund</strong> of 3 to 6 months of essential expenses.</li>
+<li><strong>Medium-interest debt (about 5% to 8%):</strong> split extra money between paying it down and investing, or pick based on your comfort level.</li>
+<li><strong>Low-interest debt (under about 5%):</strong> pay the minimum and invest the rest, especially in tax-advantaged accounts.</li>
+</ol>
+
+<h2>Applying it to our reader</h2>
+<table class="weights">
+<thead><tr><th>Debt</th><th>Rate</th><th>Priority</th></tr></thead>
+<tbody>
+<tr><td>Credit card ($6,000)</td><td class="pct">~24%</td><td>Pay off aggressively</td></tr>
+<tr><td>Car loan</td><td class="pct">6%</td><td>Gray zone: steady payments, maybe a little extra</td></tr>
+<tr><td>Student loans</td><td class="pct">4.5%</td><td>Minimum payments; invest instead</td></tr>
+</tbody></table>
+<p><strong>Our suggested plan:</strong></p>
+<ul>
+<li>Make sure there's a starter emergency fund and that the full 401(k) match is captured.</li>
+<li>Send the full $500 extra to the credit card. At 24%, it would be paid off in a little over a year, or faster with a 0% balance transfer.</li>
+<li>Once the card is gone, send most of that $500 into a Roth IRA or extra 401(k) contributions, while paying the minimums on the car and student loans.</li>
+</ul>
+
+<h2>Factors that can change the answer</h2>
+<ul>
+<li><strong>Taxes:</strong> Investing through a 401(k), IRA or HSA adds tax benefits. On the other side, student loan interest may be partly tax-deductible.</li>
+<li><strong>Variable vs. fixed rates:</strong> Debt with a rate that can rise, like credit cards and some private loans, deserves extra priority.</li>
+<li><strong>Your timeline:</strong> Investing is for money you won't need for at least five years.</li>
+<li><strong>Peace of mind:</strong> Some people sleep better debt-free even when the math slightly favors investing. That's a valid choice, especially for medium-rate debt.</li>
+<li><strong>Federal student loans:</strong> They may offer income-driven repayment or forgiveness options worth considering before you pay them off early.</li>
+<li><strong>Today's rates:</strong> With top savings accounts paying around 4% and Treasury yields elevated in late 2026, paying off debt below about 4% to 5% is less compelling than it would be if rates were near zero.</li>
+</ul>
+
+<div class="callout"><strong>Quick rule of thumb:</strong> If the interest rate on a debt is higher than the return you could reasonably expect from investing after taxes, pay the debt. If it's lower, invest. If it's close, do some of both.</div>
+
+<h2>Don't forget the time factor</h2>
+<p>Investing early is powerful because of compounding. A 25-year-old who waits five years to start investing may give up a large amount of future growth. That's why getting the employer match, and at least starting small, matters even while you pay down debt.</p>
+
+<h2>The bottom line</h2>
+<p>Get the match, kill high-interest debt, build your safety net, and then invest while paying off low-rate debt on schedule. It's not all-or-nothing. Most people do best with a clear order of priorities and automatic payments for each one.</p>
+
+<p><em>Have a money question? Join The Weekly Reason and reply to any issue. We answer reader questions every week.</em></p>
+
+<p class="art-note">This article is for education only and isn't financial advice. Your situation may differ, so consider speaking with a licensed professional.</p>
+</article>
+  <div class="art-more"><div class="eyebrow" style="color:#b3401f">Keep reading</div><h2 style="margin:6px 0 20px">More trending posts guides</h2><div class="grid-3"><a class="card" href="/trending/buzzword-brief-what-does-soft-landing-mean/"><div class="thumb" style="background:#fbe9e3"><span class="pill" style="color:#b3401f">Trending Posts</span>🔥</div>
+  <div class="card-body"><h3>Buzzword Brief: what does 'soft landing' mean?</h3><p>You'll hear it on the news whenever the Fed meets. Here's what a 'soft landing' is, why it's so hard to pull off, and where the U.S. economy stands in late 2026.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>5 min read</span></div></div></a><a class="card" href="/trending/the-3-account-system-that-makes-saving-automatic/"><div class="thumb" style="background:#fbe9e3"><span class="pill" style="color:#b3401f">Trending Posts</span>🔥</div>
+  <div class="card-body"><h3>The 3-account system that makes saving automatic</h3><p>Split your paycheck into spend, save and grow, and stop relying on willpower to build wealth. Here's how to set up the system in about 30 minutes.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>5 min read</span></div></div></a><a class="card" href="/trending/are-high-yield-savings-rates-still-worth-it/"><div class="thumb" style="background:#fbe9e3"><span class="pill" style="color:#b3401f">Trending Posts</span>🔥</div>
+  <div class="card-body"><h3>Are high-yield savings rates still worth it?</h3><p>Top savings accounts still pay around 4%, while the average bank pays under 0.5%. But with inflation running higher in 2026, is a savings account still worth it? Here's the honest math.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>5 min read</span></div></div></a></div></div></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -175,7 +152,7 @@
             <input type="text" id="nlName" placeholder="First name">
             <input type="email" id="nlEmail" placeholder="Email address" required>
             <div class="err" id="nlErr">Please enter a valid email address.</div>
-            <div class="chips" id="chips"></div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="banking-credit"><span>🏦 Banking & Credit</span></label><label><input type="checkbox" value="financial-freedom"><span>🕊️ Financial Freedom</span></label><label><input type="checkbox" value="personal-finance"><span>💼 Personal Finance</span></label><label><input type="checkbox" value="investing"><span>📈 Investing</span></label><label><input type="checkbox" value="insurance"><span>🛡️ Insurance</span></label><label><input type="checkbox" value="cryptocurrency"><span>🪙 Cryptocurrency</span></label></div>
             <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
             <div class="fine">Free forever. We never sell your email.</div>
           </div>
@@ -197,7 +174,7 @@
         <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
-      <div><h4>Topics</h4><ul id="footCats"></ul></div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/trending/">Trending Posts</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/cryptocurrency/">Cryptocurrency</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/">About</a></li><li><a href="/">How we make money</a></li><li><a href="/">Editorial standards</a></li><li><a href="/">Contact</a></li></ul></div>
     </div>
@@ -209,6 +186,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=17386163"></script>
+<script src="/assets/site.js?v=21764ee4"></script>
 </body>
 </html>

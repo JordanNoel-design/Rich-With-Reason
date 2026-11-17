@@ -4,8 +4,8 @@ Owner's standing instruction: every change Claude makes to this site goes live a
 Don't stop to ask before committing or pushing site updates.
 
 After any edit (articles, design, copy, images, tags):
-1. If articles, topics or `index.html` changed, run `node tools/build-pages.mjs` (rebuilds the
-   clean-URL pages, sitemap and asset version stamps).
+1. Always run `node tools/build-pages.mjs` (builds index.html and every topic/article page with
+   content built in, plus the sitemap and asset version stamps).
 2. Commit with a short message describing the change.
 3. Push to `main` on github.com/JordanNoel-design/Rich-With-Reason. GitHub Pages deploys to
    richwithreason.com in about a minute.
@@ -20,4 +20,7 @@ from the project copy alone.
 Site notes:
 - Clean URLs only: links are `/topic/` and `/topic/article-slug/`. Never add `#/` links.
 - Articles live in `ARTICLES` and topics in `CATS` inside `assets/site.js`.
-- Topic/article folders, `404.html`, `sitemap.xml` and `robots.txt` are generated; don't hand-edit them.
+- Layout, head tags and home page sections live in `tools/shell.html`. `index.html`, topic/article
+  folders, `404.html`, `sitemap.xml` and `robots.txt` are generated; don't hand-edit them.
+- The site is registered with Google Search Console; its verification tag in `tools/shell.html`
+  must stay in place.

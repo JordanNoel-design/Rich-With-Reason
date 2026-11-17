@@ -36,7 +36,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"></ul>
+    <ul class="menu" id="menu"><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/trending/" data-slug="trending">Trending Posts</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li><a href="/cryptocurrency/" data-slug="cryptocurrency">Cryptocurrency</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -45,113 +45,88 @@
 <main id="app">
   <!-- HOME -->
   <div class="page" id="page-home">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Financial education, minus the jargon</div>
-          <h1>Build wealth <em>with reason</em>, not with guesswork.</h1>
-          <p class="lead">Clear, honest guides on banking, credit, investing, insurance and crypto — written so you can understand the decision in front of you and make it with confidence.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
-            <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
-          </div>
-          <div class="trust">
-            <div><strong>7</strong>money topics</div>
-            <div><strong>5 min</strong>weekly newsletter</div>
-            <div><strong>$0</strong>always free to read</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <span class="tag">💡 BUZZWORD OF THE WEEK</span>
-          <h3>Sinking Fund</h3>
-          <p>The money word everyone's using, explained in 30 seconds.</p>
-          <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:24px">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Explore by topic</div><h2>What do you want to get better at?</h2></div>
-        </div>
-        <div class="cats" id="catTiles"></div>
-      </div>
-    </section>
-
-    <section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">🔥 Trending posts</div><h2>What readers are talking about</h2></div>
-          <a href="/trending/" class="link-more">See all trending →</a>
-        </div>
-        <div class="trend-wrap">
-          <a href="/trending/the-3-account-system-that-makes-saving-automatic/" class="feature">
-            <div class="eyebrow">Editor's pick · Financial Freedom</div>
-            <h3>The 3-account system that makes saving automatic</h3>
-            <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
-            <div style="margin-top:18px"><span class="btn btn-gold">Read the guide →</span></div>
-          </a>
-          <ol class="tlist" id="trendList"></ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <div><div class="eyebrow">Latest articles</div><h2>Fresh from the blog</h2></div>
-        </div>
-        <div class="grid-3" id="latestGrid"></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders to see how monthly investing compounds over time.</p></div></div>
-        <div class="tool">
-          <div>
-            <label>Monthly contribution <span class="val" id="vM">$300</span></label>
-            <input type="range" id="m" min="25" max="2000" step="25" value="300">
-            <label>Years invested <span class="val" id="vY">20</span></label>
-            <input type="range" id="y" min="1" max="40" value="20">
-            <label>Average annual return <span class="val" id="vR">7%</span></label>
-            <input type="range" id="r" min="1" max="12" step="0.5" value="7">
-            <p style="font-size:.78rem;color:#7b8a82;margin-top:14px">Illustration only. Returns aren't guaranteed and real markets go up and down.</p>
-          </div>
-          <div class="result">
-            <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-            <div class="big" id="fv">$0</div>
-            <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b id="contrib">$0</b> · growth adds <b id="growth" style="color:var(--green)">$0</b></div>
-            <div class="bars" id="bars"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="eyebrow">Sneak peek</div><h2>Here's what lands in your inbox</h2><p style="margin:6px auto 0">Every Sunday morning. Read it with your coffee.</p></div></div>
-        <div class="issue">
-          <div class="issue-head"><span><b>From:</b> The Weekly Reason</span><span>Issue #12 · Sunday</span></div>
-          <div class="issue-body">
-            <h3>Your money, this week ☕</h3>
-            <div class="issue-block"><b>💡 Buzzword Brief</b><p><strong>Sinking fund</strong> — what it is, why it beats a credit card for expected costs, and how to start one with $25.</p></div>
-            <div class="issue-block"><b>📈 One market thing</b><p>A plain-English look at the week's biggest money headline and what (if anything) it means for you.</p></div>
-            <div class="issue-block"><b>✅ One action</b><p>A five-minute task that moves your finances forward — this week: check whether your savings account beats inflation.</p></div>
-            <div class="issue-block"><b>📚 Best of the blog</b><p>Three posts worth your time, hand-picked across banking, investing and insurance.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
 
   <!-- ARTICLE (rendered by JS) -->
-  <div class="page" id="page-art"></div>
+  <div class="page on" id="page-art">
+  <div class="art-hero" style="background:linear-gradient(135deg,#1d4e89,#1d4e89dd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/banking-credit/">Banking & Credit</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">🏦 Banking & Credit</span>
+      <h1>How to build credit with no credit history</h1>
+      <p class="dek">No credit history means lenders can't score you yet. You can't skip that step, but you can get through it in months, not years.</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>Nov 17, 2026</span><span>6 min read</span></div>
+    </div>
+  </div>
+  <article class="article">
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>With no credit history, many scoring models can't produce a score for you at all. You're "credit invisible," not bad at credit.</li>
+<li>The fastest ways to start are a secured credit card, a credit-builder loan or becoming an authorized user.</li>
+<li>Pay on time and keep balances low, and a solid score can follow within about 6 to 12 months.</li>
+</ul></div>
+
+<p>It's the classic catch-22: you need credit to get credit. Students, new arrivals to the U.S. and people who've always paid cash run into it all the time. The good news is that there are products built for exactly this situation, and they work.</p>
+
+<h2>Why you don't have a score yet</h2>
+<p>A credit score is a summary of your credit report. If your report is empty or too thin, there's nothing to summarize. Classic FICO models generally need at least one account that's been open for about six months and has been reported in the last six months. VantageScore can often score you sooner. Either way, the first step is the same: get an account reporting to the credit bureaus.</p>
+
+<h2>Five ways to start</h2>
+
+<h3>1. A secured credit card</h3>
+<p>You put down a refundable deposit, often $200 to $500, and that usually becomes your credit limit. Otherwise it works like any credit card, and your payments are reported to the bureaus. Many issuers review your account after several months of on-time payments and may "graduate" you to a regular card and return your deposit.</p>
+<p><strong>Look for:</strong> no annual fee, reporting to all three bureaus (Equifax, Experian and TransUnion) and a clear path to an upgrade.</p>
+
+<h3>2. A credit-builder loan</h3>
+<p>These are offered by many credit unions, community banks and some apps. The lender holds the loan amount in a savings account while you make fixed monthly payments. When you're done, you get the money back, minus any interest and fees. You build payment history <em>and</em> savings at the same time. It also adds an installment loan to your credit mix.</p>
+
+<h3>3. Become an authorized user</h3>
+<p>A family member or partner with good credit habits adds you to their credit card. If that issuer reports authorized users, the card's history can show up on your report. Only do this with someone who pays on time and keeps a low balance, because their mistakes can show up on your report too. You don't even need to use the card.</p>
+
+<h3>4. A starter or student card</h3>
+<p>Some unsecured cards are designed for people with limited history, especially students. They usually come with low limits. Approval isn't guaranteed, so check for "pre-qualification" tools, which use a soft inquiry that won't affect your credit.</p>
+
+<h3>5. Get credit for bills you already pay</h3>
+<p>Rent-reporting services and some bank-data tools can add rent, utilities or phone payments to your credit file. They don't count in every scoring model, but newer ones, including VantageScore 4.0, can use rent data when it's reported.</p>
+
+<div class="callout"><strong>Avoid:</strong> Anyone who promises to "create a new credit identity" or sells you a "CPN" instead of your Social Security number. That's fraud, and you could be the one held responsible. Also be wary of paying big fees for "credit repair" when you don't have any credit yet.</div>
+
+<h2>Use your first account the right way</h2>
+<ol>
+<li><strong>Make a small purchase each month,</strong> like a streaming subscription or a tank of gas.</li>
+<li><strong>Pay the full statement balance</strong> by the due date. You never need to carry a balance or pay interest to build credit. That's a myth.</li>
+<li><strong>Keep your balance low.</strong> On a $300 limit, try to keep the reported balance under about $30 to $90.</li>
+<li><strong>Turn on autopay</strong> so you never miss a payment. Payment history is the biggest part of your score.</li>
+<li><strong>Don't apply for lots of cards at once.</strong> One or two accounts are enough to start.</li>
+</ol>
+
+<h2>A realistic timeline</h2>
+<ul>
+<li><strong>Month 0:</strong> Open a secured card or credit-builder loan. Ask a family member about adding you as an authorized user.</li>
+<li><strong>Months 1 to 6:</strong> Small charges, paid in full and on time, every month.</li>
+<li><strong>Around 6 months:</strong> Most scoring models can now give you a score. Check it for free through your bank or card app.</li>
+<li><strong>Months 6 to 12:</strong> Ask about graduating your secured card. If you want a second account, consider one regular no-fee card.</li>
+<li><strong>Beyond:</strong> Keep your oldest account open and let time work for you.</li>
+</ul>
+
+<h2>Check your progress</h2>
+<p>You can pull your credit reports from all three bureaus for free every week at <a href="https://www.annualcreditreport.com" target="_blank" rel="noopener">AnnualCreditReport.com</a>. Make sure your new accounts appear and that the information is correct.</p>
+
+<h2>The bottom line</h2>
+<p>Starting from zero isn't a bad credit score. It's a blank page. Open one or two starter accounts, use them lightly and pay on time, every time. In a year you can have a credit history that opens the door to better cards, loans and apartments.</p>
+
+<p class="art-note">Product terms vary by lender. Confirm that any account you open reports to the credit bureaus. This article is for education only and isn't financial advice.</p>
+</article>
+  <div class="art-more"><div class="eyebrow" style="color:#1d4e89">Keep reading</div><h2 style="margin:6px 0 20px">More banking & credit guides</h2><div class="grid-3"><a class="card" href="/banking-credit/how-credit-scores-are-actually-calculated/"><div class="thumb" style="background:#e6eef8"><span class="pill" style="color:#1d4e89">Banking & Credit</span>🏦</div>
+  <div class="card-body"><h3>How credit scores are actually calculated</h3><p>Five ingredients, one three-digit number. Here's what goes into your FICO score, how much each part counts, and which levers actually move it.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a><a class="card" href="/banking-credit/high-yield-savings-vs-money-market-accounts/"><div class="thumb" style="background:#e6eef8"><span class="pill" style="color:#1d4e89">Banking & Credit</span>🏦</div>
+  <div class="card-body"><h3>High-yield savings vs. money market accounts</h3><p>They pay similar rates and carry the same insurance. The real difference is how you get your money out, and that should decide which one you open.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>5 min read</span></div></div></a><a class="card" href="/banking-credit/balance-transfer-cards-when-theyre-worth-it/"><div class="thumb" style="background:#e6eef8"><span class="pill" style="color:#1d4e89">Banking & Credit</span>🏦</div>
+  <div class="card-body"><h3>Balance transfer cards: when they're worth it</h3><p>A 0% balance transfer can save you more than a thousand dollars in interest, or cost you a fee for nothing. Here's how to tell which one you're about to get.</p>
+  <div class="meta"><span>Nov 17, 2026</span><span>6 min read</span></div></div></a></div></div></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -175,7 +150,7 @@
             <input type="text" id="nlName" placeholder="First name">
             <input type="email" id="nlEmail" placeholder="Email address" required>
             <div class="err" id="nlErr">Please enter a valid email address.</div>
-            <div class="chips" id="chips"></div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="banking-credit"><span>🏦 Banking & Credit</span></label><label><input type="checkbox" value="financial-freedom"><span>🕊️ Financial Freedom</span></label><label><input type="checkbox" value="personal-finance"><span>💼 Personal Finance</span></label><label><input type="checkbox" value="investing"><span>📈 Investing</span></label><label><input type="checkbox" value="insurance"><span>🛡️ Insurance</span></label><label><input type="checkbox" value="cryptocurrency"><span>🪙 Cryptocurrency</span></label></div>
             <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
             <div class="fine">Free forever. We never sell your email.</div>
           </div>
@@ -197,7 +172,7 @@
         <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
-      <div><h4>Topics</h4><ul id="footCats"></ul></div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/trending/">Trending Posts</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/cryptocurrency/">Cryptocurrency</a></li></ul></div>
       <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/">About</a></li><li><a href="/">How we make money</a></li><li><a href="/">Editorial standards</a></li><li><a href="/">Contact</a></li></ul></div>
     </div>
@@ -209,6 +184,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=17386163"></script>
+<script src="/assets/site.js?v=21764ee4"></script>
 </body>
 </html>
