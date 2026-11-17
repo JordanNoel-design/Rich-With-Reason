@@ -178,6 +178,34 @@
   .other-cats a{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:.9rem}
   .other-cats a:hover{color:var(--green)}
 
+  /* Article page */
+  .art-hero{padding:48px 0 40px;color:#fff;position:relative;overflow:hidden}
+  .art-hero::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,.08);right:-140px;top:-200px}
+  .art-hero .wrap{max-width:820px;position:relative;z-index:1}
+  .art-hero h1{margin:12px 0 14px;font-size:clamp(1.9rem,4vw,2.9rem)}
+  .art-hero .dek{font-size:1.15rem;opacity:.92;max-width:700px}
+  .art-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;opacity:.85;margin-top:20px}
+  .article{max-width:740px;margin:0 auto;padding:44px 24px 12px;font-size:1.06rem;line-height:1.75}
+  .article h2{font-size:1.6rem;margin:40px 0 12px}
+  .article h3{font-size:1.2rem;margin:28px 0 8px}
+  .article p{margin:0 0 16px}
+  .article ul,.article ol{margin:0 0 18px 22px} .article li{margin-bottom:8px}
+  .article a{color:var(--green);text-decoration:underline}
+  .tldr{background:var(--green-tint);border-radius:14px;padding:20px 22px 6px;margin:0 0 28px}
+  .tldr b{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+  .callout{border-left:4px solid var(--gold);background:var(--gold-tint);padding:16px 20px;border-radius:0 12px 12px 0;margin:22px 0;font-size:.98rem}
+  .weights{width:100%;border-collapse:collapse;margin:8px 0 24px;font-size:.95rem}
+  .weights th,.weights td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  .weights th{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);font-family:var(--sans)}
+  .weights td.pct{font-weight:700;color:var(--green);white-space:nowrap}
+  .wbar{height:8px;border-radius:99px;background:var(--line);min-width:70px}
+  .wbar i{display:block;height:100%;border-radius:99px;background:var(--green)}
+  .art-note{font-size:.82rem;color:#7b8a82;border-top:1px solid var(--line);padding-top:16px;margin-top:36px;line-height:1.6}
+  .art-more{max-width:1180px;margin:0 auto;padding:36px 24px 0}
+  .soon{max-width:640px;margin:0 auto;padding:72px 24px 24px;text-align:center}
+  .soon .big-ico{font-size:3rem;margin-bottom:12px}
+  .soon p{color:var(--ink-soft);margin:12px 0 24px}
+
   /* Footer */
   footer{background:var(--ink);color:#b9c6bf;padding:56px 0 28px;margin-top:40px;font-size:.9rem}
   .foot{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px}
@@ -231,7 +259,7 @@
           <h3>Sinking Fund</h3>
           <p>The money word everyone's using, explained in 30 seconds.</p>
           <div class="def"><strong>What it means:</strong> A savings bucket for a cost you know is coming — car repairs, holidays, insurance premiums — funded a little each month so it never becomes a surprise.</div>
-          <a href="#/personal-finance" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
+          <a href="#/personal-finance/sinking-funds-the-stress-free-way-to-save" class="link-more" style="display:inline-block;margin-top:16px">Read the full breakdown →</a>
         </div>
       </div>
     </section>
@@ -252,7 +280,7 @@
           <a href="#/trending" class="link-more">See all trending →</a>
         </div>
         <div class="trend-wrap">
-          <a href="#/trending" class="feature">
+          <a href="#/trending/the-3-account-system-that-makes-saving-automatic" class="feature">
             <div class="eyebrow">Editor's pick · Financial Freedom</div>
             <h3>The 3-account system that makes saving automatic</h3>
             <p>Split your paycheck into spend, save and grow — and stop relying on willpower to build wealth.</p>
@@ -314,6 +342,9 @@
 
   <!-- CATEGORY (rendered by JS) -->
   <div class="page" id="page-cat"></div>
+
+  <!-- ARTICLE (rendered by JS) -->
+  <div class="page" id="page-art"></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -423,15 +454,436 @@ const CATS = [
    posts:["What is blockchain? A beginner's explainer","Bitcoin vs. Ethereum: what's the difference?","Hot wallet vs. cold wallet","How crypto is taxed in the U.S.","7 crypto scams and how to spot them","What are stablecoins?"],
    terms:[["Blockchain","A shared, tamper-resistant record of transactions."],["Cold wallet","Crypto storage kept offline for security."],["Stablecoin","A token designed to hold a steady value, often $1."]]}
 ];
+
+/* ============ ARTICLES ============
+   Add a new article by adding an entry keyed by its slug (the title in lowercase with
+   dashes, e.g. "how-to-build-credit-with-no-credit-history"). Any card whose title has
+   no entry here opens a "coming soon" page instead of a dead link. */
+const ARTICLES = {
+  "how-credit-scores-are-actually-calculated": {
+    cat:"banking-credit",
+    title:"How credit scores are actually calculated",
+    dek:"Five ingredients, one three-digit number. Here's what goes into your FICO score, how much each part counts, and which levers actually move it.",
+    date:"Nov 17, 2026", read:"6 min read",
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>Your FICO score is built from five factors: payment history (35%), amounts owed (30%), length of credit history (15%), credit mix (10%) and new credit (10%).</li>
+<li>Paying on time and keeping your card balances low drive about two-thirds of your score.</li>
+<li>Your income, savings and job aren't part of the formula at all.</li>
+</ul></div>
+
+<p>A credit score can feel like a grade handed down by a mysterious committee. It's actually the output of a formula, and once you know the formula you know exactly where to put your effort and where you're wasting it.</p>
+
+<h2>First: which credit score?</h2>
+<p>You don't have one credit score. You have dozens. Two companies build the models most lenders use: <strong>FICO</strong> and <strong>VantageScore</strong>. Both read the data in your credit reports from the three bureaus (Equifax, Experian and TransUnion), and their main versions score you from 300 to 850.</p>
+<p>FICO is still used in most lending decisions. VantageScore has been gaining ground, though. In 2026, Fannie Mae and Freddie Mac began accepting VantageScore 4.0 for mortgages alongside classic FICO. That's why the score in your banking app may not match the one your lender pulls: it may be a different model, a different bureau or a different day. The good news is that both models reward the same habits.</p>
+
+<h2>The five ingredients of a FICO score</h2>
+<table class="weights">
+<thead><tr><th>Factor</th><th>Weight</th><th style="width:34%"></th></tr></thead>
+<tbody>
+<tr><td>Payment history</td><td class="pct">35%</td><td><div class="wbar"><i style="width:100%"></i></div></td></tr>
+<tr><td>Amounts owed</td><td class="pct">30%</td><td><div class="wbar"><i style="width:86%"></i></div></td></tr>
+<tr><td>Length of credit history</td><td class="pct">15%</td><td><div class="wbar"><i style="width:43%"></i></div></td></tr>
+<tr><td>Credit mix</td><td class="pct">10%</td><td><div class="wbar"><i style="width:29%"></i></div></td></tr>
+<tr><td>New credit</td><td class="pct">10%</td><td><div class="wbar"><i style="width:29%"></i></div></td></tr>
+</tbody></table>
+
+<h3>1. Payment history (35%)</h3>
+<p>This is the biggest piece, and it answers one question: do you pay what you owe, when you owe it? A payment usually isn't reported as late until it's at least 30 days past due. After that, each step (60 days, 90 days, collections) does more damage. A late payment can stay on your report for up to seven years, but its impact fades as it ages, especially if everything after it is on time.</p>
+<div class="callout"><strong>Easiest win:</strong> Set up autopay for at least the minimum payment on every card and loan. Then pay the rest manually. One forgotten due date can cost you more points than months of good behavior earn.</div>
+
+<h3>2. Amounts owed (30%)</h3>
+<p>The key number here is your <strong>credit utilization</strong>: how much of your available credit you're using. If you have $5,000 in total card limits and $1,500 in balances, your utilization is 30%. Scoring models look at it overall and card by card.</p>
+<p>The common advice is to stay under 30%, but people with the highest scores tend to sit in the single digits. One detail trips people up. Your card issuer usually reports your <em>statement</em> balance, not what you owe after you pay. So even if you pay in full every month, a big balance on statement day can show up as high utilization. Paying a chunk before your statement closes fixes that.</p>
+<p>Utilization can also bounce back quickly. In classic FICO models, once a lower balance is reported, the score reflects it. Newer models such as VantageScore 4.0 also look at "trended data," meaning whether your balances have been rising or falling over time. That's another reason to pay balances down, not just move them around.</p>
+
+<h3>3. Length of credit history (15%)</h3>
+<p>This looks at the age of your oldest account, your newest account and the average age of all of them. You can't speed this one up. You can only avoid resetting it. That's why closing your oldest no-fee card is often a mistake. You lose its credit limit, which pushes utilization up. Over time you also lose its age once it eventually drops off your report.</p>
+
+<h3>4. Credit mix (10%)</h3>
+<p>Lenders like to see that you can handle different kinds of credit. That means <em>revolving</em> accounts like credit cards and <em>installment</em> loans like auto loans, student loans or a mortgage. It's a small factor. Never take out a loan just to improve your mix. The interest will cost far more than the few points it might add.</p>
+
+<h3>5. New credit (10%)</h3>
+<p>Each time you apply for credit, the lender usually does a <strong>hard inquiry</strong>. One inquiry typically costs only a few points. FICO counts it for 12 months, and it stays on your report for two years. Several new accounts in a short stretch can look risky, though. There's an exception for shoppers: multiple mortgage, auto or student loan inquiries within a short window are generally counted as one, so comparing rates won't hurt much. Checking your own score is a "soft" inquiry and never counts.</p>
+
+<h2>What's <em>not</em> in your score</h2>
+<p>Some things people assume matter don't show up at all. These include your income, savings balance, employer and job title, and age. Using a debit card doesn't count either, and neither does how often you check your own credit. Rent and utility payments usually don't count unless they're reported to the bureaus, though some newer models (including VantageScore 4.0) can use rent data when it's there.</p>
+
+<h2>A quick example</h2>
+<p>Maya and Luis both earn $60,000 and both have $5,000 in credit card limits.</p>
+<ul>
+<li><strong>Maya</strong> usually carries a $2,500 balance (50% utilization) and paid one bill 30+ days late last year.</li>
+<li><strong>Luis</strong> pays in full every month and his statements show about $300 (6% utilization).</li>
+</ul>
+<p>Luis will almost certainly have the stronger score, by a wide margin, even though their income is identical. The two biggest factors, payment history and amounts owed, both favor him. Maya's fix doesn't need a raise. She needs autopay and a plan to bring that balance down.</p>
+
+<h2>Your 5-minute action plan</h2>
+<ol>
+<li><strong>Pull your reports.</strong> You can get free reports from all three bureaus every week at <a href="https://www.annualcreditreport.com" target="_blank" rel="noopener">AnnualCreditReport.com</a>, the official site. Dispute anything that isn't yours.</li>
+<li><strong>Turn on autopay</strong> for at least the minimum on every account.</li>
+<li><strong>Find your utilization.</strong> Divide your total balances by your total limits. If it's over 30%, pay down balances or make a payment before your statement date.</li>
+<li><strong>Keep your oldest no-fee card open.</strong> Put a small recurring bill on it so the issuer doesn't close it for inactivity.</li>
+<li><strong>Space out applications.</strong> When you're rate-shopping for a loan, do it within a couple of weeks.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>About two-thirds of your FICO score comes down to two habits: paying on time and not using much of the credit you have. Get those right and most of the rest takes care of itself with time.</p>
+
+<p class="art-note">Factor weights are FICO's published general guidelines; the exact impact of any action depends on your full credit profile and the scoring model a lender uses. This article is for education only and isn't financial advice.</p>
+`},
+  "high-yield-savings-vs-money-market-accounts": {
+    cat:"banking-credit",
+    title:"High-yield savings vs. money market accounts",
+    dek:"They pay similar rates and carry the same insurance. The real difference is how you get your money out, and that should decide which one you open.",
+    date:"Nov 17, 2026", read:"5 min read",
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>Both are insured savings accounts that pay far more than a typical big-bank savings account.</li>
+<li>A money market account usually adds checks or a debit card. A high-yield savings account usually pays a little more and has lower minimums.</li>
+<li>For most emergency funds, a high-yield savings account at an online bank is the simpler choice.</li>
+</ul></div>
+
+<p>If your savings sit in the same bank as your checking account, there's a good chance they're earning almost nothing. Both high-yield savings accounts and money market accounts can fix that. They're closer cousins than their names suggest, so the choice comes down to a few practical details.</p>
+
+<h2>What they have in common</h2>
+<ul>
+<li><strong>They're both bank deposits.</strong> At an FDIC-insured bank or NCUA-insured credit union, each is protected up to $250,000 per depositor, per institution, per ownership category.</li>
+<li><strong>Their rates are variable.</strong> The rate can rise or fall at any time, usually following the Federal Reserve.</li>
+<li><strong>They pay far more than average.</strong> In November 2026, the best high-yield savings accounts pay roughly 4% to 4.4% APY, while the FDIC's national average for savings is about 0.38%. On $10,000, that's around $400 a year versus less than $40.</li>
+</ul>
+
+<h2>Where they differ</h2>
+<table class="weights">
+<thead><tr><th></th><th>High-yield savings</th><th>Money market account</th></tr></thead>
+<tbody>
+<tr><td>Typical top rates (Nov 2026)</td><td>~4.0% to 4.4% APY</td><td>~3.8% to 4.0% APY</td></tr>
+<tr><td>Checks or debit card</td><td>Rarely</td><td>Often</td></tr>
+<tr><td>Minimum balance</td><td>Often $0</td><td>Often $1,000 or more for the best rate</td></tr>
+<tr><td>Rate tiers by balance</td><td>Sometimes</td><td>Common</td></tr>
+<tr><td>Where you find the best ones</td><td>Online banks</td><td>Online banks and credit unions</td></tr>
+</tbody></table>
+<p>The big practical difference is access. With most high-yield savings accounts, you move money to checking first and then spend it, which usually takes one to two business days. A money market account often lets you write a check or use a debit card straight from the account.</p>
+
+<div class="callout"><strong>Don't mix these up:</strong> A money market <em>account</em> is a bank deposit and is FDIC- or NCUA-insured. A money market <em>fund</em> is an investment you buy through a brokerage. It's generally low-risk, but it isn't FDIC-insured. Both are useful; they're just not the same thing.</div>
+
+<h2>Which one should you choose?</h2>
+<h3>Choose a high-yield savings account if…</h3>
+<ul>
+<li>You're building an emergency fund or saving for a goal like a car or a trip.</li>
+<li>You want no minimum balance and no monthly fee.</li>
+<li>A one- or two-day wait to reach your money is fine, or even helpful because it keeps you from dipping in.</li>
+</ul>
+<h3>Choose a money market account if…</h3>
+<ul>
+<li>You keep a larger balance and want to pay some big bills straight from savings, like a property tax bill or a contractor.</li>
+<li>You can meet the minimum to earn the top rate.</li>
+<li>You like having a checkbook for that money without parking it in a low-paying checking account.</li>
+</ul>
+
+<h2>What to check before you open either one</h2>
+<ol>
+<li><strong>The real APY and its conditions.</strong> Some top rates are promotional, last only a few months or apply only up to a set balance. Read the fine print.</li>
+<li><strong>Fees and minimums.</strong> A $10 monthly fee can wipe out the interest on a small balance.</li>
+<li><strong>Insurance.</strong> Confirm the bank is FDIC-insured or the credit union is NCUA-insured. Some apps hold your money at partner banks, so check which one.</li>
+<li><strong>Withdrawal limits.</strong> The federal six-per-month limit was removed in 2020, but some banks still cap transfers or charge for extras.</li>
+<li><strong>Transfer speed.</strong> Find out how long it takes to move money to your checking account.</li>
+</ol>
+
+<h2>A simple setup that works for most people</h2>
+<p>Keep about one month of spending in checking. Put your emergency fund in a high-yield savings account at a separate online bank, so it isn't sitting one tap away. Then set up an automatic transfer on payday. If you later build a large cash cushion and want check-writing, a money market account can hold part of it.</p>
+
+<h2>The bottom line</h2>
+<p>The difference between these two accounts is small. The difference between either one and a 0.4% savings account is huge. Pick the one that fits how you'll use the money, and then automate your deposits.</p>
+
+<p class="art-note">Rates quoted are approximate ranges for top accounts in November 2026 and change often. Always confirm the current APY and terms with the bank. This article is for education only and isn't financial advice.</p>
+`},
+  "balance-transfer-cards-when-theyre-worth-it": {
+    cat:"banking-credit",
+    title:"Balance transfer cards: when they're worth it",
+    dek:"A 0% balance transfer can save you more than a thousand dollars in interest, or cost you a fee for nothing. Here's how to tell which one you're about to get.",
+    date:"Nov 17, 2026", read:"6 min read",
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>A balance transfer moves debt from a high-interest card to a new card with 0% APR for a set time, usually for a 3% to 5% fee.</li>
+<li>It pays off when you can clear most or all of the balance before the 0% period ends.</li>
+<li>It backfires if you keep adding new debt or miss a payment.</li>
+</ul></div>
+
+<p>Credit card interest is brutal. Most regular card APRs today run from the high teens to the high twenties. A balance transfer card hits pause on that interest so more of every payment goes toward what you actually owe. Used well, it's one of the best debt tools there is. Used carelessly, it just moves the problem around.</p>
+
+<h2>How a balance transfer works</h2>
+<ol>
+<li>You apply for a card with a 0% intro APR on balance transfers. Today the longest offers run up to about 21 months.</li>
+<li>Once you're approved, you ask the new card to pay off your old card's balance, usually up to your new credit limit.</li>
+<li>The new card adds a <strong>balance transfer fee</strong>, typically 3% to 5% of the amount moved.</li>
+<li>You pay 0% interest on that balance until the intro period ends. After that, the card's regular APR applies to whatever is left.</li>
+</ol>
+
+<h2>The math: when it's worth it</h2>
+<p>Say you owe <strong>$6,000 at 24% APR</strong> and can pay <strong>$300 a month</strong>.</p>
+<ul>
+<li><strong>Stay put:</strong> It takes about 26 months to pay off, and you pay roughly <strong>$1,740 in interest</strong>.</li>
+<li><strong>Transfer to a 21-month 0% card with a 5% fee:</strong> The fee is $300, so you owe $6,300. At $300 a month, it's gone in exactly 21 months. Your total cost is <strong>$300</strong>.</li>
+</ul>
+<p>That's about <strong>$1,440 saved</strong>, and you're debt-free five months sooner. With a 3% fee the savings are even bigger.</p>
+
+<div class="callout"><strong>Quick test:</strong> Divide your balance (plus the fee) by the number of 0% months. If you can comfortably pay that amount every month, a transfer is very likely worth it. If you can only pay half of it, you'll still save, but have a plan for what's left when the regular APR kicks in.</div>
+
+<h2>When it's <em>not</em> worth it</h2>
+<ul>
+<li><strong>The balance is small.</strong> If you can pay off $800 in two or three months anyway, the fee may cost more than the interest you'd save.</li>
+<li><strong>You'll keep using the old card.</strong> If the old card fills right back up, you end up with two balances instead of one.</li>
+<li><strong>Your credit isn't strong enough.</strong> The best offers usually need good to excellent credit, roughly 670 or higher. A smaller credit limit may only cover part of your debt.</li>
+<li><strong>The real problem is overspending.</strong> A transfer buys time. It doesn't fix a budget that runs short every month.</li>
+</ul>
+
+<h2>The fine print that trips people up</h2>
+<ul>
+<li><strong>Transfer deadlines.</strong> Many cards only give the 0% rate on transfers made within a set window after opening, often 60 to 120 days.</li>
+<li><strong>Same-bank rule.</strong> You usually can't move a balance between two cards from the same issuer.</li>
+<li><strong>New purchases.</strong> Some cards give 0% on transfers but not on purchases. New spending could start charging interest right away. Keep the card for the transfer only.</li>
+<li><strong>Late payments.</strong> On many cards, one late payment can end the 0% rate early. Set up autopay for at least the minimum.</li>
+<li><strong>Minimums aren't a plan.</strong> The required minimum payment is usually far too small to clear the balance in time. Set your own payment using the quick test above.</li>
+</ul>
+
+<h2>What happens to your credit score?</h2>
+<p>Applying adds a hard inquiry and a new account, which may dip your score a few points at first. Over time, a transfer often <em>helps</em>. Your total available credit goes up, and as you pay the balance down, your utilization falls. Utilization is one of the biggest factors in your score. Keep the old card open, with a zero balance, so you don't lose that available credit.</p>
+
+<h2>A step-by-step game plan</h2>
+<ol>
+<li>Add up the balances and APRs on every card.</li>
+<li>Compare the 0% period length, the transfer fee and the regular APR after the intro period.</li>
+<li>Do the quick test to work out your monthly payment.</li>
+<li>Apply, then complete the transfer before the deadline.</li>
+<li>Set up autopay for your planned payment, not just the minimum.</li>
+<li>Put the old card somewhere out of reach, but keep it open.</li>
+<li>Put a reminder in your calendar a few months before the 0% period ends.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>A balance transfer is worth it when three things are true: the interest you'll avoid is much bigger than the fee, you can pay off most of the balance before the 0% window closes, and you've stopped adding new debt. If all three are true, it's one of the fastest ways out of credit card debt.</p>
+
+<p class="art-note">Card terms such as intro periods, fees and APRs vary and change often. Check the current offer details before applying. Example figures are rounded estimates. This article is for education only and isn't financial advice.</p>
+`},
+  "debt-snowball-vs-avalanche-which-wins": {
+    cat:"banking-credit",
+    title:"Debt snowball vs. avalanche: which wins?",
+    dek:"One method saves the most money on paper. The other gets more people to the finish line. Here's how to choose, with real numbers.",
+    date:"Nov 17, 2026", read:"6 min read",
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li><strong>Snowball:</strong> Pay off the smallest balance first. You get quick wins that keep you motivated.</li>
+<li><strong>Avalanche:</strong> Pay off the highest interest rate first. It costs you the least in interest.</li>
+<li>The money difference is often smaller than people expect. The best method is the one you'll keep doing.</li>
+</ul></div>
+
+<p>When you have several debts, it's hard to know where to send extra money. Both of these methods start the same way. You pay the minimum on everything, then put every extra dollar toward one target debt. When that debt is gone, its payment "rolls over" to the next one. The only difference is the order of the targets.</p>
+
+<h2>The debt snowball</h2>
+<p>List your debts from <strong>smallest balance to largest</strong>, no matter the interest rate. Attack the smallest one first.</p>
+<p><strong>Why it works:</strong> You wipe out a whole debt fast, often within months. That means one less bill, one less due date and real proof that the plan is working. That momentum matters. Research on real borrowers suggests that fully clearing individual balances helps people stick with paying off debt.</p>
+
+<h2>The debt avalanche</h2>
+<p>List your debts from <strong>highest interest rate to lowest</strong>, no matter the balance. Attack the most expensive one first.</p>
+<p><strong>Why it works:</strong> The highest rate is the debt that grows fastest, so knocking it out first means you pay the least total interest. It's the mathematically best order.</p>
+
+<h2>Let's run the numbers</h2>
+<p>Here's one example with three debts and a total budget of <strong>$625 a month</strong> (the minimums plus $300 extra):</p>
+<table class="weights">
+<thead><tr><th>Debt</th><th>Balance</th><th>APR</th><th>Minimum</th></tr></thead>
+<tbody>
+<tr><td>Store card</td><td>$800</td><td>20%</td><td>$25</td></tr>
+<tr><td>Credit card</td><td>$4,500</td><td>26%</td><td>$90</td></tr>
+<tr><td>Car loan</td><td>$7,000</td><td>7%</td><td>$210</td></tr>
+</tbody></table>
+<table class="weights">
+<thead><tr><th></th><th>Snowball</th><th>Avalanche</th></tr></thead>
+<tbody>
+<tr><td>First debt paid off</td><td>Store card, month 3</td><td>Credit card, month 14</td></tr>
+<tr><td>Debt-free in</td><td>23 months</td><td>23 months</td></tr>
+<tr><td>Total interest paid</td><td>About $1,575</td><td>About $1,520</td></tr>
+</tbody></table>
+<p>The avalanche saves about <strong>$55</strong> here. The snowball gets you your first win <strong>11 months sooner</strong>. That's the real trade-off. The gap grows when your debts have very different rates and big balances, and shrinks when the rates are close.</p>
+<p class="art-note" style="margin-top:0;border:0;padding:0">Example assumes fixed minimum payments and no new charges; figures are rounded.</p>
+
+<h2>How to choose</h2>
+<h3>Pick the snowball if…</h3>
+<ul>
+<li>You've tried to pay off debt before and lost steam.</li>
+<li>You have a few small balances you could clear quickly.</li>
+<li>Juggling lots of bills stresses you out and you want fewer of them fast.</li>
+</ul>
+<h3>Pick the avalanche if…</h3>
+<ul>
+<li>You're motivated by numbers and can stay on track without quick wins.</li>
+<li>One debt has a much higher rate than the rest, like a 29% card next to a 6% student loan.</li>
+<li>Your balances are large, so the interest savings could be big.</li>
+</ul>
+<div class="callout"><strong>Hybrid option:</strong> Knock out one or two tiny balances first for momentum, then switch to the avalanche for the rest. There's no rule against mixing them.</div>
+
+<h2>Make either method work better</h2>
+<ol>
+<li><strong>Stop adding new debt.</strong> Neither method works if the balances keep growing. Use cash or debit while you pay down.</li>
+<li><strong>Keep a small emergency fund.</strong> Even $1,000 keeps a surprise car repair from landing back on a card.</li>
+<li><strong>Automate the minimums.</strong> Then make the extra payment by hand each payday so you see your progress.</li>
+<li><strong>Lower the rates where you can.</strong> A 0% balance transfer or a lower-rate consolidation loan can speed up either plan.</li>
+<li><strong>Roll over every freed-up dollar.</strong> When a debt is paid off, its whole payment goes to the next target. Don't let it disappear into spending.</li>
+<li><strong>Track it visually.</strong> A simple chart on the fridge or a spreadsheet you cross off works surprisingly well.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>The avalanche wins on paper and the snowball often wins in real life. If you're sure you'll stick with it, choose the avalanche. If motivation has been the problem, choose the snowball and don't feel bad about the small extra cost. Getting to zero is what counts.</p>
+
+<p class="art-note">This article is for education only and isn't financial advice. If you're struggling to make minimum payments, a nonprofit credit counselor (look for NFCC members) can help you review your options.</p>
+`},
+  "how-to-build-credit-with-no-credit-history": {
+    cat:"banking-credit",
+    title:"How to build credit with no credit history",
+    dek:"No credit history means lenders can't score you yet. You can't skip that step, but you can get through it in months, not years.",
+    date:"Nov 17, 2026", read:"6 min read",
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>With no credit history, many scoring models can't produce a score for you at all. You're "credit invisible," not bad at credit.</li>
+<li>The fastest ways to start are a secured credit card, a credit-builder loan or becoming an authorized user.</li>
+<li>Pay on time and keep balances low, and a solid score can follow within about 6 to 12 months.</li>
+</ul></div>
+
+<p>It's the classic catch-22: you need credit to get credit. Students, new arrivals to the U.S. and people who've always paid cash run into it all the time. The good news is that there are products built for exactly this situation, and they work.</p>
+
+<h2>Why you don't have a score yet</h2>
+<p>A credit score is a summary of your credit report. If your report is empty or too thin, there's nothing to summarize. Classic FICO models generally need at least one account that's been open for about six months and has been reported in the last six months. VantageScore can often score you sooner. Either way, the first step is the same: get an account reporting to the credit bureaus.</p>
+
+<h2>Five ways to start</h2>
+
+<h3>1. A secured credit card</h3>
+<p>You put down a refundable deposit, often $200 to $500, and that usually becomes your credit limit. Otherwise it works like any credit card, and your payments are reported to the bureaus. Many issuers review your account after several months of on-time payments and may "graduate" you to a regular card and return your deposit.</p>
+<p><strong>Look for:</strong> no annual fee, reporting to all three bureaus (Equifax, Experian and TransUnion) and a clear path to an upgrade.</p>
+
+<h3>2. A credit-builder loan</h3>
+<p>These are offered by many credit unions, community banks and some apps. The lender holds the loan amount in a savings account while you make fixed monthly payments. When you're done, you get the money back, minus any interest and fees. You build payment history <em>and</em> savings at the same time. It also adds an installment loan to your credit mix.</p>
+
+<h3>3. Become an authorized user</h3>
+<p>A family member or partner with good credit habits adds you to their credit card. If that issuer reports authorized users, the card's history can show up on your report. Only do this with someone who pays on time and keeps a low balance, because their mistakes can show up on your report too. You don't even need to use the card.</p>
+
+<h3>4. A starter or student card</h3>
+<p>Some unsecured cards are designed for people with limited history, especially students. They usually come with low limits. Approval isn't guaranteed, so check for "pre-qualification" tools, which use a soft inquiry that won't affect your credit.</p>
+
+<h3>5. Get credit for bills you already pay</h3>
+<p>Rent-reporting services and some bank-data tools can add rent, utilities or phone payments to your credit file. They don't count in every scoring model, but newer ones, including VantageScore 4.0, can use rent data when it's reported.</p>
+
+<div class="callout"><strong>Avoid:</strong> Anyone who promises to "create a new credit identity" or sells you a "CPN" instead of your Social Security number. That's fraud, and you could be the one held responsible. Also be wary of paying big fees for "credit repair" when you don't have any credit yet.</div>
+
+<h2>Use your first account the right way</h2>
+<ol>
+<li><strong>Make a small purchase each month,</strong> like a streaming subscription or a tank of gas.</li>
+<li><strong>Pay the full statement balance</strong> by the due date. You never need to carry a balance or pay interest to build credit. That's a myth.</li>
+<li><strong>Keep your balance low.</strong> On a $300 limit, try to keep the reported balance under about $30 to $90.</li>
+<li><strong>Turn on autopay</strong> so you never miss a payment. Payment history is the biggest part of your score.</li>
+<li><strong>Don't apply for lots of cards at once.</strong> One or two accounts are enough to start.</li>
+</ol>
+
+<h2>A realistic timeline</h2>
+<ul>
+<li><strong>Month 0:</strong> Open a secured card or credit-builder loan. Ask a family member about adding you as an authorized user.</li>
+<li><strong>Months 1 to 6:</strong> Small charges, paid in full and on time, every month.</li>
+<li><strong>Around 6 months:</strong> Most scoring models can now give you a score. Check it for free through your bank or card app.</li>
+<li><strong>Months 6 to 12:</strong> Ask about graduating your secured card. If you want a second account, consider one regular no-fee card.</li>
+<li><strong>Beyond:</strong> Keep your oldest account open and let time work for you.</li>
+</ul>
+
+<h2>Check your progress</h2>
+<p>You can pull your credit reports from all three bureaus for free every week at <a href="https://www.annualcreditreport.com" target="_blank" rel="noopener">AnnualCreditReport.com</a>. Make sure your new accounts appear and that the information is correct.</p>
+
+<h2>The bottom line</h2>
+<p>Starting from zero isn't a bad credit score. It's a blank page. Open one or two starter accounts, use them lightly and pay on time, every time. In a year you can have a credit history that opens the door to better cards, loans and apartments.</p>
+
+<p class="art-note">Product terms vary by lender. Confirm that any account you open reports to the credit bureaus. This article is for education only and isn't financial advice.</p>
+`},
+  "overdraft-fees-how-to-avoid-them-for-good": {
+    cat:"banking-credit",
+    title:"Overdraft fees: how to avoid them for good",
+    dek:"An overdraft fee can turn a $5 coffee into a $30 mistake. A few settings and habits can make sure it never happens to you again.",
+    date:"Nov 17, 2026", read:"5 min read",
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>An overdraft happens when you spend more than is in your checking account and the bank covers it for a fee, often around $25 to $35.</li>
+<li>You can opt out of overdraft coverage for debit card and ATM transactions. Then they're simply declined, with no fee.</li>
+<li>Low-balance alerts, a small cushion and a bank with no overdraft fees take care of the rest.</li>
+</ul></div>
+
+<p>Overdraft fees are among the most frustrating costs in banking because they hit when money is already tight. Banks still collect billions of dollars from them every year. The good news is that they're almost entirely avoidable once you know how they work.</p>
+
+<h2>How overdrafts work</h2>
+<p>If a payment comes through and your balance can't cover it, your bank has two choices:</p>
+<ul>
+<li><strong>Pay it anyway</strong> and charge you an <strong>overdraft fee</strong>. Your balance goes negative.</li>
+<li><strong>Reject it</strong> and possibly charge a <strong>non-sufficient funds (NSF) fee</strong>, which many banks have dropped.</li>
+</ul>
+<p>Bankrate's most recent survey put the average overdraft fee at about $27, and many large banks still charge around $35. Some charge it more than once a day, and some add an extra fee if you stay negative for several days. A few small purchases on a bad day can add up to $100 or more in fees.</p>
+
+<h2>Step 1: Check your overdraft settings</h2>
+<p>Under federal rules, a bank can't charge you an overdraft fee on <strong>ATM withdrawals or one-time debit card purchases</strong> unless you've opted in to overdraft coverage. Many people opted in without realizing it when they opened their account.</p>
+<p>Log in to your bank app or call the bank and ask: <em>"Am I opted in to overdraft coverage for debit card and ATM transactions?"</em> If you are, opt out. A card swipe without enough money will just be declined, which is mildly embarrassing but free.</p>
+<div class="callout"><strong>Note:</strong> Opting out covers debit card and ATM transactions. Checks, automatic bill payments and other recurring charges can still overdraw your account, so the next steps matter too.</div>
+
+<h2>Step 2: Turn on low-balance alerts</h2>
+<p>Almost every bank app can send a text or push alert when your balance drops below an amount you choose. Set it to something like $100 or $200, enough warning to move money or hold off on spending.</p>
+
+<h2>Step 3: Link a backup account</h2>
+<p>Many banks offer <strong>overdraft protection transfers</strong>. If checking runs short, the bank pulls money from your linked savings account. The transfer fee, if any, is usually much smaller than an overdraft fee, and at many banks it's free. Ask how yours works.</p>
+
+<h2>Step 4: Keep a buffer</h2>
+<p>Treat a small amount, say $100 to $200, as "zero." Don't count it as spending money. That buffer absorbs the timing surprises: a subscription that renews early or a payment that clears before your paycheck lands.</p>
+
+<h2>Step 5: Line up your bill dates with payday</h2>
+<p>Many overdrafts come from timing, not overspending. Most companies will let you change a due date. Move your big bills to just after payday so the money is there when they're paid.</p>
+
+<h2>Step 6: Consider a bank that doesn't charge overdraft fees</h2>
+<p>A number of banks, including several large ones and many online banks, have dropped overdraft fees entirely. Others give you a grace period or a small "cushion" before any fee applies. If your bank still charges $35 per overdraft, switching may be the simplest fix of all.</p>
+
+<h2>Already got hit? Ask for a refund</h2>
+<p>If it's a first-time or rare overdraft, call your bank and politely ask them to waive the fee. Banks often refund one, especially for long-time customers. It takes five minutes and frequently works.</p>
+
+<h2>Watch out for the "cheap" fixes</h2>
+<p>Paycheck advance apps and payday loans can look like an easy way out of an overdraft. Some charge "tips" or express fees that work out to very high costs for a short loan. Use them rarely, if ever. A small emergency fund is the real long-term fix.</p>
+
+<h2>Your 10-minute checklist</h2>
+<ol>
+<li>Opt out of debit and ATM overdraft coverage.</li>
+<li>Set a low-balance alert.</li>
+<li>Link your savings account for overdraft protection transfers.</li>
+<li>Pick your buffer amount and treat it as zero.</li>
+<li>Move bill due dates to right after payday.</li>
+<li>Compare your bank's fees with no-overdraft-fee banks.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>Overdraft fees aren't a cost of having a bank account. They're a setting you can usually turn off, plus a couple of habits that keep the rest away. Spend 10 minutes on it today and you may never pay one again.</p>
+
+<p class="art-note">Overdraft policies vary by bank and change often. Check your account agreement for current terms. This article is for education only and isn't financial advice.</p>
+`},
+};
+
 const bySlug = Object.fromEntries(CATS.map(c=>[c.slug,c]));
 const $ = s=>document.querySelector(s);
 const readTime = i => (4 + (i*3)%7) + " min read";
 const dates = ["Nov 15","Nov 13","Nov 11","Nov 8","Nov 5","Nov 2"];
+const slugify = t => t.toLowerCase().replace(/&/g," and ").replace(/['’]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+const artUrl = (c,t) => `#/${c.slug}/${slugify(t)}`;
+const artMeta = (t,i,off=0) => { const a = ARTICLES[slugify(t)]; return a ? [a.date, a.read] : [dates[(i+off)%6]+", 2026", readTime(i+off)]; };
 
 function card(c,title,i){
-  return `<a class="card" href="#/${c.slug}"><div class="thumb" style="background:${c.tint}"><span class="pill" style="color:${c.color}">${c.name}</span>${c.ico}</div>
-  <div class="card-body"><h3>${title}</h3><p>A clear, step-by-step guide that explains what it is, why it matters and what to do next.</p>
-  <div class="meta"><span>${dates[i%6]}, 2026</span><span>${readTime(i)}</span></div></div></a>`;
+  const a = ARTICLES[slugify(title)], [d,r] = artMeta(title,i);
+  return `<a class="card" href="${artUrl(c,title)}"><div class="thumb" style="background:${c.tint}"><span class="pill" style="color:${c.color}">${c.name}</span>${c.ico}</div>
+  <div class="card-body"><h3>${title}</h3><p>${a ? a.dek : "A clear, step-by-step guide that explains what it is, why it matters and what to do next."}</p>
+  <div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`;
 }
 
 // Nav, tiles, footer, chips
@@ -439,7 +891,7 @@ $("#menu").innerHTML = CATS.map(c=>`<li><a href="#/${c.slug}" data-slug="${c.slu
 $("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="#/${c.slug}"><div class="ico" style="background:${c.tint}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
 $("#footCats").innerHTML = CATS.map(c=>`<li><a href="#/${c.slug}">${c.name}</a></li>`).join("");
 $("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><input type="checkbox" value="${c.slug}"><span>${c.ico} ${c.name}</span></label>`).join("");
-$("#trendList").innerHTML = bySlug.trending.posts.slice(0,5).map((t,i)=>`<li><a href="#/trending"><small>${["Buzzword Brief","Financial Freedom","Banking & Credit","Money News","Personal Finance"][i]}</small><strong>${t}</strong></a></li>`).join("");
+$("#trendList").innerHTML = bySlug.trending.posts.slice(0,5).map((t,i)=>`<li><a href="${artUrl(bySlug.trending,t)}"><small>${["Buzzword Brief","Financial Freedom","Banking & Credit","Money News","Personal Finance"][i]}</small><strong>${t}</strong></a></li>`).join("");
 $("#latestGrid").innerHTML = ["investing","banking-credit","insurance","cryptocurrency","personal-finance","financial-freedom"].map((s,i)=>card(bySlug[s],bySlug[s].posts[i%6],i)).join("");
 
 // Category pages
@@ -468,7 +920,7 @@ function renderCat(c){
 
         <div class="eyebrow" style="color:${c.color}">Latest</div>
         <h2 style="margin:6px 0 20px">Recently published</h2>
-        <div class="rows">${c.posts.slice(3).map((p,i)=>`<a class="row card" href="#/${c.slug}"><div class="thumb" style="background:${c.tint}">${c.ico}</div><div class="card-body"><h3>${p}</h3><p>Everything you need to know, with real examples and a simple next step.</p><div class="meta"><span>${dates[(i+3)%6]}, 2026</span><span>${readTime(i+3)}</span></div></div></a>`).join("")}</div>
+        <div class="rows">${c.posts.slice(3).map((p,i)=>{const [d,r]=artMeta(p,i,3); return `<a class="row card" href="${artUrl(c,p)}"><div class="thumb" style="background:${c.tint}">${c.ico}</div><div class="card-body"><h3>${p}</h3><p>Everything you need to know, with real examples and a simple next step.</p><div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`}).join("")}</div>
       </div>
       <aside>
         <div class="box side-nl">
@@ -490,13 +942,39 @@ function renderCat(c){
   document.querySelectorAll(".side-form").forEach(f=>f.addEventListener("submit",sideSubmit));
 }
 
+// Article pages
+function renderArticle(c, aslug){
+  const a = ARTICLES[aslug];
+  const title = a ? a.title : (c.posts.find(p=>slugify(p)===aslug) || CATS.flatMap(x=>x.posts).find(p=>slugify(p)===aslug) || "Article not found");
+  const more = c.posts.filter(p=>slugify(p)!==aslug).slice(0,3);
+  const moreHtml = `<div class="art-more"><div class="eyebrow" style="color:${c.color}">Keep reading</div><h2 style="margin:6px 0 20px">More ${c.name.toLowerCase()} guides</h2><div class="grid-3">${more.map((p,i)=>card(c,p,i)).join("")}</div></div>`;
+  if(!a){
+    $("#page-art").innerHTML = `<div class="soon"><div class="big-ico">${c.ico}</div><div class="eyebrow" style="color:${c.color}">${c.name} · Coming soon</div><h1 style="font-size:clamp(1.7rem,3.5vw,2.4rem);margin-top:10px">${title}</h1><p>We're putting the finishing touches on this guide. Join The Weekly Reason and we'll send it to you the Sunday it goes live.</p><a href="#newsletter" data-scroll class="btn btn-primary">Notify me →</a></div>${moreHtml}`;
+    return title;
+  }
+  $("#page-art").innerHTML = `
+  <div class="art-hero" style="background:linear-gradient(135deg,${c.color},${c.color}dd)">
+    <div class="wrap">
+      <div class="crumbs"><a href="#/">Home</a> › <a href="#/${c.slug}">${c.name}</a></div>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">${c.ico} ${c.name}</span>
+      <h1>${a.title}</h1>
+      <p class="dek">${a.dek}</p>
+      <div class="art-meta"><span>By the Rich With Reason team</span><span>${a.date}</span><span>${a.read}</span></div>
+    </div>
+  </div>
+  <article class="article">${a.body}</article>
+  ${moreHtml}`;
+  return a.title;
+}
+
 // Router
 function route(){
-  const slug = location.hash.replace(/^#\/?/,"");
+  const [slug, aslug] = location.hash.replace(/^#\/?/,"").split("/");
   if(slug==="newsletter") return;
   document.querySelectorAll(".menu a").forEach(a=>a.classList.toggle("active",a.dataset.slug===slug));
   $("#menu").classList.remove("open");
-  if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); document.title = bySlug[slug].name+" — Rich With Reason"; }
+  if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); document.title = t+" — Rich With Reason"; }
+  else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); document.title = bySlug[slug].name+" — Rich With Reason"; }
   else { show("home"); document.title = "Rich With Reason — Money, Explained With Reason"; }
   window.scrollTo({top:0,behavior:"instant"});
 }
