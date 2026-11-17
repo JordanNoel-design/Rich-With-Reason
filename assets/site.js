@@ -25,7 +25,7 @@ const CATS = [
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
    steps:[["Catch the Buzzword Brief","One term, decoded in 30 seconds."],["Scan the week's money news","What happened and why it matters to you."],["Read the most-shared post","See what other readers found useful."],["Ask us a question","We answer reader questions every week."]],
-   posts:["Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
+   posts:["Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
   {slug:"investing", name:"Investing", ico:"📈", color:"#3b3a8f", tint:"#ecebfa",
    blurb:"Index funds, retirement accounts and growing money for the long run.",
@@ -2390,6 +2390,68 @@ const ARTICLES = {
 <p>Disability is more common than most people expect, and the financial impact can be devastating. Check your work coverage today, find out what it actually pays, and fill any gap. It's one of the most important and most overlooked parts of a solid financial plan.</p>
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
+`},
+  "buzzword-brief-what-does-rate-hike-mean": {
+    cat:"trending",
+    title:"Buzzword Brief: what does 'rate hike' mean?",
+    dek:"With inflation heating up again, the Fed is widely expected to raise rates in December. Here's what a 'rate hike' is, how it reaches your credit card and savings account, and what to do about it.",
+    date:"Nov 17, 2026", read:"6 min read",
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>A <strong>rate hike</strong> is when the Federal Reserve raises its benchmark interest rate, the federal funds rate, to cool the economy and bring inflation down.</li>
+<li>Higher rates make borrowing more expensive (credit cards, car loans, home equity lines) and saving more rewarding.</li>
+<li>Markets now expect the Fed to raise rates again at its December 8 and 9 meeting, its second hike of 2026, because inflation has picked back up.</li>
+</ul></div>
+
+<p>For most of the last two years, money headlines were about rate <em>cuts</em>. That has flipped. After a hot October inflation report, "rate hike" is back at the top of the financial news. Here's what it means, how it works and what it could mean for your budget.</p>
+
+<h2>What is a rate hike?</h2>
+<p>A rate hike is a decision by the Federal Reserve's policy committee, the Federal Open Market Committee (FOMC), to raise the target range for the <strong>federal funds rate</strong>. That's the interest rate banks charge each other for overnight loans. The Fed doesn't set your credit card rate or your mortgage rate directly, but the federal funds rate is the starting point that many other rates are built on.</p>
+<p>Hikes are usually announced in "basis points." One basis point is one-hundredth of a percentage point, so a 25-basis-point hike is a quarter of a percentage point (0.25%).</p>
+
+<h2>How the mechanism works</h2>
+<p>The Fed steers the federal funds rate mostly through the interest it pays banks on the money they keep at the Fed. In its <a href="https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf" target="_blank" rel="noopener">October 28 statement</a>, for example, the Fed set that "interest on reserve balances" rate at 3.90%, inside its 3.75% to 4% target range. Banks won't lend to each other for much less than they can earn risk-free at the Fed, so moving that rate moves the whole range.</p>
+<p>From there, the change ripples outward:</p>
+<ul>
+<li><strong>The prime rate:</strong> By long-standing convention, banks set their prime rate about 3 percentage points above the federal funds rate, and they usually adjust it right after a Fed move.</li>
+<li><strong>Credit cards:</strong> Most cards have variable rates set at prime plus a margin, so a quarter-point Fed hike typically pushes your card's APR up by about a quarter point within a billing cycle or two, as <a href="https://www.cnbc.com/select/how-credit-apr-is-affected-when-fed-raises-interest-rates" target="_blank" rel="noopener">CNBC Select explains</a>.</li>
+<li><strong>Savings:</strong> Banks tend to raise yields on high-yield savings accounts and CDs when rates rise, though often more slowly than they raise loan rates.</li>
+<li><strong>Mortgages:</strong> Fixed mortgage rates track longer-term bond yields, like the 10-year Treasury, more than the Fed's overnight rate. Those yields have been rising too: the 10-year yield touched about 5.17% on November 13, <a href="https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html" target="_blank" rel="noopener">according to CNBC</a>.</li>
+</ul>
+<p>The goal is to make borrowing and spending less attractive, so demand cools and price increases slow. Rate changes take months to work through the economy, so the Fed often moves before inflation is fully under control.</p>
+
+<h2>A quick history</h2>
+<p>Rate hikes come in cycles. In 1994, the Fed surprised markets with a series of increases, including a 75-basis-point move that stayed the largest single hike until <a href="https://www.bankrate.com/banking/federal-reserve/fomc-meeting-recap-june-2022" target="_blank" rel="noopener">June 2022</a>. In 2022, facing the highest inflation in about 40 years, the Fed raised rates at the <a href="https://www.chicagofed.org/publications/chicago-fed-letter/2023/476" target="_blank" rel="noopener">fastest pace since the 1980s</a>, including several 75-basis-point hikes, and kept going into 2023.</p>
+<p>After cutting rates in 2024 and 2025, the Fed reversed course this fall. On September 16, 2026, it raised its target range by a quarter point to 3.75% to 4%, its first hike since 2023, <a href="https://www.npr.org/2026/09/16/nx-s1-5968724/federal-reserve-interest-rates-inflation-economy" target="_blank" rel="noopener">NPR reported</a>. At the October meeting it held steady, but two officials, Governors Lisa Cook and Beth Hammack, voted for another increase right away.</p>
+
+<h2>Why it's in the news this week</h2>
+<ul>
+<li><strong>Inflation picked up:</strong> The <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">Bureau of Labor Statistics</a> reported that consumer prices rose 0.4% in October, and core prices (excluding food and energy) rose 0.3%.</li>
+<li><strong>Forecasters agree:</strong> All 101 economists in a <a href="https://www.fxstreet.com/news/25-basis-points-is-the-unanimous-call-for-december-fed-hike-reuters-poll-202611101326" target="_blank" rel="noopener">Reuters poll</a> taken November 6 to 10 expect a quarter-point hike in December, which would lift the range to 4% to 4.25%. They split on what comes next: 56 said December would be the last hike of this cycle, while 45 expect at least two more.</li>
+<li><strong>Bigger move on the table:</strong> Fed Governor Christopher Waller said a half-point hike should be considered in December, <a href="https://www.forbes.com/sites/simonmoore/2026/11/13/waller-floats-prospect-of-larger-december-interest-rate-hike/" target="_blank" rel="noopener">Forbes reported</a>, though he leans toward a quarter point.</li>
+</ul>
+<p>Nothing is final until the Fed announces its decision on December 9.</p>
+
+<h2>What it means for your wallet</h2>
+<ul>
+<li><strong>Tackle variable-rate debt first.</strong> Credit cards and home equity lines reprice quickly. If you carry a balance, every hike makes it more expensive, so paying it down, or moving it to a 0% balance transfer card, is worth more now.</li>
+<li><strong>Lock in fixed rates when you can.</strong> If you're shopping for a car loan or personal loan, a fixed rate protects you from future hikes.</li>
+<li><strong>Make your cash earn more.</strong> Higher rates are good news for savers. If your emergency fund sits in an account paying close to zero, a high-yield savings account or short-term CD could earn far more.</li>
+<li><strong>Don't overreact as an investor.</strong> Rate news can move markets sharply day to day. For goals years away, a steady plan usually beats trading on Fed headlines.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Basis point:</strong> one-hundredth of a percentage point. 25 basis points = 0.25%.</li>
+<li><strong>Hawkish:</strong> leaning toward higher rates to fight inflation. "Dovish" is the opposite.</li>
+<li><strong>Tightening cycle:</strong> a stretch of repeated hikes, like the one that may be underway now.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>A rate hike is the Fed's way of tapping the brakes on inflation by making money more expensive to borrow. You can't control what the Fed does on December 9, but you can control your exposure: shrink variable-rate debt, keep your savings in an account that pays a real yield, and stick to your long-term investing plan.</p>
+
+<p class="art-note">Rates and economic data cited are from the Federal Reserve, the Bureau of Labor Statistics and news reports as of November 17, 2026, and will change. This post is for education only and is not investment advice.</p>
 `},
   "buzzword-brief-what-does-soft-landing-mean": {
     cat:"trending",
