@@ -34,7 +34,9 @@
 <meta name="twitter:image" content="https://richwithreason.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=b51cd643">
+<link rel="stylesheet" href="/assets/site.css?v=3f57e56d">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Rich With Reason","url":"https://richwithreason.com/","publisher":{"@type":"Organization","name":"Rich With Reason","url":"https://richwithreason.com/","logo":{"@type":"ImageObject","url":"https://richwithreason.com/apple-touch-icon.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rich With Reason","url":"https://richwithreason.com/","logo":{"@type":"ImageObject","url":"https://richwithreason.com/apple-touch-icon.png"},"founder":{"@type":"Person","name":"Jordan Noel","url":"https://richwithreason.com/about/","jobTitle":"Founder, Rich With Reason","alumniOf":{"@type":"CollegeOrUniversity","name":"Temple University"},"knowsAbout":["Personal finance","Investing","Private equity accounting"]},"email":"richwreason@gmail.com"}</script>
 </head>
 <body>
 
@@ -43,7 +45,7 @@
 <header>
   <div class="wrap nav">
     <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
-    <ul class="menu" id="menu"><li class="menu-feed-li"><a class="menu-feed" href="/trending/" data-slug="trending">Trending</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li></ul>
+    <ul class="menu" id="menu"><li class="menu-feed-li"><a class="menu-feed" href="/trending/" data-slug="trending">Trending</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li class="menu-tools-li"><a href="/calculators/" data-slug="calculators">Tools</a></li></ul>
     <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -128,30 +130,25 @@
     <section style="padding-top:0">
       <div class="wrap">
         <div class="sec-head"><div><div class="eyebrow">Free tool</div><h2>See what consistency is worth</h2><p>Drag the sliders or type your own numbers to see how monthly investing compounds over time.</p></div></div>
-        <div id="calcHome"><div class="tool calc">
+        <div id="calcHome"><div class="tool calc" data-tool="compound">
     <div><div class="calc-row">
-      <label for="calc-m">Monthly contribution <span class="val" data-v="m">$300</span></label>
+      <label for="calc-compound-m">Monthly contribution <span class="val" data-v="m">$300</span></label>
       <div class="calc-in"><input type="range" data-k="m" min="0" max="10000" step="25" value="300" aria-label="Monthly contribution">
-      <span class="calc-num"><i>$</i><input type="number" id="calc-m" data-k="m" min="0" max="10000" step="25" value="300" inputmode="decimal"></span></div>
+      <span class="calc-num"><i>$</i><input type="number" id="calc-compound-m" data-k="m" min="0" max="10000" step="25" value="300" inputmode="decimal"></span></div>
       <div class="calc-range"><span>$0</span><span>$10,000</span></div></div><div class="calc-row">
-      <label for="calc-y">Years invested <span class="val" data-v="y">20 years</span></label>
+      <label for="calc-compound-y">Years invested <span class="val" data-v="y">20 years</span></label>
       <div class="calc-in"><input type="range" data-k="y" min="1" max="50" step="1" value="20" aria-label="Years invested">
-      <span class="calc-num"><input type="number" id="calc-y" data-k="y" min="1" max="50" step="1" value="20" inputmode="decimal"><i>yrs</i></span></div>
+      <span class="calc-num"><input type="number" id="calc-compound-y" data-k="y" min="1" max="50" step="1" value="20" inputmode="decimal"><i>yrs</i></span></div>
       <div class="calc-range"><span>1 year</span><span>50 years</span></div></div><div class="calc-row">
-      <label for="calc-r">Average annual return <span class="val" data-v="r">7%</span></label>
+      <label for="calc-compound-r">Average annual return <span class="val" data-v="r">7%</span></label>
       <div class="calc-in"><input type="range" data-k="r" min="0" max="15" step="0.25" value="7" aria-label="Average annual return">
-      <span class="calc-num"><input type="number" id="calc-r" data-k="r" min="0" max="15" step="0.25" value="7" inputmode="decimal"><i>%</i></span></div>
+      <span class="calc-num"><input type="number" id="calc-compound-r" data-k="r" min="0" max="15" step="0.25" value="7" inputmode="decimal"><i>%</i></span></div>
       <div class="calc-range"><span>0%</span><span>15%</span></div></div>
       <p class="calc-note">Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, and returns aren't guaranteed.</p>
     </div>
-    <div class="result">
-      <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-      <div class="big" data-o="fv">$156,278</div>
-      <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b data-o="c">$72,000</b> · growth adds <b data-o="g" style="color:var(--green)">$84,278</b></div>
-      <div class="bars" data-o="bars"><div style="height:4.929874693011211%" class=""></div><div style="height:10.598274280569647%" class=""></div><div style="height:17.115834235954015%" class=""></div><div style="height:24.609763892089408%" class=""></div><div style="height:33.22632930545561%" class=""></div><div style="height:43.13370806794949%" class=""></div><div style="height:54.52527178674315%" class=""></div><div style="height:67.62336029937721%" class=""></div><div style="height:82.68362128898649%" class=""></div><div style="height:100%" class="c"></div></div>
-    </div>
+    <div class="result" data-o="res"><div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div><div class="big">$156,278</div><div class="res-sub">You contribute <b>$72,000</b> · growth adds <b style="color:var(--green)">$84,278</b></div><div class="bars"><div style="height:4.929874693011211%" class=""></div><div style="height:10.598274280569647%" class=""></div><div style="height:17.115834235954015%" class=""></div><div style="height:24.609763892089408%" class=""></div><div style="height:33.22632930545561%" class=""></div><div style="height:43.13370806794949%" class=""></div><div style="height:54.52527178674315%" class=""></div><div style="height:67.62336029937721%" class=""></div><div style="height:82.68362128898649%" class=""></div><div style="height:100%" class="c"></div></div></div>
   </div></div>
-        <a href="/compound-calculator/" class="link-more" style="display:inline-block;margin-top:16px">How compounding works →</a>
+        <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:16px"><a href="/compound-calculator/" class="link-more">How compounding works →</a><a href="/calculators/" class="link-more">More free money tools →</a></div>
       </div>
     </section>
 
@@ -184,8 +181,9 @@
   <!-- CONTACT (rendered by JS) -->
   <div class="page" id="page-contact"></div>
 
-  <!-- COMPOUND CALCULATOR (rendered by JS) -->
-  <div class="page" id="page-calc"></div>
+  <!-- TOOLS HUB + CALCULATOR PAGES (rendered by JS) -->
+  <div class="page" id="page-tools"></div>
+  <div class="page" id="page-tool"></div>
 
   <!-- NEWSLETTER (shared on every page) -->
   <section id="newsletter">
@@ -232,7 +230,7 @@
         <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
       </div>
       <div><h4>Topics</h4><ul id="footCats"><li><a href="/trending/">Trending Posts</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li></ul></div>
-      <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/compound-calculator/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/calculators/">All money tools</a></li><li><a href="/compound-calculator/">Compound calculator</a></li><li><a href="/debt-payoff-calculator/">Debt payoff calculator</a></li><li><a href="/emergency-fund-calculator/">Emergency fund calculator</a></li><li><a href="/millionaire-calculator/">Millionaire calculator</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
     </div>
     <div class="disclaimer">
@@ -243,6 +241,6 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="/assets/site.js?v=90f5b5b5"></script>
+<script src="/assets/site.js?v=6ba28b69"></script>
 </body>
 </html>

@@ -25,6 +25,10 @@ const ICON = {
   "trending": svgIcon('<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>'),
   "investing": svgIcon('<path d="M3 20.5h18M6 20v-6M11 20V8M16 20v-9M21 20V4"/>'),
   "insurance": svgIcon('<path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>'),
+  "compound": svgIcon('<path d="M3 20h18"/><path d="M4 16c4 0 7-2 9-5s4-6 7-7"/><path d="M15 4h5v5"/>'),
+  "debt": svgIcon('<rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6 15h4"/>'),
+  "emergency": svgIcon('<path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6a2 2 0 0 0 4 0"/><path d="M12 3v0"/>'),
+  "millionaire": svgIcon('<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/>'),
   "mail": svgIcon('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>'),
 };
 const CATS = [
@@ -2888,6 +2892,303 @@ That's $8,400 a year saved and invested without a single decision.</div>
 `},
 };
 
+/* ============ RELATED GUIDES ============
+   Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
+   Add an entry for every new article. */
+const RELATED = {
+  "buzzword-brief-what-does-rate-hike-mean": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","buzzword-brief-what-does-soft-landing-mean","debt"],
+  "buzzword-brief-what-does-soft-landing-mean": ["buzzword-brief-what-does-rate-hike-mean","how-much-should-be-in-your-emergency-fund","what-the-latest-jobs-report-means-for-your-wallet","emergency"],
+  "the-3-account-system-that-makes-saving-automatic": ["high-yield-savings-vs-money-market-accounts","sinking-funds-the-stress-free-way-to-save","why-your-savings-rate-matters-more-than-returns","compound"],
+  "are-high-yield-savings-rates-still-worth-it": ["high-yield-savings-vs-money-market-accounts","how-much-should-be-in-your-emergency-fund","buzzword-brief-what-does-rate-hike-mean","emergency"],
+  "what-the-latest-jobs-report-means-for-your-wallet": ["how-much-should-be-in-your-emergency-fund","12-side-hustles-you-can-start-this-weekend","buzzword-brief-what-does-soft-landing-mean","emergency"],
+  "loud-budgeting-explained": ["the-50-30-20-budget-explained-with-examples","20-painless-ways-to-cut-monthly-bills","how-to-talk-about-money-with-your-partner"],
+  "reader-q-should-i-pay-off-debt-or-invest-first": ["debt-snowball-vs-avalanche-which-wins","roth-ira-vs-traditional-ira-simply-explained","how-much-should-be-in-your-emergency-fund","debt"],
+  "the-50-30-20-budget-explained-with-examples": ["sinking-funds-the-stress-free-way-to-save","20-painless-ways-to-cut-monthly-bills","the-3-account-system-that-makes-saving-automatic"],
+  "how-much-should-be-in-your-emergency-fund": ["high-yield-savings-vs-money-market-accounts","sinking-funds-the-stress-free-way-to-save","the-3-account-system-that-makes-saving-automatic","emergency"],
+  "sinking-funds-the-stress-free-way-to-save": ["how-much-should-be-in-your-emergency-fund","the-50-30-20-budget-explained-with-examples","high-yield-savings-vs-money-market-accounts","emergency"],
+  "tax-refunds-vs-adjusting-your-withholding": ["the-50-30-20-budget-explained-with-examples","hsa-vs-fsa-explained","roth-ira-vs-traditional-ira-simply-explained"],
+  "20-painless-ways-to-cut-monthly-bills": ["how-to-lower-your-car-insurance-premium","overdraft-fees-how-to-avoid-them-for-good","the-50-30-20-budget-explained-with-examples"],
+  "how-to-talk-about-money-with-your-partner": ["the-50-30-20-budget-explained-with-examples","how-much-life-insurance-is-enough","loud-budgeting-explained"],
+  "what-is-fire-lean-fat-and-coast-explained": ["how-to-calculate-your-financial-independence-number","the-4-rule-in-plain-english","why-your-savings-rate-matters-more-than-returns","millionaire"],
+  "the-4-rule-in-plain-english": ["how-to-calculate-your-financial-independence-number","what-is-fire-lean-fat-and-coast-explained","how-to-build-a-three-fund-portfolio","millionaire"],
+  "12-side-hustles-you-can-start-this-weekend": ["passive-income-ideas-that-actually-work","tax-refunds-vs-adjusting-your-withholding","why-your-savings-rate-matters-more-than-returns","compound"],
+  "how-to-calculate-your-financial-independence-number": ["the-4-rule-in-plain-english","what-is-fire-lean-fat-and-coast-explained","why-your-savings-rate-matters-more-than-returns","millionaire"],
+  "passive-income-ideas-that-actually-work": ["12-side-hustles-you-can-start-this-weekend","index-funds-vs-etfs-whats-the-difference","high-yield-savings-vs-money-market-accounts","compound"],
+  "why-your-savings-rate-matters-more-than-returns": ["how-to-calculate-your-financial-independence-number","the-3-account-system-that-makes-saving-automatic","what-is-an-expense-ratio-and-why-it-matters","millionaire"],
+  "how-credit-scores-are-actually-calculated": ["how-to-build-credit-with-no-credit-history","balance-transfer-cards-when-theyre-worth-it","debt-snowball-vs-avalanche-which-wins"],
+  "high-yield-savings-vs-money-market-accounts": ["are-high-yield-savings-rates-still-worth-it","how-much-should-be-in-your-emergency-fund","the-3-account-system-that-makes-saving-automatic","emergency"],
+  "balance-transfer-cards-when-theyre-worth-it": ["debt-snowball-vs-avalanche-which-wins","how-credit-scores-are-actually-calculated","reader-q-should-i-pay-off-debt-or-invest-first","debt"],
+  "debt-snowball-vs-avalanche-which-wins": ["balance-transfer-cards-when-theyre-worth-it","reader-q-should-i-pay-off-debt-or-invest-first","the-50-30-20-budget-explained-with-examples","debt"],
+  "how-to-build-credit-with-no-credit-history": ["how-credit-scores-are-actually-calculated","overdraft-fees-how-to-avoid-them-for-good","balance-transfer-cards-when-theyre-worth-it"],
+  "overdraft-fees-how-to-avoid-them-for-good": ["the-3-account-system-that-makes-saving-automatic","how-much-should-be-in-your-emergency-fund","20-painless-ways-to-cut-monthly-bills","emergency"],
+  "index-funds-vs-etfs-whats-the-difference": ["how-to-build-a-three-fund-portfolio","what-is-an-expense-ratio-and-why-it-matters","how-to-start-investing-with-100","compound"],
+  "roth-ira-vs-traditional-ira-simply-explained": ["how-to-start-investing-with-100","hsa-vs-fsa-explained","reader-q-should-i-pay-off-debt-or-invest-first","millionaire"],
+  "how-to-start-investing-with-100": ["index-funds-vs-etfs-whats-the-difference","dollar-cost-averaging-explained","roth-ira-vs-traditional-ira-simply-explained","compound"],
+  "what-is-an-expense-ratio-and-why-it-matters": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","why-your-savings-rate-matters-more-than-returns","compound"],
+  "dollar-cost-averaging-explained": ["how-to-start-investing-with-100","index-funds-vs-etfs-whats-the-difference","why-your-savings-rate-matters-more-than-returns","compound"],
+  "how-to-build-a-three-fund-portfolio": ["index-funds-vs-etfs-whats-the-difference","what-is-an-expense-ratio-and-why-it-matters","the-4-rule-in-plain-english","millionaire"],
+  "term-vs-whole-life-insurance-which-do-you-need": ["how-much-life-insurance-is-enough","disability-insurance-the-coverage-most-people-skip","how-to-build-a-three-fund-portfolio"],
+  "how-much-life-insurance-is-enough": ["term-vs-whole-life-insurance-which-do-you-need","disability-insurance-the-coverage-most-people-skip","how-to-talk-about-money-with-your-partner"],
+  "why-renters-insurance-is-the-best-deal-in-finance": ["how-to-lower-your-car-insurance-premium","20-painless-ways-to-cut-monthly-bills","how-much-should-be-in-your-emergency-fund"],
+  "how-to-lower-your-car-insurance-premium": ["why-renters-insurance-is-the-best-deal-in-finance","20-painless-ways-to-cut-monthly-bills","how-credit-scores-are-actually-calculated"],
+  "hsa-vs-fsa-explained": ["roth-ira-vs-traditional-ira-simply-explained","tax-refunds-vs-adjusting-your-withholding","disability-insurance-the-coverage-most-people-skip"],
+  "disability-insurance-the-coverage-most-people-skip": ["how-much-life-insurance-is-enough","how-much-should-be-in-your-emergency-fund","term-vs-whole-life-insurance-which-do-you-need","emergency"],
+};
+
+/* ============ MONEY TOOLS (calculators) ============
+   Every calculator uses the same widget: inputs (slider + typed number) on the left, results on the right.
+   Pure functions only here (no page access), so tools/build-pages.mjs can read them. */
+const money = v=>"$"+Math.round(v).toLocaleString("en-US");
+const FMT = {
+  usd:  {f:v=>"$"+(+v).toLocaleString("en-US"), pre:"$", suf:""},
+  years:{f:v=>v+(+v===1?" year":" years"), pre:"", suf:"yrs"},
+  pct:  {f:v=>(+v)+"%", pre:"", suf:"%"},
+  age:  {f:v=>"Age "+v, pre:"", suf:"yrs"},
+  months:{f:v=>v+(+v===1?" month":" months"), pre:"", suf:"mo"},
+};
+const fld = (label,kind,min,max,step,val) => ({label,kind,min,max,step,val});
+const spanText = n => { const y=Math.floor(n/12), m=n%12; return [y?`${y} year${y===1?"":"s"}`:"", m?`${m} month${m===1?"":"s"}`:""].filter(Boolean).join(" ") || "0 months"; };
+const monthFrom = n => { const d=new Date(); d.setDate(1); d.setMonth(d.getMonth()+n); return d.toLocaleDateString("en-US",{month:"long",year:"numeric",timeZone:"UTC"}); };
+const barsHTML = vals => { const max=Math.max(...vals,0); return `<div class="bars">${vals.map((v,i)=>`<div style="height:${max>0?Math.max(4,v/max*100):4}%" class="${i===vals.length-1?"c":""}"></div>`).join("")}</div>`; };
+const resHead = (label,big,sub) => `<div style="font-size:.85rem;color:var(--ink-soft)">${label}</div><div class="big">${big}</div><div class="res-sub">${sub}</div>`;
+
+const TOOLS = {
+  compound: {
+    slug:"compound-calculator", name:"Compound interest calculator", icon:"compound",
+    blurb:"See what steady monthly investing could grow into, and how much comes from growth.",
+    fields:{ m:fld("Monthly contribution","usd",0,10000,25,300), y:fld("Years invested","years",1,50,1,20), r:fld("Average annual return","pct",0,15,0.25,7) },
+    note:"Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, and returns aren't guaranteed.",
+    compute(v){
+      const r=v.r/1200, fvAt=n=> r ? v.m*((Math.pow(1+r,n)-1)/r) : v.m*n;
+      const fv=fvAt(v.y*12), c=v.m*v.y*12;
+      return resHead("Estimated future value", money(fv), `You contribute <b>${money(c)}</b> · growth adds <b style="color:var(--green)">${money(fv-c)}</b>`)
+        + barsHTML(Array.from({length:10},(_,i)=>fvAt(Math.round((i+1)/10*v.y*12))));
+    }
+  },
+  debt: {
+    slug:"debt-payoff-calculator", name:"Debt payoff calculator", icon:"debt",
+    blurb:"Find out when you'll be debt-free, what it will cost in interest and how much paying extra saves.",
+    fields:{ b:fld("Balance owed","usd",100,100000,100,6000), a:fld("Interest rate (APR)","pct",0,36,0.25,24), p:fld("Monthly payment","usd",25,5000,25,300) },
+    note:"Estimate only. Assumes a fixed APR, the same payment every month and no new charges. Your lender's math may differ slightly.",
+    payoff(b,a,p){ const r=a/1200; let n=0,ti=0; const path=[b]; while(b>0.005 && n<600){ const i=b*r; if(p<=i) return null; ti+=i; b=b+i-p; n++; path.push(Math.max(b,0)); } return n>=600?null:{n,ti,path}; },
+    compute(v){
+      const res=this.payoff(v.b,v.a,v.p);
+      if(!res){ const minPay=Math.ceil((v.b*v.a/1200+1)/25)*25; return resHead("Time to pay it off", "Never", `At ${money(v.p)} a month, interest grows faster than you pay it down. You'd need more than <b>${money(v.b*v.a/1200)}</b> a month just to cover interest. Try at least <b>${money(minPay)}</b>.`); }
+      const extra=this.payoff(v.b,v.a,v.p+100);
+      const step=Math.max(1,Math.ceil(res.n/10)), pts=[]; for(let i=0;i<res.path.length;i+=step) pts.push(res.path[i]); if(pts.length>10) pts.length=10;
+      return resHead("Debt-free in", spanText(res.n), `Around <b>${monthFrom(res.n)}</b> · total interest <b style="color:#b3401f">${money(res.ti)}</b> · total paid <b>${money(v.b+res.ti)}</b>`)
+        + (extra ? `<div class="res-tip">Pay <b>${money(v.p+100)}</b> a month instead and you'd be debt-free <b>${spanText(res.n-extra.n)}</b> sooner and save <b>${money(res.ti-extra.ti)}</b> in interest.</div>` : "")
+        + barsHTML(pts).replace('class="bars"','class="bars down"');
+    }
+  },
+  emergency: {
+    slug:"emergency-fund-calculator", name:"Emergency fund calculator", icon:"emergency",
+    blurb:"Work out how big your safety net should be and how long it will take to build it.",
+    fields:{ e:fld("Essential monthly expenses","usd",500,20000,50,3200), mo:fld("Months of coverage","months",1,12,1,6), s:fld("Saved so far","usd",0,100000,100,2000), c:fld("Monthly savings","usd",0,5000,25,300) },
+    note:"Count only must-pay costs: housing, utilities, groceries, transportation, insurance, minimum debt payments and childcare. Doesn't include interest, so a high-yield savings account gets you there a little faster.",
+    compute(v){
+      const target=v.e*v.mo, gap=Math.max(0,target-v.s), pct=target?Math.min(100,v.s/target*100):0;
+      const n=gap>0 && v.c>0 ? Math.ceil(gap/v.c) : 0;
+      const when = gap<=0 ? `You're fully funded. Anything extra can go toward other goals.` : v.c>0 ? `At ${money(v.c)} a month you'll get there in <b>${spanText(n)}</b>, around <b>${monthFrom(n)}</b>.` : `Add a monthly savings amount to see when you'll get there.`;
+      return resHead("Your emergency fund target", money(target), `${v.mo} months × ${money(v.e)} of essentials`)
+        + `<div class="meter"><i style="width:${pct.toFixed(1)}%"></i></div><div class="meter-l"><span>${money(v.s)} saved (${Math.round(pct)}%)</span><span>${gap>0?money(gap)+" to go":"Goal reached"}</span></div>`
+        + `<div class="res-tip">${when}</div>`;
+    }
+  },
+  millionaire: {
+    slug:"millionaire-calculator", name:"How long until I'm a millionaire?", icon:"millionaire",
+    blurb:"See the age you'd hit $1 million with your current savings and monthly investing.",
+    fields:{ age:fld("Your age","age",16,80,1,25), s:fld("Invested so far","usd",0,1000000,1000,5000), m:fld("Monthly investing","usd",0,10000,25,500), r:fld("Average annual return","pct",0,15,0.25,7) },
+    note:"Illustration only. Assumes monthly investing and compounding at a steady return, before taxes and fees. Because of inflation, $1 million in the future will buy less than $1 million today.",
+    compute(v){
+      const r=v.r/1200; let b=v.s,n=0; const path=[b];
+      while(b<1e6 && n<1200){ b=b*(1+r)+v.m; n++; path.push(b); }
+      if(b<1e6) return resHead("Age you'd reach $1 million", "Not yet", `At these numbers you won't reach $1 million within 100 years. Try investing a little more each month.`);
+      if(n===0) return resHead("Age you'd reach $1 million", "Already there", `You've already invested <b>${money(v.s)}</b>. Congratulations.`);
+      const age=v.age+Math.floor(n/12), put=v.s+v.m*n;
+      const pts=Array.from({length:10},(_,i)=>path[Math.round((i+1)/10*n)]);
+      return resHead("You'd reach $1 million at", "Age "+age, `That's <b>${spanText(n)}</b> from now · you put in <b>${money(put)}</b> · growth adds <b style="color:var(--green)">${money(1e6-put)}</b>`)
+        + barsHTML(pts);
+    }
+  },
+};
+
+function toolWidget(key){
+  const t=TOOLS[key], vals={}; for(const [k,f] of Object.entries(t.fields)) vals[k]=f.val;
+  const row=(k,f)=>{ const F=FMT[f.kind]; return `<div class="calc-row">
+      <label for="calc-${key}-${k}">${f.label} <span class="val" data-v="${k}">${F.f(f.val)}</span></label>
+      <div class="calc-in"><input type="range" data-k="${k}" min="${f.min}" max="${f.max}" step="${f.step}" value="${f.val}" aria-label="${f.label}">
+      <span class="calc-num">${F.pre?`<i>${F.pre}</i>`:""}<input type="number" id="calc-${key}-${k}" data-k="${k}" min="${f.min}" max="${f.max}" step="${f.step}" value="${f.val}" inputmode="decimal">${F.suf?`<i>${F.suf}</i>`:""}</span></div>
+      <div class="calc-range"><span>${F.f(f.min)}</span><span>${F.f(f.max)}</span></div></div>`; };
+  return `<div class="tool calc" data-tool="${key}">
+    <div>${Object.entries(t.fields).map(([k,f])=>row(k,f)).join("")}
+      <p class="calc-note">${t.note}</p>
+    </div>
+    <div class="result" data-o="res">${t.compute(vals)}</div>
+  </div>`;
+}
+
+const TOOL_KEYS = Object.keys(TOOLS);
+/* Static (non-topic) pages. tools/build-pages.mjs builds one page for each. */
+const STATIC_PAGES = [
+  {path:"about", page:"about", title:"About — Rich With Reason", desc:"Meet Jordan Noel, founder of Rich With Reason: a Temple University finance grad working in private equity accounting, making finance digestible for anyone."},
+  {path:"contact", page:"contact", title:"Contact — Rich With Reason", desc:"Get in touch with Rich With Reason. Questions, topic ideas, partnerships and press: email richwreason@gmail.com."},
+  {path:"calculators", page:"tools", title:"Free Money Calculators — Rich With Reason", desc:"Free, simple money calculators: compound interest, debt payoff, emergency fund and how long until you're a millionaire."},
+  {path:"compound-calculator", page:"tool", tool:"compound", title:"Compound Interest Calculator (Monthly Contributions) — Rich With Reason", desc:"Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works."},
+  {path:"debt-payoff-calculator", page:"tool", tool:"debt", title:"Debt Payoff Calculator: When Will I Be Debt-Free? — Rich With Reason", desc:"Free debt payoff calculator: enter your balance, APR and monthly payment to see your debt-free date, total interest and how much paying extra saves."},
+  {path:"emergency-fund-calculator", page:"tool", tool:"emergency", title:"Emergency Fund Calculator: How Much Do I Need? — Rich With Reason", desc:"Free emergency fund calculator: find out how much you need for 3 to 12 months of expenses and how long it will take to save it."},
+  {path:"millionaire-calculator", page:"tool", tool:"millionaire", title:"How Long Until I'm a Millionaire? Calculator — Rich With Reason", desc:"Free millionaire calculator: see the age you'd reach $1 million based on your savings, monthly investing and expected return."},
+];
+
+/* Explainer text and common questions for each calculator page. */
+const TOOL_PAGES = {
+  compound: {
+    h1:"Compound interest calculator",
+    dek:"See what steady monthly investing could grow into, and how much of it comes from growth rather than your own deposits.",
+    body:`
+    <h2>What is compounding?</h2>
+    <p>Compounding is what happens when your money earns a return, and then that return starts earning a return too. Instead of growing by the same amount every year, your balance grows on a bigger and bigger base. Given enough time, growth on top of growth does most of the heavy lifting.</p>
+    <h2>A simple example</h2>
+    <p>Say you invest $1,000 and it earns 7% a year. After one year you have $1,070. In year two you earn 7% on $1,070, not just on your original $1,000, so you end with about $1,145. That extra $4.90 looks tiny, but it keeps snowballing. Leave the money alone for 30 years and that single $1,000 grows to about $7,600, with nothing added.</p>
+    <h2>Why monthly investing is so powerful</h2>
+    <p>Most people don't invest one lump sum. They add a little every month. That's what the calculator above shows. Here's $300 a month at a 7% average annual return:</p>
+    <table class="weights">
+      <thead><tr><th>Years</th><th>You put in</th><th>Could grow to</th><th>From growth</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>$36,000</td><td>~$51,900</td><td>~$15,900</td></tr>
+        <tr><td>20</td><td>$72,000</td><td>~$156,300</td><td>~$84,300</td></tr>
+        <tr><td>30</td><td>$108,000</td><td>~$366,000</td><td>~$258,000</td></tr>
+        <tr><td>40</td><td>$144,000</td><td>~$787,400</td><td>~$643,400</td></tr>
+      </tbody>
+    </table>
+    <p>In the first 10 years, most of the balance is money you put in. By year 40, more than four out of every five dollars came from growth.</p>
+    <h2>Time matters more than you think</h2>
+    <p>Compare two savers, both earning 7% a year:</p>
+    <ul>
+      <li><strong>Saver A</strong> invests $200 a month from age 25 to 35, then stops completely. Total put in: $24,000.</li>
+      <li><strong>Saver B</strong> waits, then invests $200 a month from age 35 to 65. Total put in: $72,000.</li>
+    </ul>
+    <p>At 65, Saver A has about <strong>$281,000</strong> and Saver B has about <strong>$244,000</strong>. Saver A put in a third as much money and still ends up ahead, because those early dollars had 30 extra years to compound.</p>
+    <div class="callout"><strong>The takeaway:</strong> you don't need a lot of money to benefit from compounding. You need time and consistency. Starting small today usually beats starting big later.</div>
+    <h2>The Rule of 72</h2>
+    <p>A quick way to estimate how long it takes money to double: divide 72 by your annual return. At 7%, money doubles roughly every 10 years (72 ÷ 7 ≈ 10.3). At 4%, it takes about 18 years. At 10%, about 7.</p>
+    <h2>The three levers you control</h2>
+    <ol>
+      <li><strong>How much you add.</strong> Raising your monthly contribution, even by $25, adds up over decades.</li>
+      <li><strong>How long you stay invested.</strong> The biggest gains come at the end, so staying the course through ups and downs matters.</li>
+      <li><strong>What you keep.</strong> High fees and taxes eat into your return every single year. Low-cost index funds and tax-advantaged accounts like a 401(k), IRA or HSA let more of your money compound.</li>
+    </ol>
+    <p>Ready to start? Read <a href="/investing/how-to-start-investing-with-100/">How to start investing with $100</a> or <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why expense ratios matter</a>.</p>`,
+    faq:[
+      ["What is compound interest in simple terms?","It's interest on your interest. Each period, your return is added to your balance, so the next return is calculated on a bigger amount. Over long periods that makes your money grow faster and faster."],
+      ["What is the difference between simple and compound interest?","Simple interest is paid only on your original amount. Compound interest is paid on your original amount plus the interest you've already earned. $1,000 at 7% simple interest for 30 years becomes $3,100; compounded once a year, it becomes about $7,600."],
+      ["What return should I use in a compound interest calculator?","The U.S. stock market has historically averaged around 10% a year before inflation, with big swings. Many people plan with 5% to 7% to stay conservative and to roughly account for inflation. For a savings account, use its current APY."],
+      ["How often is interest compounded?","Savings accounts usually compound daily or monthly. With investments like index funds, compounding happens when gains and dividends stay invested and grow. This calculator assumes monthly compounding."],
+    ]
+  },
+  debt: {
+    h1:"Debt payoff calculator",
+    dek:"Enter your balance, interest rate and monthly payment to see your debt-free date, the total interest you'll pay and how much paying a little extra saves.",
+    body:`
+    <h2>How to use this calculator</h2>
+    <p>Enter what you owe, the card or loan's APR (you'll find it on your statement) and what you plan to pay each month. The calculator works out how many months it takes to reach zero and how much of your money goes to interest along the way. If you have several debts, run each one separately or use the combined balance and an average rate for a rough picture.</p>
+    <h2>A real example</h2>
+    <p>Say you owe <strong>$6,000 on a credit card at 24% APR</strong>:</p>
+    <table class="weights">
+      <thead><tr><th>Monthly payment</th><th>Debt-free in</th><th>Total interest</th></tr></thead>
+      <tbody>
+        <tr><td>$200</td><td>3 years 11 months</td><td>~$3,250</td></tr>
+        <tr><td>$300</td><td>2 years 2 months</td><td>~$1,740</td></tr>
+        <tr><td>$400</td><td>1 year 7 months</td><td>~$1,200</td></tr>
+      </tbody>
+    </table>
+    <p>Going from $200 to $400 a month cuts more than two years off and saves about $2,000. Extra payments are powerful because every dollar above the interest goes straight to the balance.</p>
+    <h2>Why minimum payments take so long</h2>
+    <p>Each month, interest is charged first. On a $6,000 balance at 24%, that's about $120 a month before you've paid down a cent. If your payment is close to the interest charge, the balance barely moves. That's why a minimum payment can stretch a card balance over many years.</p>
+    <h2>Four ways to get out of debt faster</h2>
+    <ol>
+      <li><strong>Pay more than the minimum.</strong> Even $25 to $50 extra a month makes a noticeable difference. Set it up on autopay.</li>
+      <li><strong>Choose a payoff order.</strong> With several debts, target either the highest rate first (avalanche) or the smallest balance first (snowball). See <a href="/banking-credit/debt-snowball-vs-avalanche-which-wins/">snowball vs. avalanche</a>.</li>
+      <li><strong>Cut the interest rate.</strong> A <a href="/banking-credit/balance-transfer-cards-when-theyre-worth-it/">0% balance transfer card</a> or a lower-rate loan can save hundreds or thousands. You can also call your card issuer and ask for a lower APR.</li>
+      <li><strong>Stop adding new charges.</strong> Pay with debit or cash while you're paying a card down, and keep a small <a href="/personal-finance/how-much-should-be-in-your-emergency-fund/">emergency fund</a> so surprises don't land back on the card.</li>
+    </ol>`,
+    faq:[
+      ["How long will it take to pay off $10,000 in credit card debt?","It depends on your rate and payment. At 24% APR, paying $400 a month takes about 3 years and roughly $4,000 in interest. Paying $500 a month cuts that to about 2 years 2 months and roughly $2,900 in interest."],
+      ["How is credit card interest calculated?","Most cards divide your APR by 365 to get a daily rate and charge it on your average daily balance. As a rough monthly estimate, multiply your balance by your APR and divide by 12. At 24% APR, a $6,000 balance costs about $120 a month in interest."],
+      ["Should I pay off debt or save money first?","Most people do best by keeping a small starter emergency fund of $1,000 to $2,000, getting any employer 401(k) match, and then attacking high-interest debt like credit cards before saving or investing more."],
+      ["Does paying off debt raise your credit score?","Usually, yes. Paying down credit card balances lowers your credit utilization, one of the biggest factors in your score. Keep old no-fee cards open after paying them off so your available credit stays high."],
+    ]
+  },
+  emergency: {
+    h1:"Emergency fund calculator",
+    dek:"Find out how much you should have set aside for emergencies, how close you are, and how long it will take to get there.",
+    body:`
+    <h2>How much should you save?</h2>
+    <p>The usual target is <strong>3 to 6 months of essential expenses</strong>, not your full income. Where you land in that range depends on how steady your income is and who depends on you:</p>
+    <table class="weights">
+      <thead><tr><th>Your situation</th><th>Months to aim for</th></tr></thead>
+      <tbody>
+        <tr><td>Stable job, two incomes, no kids</td><td class="pct">3</td></tr>
+        <tr><td>Stable job, one income or kids</td><td class="pct">4–6</td></tr>
+        <tr><td>Commission, freelance, gig or seasonal income</td><td class="pct">6–12</td></tr>
+        <tr><td>Self-employed or business owner</td><td class="pct">6–12</td></tr>
+      </tbody>
+    </table>
+    <h2>What counts as an essential expense?</h2>
+    <p>Only the bills you'd still have to pay if your income stopped: rent or mortgage, utilities, phone and internet, groceries, transportation, insurance, minimum debt payments and childcare. Leave out dining out, travel and shopping, because those are the first things you'd cut in a real emergency.</p>
+    <div class="callout"><strong>Example:</strong> If your essentials add up to $3,200 a month and you want 6 months of cover, your target is $19,200. With $2,000 saved and $300 going in each month, you'd reach it in about 4 years 10 months. Bump that to $500 a month and it's under 3 years.</div>
+    <h2>Build it in stages</h2>
+    <ol>
+      <li><strong>Starter fund: $1,000 to $2,000.</strong> Enough for most car repairs and surprise bills.</li>
+      <li><strong>One month of essentials.</strong> A short gap in pay won't sink you.</li>
+      <li><strong>Three months.</strong> You're covered for most job changes and medical surprises.</li>
+      <li><strong>Your full target.</strong> Then send that monthly savings toward investing and other goals.</li>
+    </ol>
+    <h2>Where to keep it</h2>
+    <p>Keep your emergency fund somewhere safe and easy to reach, but not too easy. A <a href="/banking-credit/high-yield-savings-vs-money-market-accounts/">high-yield savings account</a> at an FDIC-insured bank, separate from your checking account, is the usual choice. Don't keep it in stocks: emergencies and market crashes often arrive together. For the full guide, read <a href="/personal-finance/how-much-should-be-in-your-emergency-fund/">How much should be in your emergency fund?</a></p>`,
+    faq:[
+      ["How much should I have in my emergency fund?","Aim for 3 to 6 months of essential expenses. Go toward 6 to 12 months if your income is irregular, you're self-employed or you're the only earner in your household. Start with a $1,000 to $2,000 starter fund."],
+      ["Is $10,000 enough for an emergency fund?","It depends on your expenses. If your essentials cost about $3,300 a month, $10,000 covers roughly 3 months, which is a solid base for someone with a stable job. If your essentials are $5,000 a month, it covers about 2 months."],
+      ["Where should I keep my emergency fund?","In a high-yield savings account or money market account at an FDIC- or NCUA-insured bank or credit union. It keeps your money safe, earns interest and lets you reach it within a day or two."],
+      ["Should I build an emergency fund or pay off debt first?","Build a small starter fund of $1,000 to $2,000 first, so a surprise bill doesn't go on a credit card. Then focus on high-interest debt, and finish your full emergency fund after that."],
+    ]
+  },
+  millionaire: {
+    h1:"How long until I'm a millionaire?",
+    dek:"Enter your age, what you've invested so far and what you invest each month to see the age you'd reach $1 million.",
+    body:`
+    <h2>How this calculator works</h2>
+    <p>It starts with what you've already invested, adds your monthly investment, and grows the total each month at the average return you choose. Then it tells you when the balance would first pass $1 million, and how much of that came from your own money versus growth.</p>
+    <h2>Some examples</h2>
+    <p>All of these start from $0 and assume a 7% average annual return:</p>
+    <table class="weights">
+      <thead><tr><th>Start at</th><th>Invest monthly</th><th>Reach $1 million at</th></tr></thead>
+      <tbody>
+        <tr><td>25</td><td>$500</td><td>Age 61</td></tr>
+        <tr><td>35</td><td>$500</td><td>Age 71</td></tr>
+        <tr><td>35</td><td>$1,000</td><td>Age 62</td></tr>
+        <tr><td>45</td><td>$1,000</td><td>Age 72</td></tr>
+      </tbody>
+    </table>
+    <p>Starting 10 years earlier with $500 a month gets you there at about the same age as starting later with $1,000 a month. Time does a lot of the work.</p>
+    <h2>A reality check on inflation</h2>
+    <p>$1 million in 30 years won't buy what $1 million buys today. With 3% yearly inflation, it would feel more like about $412,000 in today's money. That's still a lot, but it's why many people set their target from their expected spending instead. Our guide to <a href="/financial-freedom/how-to-calculate-your-financial-independence-number/">your financial independence number</a> shows how.</p>
+    <h2>How to get there sooner</h2>
+    <ol>
+      <li><strong>Invest more each month.</strong> Grab your full employer 401(k) match first, it's free money.</li>
+      <li><strong>Raise your contribution with every raise.</strong> You won't miss money you never got used to spending.</li>
+      <li><strong>Keep costs low.</strong> Broad, low-cost index funds keep more of your return working for you. See <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why expense ratios matter</a>.</li>
+      <li><strong>Stay invested.</strong> Selling during downturns is one of the most common ways people fall behind.</li>
+    </ol>`,
+    faq:[
+      ["How much do I need to invest a month to become a millionaire?","It depends on how long you have. Starting from $0 at a 7% average return, you'd need about $380 a month for 40 years, about $820 a month for 30 years or about $1,920 a month for 20 years."],
+      ["How long does it take to become a millionaire investing $1,000 a month?","Starting from $0 at a 7% average annual return, about 27 and a half years. At 10%, it takes about 22 and a half years. Real returns vary year to year."],
+      ["Is $1 million enough to retire?","Using the 4% rule as a rough guide, $1 million could support about $40,000 a year of withdrawals, adjusted for inflation, plus any Social Security or pension income. Whether that's enough depends on your spending."],
+      ["Does this calculator account for inflation?","No. It shows dollar amounts in the future. Because prices rise over time, $1 million then will buy less than $1 million today. To get a rough feel in today's money, lower the return you enter by about 2 to 3 points."],
+    ]
+  },
+};
+
 const bySlug = Object.fromEntries(CATS.map(c=>[c.slug,c]));
 const $ = s=>document.querySelector(s);
 const readTime = i => (4 + (i*3)%7) + " min read";
@@ -2907,7 +3208,8 @@ function card(c,title,i){
 // "Trending" is a feed of the latest posts, not a subject, so it's styled apart from the topics in the menu.
 $("#menu").innerHTML = CATS.map(c=>c.slug==="trending"
   ? `<li class="menu-feed-li"><a class="menu-feed" href="/${c.slug}/" data-slug="${c.slug}">Trending</a></li>`
-  : `<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("");
+  : `<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("")
+  + `<li class="menu-tools-li"><a href="/calculators/" data-slug="calculators">Tools</a></li>`;
 if($("#topicCount")) $("#topicCount").innerHTML = String(CATS.filter(c=>c.slug!=="trending").length);
 if($("#catTiles")) $("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="/${c.slug}/"><div class="ico" style="background:${c.tint};color:${c.color}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
 $("#footCats").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/">${c.name}</a></li>`).join("");
@@ -2987,6 +3289,16 @@ function renderArticle(c, aslug){
     $("#page-art").innerHTML = `<div class="soon"><div class="big-ico" style="color:${c.color}">${c.ico}</div><div class="eyebrow" style="color:${c.color}">${c.name} · Coming soon</div><h1 style="font-size:clamp(1.7rem,3.5vw,2.4rem);margin-top:10px">${title}</h1><p>We're putting the finishing touches on this guide. Join The Weekly Reason and we'll send it to you the Sunday it goes live.</p><a href="#newsletter" data-scroll class="btn btn-primary">Notify me →</a></div>${moreHtml}`;
     return title;
   }
+  // Related guides: hand-picked in RELATED, falling back to the same topic.
+  const rel = (RELATED[aslug]||[]);
+  const relArts = rel.filter(k=>ARTICLES[k]).slice(0,3);
+  for(const p of c.posts){ if(relArts.length>=3) break; const k=slugify(p); if(k!==aslug && ARTICLES[k] && !relArts.includes(k)) relArts.push(k); }
+  const relTool = rel.find(k=>TOOLS[k]);
+  const relCard = k => { const rc=bySlug[ARTICLES[k].cat]; const t=rc.posts.find(p=>slugify(p)===k)||ARTICLES[k].title; return card(rc,t,0); };
+  const relatedHtml = `<div class="art-more"><div class="eyebrow" style="color:${c.color}">Keep learning</div><h2 style="margin:6px 0 20px">Related guides</h2><div class="grid-3">${relArts.map(relCard).join("")}</div>${relTool?`<a class="tool-cta" href="/${TOOLS[relTool].slug}/"><span class="ico" style="color:var(--green)">${ICON[TOOLS[relTool].icon]}</span><span><b>Free tool: ${TOOLS[relTool].name}</b><small>${TOOLS[relTool].blurb}</small></span><span class="go">Open →</span></a>`:""}</div>`;
+  // Common questions go just above the closing note.
+  const noteAt = a.body.lastIndexOf('<p class="art-note"');
+  const body = noteAt>-1 ? a.body.slice(0,noteAt)+faqHTML(a.faq)+a.body.slice(noteAt) : a.body+faqHTML(a.faq);
   $("#page-art").innerHTML = `
   <div class="art-hero" style="background:linear-gradient(135deg,${c.color},${c.color}dd)">
     <div class="wrap">
@@ -2994,11 +3306,11 @@ function renderArticle(c, aslug){
       <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">${c.name}</span>
       <h1>${a.title}</h1>
       <p class="dek">${a.dek}</p>
-      <div class="art-meta"><span>By the Rich With Reason team</span><span>${a.date}</span><span>${a.read}</span></div>
+      <div class="art-meta"><span>By <a href="/about/" rel="author" style="text-decoration:underline">Jordan Noel</a></span><span>${a.date}</span><span>${a.read}</span></div>
     </div>
   </div>
-  <article class="article">${a.body}</article>
-  ${moreHtml}`;
+  <article class="article">${body}</article>
+  ${relatedHtml}`;
   return a.title;
 }
 
@@ -3083,141 +3395,79 @@ function renderContact(){
   </section>`;
 }
 
-// Compound calculator: one widget, used on the home page and on /compound-calculator/
-const CALC = {
-  m:{label:"Monthly contribution", min:0, max:10000, step:25, val:300, fmt:v=>"$"+(+v).toLocaleString(), pre:"$", suf:""},
-  y:{label:"Years invested", min:1, max:50, step:1, val:20, fmt:v=>v+(+v===1?" year":" years"), pre:"", suf:"yrs"},
-  r:{label:"Average annual return", min:0, max:15, step:0.25, val:7, fmt:v=>(+v)+"%", pre:"", suf:"%"},
-};
-const money = v=>"$"+Math.round(v).toLocaleString();
-function calcResult(m,y,rPct){
-  const r=rPct/100/12, fvAt=n=> r ? m*((Math.pow(1+r,n)-1)/r) : m*n;
-  const fv=fvAt(y*12), c=m*y*12;
-  const bars=Array.from({length:10},(_,i)=>{const n=Math.round((i+1)/10*y*12); return `<div style="height:${fv>0?Math.max(4,fvAt(n)/fv*100):4}%" class="${i===9?'c':''}"></div>`}).join("");
-  return {fv,c,g:fv-c,bars};
-}
-function calcWidget(){
-  const k=CALC, res=calcResult(k.m.val,k.y.val,k.r.val);
-  const row=id=>{const o=k[id]; return `<div class="calc-row">
-      <label for="calc-${id}">${o.label} <span class="val" data-v="${id}">${o.fmt(o.val)}</span></label>
-      <div class="calc-in"><input type="range" data-k="${id}" min="${o.min}" max="${o.max}" step="${o.step}" value="${o.val}" aria-label="${o.label}">
-      <span class="calc-num">${o.pre?`<i>${o.pre}</i>`:""}<input type="number" id="calc-${id}" data-k="${id}" min="${o.min}" max="${o.max}" step="${o.step}" value="${o.val}" inputmode="decimal">${o.suf?`<i>${o.suf}</i>`:""}</span></div>
-      <div class="calc-range"><span>${o.fmt(o.min)}</span><span>${o.fmt(o.max)}</span></div></div>`;};
-  return `<div class="tool calc">
-    <div>${row("m")}${row("y")}${row("r")}
-      <p class="calc-note">Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, and returns aren't guaranteed.</p>
-    </div>
-    <div class="result">
-      <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
-      <div class="big" data-o="fv">${money(res.fv)}</div>
-      <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b data-o="c">${money(res.c)}</b> · growth adds <b data-o="g" style="color:var(--green)">${money(res.g)}</b></div>
-      <div class="bars" data-o="bars">${res.bars}</div>
-    </div>
-  </div>`;
-}
-function bindCalc(el){
-  const get=id=>el.querySelector(`input[type=range][data-k="${id}"]`);
+// Calculators on the page: keep slider and typed box in sync, recompute on every change.
+function bindTool(el){
+  const t=TOOLS[el.dataset.tool]; if(!t) return;
+  const get=k=>el.querySelector(`input[type=range][data-k="${k}"]`);
   const update=()=>{
-    const v={}; ["m","y","r"].forEach(id=>{v[id]=+get(id).value; el.querySelector(`[data-v="${id}"]`).textContent=CALC[id].fmt(v[id]);});
-    const res=calcResult(v.m,v.y,v.r);
-    el.querySelector('[data-o="fv"]').textContent=money(res.fv);
-    el.querySelector('[data-o="c"]').textContent=money(res.c);
-    el.querySelector('[data-o="g"]').textContent=money(res.g);
-    el.querySelector('[data-o="bars"]').innerHTML=res.bars;
+    const v={}; for(const [k,f] of Object.entries(t.fields)){ v[k]=+get(k).value; el.querySelector(`[data-v="${k}"]`).textContent=FMT[f.kind].f(v[k]); }
+    el.querySelector('[data-o="res"]').innerHTML=t.compute(v);
   };
   el.querySelectorAll("input[data-k]").forEach(inp=>{
-    const id=inp.dataset.k, o=CALC[id];
+    const k=inp.dataset.k, f=t.fields[k];
     inp.addEventListener("input",()=>{
       let v=parseFloat(inp.value); if(isNaN(v)) return;
-      v=Math.min(o.max,Math.max(o.min,v));
-      el.querySelectorAll(`input[data-k="${id}"]`).forEach(x=>{ if(x!==inp) x.value=v; });
+      v=Math.min(f.max,Math.max(f.min,v));
+      el.querySelectorAll(`input[data-k="${k}"]`).forEach(x=>{ if(x!==inp) x.value=v; });
       if(inp.type==="range") inp.value=v;
       update();
     });
-    if(inp.type==="number") inp.addEventListener("blur",()=>{ let v=parseFloat(inp.value); if(isNaN(v)) v=+get(id).value; inp.value=Math.min(o.max,Math.max(o.min,v)); });
+    if(inp.type==="number") inp.addEventListener("blur",()=>{ let v=parseFloat(inp.value); if(isNaN(v)) v=+get(k).value; inp.value=Math.min(f.max,Math.max(f.min,v)); });
   });
   update();
 }
-function mountCalcs(){ document.querySelectorAll(".calc").forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound="1"; bindCalc(el); } }); }
-if($("#calcHome")) $("#calcHome").innerHTML = calcWidget();
+function mountCalcs(){ document.querySelectorAll(".calc").forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound="1"; bindTool(el); } }); }
+if($("#calcHome")) $("#calcHome").innerHTML = toolWidget("compound");
 
-// Compound calculator page
-const CALC_DESC = "Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works.";
-function renderCalcPage(){
-  $("#page-calc").innerHTML = `
+// Common questions block (articles and calculator pages)
+const faqHTML = faq => !faq || !faq.length ? "" : `<section class="faq"><h2>Common questions</h2>${faq.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("")}</section>`;
+
+// Tools hub page (/calculators/)
+function renderToolsHub(){
+  $("#page-tools").innerHTML = `
   <div class="art-hero about-hero">
     <div class="wrap">
-      <div class="crumbs"><a href="/">Home</a> › Compound calculator</div>
-      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Free tool</div>
-      <h1>Compound interest calculator</h1>
-      <p class="dek">See what steady monthly investing could grow into, and how much of it comes from growth rather than your own deposits.</p>
+      <div class="crumbs"><a href="/">Home</a> › Tools</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Free money tools</div>
+      <h1>Money calculators</h1>
+      <p class="dek">Simple, free calculators that answer the money questions people ask most. No sign-up, nothing to download.</p>
     </div>
   </div>
-  <section class="calc-page">
-    <div class="wrap">${calcWidget()}</div>
-  </section>
-  <article class="article">
-    <h2>What is compounding?</h2>
-    <p>Compounding is what happens when your money earns a return, and then that return starts earning a return too. Instead of growing by the same amount every year, your balance grows on a bigger and bigger base. Albert Einstein probably never called it the eighth wonder of the world, but the idea behind the quote holds up: given enough time, growth on top of growth does most of the heavy lifting.</p>
+  <section>
+    <div class="wrap"><div class="cats tools-grid">${TOOL_KEYS.map(k=>{const t=TOOLS[k]; return `<a class="cat" href="/${t.slug}/"><div class="ico" style="background:var(--green-tint);color:var(--green)">${ICON[t.icon]}</div><h3>${t.name}</h3><p>${t.blurb}</p><span class="go">Open the calculator →</span></a>`;}).join("")}</div></div>
+  </section>`;
+}
 
-    <h2>A simple example</h2>
-    <p>Say you invest $1,000 and it earns 7% a year. After one year you have $1,070. In year two you earn 7% on $1,070, not just on your original $1,000, so you end with about $1,145. That extra $4.90 looks tiny, but it keeps snowballing. Leave the money alone for 30 years and that single $1,000 grows to about $7,600, with nothing added.</p>
-
-    <h2>Why monthly investing is so powerful</h2>
-    <p>Most people don't invest one lump sum. They add a little every month. That's what the calculator above shows. Here's $300 a month at a 7% average annual return:</p>
-    <table class="weights">
-      <thead><tr><th>Years</th><th>You put in</th><th>Could grow to</th><th>From growth</th></tr></thead>
-      <tbody>
-        <tr><td>10</td><td>$36,000</td><td>~$51,900</td><td>~$15,900</td></tr>
-        <tr><td>20</td><td>$72,000</td><td>~$156,300</td><td>~$84,300</td></tr>
-        <tr><td>30</td><td>$108,000</td><td>~$366,000</td><td>~$258,000</td></tr>
-        <tr><td>40</td><td>$144,000</td><td>~$787,400</td><td>~$643,400</td></tr>
-      </tbody>
-    </table>
-    <p>Notice what happens over time. In the first 10 years, most of the balance is money you put in. By year 40, more than four out of every five dollars came from growth.</p>
-
-    <h2>Time matters more than you think</h2>
-    <p>Compare two savers, both earning 7% a year:</p>
-    <ul>
-      <li><strong>Saver A</strong> invests $200 a month from age 25 to 35, then stops completely. Total put in: $24,000.</li>
-      <li><strong>Saver B</strong> waits, then invests $200 a month from age 35 to 65. Total put in: $72,000.</li>
-    </ul>
-    <p>At 65, Saver A has about <strong>$281,000</strong> and Saver B has about <strong>$244,000</strong>. Saver A put in a third as much money and still ends up ahead, because those early dollars had 30 extra years to compound.</p>
-    <div class="callout"><strong>The takeaway:</strong> you don't need a lot of money to benefit from compounding. You need time and consistency. Starting small today usually beats starting big later.</div>
-
-    <h2>The Rule of 72</h2>
-    <p>A quick way to estimate how long it takes money to double: divide 72 by your annual return. At 7%, money doubles roughly every 10 years (72 ÷ 7 ≈ 10.3). At 4%, it takes about 18 years. At 10%, about 7.</p>
-
-    <h2>The three levers you control</h2>
-    <ol>
-      <li><strong>How much you add.</strong> Raising your monthly contribution, even by $25, adds up over decades.</li>
-      <li><strong>How long you stay invested.</strong> The biggest gains come at the end, so staying the course through ups and downs matters.</li>
-      <li><strong>What you keep.</strong> High fees and taxes eat into your return every single year. Low-cost index funds and tax-advantaged accounts like a 401(k), IRA or HSA let more of your money compound.</li>
-    </ol>
-
-    <h2>What this calculator assumes</h2>
-    <ul>
-      <li>You add the same amount at the end of every month.</li>
-      <li>Your return compounds monthly at a steady average rate. Real returns go up and down from year to year.</li>
-      <li>Results are before taxes, fees and inflation. With inflation, the future dollars will buy less than today's dollars.</li>
-    </ul>
-    <p>As a rough guide, the U.S. stock market has historically returned around 10% a year on average before inflation, with big swings along the way. A mix that includes bonds has usually returned less. Many people plan with something in the 5% to 7% range to stay conservative.</p>
-
-    <p>Want to put this into practice? Start with <a href="/investing/how-to-start-investing-with-100/">How to start investing with $100</a> or <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why expense ratios matter</a>.</p>
-
-    <p class="art-note">Examples are hypothetical, assume steady returns and are rounded. Past performance doesn't guarantee future results. This page is for education only and isn't investment advice.</p>
+// One calculator page
+function renderToolPage(key){
+  const t=TOOLS[key], c=TOOL_PAGES[key];
+  const others=TOOL_KEYS.filter(k=>k!==key).map(k=>`<a href="/${TOOLS[k].slug}/">${TOOLS[k].name} →</a>`).join("");
+  $("#page-tool").innerHTML = `
+  <div class="art-hero about-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/calculators/">Tools</a> › ${t.name}</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Free tool</div>
+      <h1>${c.h1}</h1>
+      <p class="dek">${c.dek}</p>
+    </div>
+  </div>
+  <section class="calc-page"><div class="wrap">${toolWidget(key)}</div></section>
+  <article class="article">${c.body}
+    ${faqHTML(c.faq)}
+    <div class="more-tools"><b>More free tools</b>${others}</div>
+    <p class="art-note">Results are estimates for education only and assume steady rates. This page isn't financial advice.</p>
   </article>`;
 }
 
 // Router
 function route(){
   const [slug, aslug] = location.pathname.split("/").filter(Boolean);
-  document.querySelectorAll(".menu a").forEach(a=>a.classList.toggle("active",a.dataset.slug===slug));
+  const navSlug = (slug==="calculators" || TOOL_KEYS.some(k=>TOOLS[k].slug===slug)) ? "calculators" : slug;
+  document.querySelectorAll(".menu a").forEach(a=>a.classList.toggle("active",a.dataset.slug===navSlug));
   $("#menu").classList.remove("open");
-  if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); setMeta(t+" — Rich With Reason", (ARTICLES[aslug]||{}).dek); }
-  else if(slug==="compound-calculator"){ renderCalcPage(); show("calc"); setMeta("Compound Interest Calculator — Rich With Reason", CALC_DESC); }
-  else if(slug==="contact"){ renderContact(); show("contact"); setMeta("Contact — Rich With Reason", CONTACT_DESC); }
-  else if(slug==="about"){ renderAbout(); show("about"); setMeta("About — Rich With Reason", ABOUT_DESC); }
+  const sp = !aslug && STATIC_PAGES.find(p=>p.path===slug);
+  if(sp){ ({about:renderAbout, contact:renderContact, tools:renderToolsHub, tool:p=>renderToolPage(p.tool)})[sp.page](sp); show(sp.page); setMeta(sp.title, sp.desc); }
+  else if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); setMeta(t+" — Rich With Reason", (ARTICLES[aslug]||{}).dek); }
   else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
   else {
     // Topic/article pages are built without the home sections; load the real home page.

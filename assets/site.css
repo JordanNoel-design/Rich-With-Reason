@@ -36,7 +36,7 @@
   .menu a.menu-feed::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
   .menu a.menu-feed:hover,.menu a.menu-feed.active{background:#f5e3b0;color:#5e450a}
   .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
-  @media(max-width:1200px){
+  @media(max-width:1340px){
     .menu{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;padding:12px 24px 20px;border-bottom:1px solid var(--line)}
     .menu.open{display:flex} .burger{display:block} .nav-cta{display:none}
     .menu-feed-li{border-right:0;padding:0 0 8px;margin:0 0 6px;border-bottom:1px solid var(--line)}
@@ -274,3 +274,34 @@
   .calc-page{padding:44px 0 0}
   .calc-page .tool{max-width:1000px;margin:0 auto}
   @media(max-width:520px){.calc-num{width:100px}.calc-range{margin-right:112px}}
+
+  /* Calculator results (shared) */
+  .result .res-sub{font-size:.88rem;color:var(--ink-soft);line-height:1.55}
+  .result .res-tip{margin-top:14px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.86rem;color:var(--ink-soft);text-align:left;line-height:1.55}
+  .bars.down div{background:#b3401f;opacity:.75} .bars.down div.c{background:var(--gold);opacity:1}
+  .meter{height:12px;border-radius:99px;background:#d4e6dc;margin:20px 0 8px;overflow:hidden}
+  .meter i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .3s}
+  .meter-l{display:flex;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--ink-soft)}
+  /* Tools hub + calculator pages */
+  .tools-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .more-tools{display:flex;flex-direction:column;gap:6px;margin:34px 0 0;padding:20px 22px;background:var(--white);border:1px solid var(--line);border-radius:14px;font-size:.98rem}
+  .more-tools b{font-family:var(--serif);font-size:1.1rem;margin-bottom:4px}
+  .article .more-tools a{text-decoration:none;font-weight:600}
+  .article .more-tools a:hover{text-decoration:underline}
+  /* Common questions */
+  .faq{margin:40px 0 8px}
+  .faq details{border:1px solid var(--line);border-radius:12px;background:var(--white);margin-bottom:10px;padding:0 18px}
+  .faq summary{cursor:pointer;font-weight:600;padding:15px 24px 15px 0;list-style:none;position:relative;line-height:1.45}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:0;top:12px;font-size:1.3rem;color:var(--green);font-weight:400}
+  .faq details[open] summary::after{content:"−"}
+  .faq details p{margin:0 0 16px;color:var(--ink-soft);font-size:1rem}
+  /* Related guides tool link */
+  .tool-cta{display:flex;align-items:center;gap:16px;margin-top:20px;background:var(--green-tint);border:1px solid #cfe3d8;border-radius:14px;padding:16px 20px}
+  .tool-cta .ico{width:44px;height:44px;border-radius:12px;background:var(--white);display:grid;place-items:center;font-size:1.4rem;flex:none}
+  .tool-cta b{display:block;font-family:var(--serif);font-size:1.05rem}
+  .tool-cta small{display:block;color:var(--ink-soft);font-size:.86rem}
+  .tool-cta .go{margin-left:auto;font-weight:600;color:var(--green);white-space:nowrap}
+  .tool-cta:hover{box-shadow:var(--shadow)}
+  .menu-tools-li{margin-left:6px;padding-left:10px;border-left:1px solid var(--line)}
+  @media(max-width:1340px){ .menu-tools-li{border-left:0;padding:8px 0 0;margin:6px 0 0;border-top:1px solid var(--line)} }

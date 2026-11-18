@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (Google Analytics) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WTJ5KWGT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Long Until I'm a Millionaire? Calculator — Rich With Reason</title>
+<meta name="description" content="Free millionaire calculator: see the age you'd reach $1 million based on your savings, monthly investing and expected return.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Facebook, iMessage, WhatsApp, LinkedIn, Slack, Discord -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rich With Reason">
+<meta property="og:title" content="How Long Until I'm a Millionaire? Calculator — Rich With Reason">
+<meta property="og:description" content="Free millionaire calculator: see the age you'd reach $1 million based on your savings, monthly investing and expected return.">
+<link rel="canonical" href="https://richwithreason.com/millionaire-calculator/">
+<meta property="og:url" content="https://richwithreason.com/millionaire-calculator/">
+<meta property="og:image" content="https://richwithreason.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rich With Reason logo">
+
+<!-- X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Long Until I'm a Millionaire? Calculator — Rich With Reason">
+<meta name="twitter:description" content="Free millionaire calculator: see the age you'd reach $1 million based on your savings, monthly investing and expected return.">
+<meta name="twitter:image" content="https://richwithreason.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=3f57e56d">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"How long until I'm a millionaire?","url":"https://richwithreason.com/millionaire-calculator/","description":"Free millionaire calculator: see the age you'd reach $1 million based on your savings, monthly investing and expected return.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Jordan Noel","url":"https://richwithreason.com/about/","jobTitle":"Founder, Rich With Reason","alumniOf":{"@type":"CollegeOrUniversity","name":"Temple University"},"knowsAbout":["Personal finance","Investing","Private equity accounting"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://richwithreason.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://richwithreason.com/calculators/"},{"@type":"ListItem","position":3,"name":"How long until I'm a millionaire?","item":"https://richwithreason.com/millionaire-calculator/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much do I need to invest a month to become a millionaire?","acceptedAnswer":{"@type":"Answer","text":"It depends on how long you have. Starting from $0 at a 7% average return, you'd need about $380 a month for 40 years, about $820 a month for 30 years or about $1,920 a month for 20 years."}},{"@type":"Question","name":"How long does it take to become a millionaire investing $1,000 a month?","acceptedAnswer":{"@type":"Answer","text":"Starting from $0 at a 7% average annual return, about 27 and a half years. At 10%, it takes about 22 and a half years. Real returns vary year to year."}},{"@type":"Question","name":"Is $1 million enough to retire?","acceptedAnswer":{"@type":"Answer","text":"Using the 4% rule as a rough guide, $1 million could support about $40,000 a year of withdrawals, adjusted for inflation, plus any Social Security or pension income. Whether that's enough depends on your spending."}},{"@type":"Question","name":"Does this calculator account for inflation?","acceptedAnswer":{"@type":"Answer","text":"No. It shows dollar amounts in the future. Because prices rise over time, $1 million then will buy less than $1 million today. To get a rough feel in today's money, lower the return you enter by about 2 to 3 points."}}]}</script>
+</head>
+<body>
+
+<div class="topbar">New: <strong>The Weekly Reason</strong> — one email every Sunday, five minutes, smarter money. <a href="#newsletter" data-scroll>Join free →</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
+    <ul class="menu" id="menu"><li class="menu-feed-li"><a class="menu-feed" href="/trending/" data-slug="trending">Trending</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li><li class="menu-tools-li"><a href="/calculators/" data-slug="calculators">Tools</a></li></ul>
+    <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="app">
+  <!-- HOME -->
+  <div class="page" id="page-home">
+  </div>
+
+  <!-- CATEGORY (rendered by JS) -->
+  <div class="page" id="page-cat"></div>
+
+  <!-- ARTICLE (rendered by JS) -->
+  <div class="page" id="page-art"></div>
+
+  <!-- ABOUT (rendered by JS) -->
+  <div class="page" id="page-about"></div>
+
+  <!-- CONTACT (rendered by JS) -->
+  <div class="page" id="page-contact"></div>
+
+  <!-- TOOLS HUB + CALCULATOR PAGES (rendered by JS) -->
+  <div class="page" id="page-tools"></div>
+  <div class="page on" id="page-tool">
+  <div class="art-hero about-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › <a href="/calculators/">Tools</a> › How long until I'm a millionaire?</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Free tool</div>
+      <h1>How long until I'm a millionaire?</h1>
+      <p class="dek">Enter your age, what you've invested so far and what you invest each month to see the age you'd reach $1 million.</p>
+    </div>
+  </div>
+  <section class="calc-page"><div class="wrap"><div class="tool calc" data-tool="millionaire">
+    <div><div class="calc-row">
+      <label for="calc-millionaire-age">Your age <span class="val" data-v="age">Age 25</span></label>
+      <div class="calc-in"><input type="range" data-k="age" min="16" max="80" step="1" value="25" aria-label="Your age">
+      <span class="calc-num"><input type="number" id="calc-millionaire-age" data-k="age" min="16" max="80" step="1" value="25" inputmode="decimal"><i>yrs</i></span></div>
+      <div class="calc-range"><span>Age 16</span><span>Age 80</span></div></div><div class="calc-row">
+      <label for="calc-millionaire-s">Invested so far <span class="val" data-v="s">$5,000</span></label>
+      <div class="calc-in"><input type="range" data-k="s" min="0" max="1000000" step="1000" value="5000" aria-label="Invested so far">
+      <span class="calc-num"><i>$</i><input type="number" id="calc-millionaire-s" data-k="s" min="0" max="1000000" step="1000" value="5000" inputmode="decimal"></span></div>
+      <div class="calc-range"><span>$0</span><span>$1,000,000</span></div></div><div class="calc-row">
+      <label for="calc-millionaire-m">Monthly investing <span class="val" data-v="m">$500</span></label>
+      <div class="calc-in"><input type="range" data-k="m" min="0" max="10000" step="25" value="500" aria-label="Monthly investing">
+      <span class="calc-num"><i>$</i><input type="number" id="calc-millionaire-m" data-k="m" min="0" max="10000" step="25" value="500" inputmode="decimal"></span></div>
+      <div class="calc-range"><span>$0</span><span>$10,000</span></div></div><div class="calc-row">
+      <label for="calc-millionaire-r">Average annual return <span class="val" data-v="r">7%</span></label>
+      <div class="calc-in"><input type="range" data-k="r" min="0" max="15" step="0.25" value="7" aria-label="Average annual return">
+      <span class="calc-num"><input type="number" id="calc-millionaire-r" data-k="r" min="0" max="15" step="0.25" value="7" inputmode="decimal"><i>%</i></span></div>
+      <div class="calc-range"><span>0%</span><span>15%</span></div></div>
+      <p class="calc-note">Illustration only. Assumes monthly investing and compounding at a steady return, before taxes and fees. Because of inflation, $1 million in the future will buy less than $1 million today.</p>
+    </div>
+    <div class="result" data-o="res"><div style="font-size:.85rem;color:var(--ink-soft)">You'd reach $1 million at</div><div class="big">Age 60</div><div class="res-sub">That's <b>35 years 7 months</b> from now · you put in <b>$218,500</b> · growth adds <b style="color:var(--green)">$781,500</b></div><div class="bars"><div style="height:4%" class=""></div><div style="height:6.2921900002750535%" class=""></div><div style="height:10.512348610656614%" class=""></div><div style="height:15.931706195049976%" class=""></div><div style="height:22.89102676543639%" class=""></div><div style="height:31.593680753309698%" class=""></div><div style="height:43.00350320176782%" class=""></div><div style="height:57.65553729132124%" class=""></div><div style="height:75.97795563809206%" class=""></div><div style="height:100%" class="c"></div></div></div>
+  </div></div></section>
+  <article class="article">
+    <h2>How this calculator works</h2>
+    <p>It starts with what you've already invested, adds your monthly investment, and grows the total each month at the average return you choose. Then it tells you when the balance would first pass $1 million, and how much of that came from your own money versus growth.</p>
+    <h2>Some examples</h2>
+    <p>All of these start from $0 and assume a 7% average annual return:</p>
+    <table class="weights">
+      <thead><tr><th>Start at</th><th>Invest monthly</th><th>Reach $1 million at</th></tr></thead>
+      <tbody>
+        <tr><td>25</td><td>$500</td><td>Age 61</td></tr>
+        <tr><td>35</td><td>$500</td><td>Age 71</td></tr>
+        <tr><td>35</td><td>$1,000</td><td>Age 62</td></tr>
+        <tr><td>45</td><td>$1,000</td><td>Age 72</td></tr>
+      </tbody>
+    </table>
+    <p>Starting 10 years earlier with $500 a month gets you there at about the same age as starting later with $1,000 a month. Time does a lot of the work.</p>
+    <h2>A reality check on inflation</h2>
+    <p>$1 million in 30 years won't buy what $1 million buys today. With 3% yearly inflation, it would feel more like about $412,000 in today's money. That's still a lot, but it's why many people set their target from their expected spending instead. Our guide to <a href="/financial-freedom/how-to-calculate-your-financial-independence-number/">your financial independence number</a> shows how.</p>
+    <h2>How to get there sooner</h2>
+    <ol>
+      <li><strong>Invest more each month.</strong> Grab your full employer 401(k) match first, it's free money.</li>
+      <li><strong>Raise your contribution with every raise.</strong> You won't miss money you never got used to spending.</li>
+      <li><strong>Keep costs low.</strong> Broad, low-cost index funds keep more of your return working for you. See <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why expense ratios matter</a>.</li>
+      <li><strong>Stay invested.</strong> Selling during downturns is one of the most common ways people fall behind.</li>
+    </ol>
+    <section class="faq"><h2>Common questions</h2><details><summary>How much do I need to invest a month to become a millionaire?</summary><p>It depends on how long you have. Starting from $0 at a 7% average return, you'd need about $380 a month for 40 years, about $820 a month for 30 years or about $1,920 a month for 20 years.</p></details><details><summary>How long does it take to become a millionaire investing $1,000 a month?</summary><p>Starting from $0 at a 7% average annual return, about 27 and a half years. At 10%, it takes about 22 and a half years. Real returns vary year to year.</p></details><details><summary>Is $1 million enough to retire?</summary><p>Using the 4% rule as a rough guide, $1 million could support about $40,000 a year of withdrawals, adjusted for inflation, plus any Social Security or pension income. Whether that's enough depends on your spending.</p></details><details><summary>Does this calculator account for inflation?</summary><p>No. It shows dollar amounts in the future. Because prices rise over time, $1 million then will buy less than $1 million today. To get a rough feel in today's money, lower the return you enter by about 2 to 3 points.</p></details></section>
+    <div class="more-tools"><b>More free tools</b><a href="/compound-calculator/">Compound interest calculator →</a><a href="/debt-payoff-calculator/">Debt payoff calculator →</a><a href="/emergency-fund-calculator/">Emergency fund calculator →</a></div>
+    <p class="art-note">Results are estimates for education only and assume steady rates. This page isn't financial advice.</p>
+  </article></div>
+
+  <!-- NEWSLETTER (shared on every page) -->
+  <section id="newsletter">
+    <div class="wrap">
+      <div class="news">
+        <div>
+          <div class="eyebrow">The Weekly Reason</div>
+          <h2>One email a week. Smarter money for life.</h2>
+          <p>Every Sunday we send a five-minute read that makes you a little sharper with money — no hype, no spam, unsubscribe anytime.</p>
+          <ul>
+            <li>The Buzzword Brief: one finance term, decoded</li>
+            <li>A plain-English take on the week's money news</li>
+            <li>One action you can finish in five minutes</li>
+            <li>The best new guides from your favorite topics</li>
+          </ul>
+        </div>
+        <form class="nl-form" id="nlForm" novalidate>
+          <div id="nlFields">
+            <h3>Join free</h3>
+            <p>Pick your topics and we'll tailor the "Best of the blog" section.</p>
+            <input type="text" id="nlName" placeholder="First name">
+            <input type="email" id="nlEmail" placeholder="Email address" required>
+            <div class="err" id="nlErr">Please enter a valid email address.</div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="personal-finance"><span>Personal Finance</span></label><label><input type="checkbox" value="financial-freedom"><span>Financial Freedom</span></label><label><input type="checkbox" value="banking-credit"><span>Banking & Credit</span></label><label><input type="checkbox" value="investing"><span>Investing</span></label><label><input type="checkbox" value="insurance"><span>Insurance</span></label></div>
+            <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
+            <div class="fine">Free forever. We never sell your email. Unsubscribe anytime with one click.</div>
+          </div>
+          <div class="nl-ok" id="nlOk">
+            <div class="chk">✓</div>
+            <h3>You're in<span id="okName"></span>!</h3>
+            <p style="margin-top:6px">Your first issue arrives Sunday morning. Add our address to your contacts so it lands in your inbox, not spam.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
+        <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
+      </div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/trending/">Trending Posts</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/calculators/">All money tools</a></li><li><a href="/compound-calculator/">Compound calculator</a></li><li><a href="/debt-payoff-calculator/">Debt payoff calculator</a></li><li><a href="/emergency-fund-calculator/">Emergency fund calculator</a></li><li><a href="/millionaire-calculator/">Millionaire calculator</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> Content on Rich With Reason is for educational and informational purposes only and is not financial, investment, tax, insurance or legal advice. Consider speaking with a licensed professional about your situation. Some links may be affiliate links; this never affects our editorial opinions. Investing involves risk, including loss of principal.<br><br>© 2026 Rich With Reason. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="/assets/site.js?v=6ba28b69"></script>
+</body>
+</html>

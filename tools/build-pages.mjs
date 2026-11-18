@@ -62,11 +62,11 @@ function fill(page, rendered) {
 }
 
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
-function build({ pathname, desc, type = "website" }) {
+function build({ pathname, desc, type = "website", page: pageId, ld = [], author }) {
   const { html, title } = renderPath(pathname);
   const url = SITE + pathname;
   let page = fill(shell, html);
-  const which = pathname === "/" ? "home" : pathname === "/about/" ? "about" : pathname === "/contact/" ? "contact" : pathname === "/compound-calculator/" ? "calc" : pathname.split("/").filter(Boolean).length > 1 ? "art" : "cat";
+  const which = pageId || (pathname === "/" ? "home" : pathname.split("/").filter(Boolean).length > 1 ? "art" : "cat");
   // Show the right section before JavaScript runs.
   page = page.replace(`class="page" id="page-${which}"`, `class="page on" id="page-${which}"`);
   // Topic/article pages don't carry the home page's sections (keeps each page about one thing).
@@ -81,7 +81,9 @@ function build({ pathname, desc, type = "website" }) {
     .replace(/(<meta property="og:description" content=")[^"]*/, (_, a) => a + d)
     .replace(/(<meta property="og:url" content=")[^"]*/, (_, a) => a + url)
     .replace(/(<meta name="twitter:title" content=")[^"]*/, (_, a) => a + t)
-    .replace(/(<meta name="twitter:description" content=")[^"]*/, (_, a) => a + d);
+    .replace(/(<meta name="twitter:description" content=")[^"]*/, (_, a) => a + d)
+    .replace("</head>", () => (author ? `<meta name="author" content="${esc(author)}">\n` : "")
+      + ld.map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`).join("\n") + (ld.length ? "\n" : "") + "</head>");
 }
 function write(rel, html) {
   fs.mkdirSync(path.dirname(rel), { recursive: true });
@@ -90,8 +92,8 @@ function write(rel, html) {
 
 // Topic and article data, for the list of pages to build.
 const ctx = {};
-vm.runInNewContext(js.slice(0, js.indexOf("const bySlug")) + "\nthis.CATS = CATS; this.ARTICLES = ARTICLES;", ctx);
-const { CATS, ARTICLES } = ctx;
+vm.runInNewContext(js.slice(0, js.indexOf("const bySlug")) + "\nthis.CATS = CATS; this.ARTICLES = ARTICLES; this.STATIC_PAGES = STATIC_PAGES; this.TOOLS = TOOLS; this.TOOL_PAGES = TOOL_PAGES;", ctx);
+const { CATS, ARTICLES, STATIC_PAGES, TOOLS, TOOL_PAGES } = ctx;
 const slugify = t => t.toLowerCase().replace(/&/g, " and ").replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 const HOME_DESC = "Clear, honest guides on banking, credit, investing and insurance.";
 
@@ -99,23 +101,40 @@ const HOME_DESC = "Clear, honest guides on banking, credit, investing and insura
 for (const c of CATS) fs.rmSync(c.slug, { recursive: true, force: true });
 
 const noindex = h => h.replace("<head>", '<head>\n<meta name="robots" content="noindex">');
-const home = build({ pathname: "/", desc: HOME_DESC });
-write("index.html", home);
-write("404.html", noindex(home));
+write("404.html", noindex(build({ pathname: "/", desc: HOME_DESC })));
 const urls = [SITE + "/"];
 let n = 1;
-// About page
-const ABOUT_DESC = "Meet Jordan Noel, founder of Rich With Reason: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
-write("about/index.html", build({ pathname: "/about/", desc: ABOUT_DESC }));
-urls.push(`${SITE}/about/`); n++;
-// Contact page
-write("contact/index.html", build({ pathname: "/contact/", desc: "Get in touch with Rich With Reason. Questions, topic ideas, partnerships and press: email richwreason@gmail.com." }));
-urls.push(`${SITE}/contact/`); n++;
-// Compound calculator page
-write("compound-calculator/index.html", build({ pathname: "/compound-calculator/", desc: "Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works." }));
-urls.push(`${SITE}/compound-calculator/`); n++;
+// ---- Structured data (JSON-LD) for search engines ----
+const AUTHOR = { "@type": "Person", name: "Jordan Noel", url: `${SITE}/about/`,
+  jobTitle: "Founder, Rich With Reason", alumniOf: { "@type": "CollegeOrUniversity", name: "Temple University" },
+  knowsAbout: ["Personal finance", "Investing", "Private equity accounting"] };
+const PUBLISHER = { "@type": "Organization", name: "Rich With Reason", url: `${SITE}/`, logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } };
+const crumbs = list => ({ "@context": "https://schema.org", "@type": "BreadcrumbList",
+  itemListElement: list.map(([name, path], i) => ({ "@type": "ListItem", position: i + 1, name, item: SITE + path })) });
+const faqLd = faq => faq && faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage",
+  mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) }] : [];
+const isoDate = d => { const t = new Date(d); return isNaN(t) ? undefined : t.toISOString().slice(0, 10); };
+
+// Home page gets WebSite + Organization data
+write("index.html", build({ pathname: "/", desc: HOME_DESC, ld: [
+  { "@context": "https://schema.org", "@type": "WebSite", name: "Rich With Reason", url: `${SITE}/`, publisher: PUBLISHER },
+  { "@context": "https://schema.org", ...PUBLISHER, founder: AUTHOR, email: "richwreason@gmail.com" } ] }));
+
+// Static pages: About, Contact, Tools hub and each calculator
+for (const p of STATIC_PAGES) {
+  const path = `/${p.path}/`, ld = [];
+  if (p.page === "about") ld.push({ "@context": "https://schema.org", "@type": "ProfilePage", mainEntity: AUTHOR }, crumbs([["Home", "/"], ["About", path]]));
+  else if (p.page === "tool") {
+    const t = TOOLS[p.tool];
+    ld.push({ "@context": "https://schema.org", "@type": "WebApplication", name: t.name, url: SITE + path, description: p.desc,
+      applicationCategory: "FinanceApplication", operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, author: AUTHOR },
+      crumbs([["Home", "/"], ["Tools", "/calculators/"], [t.name, path]]), ...faqLd(TOOL_PAGES[p.tool].faq));
+  } else ld.push(crumbs([["Home", "/"], [p.title.split(" — ")[0], path]]));
+  write(`${p.path}/index.html`, build({ pathname: path, desc: p.desc, page: p.page, ld }));
+  urls.push(SITE + path); n++;
+}
 for (const c of CATS) {
-  write(`${c.slug}/index.html`, build({ pathname: `/${c.slug}/`, desc: c.blurb }));
+  write(`${c.slug}/index.html`, build({ pathname: `/${c.slug}/`, desc: c.blurb, ld: [crumbs([["Home", "/"], [c.name, `/${c.slug}/`]])] }));
   urls.push(`${SITE}/${c.slug}/`); n++;
   for (const p of c.posts) {
     const s = slugify(p), a = ARTICLES[s];
@@ -123,6 +142,11 @@ for (const c of CATS) {
       pathname: `/${c.slug}/${s}/`,
       desc: a ? a.dek : `${c.name} guide from Rich With Reason.`,
       type: a ? "article" : "website",
+      author: a ? "Jordan Noel" : undefined,
+      ld: a ? [{ "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.dek,
+          datePublished: isoDate(a.date), dateModified: isoDate(a.updated || a.date), author: AUTHOR, publisher: PUBLISHER,
+          mainEntityOfPage: `${SITE}/${c.slug}/${s}/`, image: `${SITE}/og-image.png`, articleSection: c.name },
+        crumbs([["Home", "/"], [c.name, `/${c.slug}/`], [a.title, `/${c.slug}/${s}/`]]), ...faqLd(a.faq)] : [],
     });
     // "Coming soon" placeholders stay out of search results until the article exists.
     if (!a) html = noindex(html);
