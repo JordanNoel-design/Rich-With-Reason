@@ -22,6 +22,8 @@ Site notes:
 - Articles live in `ARTICLES` and topics in `CATS` inside `assets/site.js`.
 - Layout, head tags and home page sections live in `tools/shell.html`. `index.html`, topic/article
   folders, `404.html`, `sitemap.xml` and `robots.txt` are generated; don't hand-edit them.
+- No emojis anywhere on the web pages (copy, headings, buttons, articles, Buzzword of the Day).
+  Topic icons are the line icons in `ICON` in `assets/site.js`.
 - The site is verified in Google Search Console by `google326d43f13534df04.html` in the repo root.
   Never delete or change that file.
 

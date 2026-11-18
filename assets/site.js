@@ -16,43 +16,54 @@ const BUZZWORD = {
 };
 /* BUZZWORD:END */
 
+/* Category icons: simple line icons that take the surrounding text colour. */
+const svgIcon = d => `<svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const ICON = {
+  "banking-credit": svgIcon('<path d="M12 3l9 5H3z"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20.5h18"/>'),
+  "personal-finance": svgIcon('<path d="M17 5H5a2 2 0 0 0 0 4"/><path d="M3 7v11a2 2 0 0 0 2 2h15V9H5"/><circle cx="16" cy="14.5" r="1.2"/>'),
+  "financial-freedom": svgIcon('<path d="M3 20l6-9 4 5 3-3.5 5 7.5z"/><path d="M14 3.5v6M14 3.5h4.5l-1.2 1.5 1.2 1.5H14"/>'),
+  "trending": svgIcon('<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>'),
+  "investing": svgIcon('<path d="M3 20.5h18M6 20v-6M11 20V8M16 20v-9M21 20V4"/>'),
+  "insurance": svgIcon('<path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>'),
+  "mail": svgIcon('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>'),
+};
 const CATS = [
-  {slug:"trending", name:"Trending Posts", ico:"🔥", color:"#b3401f", tint:"#fbe9e3",
+  {slug:"trending", name:"Trending Posts", ico:ICON["trending"], color:"#b3401f", tint:"#fbe9e3",
    blurb:"The money stories and buzzwords everyone's searching this week.",
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
    steps:[["Catch the Buzzword Brief","One term, decoded in 30 seconds."],["Scan the week's money news","What happened and why it matters to you."],["Read the most-shared post","See what other readers found useful."],["Ask us a question","We answer reader questions every week."]],
    posts:["Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
-  {slug:"personal-finance", name:"Personal Finance", ico:"💼", color:"#7a4b12", tint:"#fbf3dd",
+  {slug:"personal-finance", name:"Personal Finance", ico:ICON["personal-finance"], color:"#7a4b12", tint:"#fbf3dd",
    blurb:"Budgeting, saving and everyday money habits that add up.",
    intro:"Start here if you're new. Budgeting, emergency funds, taxes and everyday money habits — explained step by step, with no judgment and no jargon.",
    sub:["Budgeting","Emergency Fund","Taxes","Saving Money","Money Habits"],
    steps:[["Track one month of spending","You can't change what you can't see."],["Build a starter emergency fund","Aim for $1,000, then 3–6 months of expenses."],["Choose a budget style","50/30/20, zero-based or pay-yourself-first."],["Set one money goal","Specific, dated and automated."]],
    posts:["The 50/30/20 budget, explained with examples","How much should be in your emergency fund?","Sinking funds: the stress-free way to save","Tax refunds vs. adjusting your withholding","20 painless ways to cut monthly bills","How to talk about money with your partner"],
    terms:[["Net worth","What you own minus what you owe."],["Sinking fund","Saving monthly for a known future expense."],["Zero-based budget","Every dollar gets a job before the month begins."]]},
-  {slug:"financial-freedom", name:"Financial Freedom", ico:"🕊️", color:"#0f5b3f", tint:"#e7f2ec",
+  {slug:"financial-freedom", name:"Financial Freedom", ico:ICON["financial-freedom"], color:"#0f5b3f", tint:"#e7f2ec",
    blurb:"FIRE, side income and the path to choosing how you spend your time.",
    intro:"Financial freedom means your money supports the life you want — not the other way around. Explore FIRE, passive income, side hustles and the mindset shifts that get you there sooner.",
    sub:["FIRE Movement","Side Hustles","Passive Income","Mindset","Early Retirement"],
    steps:[["Find your freedom number","Annual expenses × 25 — your starting target."],["Raise your savings rate","The single biggest lever on your timeline."],["Add a second income stream","Even $300/month changes the math."],["Invest the gap automatically","Make progress the default."]],
    posts:["What is FIRE? Lean, Fat and Coast explained","The 4% rule in plain English","12 side hustles you can start this weekend","How to calculate your financial independence number","Passive income ideas that actually work","Why your savings rate matters more than returns"],
    terms:[["FIRE","Financial Independence, Retire Early."],["Savings rate","The share of your income you keep and invest."],["Coast FI","Having enough invested that growth alone covers retirement."]]},
-  {slug:"banking-credit", name:"Banking & Credit", ico:"🏦", color:"#1d4e89", tint:"#e6eef8",
+  {slug:"banking-credit", name:"Banking & Credit", ico:ICON["banking-credit"], color:"#1d4e89", tint:"#e6eef8",
    blurb:"Checking, savings, credit scores and cards — the foundation of every money move.",
    intro:"Your bank account and credit score quietly shape the price you pay for almost everything. Learn how to pick the right accounts, build credit from scratch, and use cards without paying a cent in interest.",
    sub:["Credit Scores","Credit Cards","Savings Accounts","Checking","Debt Payoff"],
    steps:[["Know your score","Where to check it for free and what the number means."],["Pick a high-yield savings account","Stop letting your emergency fund earn almost nothing."],["Use one card, pay it in full","The simplest way to build credit without debt."],["Automate your bills","Never pay a late fee again."]],
    posts:["How credit scores are actually calculated","High-yield savings vs. money market accounts","Balance transfer cards: when they're worth it","Debt snowball vs. avalanche: which wins?","How to build credit with no credit history","Overdraft fees: how to avoid them for good"],
    terms:[["APR","The yearly cost of borrowing, including interest."],["Credit utilization","How much of your available credit you're using — keep it under 30%."],["APY","What your savings actually earn in a year with compounding."]]},
-  {slug:"investing", name:"Investing", ico:"📈", color:"#3b3a8f", tint:"#ecebfa",
+  {slug:"investing", name:"Investing", ico:ICON["investing"], color:"#3b3a8f", tint:"#ecebfa",
    blurb:"Index funds, retirement accounts and growing money for the long run.",
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money."],["Open a Roth or traditional IRA","Know the difference before you choose."],["Pick a low-cost index fund","Broad, diversified and cheap."],["Invest on autopilot","Dollar-cost averaging beats market timing."]],
    posts:["Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
-  {slug:"insurance", name:"Insurance", ico:"🛡️", color:"#0e6b73", tint:"#e3f3f4",
+  {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
    intro:"Insurance protects everything else you're building. Understand what coverage you actually need, how to compare policies, and where people commonly overpay.",
    sub:["Life Insurance","Health Insurance","Auto Insurance","Home & Renters","Disability"],
@@ -2887,7 +2898,7 @@ const artMeta = (t,i,off=0) => { const a = ARTICLES[slugify(t)]; return a ? [a.d
 
 function card(c,title,i){
   const a = ARTICLES[slugify(title)], [d,r] = artMeta(title,i);
-  return `<a class="card" href="${artUrl(c,title)}"><div class="thumb" style="background:${c.tint}"><span class="pill" style="color:${c.color}">${c.name}</span>${c.ico}</div>
+  return `<a class="card" href="${artUrl(c,title)}"><div class="thumb" style="background:${c.tint};color:${c.color}"><span class="pill" style="color:${c.color}">${c.name}</span>${c.ico}</div>
   <div class="card-body"><h3>${title}</h3><p>${a ? a.dek : "A clear, step-by-step guide that explains what it is, why it matters and what to do next."}</p>
   <div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`;
 }
@@ -2898,9 +2909,9 @@ $("#menu").innerHTML = CATS.map(c=>c.slug==="trending"
   ? `<li class="menu-feed-li"><a class="menu-feed" href="/${c.slug}/" data-slug="${c.slug}">Trending</a></li>`
   : `<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("");
 if($("#topicCount")) $("#topicCount").innerHTML = String(CATS.filter(c=>c.slug!=="trending").length);
-if($("#catTiles")) $("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="/${c.slug}/"><div class="ico" style="background:${c.tint}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
+if($("#catTiles")) $("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="/${c.slug}/"><div class="ico" style="background:${c.tint};color:${c.color}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
 $("#footCats").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/">${c.name}</a></li>`).join("");
-$("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><input type="checkbox" value="${c.slug}"><span>${c.ico} ${c.name}</span></label>`).join("");
+$("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><input type="checkbox" value="${c.slug}"><span>${c.name}</span></label>`).join("");
 if($("#trendList")) $("#trendList").innerHTML = bySlug.trending.posts.slice(0,5).map((t,i)=>`<li><a href="${artUrl(bySlug.trending,t)}"><small>${["Buzzword Brief","Financial Freedom","Banking & Credit","Money News","Personal Finance"][i]}</small><strong>${t}</strong></a></li>`).join("");
 if($("#latestGrid")) $("#latestGrid").innerHTML = ["investing","banking-credit","insurance","trending","personal-finance","financial-freedom"].map((s,i)=>card(bySlug[s],bySlug[s].posts[i%6],i)).join("");
 
@@ -2909,7 +2920,7 @@ function renderBuzz(){
   const el=$("#buzzCard"); if(!el) return;
   const b=BUZZWORD, esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
   const d=new Date(b.date+"T12:00:00Z").toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:"UTC"});
-  el.innerHTML = `<span class="tag">💡 BUZZWORD OF THE DAY · ${d.toUpperCase()}</span>
+  el.innerHTML = `<span class="tag">BUZZWORD OF THE DAY · ${d.toUpperCase()}</span>
           <h3>${esc(b.term)}</h3>
           <p>The money word everyone's using, explained in 30 seconds.</p>
           <div class="def"><strong>What it means:</strong> ${esc(b.def)}</div>
@@ -2944,21 +2955,21 @@ function renderCat(c){
 
         <div class="eyebrow" style="color:${c.color}">Latest</div>
         <h2 style="margin:6px 0 20px">Recently published</h2>
-        <div class="rows">${c.posts.slice(3).map((p,i)=>{const [d,r]=artMeta(p,i,3); return `<a class="row card" href="${artUrl(c,p)}"><div class="thumb" style="background:${c.tint}">${c.ico}</div><div class="card-body"><h3>${p}</h3><p>Everything you need to know, with real examples and a simple next step.</p><div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`}).join("")}</div>
+        <div class="rows">${c.posts.slice(3).map((p,i)=>{const [d,r]=artMeta(p,i,3); return `<a class="row card" href="${artUrl(c,p)}"><div class="thumb" style="background:${c.tint};color:${c.color}">${c.ico}</div><div class="card-body"><h3>${p}</h3><p>Everything you need to know, with real examples and a simple next step.</p><div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`}).join("")}</div>
       </div>
       <aside>
         <div class="box side-nl">
-          <h3>📬 Get ${c.name} tips weekly</h3>
+          <h3>Get ${c.name} tips weekly</h3>
           <p style="font-size:.86rem;color:var(--ink-soft)">Join The Weekly Reason and we'll include the best new ${c.name.toLowerCase()} guides every Sunday.</p>
           <form class="side-form" data-topic="${c.slug}" novalidate><input type="email" placeholder="Email address"><button class="btn btn-primary" type="submit">Subscribe free</button></form>
         </div>
         <div class="box">
-          <h3>📖 Key terms</h3>
+          <h3>Key terms</h3>
           <dl class="terms">${c.terms.map(t=>`<dt>${t[0]}</dt><dd>${t[1]}</dd>`).join("")}</dl>
         </div>
         <div class="box other-cats">
           <h3>More topics</h3>
-          ${others.map(o=>`<a href="/${o.slug}/"><span>${o.ico} ${o.name}</span><span>→</span></a>`).join("")}
+          ${others.map(o=>`<a href="/${o.slug}/"><span>${o.name}</span><span>→</span></a>`).join("")}
         </div>
       </aside>
     </div>
@@ -2973,14 +2984,14 @@ function renderArticle(c, aslug){
   const more = c.posts.filter(p=>slugify(p)!==aslug).slice(0,3);
   const moreHtml = `<div class="art-more"><div class="eyebrow" style="color:${c.color}">Keep reading</div><h2 style="margin:6px 0 20px">More ${c.name.toLowerCase()} guides</h2><div class="grid-3">${more.map((p,i)=>card(c,p,i)).join("")}</div></div>`;
   if(!a){
-    $("#page-art").innerHTML = `<div class="soon"><div class="big-ico">${c.ico}</div><div class="eyebrow" style="color:${c.color}">${c.name} · Coming soon</div><h1 style="font-size:clamp(1.7rem,3.5vw,2.4rem);margin-top:10px">${title}</h1><p>We're putting the finishing touches on this guide. Join The Weekly Reason and we'll send it to you the Sunday it goes live.</p><a href="#newsletter" data-scroll class="btn btn-primary">Notify me →</a></div>${moreHtml}`;
+    $("#page-art").innerHTML = `<div class="soon"><div class="big-ico" style="color:${c.color}">${c.ico}</div><div class="eyebrow" style="color:${c.color}">${c.name} · Coming soon</div><h1 style="font-size:clamp(1.7rem,3.5vw,2.4rem);margin-top:10px">${title}</h1><p>We're putting the finishing touches on this guide. Join The Weekly Reason and we'll send it to you the Sunday it goes live.</p><a href="#newsletter" data-scroll class="btn btn-primary">Notify me →</a></div>${moreHtml}`;
     return title;
   }
   $("#page-art").innerHTML = `
   <div class="art-hero" style="background:linear-gradient(135deg,${c.color},${c.color}dd)">
     <div class="wrap">
       <div class="crumbs"><a href="/">Home</a> › <a href="/${c.slug}/">${c.name}</a></div>
-      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">${c.ico} ${c.name}</span>
+      <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">${c.name}</span>
       <h1>${a.title}</h1>
       <p class="dek">${a.dek}</p>
       <div class="art-meta"><span>By the Rich With Reason team</span><span>${a.date}</span><span>${a.read}</span></div>
@@ -3041,11 +3052,11 @@ const CONTACT_EMAIL = "richwreason@gmail.com";
 const CONTACT_DESC = "Get in touch with Rich With Reason. Questions, topic ideas, partnerships and press: email richwreason@gmail.com.";
 function renderContact(){
   const reasons = [
-    ["💬","Questions about a post","Something not clicking? Ask, and it may become a future guide or Reader Q."],
-    ["💡","Topic suggestions","A buzzword you keep hearing or a money topic you want explained."],
-    ["🤝","Partnerships and advertising","Brands and creators interested in working with Rich With Reason."],
-    ["📰","Press and media","Interviews, quotes and speaking requests."],
-    ["✏️","Corrections","Spotted a mistake or an outdated number? Let me know so I can fix it."],
+    ["Questions about a post","Something not clicking? Ask, and it may become a future guide or Reader Q."],
+    ["Topic suggestions","A buzzword you keep hearing or a money topic you want explained."],
+    ["Partnerships and advertising","Brands and creators interested in working with Rich With Reason."],
+    ["Press and media","Interviews, quotes and speaking requests."],
+    ["Corrections","Spotted a mistake or an outdated number? Let me know so I can fix it."],
   ];
   $("#page-contact").innerHTML = `
   <div class="art-hero about-hero">
@@ -3058,7 +3069,7 @@ function renderContact(){
   </div>
   <section class="contact">
     <div class="contact-card">
-      <div class="contact-ico">✉️</div>
+      <div class="contact-ico">${ICON.mail}</div>
       <div>
         <div class="eyebrow">Email</div>
         <a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>
@@ -3067,7 +3078,7 @@ function renderContact(){
       <a class="btn btn-primary" href="mailto:${CONTACT_EMAIL}">Send an email →</a>
     </div>
     <h2 class="contact-h">What to reach out about</h2>
-    <div class="contact-grid">${reasons.map(r=>`<div class="step"><div class="contact-ri">${r[0]}</div><h3>${r[1]}</h3><p>${r[2]}</p></div>`).join("")}</div>
+    <div class="contact-grid">${reasons.map(r=>`<div class="step"><h3>${r[0]}</h3><p>${r[1]}</p></div>`).join("")}</div>
     <p class="art-note about-note">Please don't send account numbers or other sensitive financial details by email. I can't give personal financial advice, but I'm always happy to point you to a guide that helps.</p>
   </section>`;
 }
@@ -3181,7 +3192,7 @@ async function sideSubmit(e){
   try {
     await subscribe({ email: inp.value.trim(), topics: f.dataset.topic ? [f.dataset.topic] : [] });
     f.innerHTML = `<p style="font-weight:600;color:var(--green);margin-top:10px">✓ You're subscribed! First issue arrives Sunday.</p>`;
-    toast("Welcome to The Weekly Reason 📬");
+    toast("Welcome to The Weekly Reason");
   } catch(_){
     btn.disabled=false; btn.textContent="Subscribe free"; toast(SUBMIT_ERR);
   }

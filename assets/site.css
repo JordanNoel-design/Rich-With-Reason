@@ -255,3 +255,7 @@
   .contact-ri{font-size:1.5rem;margin-bottom:6px}
   .contact-grid h3{font-size:1.05rem;margin:0 0 6px} .contact-grid p{font-size:.9rem;color:var(--ink-soft)}
   @media(max-width:700px){.contact-card{grid-template-columns:1fr;text-align:center;justify-items:center}}
+
+  /* Line icons */
+  svg.ic{display:block}
+  .contact-ico{color:var(--green);font-size:1.6rem}
