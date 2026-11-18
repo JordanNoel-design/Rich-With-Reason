@@ -3,13 +3,13 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-17",
-  "term": "Treasury yield",
-  "def": "The interest rate the U.S. government pays to borrow money. The 10-year Treasury yield is the benchmark that mortgage rates and many other loan rates follow.",
-  "why": "The 10-year yield has climbed above 5%, near its highest level in almost two decades, which is pushing mortgage and loan rates up.",
+  "date": "2026-11-18",
+  "term": "Rate hike",
+  "def": "When the Federal Reserve raises its benchmark interest rate to cool the economy and bring inflation down. It makes borrowing on things like credit cards cost more, and savings accounts usually pay more.",
+  "why": "On Nov. 17, St. Louis Fed President Alberto Musalem said another rate hike is needed soon, with more likely before spring, calling inflation too high and broad-based.",
   "source": {
-    "name": "Forbes Advisor",
-    "url": "https://www.forbes.com/advisor/investing/treasury-rates/"
+    "name": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/policy/article/st-louis-feds-musalem-calls-for-interest-rate-hikes-soon-132554806.html"
   },
   "link": "/trending/buzzword-brief-what-does-rate-hike-mean/",
   "linkText": "Related: what a 'rate hike' means"
