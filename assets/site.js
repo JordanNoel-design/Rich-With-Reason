@@ -2974,8 +2974,9 @@ function renderAbout(){
         <figcaption><strong>Jordan Noel</strong><span>Founder, Rich With Reason<br>Finance, Temple University<br>Private Equity Accounting</span></figcaption>
       </figure>
       <div class="article about-text">
-        <h2>Hi, I'm Jordan Noel.</h2>
-        <p>I'm the founder of Rich With Reason. I studied finance at <strong>Temple University</strong>, and today I work in <strong>private equity accounting</strong>. My day job keeps me close to the numbers behind how money is invested, tracked and reported.</p>
+        <h2>Hi, I'm Jordan Noel. I speak fluent finance, and I translate.</h2>
+        <p>By day, I work in <strong>private equity accounting</strong>, following the money behind big-league investments: where every dollar goes, how it grows and how it's accounted for. It's the side of finance most people never get to see, and I picked up the language of it earning my finance degree at <strong>Temple University</strong>.</p>
+        <p>Outside the office, I run Rich With Reason, where I take the insider-speak I hear every day and turn it into plain English you can actually use.</p>
         <p>Working in finance taught me something that surprised me: most money topics aren't actually hard. They just tend to be explained in jargon, by people who forget what it was like not to know the terms. That gap keeps a lot of smart people from making confident decisions about their own money.</p>
         <p>Rich With Reason is my attempt to close it. My goal is simple: <strong>make finance digestible to anyone.</strong> Whether you're opening your first savings account, trying to figure out what a "rate hike" means for you, or finally getting serious about investing, you should be able to read a guide here and walk away understanding it.</p>
         <h2>What you'll find here</h2>
