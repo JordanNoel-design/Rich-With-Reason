@@ -2956,7 +2956,7 @@ function renderArticle(c, aslug){
 }
 
 // About page
-const ABOUT_DESC = "Why Rich With Reason exists: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
+const ABOUT_DESC = "Meet Jordan Noel, founder of Rich With Reason: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
 function renderAbout(){
   $("#page-about").innerHTML = `
   <div class="art-hero about-hero">
@@ -2970,12 +2970,12 @@ function renderAbout(){
   <section class="about">
     <div class="about-grid">
       <figure class="about-photo">
-        <img src="/assets/about-headshot.jpg" alt="Headshot of the founder of Rich With Reason" width="640" height="640" loading="eager">
-        <figcaption><strong>Founder, Rich With Reason</strong><span>Finance, Temple University<br>Private Equity Accounting</span></figcaption>
+        <img src="/assets/about-headshot.jpg" alt="Jordan Noel, founder of Rich With Reason" width="640" height="640" loading="eager">
+        <figcaption><strong>Jordan Noel</strong><span>Founder, Rich With Reason<br>Finance, Temple University<br>Private Equity Accounting</span></figcaption>
       </figure>
       <div class="article about-text">
-        <h2>Hi, I'm the person behind Rich With Reason.</h2>
-        <p>I studied finance at <strong>Temple University</strong>, and today I work in <strong>private equity accounting</strong>. My day job keeps me close to the numbers behind how money is invested, tracked and reported.</p>
+        <h2>Hi, I'm Jordan Noel.</h2>
+        <p>I'm the founder of Rich With Reason. I studied finance at <strong>Temple University</strong>, and today I work in <strong>private equity accounting</strong>. My day job keeps me close to the numbers behind how money is invested, tracked and reported.</p>
         <p>Working in finance taught me something that surprised me: most money topics aren't actually hard. They just tend to be explained in jargon, by people who forget what it was like not to know the terms. That gap keeps a lot of smart people from making confident decisions about their own money.</p>
         <p>Rich With Reason is my attempt to close it. My goal is simple: <strong>make finance digestible to anyone.</strong> Whether you're opening your first savings account, trying to figure out what a "rate hike" means for you, or finally getting serious about investing, you should be able to read a guide here and walk away understanding it.</p>
         <h2>What you'll find here</h2>

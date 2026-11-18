@@ -105,7 +105,7 @@ write("404.html", noindex(home));
 const urls = [SITE + "/"];
 let n = 1;
 // About page
-const ABOUT_DESC = "Why Rich With Reason exists: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
+const ABOUT_DESC = "Meet Jordan Noel, founder of Rich With Reason: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
 write("about/index.html", build({ pathname: "/about/", desc: ABOUT_DESC }));
 urls.push(`${SITE}/about/`); n++;
 for (const c of CATS) {
