@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (Google Analytics) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WTJ5KWGT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Interest Calculator — Rich With Reason</title>
+<meta name="description" content="Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Facebook, iMessage, WhatsApp, LinkedIn, Slack, Discord -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rich With Reason">
+<meta property="og:title" content="Compound Interest Calculator — Rich With Reason">
+<meta property="og:description" content="Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works.">
+<link rel="canonical" href="https://richwithreason.com/compound-calculator/">
+<meta property="og:url" content="https://richwithreason.com/compound-calculator/">
+<meta property="og:image" content="https://richwithreason.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rich With Reason logo">
+
+<!-- X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compound Interest Calculator — Rich With Reason">
+<meta name="twitter:description" content="Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works.">
+<meta name="twitter:image" content="https://richwithreason.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=b51cd643">
+</head>
+<body>
+
+<div class="topbar">New: <strong>The Weekly Reason</strong> — one email every Sunday, five minutes, smarter money. <a href="#newsletter" data-scroll>Join free →</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo"><span class="logo-mark">R</span>Rich With Reason</a>
+    <ul class="menu" id="menu"><li class="menu-feed-li"><a class="menu-feed" href="/trending/" data-slug="trending">Trending</a></li><li><a href="/personal-finance/" data-slug="personal-finance">Personal Finance</a></li><li><a href="/financial-freedom/" data-slug="financial-freedom">Financial Freedom</a></li><li><a href="/banking-credit/" data-slug="banking-credit">Banking & Credit</a></li><li><a href="/investing/" data-slug="investing">Investing</a></li><li><a href="/insurance/" data-slug="insurance">Insurance</a></li></ul>
+    <a href="#newsletter" data-scroll class="btn btn-primary nav-cta">Get the Newsletter</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="app">
+  <!-- HOME -->
+  <div class="page" id="page-home">
+  </div>
+
+  <!-- CATEGORY (rendered by JS) -->
+  <div class="page" id="page-cat"></div>
+
+  <!-- ARTICLE (rendered by JS) -->
+  <div class="page" id="page-art"></div>
+
+  <!-- ABOUT (rendered by JS) -->
+  <div class="page" id="page-about"></div>
+
+  <!-- CONTACT (rendered by JS) -->
+  <div class="page" id="page-contact"></div>
+
+  <!-- COMPOUND CALCULATOR (rendered by JS) -->
+  <div class="page on" id="page-calc">
+  <div class="art-hero about-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › Compound calculator</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Free tool</div>
+      <h1>Compound interest calculator</h1>
+      <p class="dek">See what steady monthly investing could grow into, and how much of it comes from growth rather than your own deposits.</p>
+    </div>
+  </div>
+  <section class="calc-page">
+    <div class="wrap"><div class="tool calc">
+    <div><div class="calc-row">
+      <label for="calc-m">Monthly contribution <span class="val" data-v="m">$300</span></label>
+      <div class="calc-in"><input type="range" data-k="m" min="0" max="10000" step="25" value="300" aria-label="Monthly contribution">
+      <span class="calc-num"><i>$</i><input type="number" id="calc-m" data-k="m" min="0" max="10000" step="25" value="300" inputmode="decimal"></span></div>
+      <div class="calc-range"><span>$0</span><span>$10,000</span></div></div><div class="calc-row">
+      <label for="calc-y">Years invested <span class="val" data-v="y">20 years</span></label>
+      <div class="calc-in"><input type="range" data-k="y" min="1" max="50" step="1" value="20" aria-label="Years invested">
+      <span class="calc-num"><input type="number" id="calc-y" data-k="y" min="1" max="50" step="1" value="20" inputmode="decimal"><i>yrs</i></span></div>
+      <div class="calc-range"><span>1 year</span><span>50 years</span></div></div><div class="calc-row">
+      <label for="calc-r">Average annual return <span class="val" data-v="r">7%</span></label>
+      <div class="calc-in"><input type="range" data-k="r" min="0" max="15" step="0.25" value="7" aria-label="Average annual return">
+      <span class="calc-num"><input type="number" id="calc-r" data-k="r" min="0" max="15" step="0.25" value="7" inputmode="decimal"><i>%</i></span></div>
+      <div class="calc-range"><span>0%</span><span>15%</span></div></div>
+      <p class="calc-note">Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, and returns aren't guaranteed.</p>
+    </div>
+    <div class="result">
+      <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
+      <div class="big" data-o="fv">$156,278</div>
+      <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b data-o="c">$72,000</b> · growth adds <b data-o="g" style="color:var(--green)">$84,278</b></div>
+      <div class="bars" data-o="bars"><div style="height:4.929874693011211%" class=""></div><div style="height:10.598274280569647%" class=""></div><div style="height:17.115834235954015%" class=""></div><div style="height:24.609763892089408%" class=""></div><div style="height:33.22632930545561%" class=""></div><div style="height:43.13370806794949%" class=""></div><div style="height:54.52527178674315%" class=""></div><div style="height:67.62336029937721%" class=""></div><div style="height:82.68362128898649%" class=""></div><div style="height:100%" class="c"></div></div>
+    </div>
+  </div></div>
+  </section>
+  <article class="article">
+    <h2>What is compounding?</h2>
+    <p>Compounding is what happens when your money earns a return, and then that return starts earning a return too. Instead of growing by the same amount every year, your balance grows on a bigger and bigger base. Albert Einstein probably never called it the eighth wonder of the world, but the idea behind the quote holds up: given enough time, growth on top of growth does most of the heavy lifting.</p>
+
+    <h2>A simple example</h2>
+    <p>Say you invest $1,000 and it earns 7% a year. After one year you have $1,070. In year two you earn 7% on $1,070, not just on your original $1,000, so you end with about $1,145. That extra $4.90 looks tiny, but it keeps snowballing. Leave the money alone for 30 years and that single $1,000 grows to about $7,600, with nothing added.</p>
+
+    <h2>Why monthly investing is so powerful</h2>
+    <p>Most people don't invest one lump sum. They add a little every month. That's what the calculator above shows. Here's $300 a month at a 7% average annual return:</p>
+    <table class="weights">
+      <thead><tr><th>Years</th><th>You put in</th><th>Could grow to</th><th>From growth</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>$36,000</td><td>~$51,900</td><td>~$15,900</td></tr>
+        <tr><td>20</td><td>$72,000</td><td>~$156,300</td><td>~$84,300</td></tr>
+        <tr><td>30</td><td>$108,000</td><td>~$366,000</td><td>~$258,000</td></tr>
+        <tr><td>40</td><td>$144,000</td><td>~$787,400</td><td>~$643,400</td></tr>
+      </tbody>
+    </table>
+    <p>Notice what happens over time. In the first 10 years, most of the balance is money you put in. By year 40, more than four out of every five dollars came from growth.</p>
+
+    <h2>Time matters more than you think</h2>
+    <p>Compare two savers, both earning 7% a year:</p>
+    <ul>
+      <li><strong>Saver A</strong> invests $200 a month from age 25 to 35, then stops completely. Total put in: $24,000.</li>
+      <li><strong>Saver B</strong> waits, then invests $200 a month from age 35 to 65. Total put in: $72,000.</li>
+    </ul>
+    <p>At 65, Saver A has about <strong>$281,000</strong> and Saver B has about <strong>$244,000</strong>. Saver A put in a third as much money and still ends up ahead, because those early dollars had 30 extra years to compound.</p>
+    <div class="callout"><strong>The takeaway:</strong> you don't need a lot of money to benefit from compounding. You need time and consistency. Starting small today usually beats starting big later.</div>
+
+    <h2>The Rule of 72</h2>
+    <p>A quick way to estimate how long it takes money to double: divide 72 by your annual return. At 7%, money doubles roughly every 10 years (72 ÷ 7 ≈ 10.3). At 4%, it takes about 18 years. At 10%, about 7.</p>
+
+    <h2>The three levers you control</h2>
+    <ol>
+      <li><strong>How much you add.</strong> Raising your monthly contribution, even by $25, adds up over decades.</li>
+      <li><strong>How long you stay invested.</strong> The biggest gains come at the end, so staying the course through ups and downs matters.</li>
+      <li><strong>What you keep.</strong> High fees and taxes eat into your return every single year. Low-cost index funds and tax-advantaged accounts like a 401(k), IRA or HSA let more of your money compound.</li>
+    </ol>
+
+    <h2>What this calculator assumes</h2>
+    <ul>
+      <li>You add the same amount at the end of every month.</li>
+      <li>Your return compounds monthly at a steady average rate. Real returns go up and down from year to year.</li>
+      <li>Results are before taxes, fees and inflation. With inflation, the future dollars will buy less than today's dollars.</li>
+    </ul>
+    <p>As a rough guide, the U.S. stock market has historically returned around 10% a year on average before inflation, with big swings along the way. A mix that includes bonds has usually returned less. Many people plan with something in the 5% to 7% range to stay conservative.</p>
+
+    <p>Want to put this into practice? Start with <a href="/investing/how-to-start-investing-with-100/">How to start investing with $100</a> or <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why expense ratios matter</a>.</p>
+
+    <p class="art-note">Examples are hypothetical, assume steady returns and are rounded. Past performance doesn't guarantee future results. This page is for education only and isn't investment advice.</p>
+  </article></div>
+
+  <!-- NEWSLETTER (shared on every page) -->
+  <section id="newsletter">
+    <div class="wrap">
+      <div class="news">
+        <div>
+          <div class="eyebrow">The Weekly Reason</div>
+          <h2>One email a week. Smarter money for life.</h2>
+          <p>Every Sunday we send a five-minute read that makes you a little sharper with money — no hype, no spam, unsubscribe anytime.</p>
+          <ul>
+            <li>The Buzzword Brief: one finance term, decoded</li>
+            <li>A plain-English take on the week's money news</li>
+            <li>One action you can finish in five minutes</li>
+            <li>The best new guides from your favorite topics</li>
+          </ul>
+        </div>
+        <form class="nl-form" id="nlForm" novalidate>
+          <div id="nlFields">
+            <h3>Join free</h3>
+            <p>Pick your topics and we'll tailor the "Best of the blog" section.</p>
+            <input type="text" id="nlName" placeholder="First name">
+            <input type="email" id="nlEmail" placeholder="Email address" required>
+            <div class="err" id="nlErr">Please enter a valid email address.</div>
+            <div class="chips" id="chips"><label><input type="checkbox" value="personal-finance"><span>Personal Finance</span></label><label><input type="checkbox" value="financial-freedom"><span>Financial Freedom</span></label><label><input type="checkbox" value="banking-credit"><span>Banking & Credit</span></label><label><input type="checkbox" value="investing"><span>Investing</span></label><label><input type="checkbox" value="insurance"><span>Insurance</span></label></div>
+            <button class="btn btn-primary" type="submit">Subscribe to The Weekly Reason</button>
+            <div class="fine">Free forever. We never sell your email. Unsubscribe anytime with one click.</div>
+          </div>
+          <div class="nl-ok" id="nlOk">
+            <div class="chk">✓</div>
+            <h3>You're in<span id="okName"></span>!</h3>
+            <p style="margin-top:6px">Your first issue arrives Sunday morning. Add our address to your contacts so it lands in your inbox, not spam.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo"><span class="logo-mark">R</span>Rich With Reason</div>
+        <p>Financial education that respects your intelligence. We explain the "why" so you can make the right call for your life.</p>
+      </div>
+      <div><h4>Topics</h4><ul id="footCats"><li><a href="/trending/">Trending Posts</a></li><li><a href="/personal-finance/">Personal Finance</a></li><li><a href="/financial-freedom/">Financial Freedom</a></li><li><a href="/banking-credit/">Banking & Credit</a></li><li><a href="/investing/">Investing</a></li><li><a href="/insurance/">Insurance</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#newsletter" data-scroll>The Weekly Reason</a></li><li><a href="/personal-finance/">Beginner's guide</a></li><li><a href="/compound-calculator/">Compound calculator</a></li><li><a href="/">Money glossary</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> Content on Rich With Reason is for educational and informational purposes only and is not financial, investment, tax, insurance or legal advice. Consider speaking with a licensed professional about your situation. Some links may be affiliate links; this never affects our editorial opinions. Investing involves risk, including loss of principal.<br><br>© 2026 Rich With Reason. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="/assets/site.js?v=90f5b5b5"></script>
+</body>
+</html>

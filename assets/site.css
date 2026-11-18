@@ -259,3 +259,18 @@
   /* Line icons */
   svg.ic{display:block}
   .contact-ico{color:var(--green);font-size:1.6rem}
+
+  /* Compound calculator */
+  .calc-row{margin-bottom:6px}
+  .calc-in{display:flex;align-items:center;gap:12px}
+  .calc-in input[type=range]{flex:1;min-width:0}
+  .calc-num{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:9px;background:var(--white);padding:0 8px;width:118px;flex:none}
+  .calc-num:focus-within{border-color:var(--green)}
+  .calc-num i{font-style:normal;color:var(--ink-soft);font-size:.85rem}
+  .calc-num input{border:0;outline:0;width:100%;padding:8px 4px;font:inherit;font-size:.92rem;background:transparent;text-align:right;-moz-appearance:textfield}
+  .calc-num input::-webkit-outer-spin-button,.calc-num input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .calc-range{display:flex;justify-content:space-between;font-size:.72rem;color:#8a978f;margin:2px 130px 0 0}
+  .calc-note{font-size:.78rem;color:#7b8a82;margin-top:16px;line-height:1.5}
+  .calc-page{padding:44px 0 0}
+  .calc-page .tool{max-width:1000px;margin:0 auto}
+  @media(max-width:520px){.calc-num{width:100px}.calc-range{margin-right:112px}}

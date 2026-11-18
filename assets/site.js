@@ -3083,12 +3083,139 @@ function renderContact(){
   </section>`;
 }
 
+// Compound calculator: one widget, used on the home page and on /compound-calculator/
+const CALC = {
+  m:{label:"Monthly contribution", min:0, max:10000, step:25, val:300, fmt:v=>"$"+(+v).toLocaleString(), pre:"$", suf:""},
+  y:{label:"Years invested", min:1, max:50, step:1, val:20, fmt:v=>v+(+v===1?" year":" years"), pre:"", suf:"yrs"},
+  r:{label:"Average annual return", min:0, max:15, step:0.25, val:7, fmt:v=>(+v)+"%", pre:"", suf:"%"},
+};
+const money = v=>"$"+Math.round(v).toLocaleString();
+function calcResult(m,y,rPct){
+  const r=rPct/100/12, fvAt=n=> r ? m*((Math.pow(1+r,n)-1)/r) : m*n;
+  const fv=fvAt(y*12), c=m*y*12;
+  const bars=Array.from({length:10},(_,i)=>{const n=Math.round((i+1)/10*y*12); return `<div style="height:${fv>0?Math.max(4,fvAt(n)/fv*100):4}%" class="${i===9?'c':''}"></div>`}).join("");
+  return {fv,c,g:fv-c,bars};
+}
+function calcWidget(){
+  const k=CALC, res=calcResult(k.m.val,k.y.val,k.r.val);
+  const row=id=>{const o=k[id]; return `<div class="calc-row">
+      <label for="calc-${id}">${o.label} <span class="val" data-v="${id}">${o.fmt(o.val)}</span></label>
+      <div class="calc-in"><input type="range" data-k="${id}" min="${o.min}" max="${o.max}" step="${o.step}" value="${o.val}" aria-label="${o.label}">
+      <span class="calc-num">${o.pre?`<i>${o.pre}</i>`:""}<input type="number" id="calc-${id}" data-k="${id}" min="${o.min}" max="${o.max}" step="${o.step}" value="${o.val}" inputmode="decimal">${o.suf?`<i>${o.suf}</i>`:""}</span></div>
+      <div class="calc-range"><span>${o.fmt(o.min)}</span><span>${o.fmt(o.max)}</span></div></div>`;};
+  return `<div class="tool calc">
+    <div>${row("m")}${row("y")}${row("r")}
+      <p class="calc-note">Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, and returns aren't guaranteed.</p>
+    </div>
+    <div class="result">
+      <div style="font-size:.85rem;color:var(--ink-soft)">Estimated future value</div>
+      <div class="big" data-o="fv">${money(res.fv)}</div>
+      <div style="font-size:.88rem;color:var(--ink-soft)">You contribute <b data-o="c">${money(res.c)}</b> · growth adds <b data-o="g" style="color:var(--green)">${money(res.g)}</b></div>
+      <div class="bars" data-o="bars">${res.bars}</div>
+    </div>
+  </div>`;
+}
+function bindCalc(el){
+  const get=id=>el.querySelector(`input[type=range][data-k="${id}"]`);
+  const update=()=>{
+    const v={}; ["m","y","r"].forEach(id=>{v[id]=+get(id).value; el.querySelector(`[data-v="${id}"]`).textContent=CALC[id].fmt(v[id]);});
+    const res=calcResult(v.m,v.y,v.r);
+    el.querySelector('[data-o="fv"]').textContent=money(res.fv);
+    el.querySelector('[data-o="c"]').textContent=money(res.c);
+    el.querySelector('[data-o="g"]').textContent=money(res.g);
+    el.querySelector('[data-o="bars"]').innerHTML=res.bars;
+  };
+  el.querySelectorAll("input[data-k]").forEach(inp=>{
+    const id=inp.dataset.k, o=CALC[id];
+    inp.addEventListener("input",()=>{
+      let v=parseFloat(inp.value); if(isNaN(v)) return;
+      v=Math.min(o.max,Math.max(o.min,v));
+      el.querySelectorAll(`input[data-k="${id}"]`).forEach(x=>{ if(x!==inp) x.value=v; });
+      if(inp.type==="range") inp.value=v;
+      update();
+    });
+    if(inp.type==="number") inp.addEventListener("blur",()=>{ let v=parseFloat(inp.value); if(isNaN(v)) v=+get(id).value; inp.value=Math.min(o.max,Math.max(o.min,v)); });
+  });
+  update();
+}
+function mountCalcs(){ document.querySelectorAll(".calc").forEach(el=>{ if(!el.dataset.bound){ el.dataset.bound="1"; bindCalc(el); } }); }
+if($("#calcHome")) $("#calcHome").innerHTML = calcWidget();
+
+// Compound calculator page
+const CALC_DESC = "Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works.";
+function renderCalcPage(){
+  $("#page-calc").innerHTML = `
+  <div class="art-hero about-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › Compound calculator</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Free tool</div>
+      <h1>Compound interest calculator</h1>
+      <p class="dek">See what steady monthly investing could grow into, and how much of it comes from growth rather than your own deposits.</p>
+    </div>
+  </div>
+  <section class="calc-page">
+    <div class="wrap">${calcWidget()}</div>
+  </section>
+  <article class="article">
+    <h2>What is compounding?</h2>
+    <p>Compounding is what happens when your money earns a return, and then that return starts earning a return too. Instead of growing by the same amount every year, your balance grows on a bigger and bigger base. Albert Einstein probably never called it the eighth wonder of the world, but the idea behind the quote holds up: given enough time, growth on top of growth does most of the heavy lifting.</p>
+
+    <h2>A simple example</h2>
+    <p>Say you invest $1,000 and it earns 7% a year. After one year you have $1,070. In year two you earn 7% on $1,070, not just on your original $1,000, so you end with about $1,145. That extra $4.90 looks tiny, but it keeps snowballing. Leave the money alone for 30 years and that single $1,000 grows to about $7,600, with nothing added.</p>
+
+    <h2>Why monthly investing is so powerful</h2>
+    <p>Most people don't invest one lump sum. They add a little every month. That's what the calculator above shows. Here's $300 a month at a 7% average annual return:</p>
+    <table class="weights">
+      <thead><tr><th>Years</th><th>You put in</th><th>Could grow to</th><th>From growth</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>$36,000</td><td>~$51,900</td><td>~$15,900</td></tr>
+        <tr><td>20</td><td>$72,000</td><td>~$156,300</td><td>~$84,300</td></tr>
+        <tr><td>30</td><td>$108,000</td><td>~$366,000</td><td>~$258,000</td></tr>
+        <tr><td>40</td><td>$144,000</td><td>~$787,400</td><td>~$643,400</td></tr>
+      </tbody>
+    </table>
+    <p>Notice what happens over time. In the first 10 years, most of the balance is money you put in. By year 40, more than four out of every five dollars came from growth.</p>
+
+    <h2>Time matters more than you think</h2>
+    <p>Compare two savers, both earning 7% a year:</p>
+    <ul>
+      <li><strong>Saver A</strong> invests $200 a month from age 25 to 35, then stops completely. Total put in: $24,000.</li>
+      <li><strong>Saver B</strong> waits, then invests $200 a month from age 35 to 65. Total put in: $72,000.</li>
+    </ul>
+    <p>At 65, Saver A has about <strong>$281,000</strong> and Saver B has about <strong>$244,000</strong>. Saver A put in a third as much money and still ends up ahead, because those early dollars had 30 extra years to compound.</p>
+    <div class="callout"><strong>The takeaway:</strong> you don't need a lot of money to benefit from compounding. You need time and consistency. Starting small today usually beats starting big later.</div>
+
+    <h2>The Rule of 72</h2>
+    <p>A quick way to estimate how long it takes money to double: divide 72 by your annual return. At 7%, money doubles roughly every 10 years (72 ÷ 7 ≈ 10.3). At 4%, it takes about 18 years. At 10%, about 7.</p>
+
+    <h2>The three levers you control</h2>
+    <ol>
+      <li><strong>How much you add.</strong> Raising your monthly contribution, even by $25, adds up over decades.</li>
+      <li><strong>How long you stay invested.</strong> The biggest gains come at the end, so staying the course through ups and downs matters.</li>
+      <li><strong>What you keep.</strong> High fees and taxes eat into your return every single year. Low-cost index funds and tax-advantaged accounts like a 401(k), IRA or HSA let more of your money compound.</li>
+    </ol>
+
+    <h2>What this calculator assumes</h2>
+    <ul>
+      <li>You add the same amount at the end of every month.</li>
+      <li>Your return compounds monthly at a steady average rate. Real returns go up and down from year to year.</li>
+      <li>Results are before taxes, fees and inflation. With inflation, the future dollars will buy less than today's dollars.</li>
+    </ul>
+    <p>As a rough guide, the U.S. stock market has historically returned around 10% a year on average before inflation, with big swings along the way. A mix that includes bonds has usually returned less. Many people plan with something in the 5% to 7% range to stay conservative.</p>
+
+    <p>Want to put this into practice? Start with <a href="/investing/how-to-start-investing-with-100/">How to start investing with $100</a> or <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why expense ratios matter</a>.</p>
+
+    <p class="art-note">Examples are hypothetical, assume steady returns and are rounded. Past performance doesn't guarantee future results. This page is for education only and isn't investment advice.</p>
+  </article>`;
+}
+
 // Router
 function route(){
   const [slug, aslug] = location.pathname.split("/").filter(Boolean);
   document.querySelectorAll(".menu a").forEach(a=>a.classList.toggle("active",a.dataset.slug===slug));
   $("#menu").classList.remove("open");
   if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); setMeta(t+" — Rich With Reason", (ARTICLES[aslug]||{}).dek); }
+  else if(slug==="compound-calculator"){ renderCalcPage(); show("calc"); setMeta("Compound Interest Calculator — Rich With Reason", CALC_DESC); }
   else if(slug==="contact"){ renderContact(); show("contact"); setMeta("Contact — Rich With Reason", CONTACT_DESC); }
   else if(slug==="about"){ renderAbout(); show("about"); setMeta("About — Rich With Reason", ABOUT_DESC); }
   else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
@@ -3096,6 +3223,7 @@ function route(){
     // Topic/article pages are built without the home sections; load the real home page.
     const ph = $("#page-home"); if(ph && ph.children && !ph.children.length){ location.reload(); return; }
     show("home"); setMeta("Rich With Reason — Money, Explained With Reason", "Clear, honest guides on banking, credit, investing and insurance."); }
+  mountCalcs();
   window.scrollTo({top:0,behavior:"instant"});
 }
 function setMeta(title,desc){
@@ -3198,17 +3326,4 @@ async function sideSubmit(e){
   }
 }
 
-// Compound calculator
-function calc(){
-  const m=+$("#m").value, y=+$("#y").value, r=+$("#r").value/100/12;
-  $("#vM").textContent="$"+m.toLocaleString(); $("#vY").textContent=y; $("#vR").textContent=$("#r").value+"%";
-  const fvAt = n => r ? m*((Math.pow(1+r,n)-1)/r) : m*n;
-  const fv=fvAt(y*12), c=m*y*12;
-  const f=v=>"$"+Math.round(v).toLocaleString();
-  $("#fv").textContent=f(fv); $("#contrib").textContent=f(c); $("#growth").textContent=f(fv-c);
-  const pts=10, max=fv;
-  $("#bars").innerHTML = Array.from({length:pts},(_,i)=>{const n=Math.round((i+1)/pts*y*12); return `<div style="height:${Math.max(4,fvAt(n)/max*100)}%" class="${i===pts-1?'c':''}"></div>`}).join("");
-}
-// The calculator only exists on the home page.
-if($("#m")){ ["m","y","r"].forEach(id=>$("#"+id).addEventListener("input",calc)); calc(); }
 route();
