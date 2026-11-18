@@ -86,6 +86,8 @@ const ARTICLES = {
     title:"How credit scores are actually calculated",
     dek:"Five ingredients, one three-digit number. Here's what goes into your FICO score, how much each part counts, and which levers actually move it.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How Are Credit Scores Calculated? The 5 FICO Factors Explained",
+    faq:[["What is a good credit score?", "On the FICO scale of 300 to 850, 670 to 739 is considered good, 740 to 799 very good and 800 or higher exceptional. Lenders usually save their best rates for scores in the very good range and above."], ["How long do late payments stay on your credit report?", "Up to seven years from the date the late payment was first reported. The damage fades as the late payment ages, especially if every payment after it is on time."], ["Does checking your own credit score lower it?", "No. Checking your own score or report is a soft inquiry and never affects your score. Only hard inquiries, which happen when you apply for credit, can lower it a few points."], ["What is the fastest way to raise my credit score?", "Pay down credit card balances so your utilization drops, ideally below 10% of your limits, and make every payment on time. Utilization changes can show up in your score as soon as the lower balance is reported."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -159,6 +161,8 @@ const ARTICLES = {
     title:"High-yield savings vs. money market accounts",
     dek:"They pay similar rates and carry the same insurance. The real difference is how you get your money out, and that should decide which one you open.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"High-Yield Savings vs. Money Market Account: Which Is Better?",
+    faq:[["Is a money market account the same as a high-yield savings account?", "They're very similar. Both are insured bank deposits with variable rates. Money market accounts often add checks or a debit card and may need a higher minimum balance, while high-yield savings accounts usually have no minimum."], ["Are high-yield savings accounts safe?", "Yes, if the bank is FDIC-insured or the credit union is NCUA-insured. Your deposits are protected up to $250,000 per depositor, per institution, per ownership category."], ["Can you lose money in a money market account?", "Not in a money market account at an insured bank, which is a deposit protected by FDIC or NCUA insurance. A money market fund is different: it's an investment and isn't FDIC-insured, though it's generally low-risk."], ["How much interest will $10,000 earn in a high-yield savings account?", "At about 4% APY, roughly $400 in a year. At the national average savings rate of under 0.5%, the same $10,000 would earn less than $40."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -226,6 +230,8 @@ const ARTICLES = {
     title:"Balance transfer cards: when they're worth it",
     dek:"A 0% balance transfer can save you more than a thousand dollars in interest, or cost you a fee for nothing. Here's how to tell which one you're about to get.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Is a Balance Transfer Worth It? When 0% APR Cards Save You Money",
+    faq:[["Does a balance transfer hurt your credit score?", "It can dip a few points at first because of the hard inquiry and new account. Over time it often helps, because your total available credit rises and your utilization falls as you pay the balance down."], ["How much is a balance transfer fee?", "Usually 3% to 5% of the amount you move. Transferring $6,000 with a 5% fee costs $300, which is added to your new balance."], ["What happens when the 0% balance transfer period ends?", "Any balance left starts charging the card's regular APR, which is often in the 20s. Divide your transferred balance by the number of 0% months to find the payment that clears it in time."], ["Can I transfer a balance between cards from the same bank?", "Usually not. Most issuers don't allow balance transfers between their own cards, so you'll typically need a card from a different bank."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -295,6 +301,8 @@ const ARTICLES = {
     title:"Debt snowball vs. avalanche: which wins?",
     dek:"One method saves the most money on paper. The other gets more people to the finish line. Here's how to choose, with real numbers.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Debt Snowball vs. Avalanche: Which Pays Off Debt Faster?",
+    faq:[["Which is better, the debt snowball or the debt avalanche?", "The avalanche (highest interest rate first) saves the most money. The snowball (smallest balance first) gives quicker wins that keep many people motivated. The best one is the method you'll stick with."], ["How much more does the debt snowball cost?", "Often less than people expect. In our example with three debts and $625 a month, the snowball cost about $55 more in interest than the avalanche, but cleared the first debt 11 months sooner."], ["Should I use the snowball method on student loans and a mortgage?", "Most people leave a low-rate mortgage out and focus on consumer debts like credit cards, personal loans and car loans. Federal student loans may have repayment options worth checking before paying them off early."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -367,6 +375,8 @@ const ARTICLES = {
     title:"How to build credit with no credit history",
     dek:"No credit history means lenders can't score you yet. You can't skip that step, but you can get through it in months, not years.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How to Build Credit From Nothing: 5 Ways to Start With No History",
+    faq:[["How long does it take to build credit from nothing?", "Most people can get a FICO score after about six months of having an account reported to the credit bureaus. A solid score can follow within 6 to 12 months of on-time payments and low balances."], ["What is the easiest credit card to get with no credit?", "A secured credit card is usually the easiest. You put down a refundable deposit, often $200 to $500, which becomes your limit. Student cards and some starter cards are also designed for people with no history."], ["Does being an authorized user build credit?", "It can, if the card issuer reports authorized users to the credit bureaus. Choose someone who pays on time and keeps a low balance, because their card history shows up on your report."], ["Do you need to carry a balance to build credit?", "No. That's a myth. Paying your full statement balance every month builds credit just as well and means you pay no interest."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -431,6 +441,8 @@ const ARTICLES = {
     title:"Overdraft fees: how to avoid them for good",
     dek:"An overdraft fee can turn a $5 coffee into a $30 mistake. A few settings and habits can make sure it never happens to you again.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"How to Avoid Overdraft Fees: 6 Steps That Work",
+    faq:[["Can I turn off overdraft protection?", "You can opt out of overdraft coverage for debit card and ATM transactions, and your bank can't charge an overdraft fee on those unless you opted in. Those purchases will simply be declined instead."], ["Will my bank refund an overdraft fee?", "Often, if it's a first-time or rare overdraft. Call, explain what happened and politely ask for a courtesy refund. Long-time customers in good standing usually have the best luck."], ["How much is an overdraft fee?", "Bankrate's most recent survey put the average at about $27, and many large banks still charge around $35. Some banks have dropped overdraft fees entirely."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -495,6 +507,8 @@ const ARTICLES = {
     title:"What is FIRE? Lean, Fat and Coast explained",
     dek:"FIRE stands for Financial Independence, Retire Early. It isn't one plan but a family of them. Here's how each version works and who it fits.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"What Is FIRE? Lean, Fat, Coast and Barista FIRE Explained",
+    faq:[["How much money do you need for FIRE?", "A common target is 25 times your yearly spending, based on the 4% rule. If you spend $40,000 a year, that's about $1 million. Early retirees often use 28 to 30 times for extra safety."], ["What is Coast FIRE?", "It's having enough invested that, without adding another dollar, growth should carry you to your full retirement number by a traditional retirement age. You still work to cover today's bills."], ["What is Barista FIRE?", "Your investments cover part of your living costs and part-time or flexible work covers the rest, often a job that also provides health insurance."], ["How do early retirees get health insurance?", "Most use the ACA marketplace before Medicare starts at 65. Premiums depend on income, so budgeting for health care is a key part of any early retirement plan."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -575,6 +589,8 @@ const ARTICLES = {
     title:"The 4% rule in plain English",
     dek:"It's the most famous number in retirement planning, and the most misunderstood. Here's what the 4% rule actually says, where it came from and how experts see it today.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"What Is the 4% Rule for Retirement? Explained in Plain English",
+    faq:[["How does the 4% rule work?", "Withdraw 4% of your savings in your first year of retirement, then take the same dollar amount each year after, adjusted for inflation. Historically, that lasted at least 30 years in nearly every period studied."], ["Is the 4% rule still valid in 2026?", "It's still a reasonable starting point. Morningstar's estimate for 2026 retirees is 3.9%, while the rule's creator, Bill Bengen, now suggests 4.7% for a more diversified portfolio."], ["How much do I need to retire using the 4% rule?", "Multiply the yearly spending your portfolio must cover by 25. To withdraw $50,000 a year, you'd need about $1.25 million."], ["Does the 4% rule work for early retirement?", "It was built for 30-year retirements. If you retire in your 40s, many planners suggest a lower rate of about 3.25% to 3.5%, or staying flexible with spending."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -643,6 +659,8 @@ const ARTICLES = {
     title:"12 side hustles you can start this weekend",
     dek:"No big investment, no business degree. Here are 12 realistic ways to earn extra money starting this weekend, plus the tax basics most people miss.",
     date:"Nov 17, 2026", read:"7 min read",
+    seo:"12 Side Hustles You Can Start This Weekend (and How They're Taxed)",
+    faq:[["Do I have to pay taxes on side hustle income?", "Yes. All side income is taxable, even if you don't receive a tax form. If you net $400 or more from self-employment in a year, you generally also owe self-employment tax of about 15.3%."], ["How much should I set aside for taxes on a side hustle?", "A common rule of thumb is 25% to 30% of what you earn. Keep it in a separate savings account so it's ready at tax time."], ["Will I get a 1099-K for my side hustle?", "For 2026, payment apps and marketplaces generally send a Form 1099-K only if you receive more than $20,000 and more than 200 transactions. You still have to report income below that."], ["What is the easiest side hustle to start?", "Ones that use skills or things you already have, like pet sitting, odd jobs, tutoring or selling items you no longer use. They cost little to start and can earn money the same week."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -728,6 +746,8 @@ const ARTICLES = {
     title:"How to calculate your financial independence number",
     dek:"Your FI number is the amount of invested money that could cover your living costs for life. Here's how to work out yours in about 15 minutes.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How to Calculate Your Financial Independence Number (FI Number)",
+    faq:[["What is an FI number?", "The amount of invested money that could cover your living costs for life. A common formula is your yearly spending minus other reliable income, such as Social Security, times 25."], ["Should I include my house in my FI number?", "Usually not. Your home only counts toward financial independence if you plan to sell it or rent it out. Otherwise it doesn't produce income to live on."], ["What multiplier should I use for early retirement?", "Use 28 to 30 times your yearly spending instead of 25 if you plan to retire early or want extra safety, because your money may need to last 40 years or more."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -823,6 +843,8 @@ const ARTICLES = {
     title:"Passive income ideas that actually work",
     dek:"Most passive income takes money, work or both up front. Here's an honest look at what works, what it really requires and what to avoid.",
     date:"Nov 17, 2026", read:"7 min read",
+    seo:"Passive Income Ideas That Actually Work (and Which to Avoid)",
+    faq:[["What is the most passive form of income?", "Income from money you've already saved: interest from high-yield savings, Treasury bills and CDs, and dividends from index funds. They take almost no ongoing work but require capital first."], ["How much do you need invested to earn $1,000 a month?", "Roughly $300,000, using a 4% yearly withdrawal rate as a guide. That's why steady investing over time is the real engine of passive income."], ["Are passive income courses worth it?", "Be careful. Courses that promise to replace your salary in weeks, guaranteed returns or income from recruiting others are common red flags for scams."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -909,6 +931,8 @@ const ARTICLES = {
     title:"Why your savings rate matters more than returns",
     dek:"You can't control what the market does. You can control how much you save. For most people, especially early on, that's the number that decides when they're free.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Why Your Savings Rate Matters More Than Investment Returns",
+    faq:[["What is a good savings rate?", "Saving 15% to 20% of your income is a solid goal for most people. Higher rates, like 30% to 50%, are how people reach financial independence much earlier."], ["How do you calculate your savings rate?", "Divide the money you save and invest each month by your take-home pay. If you take home $4,000 and save $600, your savings rate is 15%."], ["How many years to financial independence at a 50% savings rate?", "Roughly 17 years starting from zero, assuming about 5% growth after inflation. At a 20% savings rate, it's about 37 years."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -989,6 +1013,8 @@ const ARTICLES = {
     title:"The 50/30/20 budget, explained with examples",
     dek:"Three buckets, one paycheck, no spreadsheet obsession. Here's how the 50/30/20 budget works, with real numbers, and how to adjust it when life doesn't fit the formula.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"The 50/30/20 Rule: How to Budget Your Paycheck (With Examples)",
+    faq:[["What is the 50/30/20 rule?", "A budgeting guideline that splits your take-home pay into 50% for needs, 30% for wants and 20% for savings and extra debt payments. It was popularized by Elizabeth Warren and Amelia Warren Tyagi in their book All Your Worth."], ["Is the 50/30/20 rule based on gross or net income?", "Net, meaning your take-home pay after taxes. If retirement contributions or health insurance come out of your paycheck first, add them back into the right bucket."], ["What if my needs are more than 50% of my income?", "That's common, especially in high-rent areas. Try a 60/20/20 split by trimming wants, or start at 60/30/10 and raise savings by 1% every few months."], ["How do you do the 50/30/20 rule on $3,000 a month?", "Put about $1,500 toward needs, $900 toward wants and $600 toward savings and extra debt payments. Automate the $600 on payday so it happens first."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1080,6 +1106,8 @@ const ARTICLES = {
     title:"How much should be in your emergency fund?",
     dek:"Three months? Six? A year? The right answer depends on how stable your income is and who depends on you. Here's how to find your number and build it.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How Much Should I Have in My Emergency Fund? (3, 6 or 12 Months)",
+    faq:[["How many months should an emergency fund cover?", "Three to six months of essential expenses for most people. Aim for six to 12 months if your income is irregular, you're self-employed or you're the only earner in your household."], ["Is $1,000 enough for an emergency fund?", "It's a good starter fund that covers most car repairs and surprise bills. Once you have it, keep building toward three to six months of essential expenses."], ["Where should I keep my emergency fund?", "In a high-yield savings or money market account at an FDIC- or NCUA-insured institution, ideally at a different bank from your checking account so it's easy to reach but not too easy to spend."], ["Should I invest my emergency fund?", "No. Emergencies like job losses often happen during market downturns, so your emergency money should sit somewhere safe and stable, not in stocks or crypto."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1171,6 +1199,8 @@ const ARTICLES = {
     title:"Sinking funds: the stress-free way to save",
     dek:"Most \"surprise\" expenses aren't surprises at all: holidays, car registration, annual subscriptions. A sinking fund turns them into small monthly amounts so they never hit hard again.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"What Is a Sinking Fund? How to Save for Expenses You Know Are Coming",
+    faq:[["What is the difference between a sinking fund and an emergency fund?", "A sinking fund is for known, planned costs like holidays or car registration. An emergency fund is for unexpected costs like a job loss or medical bill. Keeping them separate protects your emergency money."], ["How do you calculate a sinking fund?", "Divide the expected cost by the number of months until you need it. A $1,200 holiday budget 12 months away means saving $100 a month."], ["Where should I keep sinking funds?", "A high-yield savings account works well. Many online banks let you create named buckets inside one account, such as Car, Holidays and Travel."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1254,6 +1284,8 @@ const ARTICLES = {
     title:"Tax refunds vs. adjusting your withholding",
     dek:"A big tax refund feels like a bonus, but it's really your own money coming back late. Here's how to decide whether to keep the refund or put that money in your paycheck instead.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Big Tax Refund or Bigger Paycheck? How to Adjust Your W-4 Withholding",
+    faq:[["Is it better to get a big tax refund or owe?", "Aim for a small refund. A big refund means you overpaid all year without interest. Owing a lot can bring an underpayment penalty. A few hundred dollars back is a comfortable middle ground."], ["How do I change my tax withholding?", "Use the free IRS Tax Withholding Estimator at irs.gov, then give your employer a new Form W-4 based on the results. Check your next pay stub to confirm the change."], ["How do I avoid an underpayment penalty?", "Generally, you're safe if your withholding and estimated payments cover at least 90% of this year's tax or 100% of last year's tax (110% if your income is higher)."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1331,6 +1363,8 @@ const ARTICLES = {
     title:"20 painless ways to cut monthly bills",
     dek:"You don't need to give up everything you enjoy to save money. These 20 moves trim recurring bills, most in under an hour, and the savings repeat every month.",
     date:"Nov 17, 2026", read:"7 min read",
+    seo:"How to Lower Your Monthly Bills: 20 Easy Ways to Save",
+    faq:[["What bills can I negotiate?", "Internet, cable, phone plans, car and home insurance, credit card interest rates and some medical bills are often negotiable. Ask for current promotions and mention competitor prices."], ["What is the fastest way to cut monthly expenses?", "Audit your subscriptions, shop your car insurance, and switch to a cheaper phone plan. Those three alone can save $100 a month for many households, and the savings repeat every month."], ["How do I find subscriptions I forgot about?", "Scan three months of bank and credit card statements for recurring charges. Many banking apps also list recurring payments in one place."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1405,6 +1439,8 @@ const ARTICLES = {
     title:"How to talk about money with your partner",
     dek:"Money is one of the most common sources of tension in relationships, and one of the best ways to build trust. Here's how to start the conversation and keep it going.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How to Talk About Money With Your Partner (Without Fighting)",
+    faq:[["When should couples talk about money?", "Before big commitments like moving in, getting engaged or combining accounts, and then regularly. A short monthly money date keeps small issues from becoming big ones."], ["Should couples combine finances?", "There's no single right answer. Many couples use a joint account for shared bills plus separate personal accounts. Others combine everything or keep everything separate. Pick what feels fair to both of you."], ["How do couples split bills with different incomes?", "Many split shared costs in proportion to income. If one partner earns 60% of the household income, they cover 60% of shared bills, which often feels fairer than 50/50."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1494,6 +1530,8 @@ const ARTICLES = {
     title:"Index funds vs. ETFs: what's the difference?",
     dek:"They're often described as rivals, but an ETF can be an index fund, and many index funds come in both forms. Here's what actually separates them and how to choose.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Index Funds vs. ETFs: What's the Difference and Which Should You Buy?",
+    faq:[["Is an ETF an index fund?", "Many are. 'Index fund' describes the strategy of tracking a market index, while 'ETF' describes how the fund trades. Most popular ETFs are index funds, but some ETFs are actively managed."], ["Are ETFs better than index mutual funds?", "In a taxable brokerage account, ETFs are usually a bit more tax-efficient and easier to buy with small amounts. In a 401(k) or IRA, a low-cost index mutual fund works just as well."], ["What is a good expense ratio for an index fund?", "For a broad U.S. stock index fund or ETF, under 0.10% is excellent and under 0.20% is good."], ["Can you lose money in an index fund?", "Yes. Index funds rise and fall with the market, so they can lose value, especially in the short term. Over long periods, broad stock indexes have historically grown."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1571,6 +1609,8 @@ const ARTICLES = {
     title:"Roth IRA vs. traditional IRA, simply explained",
     dek:"Both help you save for retirement with big tax advantages. The difference is when you pay the tax: now or later. Here's how to pick, with 2026 limits.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Roth IRA vs. Traditional IRA: Which Is Better for You? (2026 Limits)",
+    faq:[["What is the Roth IRA contribution limit for 2026?", "$7,500 in total across all your IRAs, or $8,600 if you're 50 or older. The limit is shared between Roth and traditional IRAs."], ["What is the Roth IRA income limit for 2026?", "Eligibility phases out between $153,000 and $168,000 of income for single filers, and between $242,000 and $252,000 for married couples filing jointly."], ["Can I withdraw from a Roth IRA before 59 1/2?", "You can withdraw your contributions at any time, tax- and penalty-free. Earnings generally need you to be 59 1/2 and have had a Roth for five years to come out tax-free."], ["Can I have a 401(k) and a Roth IRA?", "Yes. You can contribute to both in the same year, as long as you meet the Roth IRA's income rules."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1650,6 +1690,8 @@ const ARTICLES = {
     title:"How to start investing with $100",
     dek:"You don't need thousands of dollars to start investing. With $100 and the right first steps, you can own a slice of thousands of companies by this afternoon.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How to Start Investing With $100: A Beginner's Step-by-Step Guide",
+    faq:[["Can you really start investing with $100?", "Yes. Many brokerages have $0 minimums, no trading commissions and fractional shares, so $100 can buy a slice of a broad index fund holding hundreds of companies."], ["What should a beginner invest $100 in?", "A broad, low-cost index fund or ETF, such as a total U.S. stock market or S&P 500 fund, or a target-date fund in a retirement account. Skip single 'hot' stocks for now."], ["How much will $100 a month be worth in 30 years?", "About $113,000 at a 7% average annual return, even though you'd only put in $36,000. Real returns vary year to year."], ["Should I pay off debt before investing?", "If you have credit card debt at 20% or more, paying it down usually comes first. Do grab any employer 401(k) match, though, because that's free money."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1734,6 +1776,8 @@ const ARTICLES = {
     title:"What is an expense ratio and why it matters",
     dek:"It's a fee you never see on a bill, and that's exactly why it's easy to ignore. Over a lifetime of investing, the difference between a cheap fund and an expensive one can reach tens of thousands of dollars.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"What Is an Expense Ratio? What's Good and Why It Matters",
+    faq:[["What is a good expense ratio?", "For broad stock or bond index funds, under 0.10% is excellent and under 0.20% is good. Actively managed funds often charge 0.50% to 1% or more."], ["How is an expense ratio charged?", "It's taken automatically from the fund's assets throughout the year, so you never get a bill. The returns you see are already after the fee."], ["Is a 1% expense ratio high?", "Yes, by today's standards. Investing $500 a month for 30 years, a 1% fund could leave you about $87,000 less than a 0.05% fund, assuming the same 7% market return."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1812,6 +1856,8 @@ const ARTICLES = {
     title:"Dollar-cost averaging, explained",
     dek:"Investing the same amount on a regular schedule takes emotion out of the market. Here's how dollar-cost averaging works, what the research says, and when investing all at once is better.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"What Is Dollar-Cost Averaging? Does It Beat Investing a Lump Sum?",
+    faq:[["Is dollar-cost averaging a good strategy?", "For money you earn over time, yes. Investing a fixed amount every payday builds the habit and removes the temptation to time the market."], ["Is it better to invest a lump sum or dollar-cost average?", "Historically, investing a lump sum right away beat spreading it out about two-thirds of the time, according to Vanguard's research. Spreading it out can still make sense if a big early drop would make you panic."], ["Should I stop investing when the market drops?", "No. That's when dollar-cost averaging works best, because each fixed investment buys more shares at lower prices."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1880,6 +1926,8 @@ const ARTICLES = {
     title:"How to build a three-fund portfolio",
     dek:"Three low-cost index funds can give you a globally diversified portfolio that's simple to manage and hard to beat. Here's how to build one and choose your mix.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How to Build a Three-Fund Portfolio (Simple Bogleheads Strategy)",
+    faq:[["What are the three funds in a three-fund portfolio?", "A total U.S. stock market fund, a total international stock fund and a total U.S. bond market fund. Together they hold thousands of stocks and bonds at very low cost."], ["What is a good allocation for a three-fund portfolio?", "It depends on your timeline and comfort with risk. Someone 20 or more years from retirement might hold about 60% U.S. stocks, 30% international and 10% bonds, shifting toward bonds over time."], ["How often should I rebalance?", "Once a year, or when a fund drifts more than about 5 percentage points from its target. Directing new contributions to the underweight fund avoids selling."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -1961,6 +2009,8 @@ const ARTICLES = {
     title:"Term vs. whole life insurance: which do you need?",
     dek:"One is simple, temporary and cheap. The other is permanent, complex and expensive. Here's how term and whole life insurance really compare, and why most families start with term.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Term vs. Whole Life Insurance: Which Do You Really Need?",
+    faq:[["Is term or whole life insurance better?", "For most families who need to replace income while kids are young or a mortgage is unpaid, term is better. It's far cheaper for the same coverage. Whole life fits specific needs like lifelong dependents or estate planning."], ["How much does term life insurance cost?", "A healthy 30-year-old non-smoker can often get a 20-year, $500,000 policy for roughly $20 to $30 a month in 2026. Rates depend on age, health and the insurer."], ["What happens when term life insurance ends?", "Coverage stops and nothing is paid out. Many policies let you convert to permanent coverage without a new medical exam, which is worth looking for when you buy."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2040,6 +2090,8 @@ const ARTICLES = {
     title:"How much life insurance is enough?",
     dek:"Too little leaves your family exposed; too much wastes money every month. Here's a simple way to calculate the coverage you actually need.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How Much Life Insurance Do I Need? A Simple Way to Calculate It",
+    faq:[["How much life insurance do I need?", "A quick rule of thumb is 10 to 12 times your income. For a more accurate number, add up your debts, the income your family would need, your mortgage and education costs, then subtract savings and existing coverage."], ["Is life insurance through work enough?", "Usually not. Employer coverage is often only 1 to 2 times your salary and typically ends when you leave the job."], ["Do stay-at-home parents need life insurance?", "Often, yes. Replacing childcare, transportation and household work can cost tens of thousands of dollars a year, so many families insure both parents."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2132,6 +2184,8 @@ const ARTICLES = {
     title:"Why renters insurance is the best deal in finance",
     dek:"For about the cost of a streaming subscription, renters insurance protects your belongings, covers you if someone gets hurt and pays for a hotel if your home becomes unlivable.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"Is Renters Insurance Worth It? What It Covers and What It Costs",
+    faq:[["How much is renters insurance a month?", "Typically about $13 to $23 a month in 2026, depending on where you live and how much coverage you choose."], ["What does renters insurance cover?", "Your belongings against risks like fire, theft and certain water damage, your liability if someone is hurt or you damage someone else's property, and extra living costs if your home becomes unlivable."], ["Does my landlord's insurance cover my stuff?", "No. Your landlord's policy covers the building, not your belongings or your personal liability."], ["Does renters insurance cover floods?", "No. Floods and earthquakes need separate policies."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2202,6 +2256,8 @@ const ARTICLES = {
     title:"How to lower your car insurance premium",
     dek:"Full-coverage car insurance now averages well over $2,000 a year. Here are the moves that can lower your bill without leaving you underinsured.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"How to Lower Your Car Insurance: 9 Ways to Pay Less",
+    faq:[["Why is my car insurance so expensive?", "Rates depend on your age, driving record, location, car model, coverage and, in most states, a credit-based insurance score. Rates have also risen nationally as repair costs have climbed."], ["How often should I shop for car insurance?", "Every year at renewal, and after big changes like moving, marriage, buying a car or a ticket dropping off your record. Prices for the same coverage vary a lot between insurers."], ["Does raising my deductible lower my premium?", "Yes. Going from $250 or $500 to $1,000 can noticeably lower your premium. Make sure your emergency fund can cover the deductible."], ["When should I drop full coverage?", "Consider dropping collision and comprehensive if their yearly cost is more than about 10% of your car's value and you could afford to replace the car. Never drop them on a financed or leased car."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2278,6 +2334,8 @@ const ARTICLES = {
     title:"HSA vs. FSA explained",
     dek:"Both let you pay for health costs with pre-tax money. But one is yours forever and can be invested, while the other is mostly use-it-or-lose-it. Here's how they compare, with 2026 limits.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"HSA vs. FSA: Differences, 2026 Limits and Which to Choose",
+    faq:[["What are the HSA contribution limits for 2026?", "$4,400 for self-only coverage and $8,750 for family coverage, plus an extra $1,000 if you're 55 or older."], ["What is the FSA limit for 2026?", "$3,400 per employee for a health FSA. Plans that allow a carryover can let up to $680 roll into 2027."], ["Can I have an HSA and an FSA at the same time?", "Not a general-purpose health FSA. You can pair an HSA with a limited-purpose FSA that covers only dental and vision costs."], ["What happens to my HSA if I change jobs?", "It's yours to keep. The money stays in your account and you can keep using it or investing it."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2355,6 +2413,8 @@ const ARTICLES = {
     title:"Disability insurance: the coverage most people skip",
     dek:"Your ability to earn an income may be your biggest financial asset. Disability insurance protects it, yet many workers have little or none. Here's how it works and how much you need.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Do I Need Disability Insurance? How It Works and What It Costs",
+    faq:[["Do I need disability insurance?", "If you rely on your paycheck, likely yes. The Social Security Administration estimates more than 1 in 4 of today's 20-year-olds will become disabled before retirement age."], ["How much does disability insurance cost?", "Individual long-term disability insurance commonly costs about 1% to 3% of your annual income, depending on your age, health, job and the policy's features."], ["What is own-occupation disability insurance?", "A policy that pays if you can't do your specific job, even if you could do a different one. It's the strongest type of protection and costs more."], ["Is employer disability insurance enough?", "Often not. Group plans usually replace around 60% of pay up to a monthly cap, may be taxable and usually end when you leave the job."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2429,6 +2489,8 @@ const ARTICLES = {
     title:"Buzzword Brief: what does 'rate hike' mean?",
     dek:"With inflation heating up again, the Fed is widely expected to raise rates in December. Here's what a 'rate hike' is, how it reaches your credit card and savings account, and what to do about it.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"What Does a Fed Rate Hike Mean for You? Buzzword Brief",
+    faq:[["What does a rate hike mean?", "The Federal Reserve raises its benchmark interest rate, the federal funds rate, to cool the economy and bring inflation down. Borrowing gets more expensive and saving pays more."], ["How does a Fed rate hike affect credit cards?", "Most cards have variable rates tied to the prime rate, so a quarter-point hike usually raises your card's APR by about a quarter point within a billing cycle or two."], ["Do rate hikes raise mortgage rates?", "Not directly. Fixed mortgage rates follow longer-term bond yields like the 10-year Treasury more than the Fed's overnight rate, though both often move in the same direction."], ["When is the next Fed meeting?", "The Fed's next policy meeting is December 8 and 9, 2026, with the decision announced on December 9."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2491,6 +2553,8 @@ const ARTICLES = {
     title:"Buzzword Brief: what does 'soft landing' mean?",
     dek:"You'll hear it on the news whenever the Fed meets. Here's what a 'soft landing' is, why it's so hard to pull off, and where the U.S. economy stands in late 2026.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"What Is a Soft Landing in Economics? Buzzword Brief",
+    faq:[["What is a soft landing?", "When the Federal Reserve slows inflation without pushing the economy into a recession. A hard landing is when the fight against inflation causes a recession and big job losses."], ["Has the U.S. ever had a soft landing?", "Economists usually point to the mid-1990s, when the Fed raised rates and inflation stayed in check without a recession. True soft landings are historically rare."], ["What is a no-landing scenario?", "When the economy keeps growing strongly and inflation stays stubbornly high, so the Fed has to keep rates high for longer or raise them again."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2552,6 +2616,8 @@ const ARTICLES = {
     title:"The 3-account system that makes saving automatic",
     dek:"Split your paycheck into spend, save and grow, and stop relying on willpower to build wealth. Here's how to set up the system in about 30 minutes.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"The 3-Account System: How to Make Saving Money Automatic",
+    faq:[["What are the three bank accounts everyone should have?", "A checking account for bills and spending, a high-yield savings account for emergencies and short-term goals, and an investment account such as a 401(k) or IRA for long-term growth."], ["How much of my paycheck should go to savings?", "A common starting point is 10% to investing and 5% to 10% to savings. Start with whatever you can, even 1%, and raise it with every raise."], ["Should my savings account be at a different bank?", "It helps. Keeping savings at a separate bank adds a day or two of transfer time, which is just enough friction to stop impulse spending."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2624,6 +2690,8 @@ That's $8,400 a year saved and invested without a single decision.</div>
     title:"Are high-yield savings rates still worth it?",
     dek:"Top savings accounts still pay around 4%, while the average bank pays under 0.5%. But with inflation running higher in 2026, is a savings account still worth it? Here's the honest math.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"Are High-Yield Savings Accounts Still Worth It in 2026?",
+    faq:[["Are high-yield savings accounts worth it right now?", "Yes, for emergency funds and short-term goals. Top accounts pay about 4% to 4.4% APY, while the national average is under 0.5%."], ["Will high-yield savings rates go down?", "They're variable and tend to follow the Federal Reserve. If the Fed raises rates, savings rates could rise. If it cuts later, they'll fall."], ["Is a high-yield savings account better than a CD?", "A high-yield savings account lets you withdraw any time but its rate can change. A CD locks in a rate for a set term, which helps if you think rates will fall and you won't need the money."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2692,6 +2760,8 @@ That's $8,400 a year saved and invested without a single decision.</div>
     title:"What the latest jobs report means for your wallet",
     dek:"The October 2026 jobs report beat expectations: 165,000 new jobs and a 4.1% unemployment rate. Here's what the numbers mean for your paycheck, your job security and your money.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"What the October 2026 Jobs Report Means for Your Wallet",
+    faq:[["When is the jobs report released?", "The Bureau of Labor Statistics usually releases it at 8:30 a.m. Eastern on the first Friday of the month. The next report, for November 2026, is scheduled for Friday, December 4."], ["What does nonfarm payrolls mean?", "The number of jobs added or lost by U.S. employers in a month, excluding farm workers, private household employees and a few other groups. It's the headline number in the jobs report."], ["Why do stocks sometimes fall on a strong jobs report?", "A strong report can mean the Fed is less likely to cut rates, or more likely to raise them, and higher rates can weigh on stock prices."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2758,6 +2828,8 @@ That's $8,400 a year saved and invested without a single decision.</div>
     title:"'Loud budgeting' explained",
     dek:"It started as a TikTok joke and became a real money movement: saying your financial goals out loud instead of quietly overspending. Here's what loud budgeting is and how to try it.",
     date:"Nov 17, 2026", read:"5 min read",
+    seo:"What Is Loud Budgeting? The Money Trend Explained",
+    faq:[["What does loud budgeting mean?", "Being open about your money goals and saying no to spending that doesn't fit them, without embarrassment. It's the opposite of quietly going along with plans you can't afford."], ["Who started loud budgeting?", "Comedian and writer Lukas Battle coined it in a TikTok video at the end of 2023, calling it the opposite of quiet luxury."], ["How do you say no to plans without seeming cheap?", "Name your goal and suggest an alternative, like: 'I'm saving for a trip this spring, so I'll skip the concert, but want to do a picnic instead?'"]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2829,6 +2901,8 @@ That's $8,400 a year saved and invested without a single decision.</div>
     title:"Reader Q: Should I pay off debt or invest first?",
     dek:"It's one of the most common money questions we get. The answer depends mostly on one number, your interest rate, plus a few rules that come first. Here's the framework.",
     date:"Nov 17, 2026", read:"6 min read",
+    seo:"Should I Pay Off Debt or Invest First? A Simple Framework",
+    faq:[["Should I pay off debt or invest?", "Grab any employer 401(k) match first, then pay off high-interest debt, roughly 8% and up. For low-interest debt under about 5%, investing usually makes more sense."], ["Should I pay off my car loan early or invest?", "It depends on the rate. At 6% to 8%, splitting extra money between the loan and investing is reasonable. Under about 5%, investing usually wins over time."], ["Should I pay off student loans or invest?", "For low-rate student loans, paying the minimum and investing often comes out ahead. Federal loans may also offer income-driven repayment or forgiveness options worth checking first."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -3467,7 +3541,7 @@ function route(){
   $("#menu").classList.remove("open");
   const sp = !aslug && STATIC_PAGES.find(p=>p.path===slug);
   if(sp){ ({about:renderAbout, contact:renderContact, tools:renderToolsHub, tool:p=>renderToolPage(p.tool)})[sp.page](sp); show(sp.page); setMeta(sp.title, sp.desc); }
-  else if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); setMeta(t+" — Rich With Reason", (ARTICLES[aslug]||{}).dek); }
+  else if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug), A = ARTICLES[aslug]||{}; show("art"); setMeta((A.seo||t)+" — Rich With Reason", A.dek); }
   else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
   else {
     // Topic/article pages are built without the home sections; load the real home page.
