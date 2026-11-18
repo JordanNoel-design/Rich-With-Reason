@@ -3000,12 +3000,49 @@ function renderAbout(){
   </section>`;
 }
 
+// Contact page
+const CONTACT_EMAIL = "richwreason@gmail.com";
+const CONTACT_DESC = "Get in touch with Rich With Reason. Questions, topic ideas, partnerships and press: email richwreason@gmail.com.";
+function renderContact(){
+  const reasons = [
+    ["💬","Questions about a post","Something not clicking? Ask, and it may become a future guide or Reader Q."],
+    ["💡","Topic suggestions","A buzzword you keep hearing or a money topic you want explained."],
+    ["🤝","Partnerships and advertising","Brands and creators interested in working with Rich With Reason."],
+    ["📰","Press and media","Interviews, quotes and speaking requests."],
+    ["✏️","Corrections","Spotted a mistake or an outdated number? Let me know so I can fix it."],
+  ];
+  $("#page-contact").innerHTML = `
+  <div class="art-hero about-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › Contact</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Contact</div>
+      <h1>Let's talk money.</h1>
+      <p class="dek">Questions, ideas, partnerships or just a hello. Every message comes straight to me.</p>
+    </div>
+  </div>
+  <section class="contact">
+    <div class="contact-card">
+      <div class="contact-ico">✉️</div>
+      <div>
+        <div class="eyebrow">Email</div>
+        <a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>
+        <p>I read every email and do my best to reply within a few days.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:${CONTACT_EMAIL}">Send an email →</a>
+    </div>
+    <h2 class="contact-h">What to reach out about</h2>
+    <div class="contact-grid">${reasons.map(r=>`<div class="step"><div class="contact-ri">${r[0]}</div><h3>${r[1]}</h3><p>${r[2]}</p></div>`).join("")}</div>
+    <p class="art-note about-note">Please don't send account numbers or other sensitive financial details by email. I can't give personal financial advice, but I'm always happy to point you to a guide that helps.</p>
+  </section>`;
+}
+
 // Router
 function route(){
   const [slug, aslug] = location.pathname.split("/").filter(Boolean);
   document.querySelectorAll(".menu a").forEach(a=>a.classList.toggle("active",a.dataset.slug===slug));
   $("#menu").classList.remove("open");
   if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); setMeta(t+" — Rich With Reason", (ARTICLES[aslug]||{}).dek); }
+  else if(slug==="contact"){ renderContact(); show("contact"); setMeta("Contact — Rich With Reason", CONTACT_DESC); }
   else if(slug==="about"){ renderAbout(); show("about"); setMeta("About — Rich With Reason", ABOUT_DESC); }
   else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
   else {

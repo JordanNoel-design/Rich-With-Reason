@@ -66,7 +66,7 @@ function build({ pathname, desc, type = "website" }) {
   const { html, title } = renderPath(pathname);
   const url = SITE + pathname;
   let page = fill(shell, html);
-  const which = pathname === "/" ? "home" : pathname === "/about/" ? "about" : pathname.split("/").filter(Boolean).length > 1 ? "art" : "cat";
+  const which = pathname === "/" ? "home" : pathname === "/about/" ? "about" : pathname === "/contact/" ? "contact" : pathname.split("/").filter(Boolean).length > 1 ? "art" : "cat";
   // Show the right section before JavaScript runs.
   page = page.replace(`class="page" id="page-${which}"`, `class="page on" id="page-${which}"`);
   // Topic/article pages don't carry the home page's sections (keeps each page about one thing).
@@ -108,6 +108,9 @@ let n = 1;
 const ABOUT_DESC = "Meet Jordan Noel, founder of Rich With Reason: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
 write("about/index.html", build({ pathname: "/about/", desc: ABOUT_DESC }));
 urls.push(`${SITE}/about/`); n++;
+// Contact page
+write("contact/index.html", build({ pathname: "/contact/", desc: "Get in touch with Rich With Reason. Questions, topic ideas, partnerships and press: email richwreason@gmail.com." }));
+urls.push(`${SITE}/contact/`); n++;
 for (const c of CATS) {
   write(`${c.slug}/index.html`, build({ pathname: `/${c.slug}/`, desc: c.blurb }));
   urls.push(`${SITE}/${c.slug}/`); n++;
