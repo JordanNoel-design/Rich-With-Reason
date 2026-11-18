@@ -3026,7 +3026,7 @@ function renderContact(){
       <div>
         <div class="eyebrow">Email</div>
         <a class="contact-email" href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>
-        <p>I read every email and do my best to reply within a few days.</p>
+        <p>I read every email that comes in.</p>
       </div>
       <a class="btn btn-primary" href="mailto:${CONTACT_EMAIL}">Send an email →</a>
     </div>
