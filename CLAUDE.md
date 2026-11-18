@@ -46,3 +46,15 @@ Buzzword of the Day:
   Never invent numbers or quotes. Stay politically neutral.
 - `link`: the closest published Rich With Reason guide (clean URL), otherwise `/trending/`.
 - The daily update needs no approval: set it, build, commit, push, update the project copy.
+
+SEO (a priority for every article):
+- Target a specific question people type into Google (e.g. "how long does a late payment stay on
+  your credit report"), not a broad topic. Research what people are actually asking before writing.
+- Every ARTICLES entry needs: `seo` (the search-friendly <title>, under ~65 characters, containing
+  the main question or keyword), `faq` (3-4 [question, answer] pairs using real searched questions,
+  plain-text answers of 1-3 sentences, facts checked), and an entry in `RELATED` (3 related article
+  keys, plus a calculator key: compound, debt, emergency or millionaire, when one fits).
+- The byline is "By Jordan Noel" (automatic). Structured data (Article, FAQPage, BreadcrumbList)
+  is added by tools/build-pages.mjs; don't hand-write it.
+- Link to 2-3 related Rich With Reason guides inside the body text, using clean URLs.
+- Calculators live in `TOOLS` / `TOOL_PAGES` in assets/site.js and are listed at /calculators/.
