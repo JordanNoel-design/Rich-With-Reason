@@ -13,6 +13,13 @@ const CATS = [
    steps:[["Track one month of spending","You can't change what you can't see."],["Build a starter emergency fund","Aim for $1,000, then 3–6 months of expenses."],["Choose a budget style","50/30/20, zero-based or pay-yourself-first."],["Set one money goal","Specific, dated and automated."]],
    posts:["The 50/30/20 budget, explained with examples","How much should be in your emergency fund?","Sinking funds: the stress-free way to save","Tax refunds vs. adjusting your withholding","20 painless ways to cut monthly bills","How to talk about money with your partner"],
    terms:[["Net worth","What you own minus what you owe."],["Sinking fund","Saving monthly for a known future expense."],["Zero-based budget","Every dollar gets a job before the month begins."]]},
+  {slug:"financial-freedom", name:"Financial Freedom", ico:"🕊️", color:"#0f5b3f", tint:"#e7f2ec",
+   blurb:"FIRE, side income and the path to choosing how you spend your time.",
+   intro:"Financial freedom means your money supports the life you want — not the other way around. Explore FIRE, passive income, side hustles and the mindset shifts that get you there sooner.",
+   sub:["FIRE Movement","Side Hustles","Passive Income","Mindset","Early Retirement"],
+   steps:[["Find your freedom number","Annual expenses × 25 — your starting target."],["Raise your savings rate","The single biggest lever on your timeline."],["Add a second income stream","Even $300/month changes the math."],["Invest the gap automatically","Make progress the default."]],
+   posts:["What is FIRE? Lean, Fat and Coast explained","The 4% rule in plain English","12 side hustles you can start this weekend","How to calculate your financial independence number","Passive income ideas that actually work","Why your savings rate matters more than returns"],
+   terms:[["FIRE","Financial Independence, Retire Early."],["Savings rate","The share of your income you keep and invest."],["Coast FI","Having enough invested that growth alone covers retirement."]]},
   {slug:"banking-credit", name:"Banking & Credit", ico:"🏦", color:"#1d4e89", tint:"#e6eef8",
    blurb:"Checking, savings, credit scores and cards — the foundation of every money move.",
    intro:"Your bank account and credit score quietly shape the price you pay for almost everything. Learn how to pick the right accounts, build credit from scratch, and use cards without paying a cent in interest.",
@@ -34,13 +41,6 @@ const CATS = [
    steps:[["List what you need to protect","Income, home, car, family."],["Learn the key terms","Premium, deductible, out-of-pocket max."],["Compare at least three quotes","Prices vary more than you'd think."],["Review coverage every year","Life changes; your policy should too."]],
    posts:["Term vs. whole life insurance: which do you need?","How much life insurance is enough?","Why renters insurance is the best deal in finance","How to lower your car insurance premium","HSA vs. FSA explained","Disability insurance: the coverage most people skip"],
    terms:[["Premium","What you pay for coverage, monthly or yearly."],["Deductible","What you pay before insurance kicks in."],["Term life","Coverage for a set period, usually 10–30 years."]]},
-  {slug:"financial-freedom", name:"Financial Freedom", ico:"🕊️", color:"#0f5b3f", tint:"#e7f2ec",
-   blurb:"FIRE, side income and the path to choosing how you spend your time.",
-   intro:"Financial freedom means your money supports the life you want — not the other way around. Explore FIRE, passive income, side hustles and the mindset shifts that get you there sooner.",
-   sub:["FIRE Movement","Side Hustles","Passive Income","Mindset","Early Retirement"],
-   steps:[["Find your freedom number","Annual expenses × 25 — your starting target."],["Raise your savings rate","The single biggest lever on your timeline."],["Add a second income stream","Even $300/month changes the math."],["Invest the gap automatically","Make progress the default."]],
-   posts:["What is FIRE? Lean, Fat and Coast explained","The 4% rule in plain English","12 side hustles you can start this weekend","How to calculate your financial independence number","Passive income ideas that actually work","Why your savings rate matters more than returns"],
-   terms:[["FIRE","Financial Independence, Retire Early."],["Savings rate","The share of your income you keep and invest."],["Coast FI","Having enough invested that growth alone covers retirement."]]},
 ];
 
 /* ============ ARTICLES ============
