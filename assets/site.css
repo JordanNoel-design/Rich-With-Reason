@@ -32,7 +32,7 @@
   .menu a:hover,.menu a.active{background:var(--green-tint);color:var(--green)}
   .nav-cta{white-space:nowrap;padding:10px 18px}
   .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
-  @media(max-width:1200px){
+  @media(max-width:1080px){
     .menu{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;padding:12px 24px 20px;border-bottom:1px solid var(--line)}
     .menu.open{display:flex} .burger{display:block} .nav-cta{display:none}
   }

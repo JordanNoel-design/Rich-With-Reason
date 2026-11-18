@@ -2875,7 +2875,7 @@ function card(c,title,i){
 }
 
 // Nav, tiles, footer, chips
-$("#menu").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("") + `<li><a href="/about/" data-slug="about">About</a></li>`;
+$("#menu").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("");
 if($("#catTiles")) $("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="/${c.slug}/"><div class="ico" style="background:${c.tint}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
 $("#footCats").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/">${c.name}</a></li>`).join("");
 $("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><input type="checkbox" value="${c.slug}"><span>${c.ico} ${c.name}</span></label>`).join("");
