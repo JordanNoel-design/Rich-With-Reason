@@ -1,3 +1,21 @@
+/* ============ BUZZWORD OF THE DAY ============
+   Updated every morning by the scheduled "Buzzword of the Day" task with
+   `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
+/* BUZZWORD:START */
+const BUZZWORD = {
+  "date": "2026-11-17",
+  "term": "Treasury yield",
+  "def": "The interest rate the U.S. government pays to borrow money. The 10-year Treasury yield is the benchmark that mortgage rates and many other loan rates follow.",
+  "why": "The 10-year yield has climbed above 5%, near its highest level in almost two decades, which is pushing mortgage and loan rates up.",
+  "source": {
+    "name": "Forbes Advisor",
+    "url": "https://www.forbes.com/advisor/investing/treasury-rates/"
+  },
+  "link": "/trending/buzzword-brief-what-does-rate-hike-mean/",
+  "linkText": "Related: what a 'rate hike' means"
+};
+/* BUZZWORD:END */
+
 const CATS = [
   {slug:"trending", name:"Trending Posts", ico:"🔥", color:"#b3401f", tint:"#fbe9e3",
    blurb:"The money stories and buzzwords everyone's searching this week.",
@@ -2885,6 +2903,20 @@ $("#footCats").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/">${c.name}</a><
 $("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><input type="checkbox" value="${c.slug}"><span>${c.ico} ${c.name}</span></label>`).join("");
 if($("#trendList")) $("#trendList").innerHTML = bySlug.trending.posts.slice(0,5).map((t,i)=>`<li><a href="${artUrl(bySlug.trending,t)}"><small>${["Buzzword Brief","Financial Freedom","Banking & Credit","Money News","Personal Finance"][i]}</small><strong>${t}</strong></a></li>`).join("");
 if($("#latestGrid")) $("#latestGrid").innerHTML = ["investing","banking-credit","insurance","trending","personal-finance","financial-freedom"].map((s,i)=>card(bySlug[s],bySlug[s].posts[i%6],i)).join("");
+
+// Buzzword of the Day card (home page)
+function renderBuzz(){
+  const el=$("#buzzCard"); if(!el) return;
+  const b=BUZZWORD, esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+  const d=new Date(b.date+"T12:00:00Z").toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:"UTC"});
+  el.innerHTML = `<span class="tag">💡 BUZZWORD OF THE DAY · ${d.toUpperCase()}</span>
+          <h3>${esc(b.term)}</h3>
+          <p>The money word everyone's using, explained in 30 seconds.</p>
+          <div class="def"><strong>What it means:</strong> ${esc(b.def)}</div>
+          <p class="buzz-why"><strong>Why it's buzzing:</strong> ${esc(b.why)}${b.source&&b.source.url?` <a href="${esc(b.source.url)}" target="_blank" rel="noopener">(${esc(b.source.name)})</a>`:""}</p>
+          <a href="${esc(b.link||"/trending/")}" class="link-more" style="display:inline-block;margin-top:14px">${esc(b.linkText||"More trending money news")} →</a>`;
+}
+renderBuzz();
 
 // Category pages
 function renderCat(c){

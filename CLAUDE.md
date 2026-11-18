@@ -29,3 +29,18 @@ Newsletter:
 - The Weekly Reason rules live in `NEWSLETTER.md`. Follow them for every issue.
 - Claude only ever creates draft campaigns in Wix Email Marketing. Never send, schedule,
   publish or test-send a campaign, and never send any email on the owner's behalf.
+
+Buzzword of the Day:
+- The home page card reads `BUZZWORD` in `assets/site.js`. Change it only with
+  `node tools/set-buzzword.mjs <file.json>` (fields: date, term, def, why, source {name, url},
+  optional link, linkText). It also logs each pick to `tools/buzzword-history.json`.
+- Pick the finance term getting the most attention in the last 24–48 hours across major news
+  outlets (Reuters, AP, CNBC, Bloomberg, WSJ, NYT, Yahoo Finance, MarketWatch, Fox Business, NPR)
+  and official sources (Fed, BLS, Treasury, IRS, SEC). It must be a real money term a regular
+  reader would hear and want explained, not a company name, ticker or person.
+- Don't repeat any term used in the last 30 days (check the history file).
+- `def`: plain English, one or two sentences, no jargon. `why`: one sentence on why it's in the
+  news today, with facts from the cited `source` (a real article or official page you opened).
+  Never invent numbers or quotes. Stay politically neutral.
+- `link`: the closest published Rich With Reason guide (clean URL), otherwise `/trending/`.
+- The daily update needs no approval: set it, build, commit, push, update the project copy.
