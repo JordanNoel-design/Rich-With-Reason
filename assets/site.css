@@ -31,10 +31,15 @@
   .menu a{display:block;padding:8px 11px;border-radius:8px;font-size:.88rem;font-weight:500;color:var(--ink-soft);white-space:nowrap}
   .menu a:hover,.menu a.active{background:var(--green-tint);color:var(--green)}
   .nav-cta{white-space:nowrap;padding:10px 18px}
+  .menu-feed-li{margin-right:6px;padding-right:10px;border-right:1px solid var(--line)}
+  .menu a.menu-feed{display:flex;align-items:center;gap:7px;background:var(--gold-tint);color:#7a5a0e;font-weight:600}
+  .menu a.menu-feed::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+  .menu a.menu-feed:hover,.menu a.menu-feed.active{background:#f5e3b0;color:#5e450a}
   .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
   @media(max-width:1200px){
     .menu{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;padding:12px 24px 20px;border-bottom:1px solid var(--line)}
     .menu.open{display:flex} .burger{display:block} .nav-cta{display:none}
+    .menu-feed-li{border-right:0;padding:0 0 8px;margin:0 0 6px;border-bottom:1px solid var(--line)}
   }
 
   /* Hero */

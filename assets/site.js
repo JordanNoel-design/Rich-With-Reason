@@ -2875,8 +2875,11 @@ function card(c,title,i){
 }
 
 // Nav, tiles, footer, chips
-$("#menu").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("");
-if($("#topicCount")) $("#topicCount").innerHTML = String(CATS.length);
+// "Trending" is a feed of the latest posts, not a subject, so it's styled apart from the topics in the menu.
+$("#menu").innerHTML = CATS.map(c=>c.slug==="trending"
+  ? `<li class="menu-feed-li"><a class="menu-feed" href="/${c.slug}/" data-slug="${c.slug}">Trending</a></li>`
+  : `<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("");
+if($("#topicCount")) $("#topicCount").innerHTML = String(CATS.filter(c=>c.slug!=="trending").length);
 if($("#catTiles")) $("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="/${c.slug}/"><div class="ico" style="background:${c.tint}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
 $("#footCats").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/">${c.name}</a></li>`).join("");
 $("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><input type="checkbox" value="${c.slug}"><span>${c.ico} ${c.name}</span></label>`).join("");
