@@ -3030,7 +3030,7 @@ const TOOLS = {
   compound: {
     slug:"compound-calculator", name:"Compound interest calculator", icon:"compound",
     blurb:"See what steady monthly investing could grow into, and how much comes from growth.",
-    fields:{ m:fld("Monthly contribution","usd",0,10000,25,300), y:fld("Years invested","years",1,50,1,20), r:fld("Average annual return","pct",0,15,0.25,7) },
+    fields:{ m:fld("Monthly contribution","usd",0,2500,25,300), y:fld("Years invested","years",1,50,1,20), r:fld("Average annual return","pct",0,15,0.25,7) },
     note:"Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, and returns aren't guaranteed.",
     compute(v){
       const r=v.r/1200, fvAt=n=> r ? v.m*((Math.pow(1+r,n)-1)/r) : v.m*n;
