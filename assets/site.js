@@ -2875,12 +2875,12 @@ function card(c,title,i){
 }
 
 // Nav, tiles, footer, chips
-$("#menu").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("");
-$("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="/${c.slug}/"><div class="ico" style="background:${c.tint}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
+$("#menu").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/" data-slug="${c.slug}">${c.name}</a></li>`).join("") + `<li><a href="/about/" data-slug="about">About</a></li>`;
+if($("#catTiles")) $("#catTiles").innerHTML = CATS.map(c=>`<a class="cat" href="/${c.slug}/"><div class="ico" style="background:${c.tint}">${c.ico}</div><h3>${c.name}</h3><p>${c.blurb}</p><span class="go">Explore ${c.name} →</span></a>`).join("");
 $("#footCats").innerHTML = CATS.map(c=>`<li><a href="/${c.slug}/">${c.name}</a></li>`).join("");
 $("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><input type="checkbox" value="${c.slug}"><span>${c.ico} ${c.name}</span></label>`).join("");
-$("#trendList").innerHTML = bySlug.trending.posts.slice(0,5).map((t,i)=>`<li><a href="${artUrl(bySlug.trending,t)}"><small>${["Buzzword Brief","Financial Freedom","Banking & Credit","Money News","Personal Finance"][i]}</small><strong>${t}</strong></a></li>`).join("");
-$("#latestGrid").innerHTML = ["investing","banking-credit","insurance","trending","personal-finance","financial-freedom"].map((s,i)=>card(bySlug[s],bySlug[s].posts[i%6],i)).join("");
+if($("#trendList")) $("#trendList").innerHTML = bySlug.trending.posts.slice(0,5).map((t,i)=>`<li><a href="${artUrl(bySlug.trending,t)}"><small>${["Buzzword Brief","Financial Freedom","Banking & Credit","Money News","Personal Finance"][i]}</small><strong>${t}</strong></a></li>`).join("");
+if($("#latestGrid")) $("#latestGrid").innerHTML = ["investing","banking-credit","insurance","trending","personal-finance","financial-freedom"].map((s,i)=>card(bySlug[s],bySlug[s].posts[i%6],i)).join("");
 
 // Category pages
 function renderCat(c){
@@ -2955,12 +2955,57 @@ function renderArticle(c, aslug){
   return a.title;
 }
 
+// About page
+const ABOUT_DESC = "Why Rich With Reason exists: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
+function renderAbout(){
+  $("#page-about").innerHTML = `
+  <div class="art-hero about-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › About</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">About Rich With Reason</div>
+      <h1>Finance, made digestible for everyone.</h1>
+      <p class="dek">No jargon, no hype, no assumption that you already know the lingo. Just clear explanations of how money works, so you can make your next decision with confidence.</p>
+    </div>
+  </div>
+  <section class="about">
+    <div class="about-grid">
+      <figure class="about-photo">
+        <img src="/assets/about-headshot.jpg" alt="Headshot of the founder of Rich With Reason" width="640" height="640" loading="eager">
+        <figcaption><strong>Founder, Rich With Reason</strong><span>Finance, Temple University<br>Private Equity Accounting</span></figcaption>
+      </figure>
+      <div class="article about-text">
+        <h2>Hi, I'm the person behind Rich With Reason.</h2>
+        <p>I studied finance at <strong>Temple University</strong>, and today I work in <strong>private equity accounting</strong>. My day job keeps me close to the numbers behind how money is invested, tracked and reported.</p>
+        <p>Working in finance taught me something that surprised me: most money topics aren't actually hard. They just tend to be explained in jargon, by people who forget what it was like not to know the terms. That gap keeps a lot of smart people from making confident decisions about their own money.</p>
+        <p>Rich With Reason is my attempt to close it. My goal is simple: <strong>make finance digestible to anyone.</strong> Whether you're opening your first savings account, trying to figure out what a "rate hike" means for you, or finally getting serious about investing, you should be able to read a guide here and walk away understanding it.</p>
+        <h2>What you'll find here</h2>
+        <ul>
+          <li><strong>Plain-English guides</strong> on banking and credit, personal finance, investing, insurance and financial freedom.</li>
+          <li><strong>The Buzzword Brief</strong>: the finance terms everyone's using, decoded in a couple of minutes.</li>
+          <li><strong>The Weekly Reason</strong>: one short email every Sunday with a money term, a take on the week's news and one small action.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-values">
+      <div class="step"><div class="n">01</div><h3>Plain English first</h3><p>If a term needs explaining, we explain it. You shouldn't need a finance degree to follow along.</p></div>
+      <div class="step"><div class="n">02</div><h3>The why, not just the what</h3><p>Rules of thumb are useful, but understanding the reason behind them is what lets you apply them to your life.</p></div>
+      <div class="step"><div class="n">03</div><h3>Honest, never hype</h3><p>No get-rich-quick promises. Just the trade-offs, laid out clearly, so you can make the call.</p></div>
+    </div>
+    <div class="about-cta">
+      <a href="/personal-finance/" class="btn btn-primary">Start with the basics →</a>
+      <a href="#newsletter" data-scroll class="btn btn-ghost" style="color:var(--green)">Join The Weekly Reason</a>
+    </div>
+    <p class="art-note about-note">Rich With Reason is for education only. Nothing here is personal financial, investment, tax or legal advice, and the views shared are my own, not those of my employer.</p>
+  </section>`;
+}
+
 // Router
 function route(){
   const [slug, aslug] = location.pathname.split("/").filter(Boolean);
   document.querySelectorAll(".menu a").forEach(a=>a.classList.toggle("active",a.dataset.slug===slug));
   $("#menu").classList.remove("open");
   if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug); show("art"); setMeta(t+" — Rich With Reason", (ARTICLES[aslug]||{}).dek); }
+  else if(slug==="about"){ renderAbout(); show("about"); setMeta("About — Rich With Reason", ABOUT_DESC); }
   else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
   else {
     // Topic/article pages are built without the home sections; load the real home page.
@@ -3079,5 +3124,6 @@ function calc(){
   const pts=10, max=fv;
   $("#bars").innerHTML = Array.from({length:pts},(_,i)=>{const n=Math.round((i+1)/pts*y*12); return `<div style="height:${Math.max(4,fvAt(n)/max*100)}%" class="${i===pts-1?'c':''}"></div>`}).join("");
 }
-["m","y","r"].forEach(id=>$("#"+id).addEventListener("input",calc));
-calc(); route();
+// The calculator only exists on the home page.
+if($("#m")){ ["m","y","r"].forEach(id=>$("#"+id).addEventListener("input",calc)); calc(); }
+route();

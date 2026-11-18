@@ -66,7 +66,7 @@ function build({ pathname, desc, type = "website" }) {
   const { html, title } = renderPath(pathname);
   const url = SITE + pathname;
   let page = fill(shell, html);
-  const which = pathname === "/" ? "home" : pathname.split("/").filter(Boolean).length > 1 ? "art" : "cat";
+  const which = pathname === "/" ? "home" : pathname === "/about/" ? "about" : pathname.split("/").filter(Boolean).length > 1 ? "art" : "cat";
   // Show the right section before JavaScript runs.
   page = page.replace(`class="page" id="page-${which}"`, `class="page on" id="page-${which}"`);
   // Topic/article pages don't carry the home page's sections (keeps each page about one thing).
@@ -104,6 +104,10 @@ write("index.html", home);
 write("404.html", noindex(home));
 const urls = [SITE + "/"];
 let n = 1;
+// About page
+const ABOUT_DESC = "Why Rich With Reason exists: a Temple University finance grad working in private equity accounting, making finance digestible for anyone.";
+write("about/index.html", build({ pathname: "/about/", desc: ABOUT_DESC }));
+urls.push(`${SITE}/about/`); n++;
 for (const c of CATS) {
   write(`${c.slug}/index.html`, build({ pathname: `/${c.slug}/`, desc: c.blurb }));
   urls.push(`${SITE}/${c.slug}/`); n++;
