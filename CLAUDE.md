@@ -40,7 +40,10 @@ Buzzword of the Day:
   outlets (Reuters, AP, CNBC, Bloomberg, WSJ, NYT, Yahoo Finance, MarketWatch, Fox Business, NPR)
   and official sources (Fed, BLS, Treasury, IRS, SEC). It must be a real money term a regular
   reader would hear and want explained, not a company name, ticker or person.
-- Don't repeat any term used in the last 30 days (check the history file).
+- Never repeat a buzzword: every day must be a different term from every past day in
+  `tools/buzzword-history.json` (set-buzzword.mjs refuses exact repeats). Also skip near-duplicates
+  and variants of a past term (e.g. "rate hike" vs "interest rate increase"); if the top story is
+  about a term already used, pick the next most-talked-about term instead.
 - `def`: plain English, one or two sentences, no jargon. `why`: one sentence on why it's in the
   news today, with facts from the cited `source` (a real article or official page you opened).
   Never invent numbers or quotes. Stay politically neutral.

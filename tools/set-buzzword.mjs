@@ -21,15 +21,21 @@ const out = { date: b.date, term: b.term.trim(), def: b.def.trim(), why: b.why.t
   source: { name: b.source.name.trim(), url: b.source.url.trim() },
   link: b.link || "/trending/", linkText: (b.linkText || "More trending money news").trim() };
 
+const hp = "tools/buzzword-history.json";
+const hist = fs.existsSync(hp) ? JSON.parse(fs.readFileSync(hp, "utf8")) : [];
+
+// Never repeat a buzzword: compare normalized terms (case, punctuation, plurals) with every past day.
+const norm = t => t.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter(Boolean)
+  .map(w => w.length > 3 ? w.replace(/s$/, "") : w).join(" ");
+const dup = hist.find(h => h.date !== b.date && norm(h.term) === norm(b.term));
+if (dup) throw new Error(`"${b.term}" was already the Buzzword of the Day on ${dup.date}. Pick a different term.`);
 const js = fs.readFileSync("assets/site.js", "utf8");
 const re = /\/\* BUZZWORD:START \*\/[\s\S]*?\/\* BUZZWORD:END \*\//;
 if (!re.test(js)) throw new Error("BUZZWORD markers not found in assets/site.js");
 fs.writeFileSync("assets/site.js", js.replace(re, () =>
   `/* BUZZWORD:START */\nconst BUZZWORD = ${JSON.stringify(out, null, 2)};\n/* BUZZWORD:END */`));
 
-const hp = "tools/buzzword-history.json";
-const hist = fs.existsSync(hp) ? JSON.parse(fs.readFileSync(hp, "utf8")) : [];
 const filtered = hist.filter(h => h.date !== out.date);
 filtered.push({ date: out.date, term: out.term, source: out.source.url });
-fs.writeFileSync(hp, JSON.stringify(filtered.slice(-365), null, 2) + "\n");
+fs.writeFileSync(hp, JSON.stringify(filtered, null, 2) + "\n");
 console.log(`Buzzword of the Day for ${out.date}: ${out.term}`);
