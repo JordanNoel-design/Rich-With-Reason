@@ -3,13 +3,13 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-18",
-  "term": "Rate hike",
-  "def": "When the Federal Reserve raises its benchmark interest rate to cool the economy and bring inflation down. It makes borrowing on things like credit cards cost more, and savings accounts usually pay more.",
-  "why": "On Nov. 17, St. Louis Fed President Alberto Musalem said another rate hike is needed soon, with more likely before spring, calling inflation too high and broad-based.",
+  "date": "2026-11-19",
+  "term": "Fed minutes",
+  "def": "The official written record of a Federal Reserve policy meeting, released about three weeks later. It shows what officials discussed and how they are leaning on interest rates.",
+  "why": "Minutes of the Fed's Oct. 27-28 meeting show almost all officials expect further rate increases, and a couple floated a hike bigger than a quarter point next time.",
   "source": {
-    "name": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/economy/policy/article/st-louis-feds-musalem-calls-for-interest-rate-hikes-soon-132554806.html"
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20261028.pdf"
   },
   "link": "/trending/buzzword-brief-what-does-rate-hike-mean/",
   "linkText": "Related: what a 'rate hike' means"
