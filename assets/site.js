@@ -3585,8 +3585,8 @@ $("#burger").onclick = ()=>$("#menu").classList.toggle("open");
 // which creates/updates the contact and subscribes their email (Wix Email Marketing audience).
 // WIX_CLIENT_ID is the site's public headless client id (not a secret; it only mints visitor tokens).
 const WIX = {
-  clientId: "bd6b5e41-1016-4400-b98c-d667515c8ae9",
-  formId: "208dca30-0514-429d-90a8-734ff9f132e4",
+  clientId: "14ce54ce-2d30-4ea9-ab86-3ebd78d8974c",
+  formId: "70111ef7-a163-414f-a250-c5767d5886b7",
   f: { first: "first_name_9abc", email: "email_3fe8", topics: "topics_4fd6", subscribe: "subscribe_bda9" },
   topicNames: { "banking-credit":"Banking & Credit", "financial-freedom":"Financial Freedom", "personal-finance":"Personal Finance", "investing":"Investing", "insurance":"Insurance" }
 };

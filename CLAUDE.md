@@ -31,8 +31,9 @@ Site notes:
 Wix copy (step 5):
 The same site also runs on Wix as a mirror: Wix site "Rich With Reason" (Wix Headless, uploaded
 files), site ID `fea00c88-5cb8-40a0-8fc2-7737fde49e94`, live at
-https://headless-kgxameghwen-jnoel113-1408.wix-site-host.com . This is NOT the owner's old
-editor-built Wix site (27c4bbd3-…); never upload site files there. richwithreason.com stays on
+https://headless-kgxameghwen-jnoel113-1408.wix-site-host.com . It is also the newsletter's Wix
+site (subscribers, signup form, welcome email; see NEWSLETTER.md). Never use the old
+editor-built Wix site (27c4bbd3-…), which is being retired. richwithreason.com stays on
 GitHub Pages. Only sync what is on `main` (never a branch or unmerged pull request).
 Run it after every push to `main`, using the Wix connector (call WixREADME once first):
 1. Note the commit you pushed: `git rev-parse HEAD`.

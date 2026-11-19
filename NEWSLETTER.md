@@ -116,9 +116,13 @@ Sponsored sections are labelled "Sponsored" where they appear.
 
 ## Technical notes (for Claude)
 
-- Wix site: "Rich With Reason", site ID `27c4bbd3-0f80-42ab-abf1-1ec09cca675c`.
-- Signup form: "The Weekly Reason signup", form ID `208dca30-0514-429d-90a8-734ff9f132e4`.
-- Website headless client ID (public): `bd6b5e41-1016-4400-b98c-d667515c8ae9`.
+- Wix site: "Rich With Reason" (Wix Headless; also hosts the Wix copy of the website), site ID
+  `fea00c88-5cb8-40a0-8fc2-7737fde49e94`. Subscribers, the signup form and the welcome email
+  moved here from the old editor site (27c4bbd3-…) on 2026-11-18; never use the old site.
+- Signup form: "The Weekly Reason signup", form ID `70111ef7-a163-414f-a250-c5767d5886b7`.
+- Welcome email automation ID `f002384d-2146-4d42-95c7-34fc3c22bd89`, email action ID
+  `8b1f3c52-6d0e-4a7b-9c21-5e4d7f2a9b10`.
+- Website headless client ID (public): `14ce54ce-2d30-4ea9-ab86-3ebd78d8974c`.
 - Drafts: Wix Email Marketing `POST https://www.wixapis.com/email-marketing/v1/campaigns` with
   MJML content (creates a draft). Never call Publish or any send/schedule/test endpoint.
 - Draft title format: `The Weekly Reason — <Sunday date, e.g. Nov 22, 2026> — <Buzzword>`.
