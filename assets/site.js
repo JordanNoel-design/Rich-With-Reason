@@ -3024,7 +3024,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
 
 <p><em>Have a money question? Join The Weekly Reason and reply to any issue. We answer reader questions every week.</em></p>
 
-<p class="art-note">This article is for education only and isn't financial advice. Your situation may differ, so consider speaking with a licensed professional.</p>
+<p class="art-note">Reader questions are edited for length and clarity, and identifying details may be changed or combined to protect privacy. This article is for education only and isn't financial advice. Your situation may differ, so consider speaking with a licensed professional.</p>
 `},
 };
 
@@ -3170,6 +3170,9 @@ const TOOL_KEYS = Object.keys(TOOLS);
 const STATIC_PAGES = [
   {path:"about", page:"about", title:"About — Rich With Reason", desc:"Meet Jordan Noel, founder of Rich With Reason: a Temple University finance grad working in private equity accounting, making finance digestible for anyone."},
   {path:"contact", page:"contact", title:"Contact — Rich With Reason", desc:"Get in touch with Rich With Reason. Questions, topic ideas, partnerships and press: email richwreason@gmail.com."},
+  {path:"privacy", page:"legal", title:"Privacy Policy — Rich With Reason", desc:"How Rich With Reason collects, uses and protects information, including newsletter signups and site analytics."},
+  {path:"terms", page:"legal", title:"Terms of Use — Rich With Reason", desc:"The terms for using Rich With Reason, its guides, calculators and newsletter."},
+  {path:"disclaimer", page:"legal", title:"Disclaimer and Disclosures — Rich With Reason", desc:"Rich With Reason is for education only and is not financial advice. Read our full disclaimer and advertising disclosures."},
   {path:"calculators", page:"tools", title:"Free Money Calculators — Rich With Reason", desc:"Free, simple money calculators: compound interest, debt payoff, emergency fund and how long until you're a millionaire."},
   {path:"compound-calculator", page:"tool", tool:"compound", title:"Compound Interest Calculator (Monthly Contributions) — Rich With Reason", desc:"Free compound interest calculator: see how monthly investing grows over time, plus a plain-English guide to how compounding works."},
   {path:"debt-payoff-calculator", page:"tool", tool:"debt", title:"Debt Payoff Calculator: When Will I Be Debt-Free? — Rich With Reason", desc:"Free debt payoff calculator: enter your balance, APR and monthly payment to see your debt-free date, total interest and how much paying extra saves."},
@@ -3501,7 +3504,7 @@ const CONTACT_EMAIL = "richwreason@gmail.com";
 const CONTACT_DESC = "Get in touch with Rich With Reason. Questions, topic ideas, partnerships and press: email richwreason@gmail.com.";
 function renderContact(){
   const reasons = [
-    ["Questions about a post","Something not clicking? Ask, and it may become a future guide or Reader Q."],
+    ["Questions about a post","Something not clicking? Ask, and it may become a future guide or Reader Q. Your name is never published unless you say it's okay."],
     ["Topic suggestions","A buzzword you keep hearing or a money topic you want explained."],
     ["Partnerships and advertising","Brands and creators interested in working with Rich With Reason."],
     ["Press and media","Interviews, quotes and speaking requests."],
@@ -3529,6 +3532,152 @@ function renderContact(){
     <h2 class="contact-h">What to reach out about</h2>
     <div class="contact-grid">${reasons.map(r=>`<div class="step"><h3>${r[0]}</h3><p>${r[1]}</p></div>`).join("")}</div>
     <p class="art-note about-note">Please don't send account numbers or other sensitive financial details by email. I can't give personal financial advice, but I'm always happy to point you to a guide that helps.</p>
+  </section>`;
+}
+
+// Legal pages: Privacy Policy, Terms of Use, Disclaimer and Disclosures
+const LEGAL_UPDATED = "November 19, 2026";
+const LEGAL = {
+  privacy: { h1:"Privacy Policy", dek:"What information Rich With Reason collects, why, and the choices you have.", body:`
+<p>Rich With Reason (richwithreason.com) is owned and operated by Jordan Noel ("we," "us"). This policy explains what information we collect when you visit the site, subscribe to The Weekly Reason or email us, and how we use it. We keep it short and plain on purpose.</p>
+
+<h2>Information we collect</h2>
+<ul>
+<li><strong>Newsletter signups.</strong> When you subscribe, we collect your email address and, if you choose to give them, your first name and the topics you're interested in.</li>
+<li><strong>Emails you send us.</strong> If you write to us, we receive your email address, your message and anything else you choose to include.</li>
+<li><strong>Usage data.</strong> We use Google Analytics (loaded through Google Tag Manager) to understand how the site is used. It uses cookies and similar technology to collect information such as the pages you view, how you arrived at the site, your device and browser type, and your approximate location (city or region level). Google processes your IP address to provide this service.</li>
+<li><strong>Server logs.</strong> Our hosting provider, GitHub Pages, may log your IP address and basic request details for security and to keep the site running.</li>
+<li><strong>Browser storage.</strong> To send your newsletter signup, the site stores a short-lived visitor token from our email provider, Wix, in your browser's local storage. It is not used to track you across other sites.</li>
+</ul>
+<p>We don't ask for, and you shouldn't send us, account numbers, Social Security numbers or other sensitive financial details.</p>
+
+<h2>How we use it</h2>
+<ul>
+<li>To send The Weekly Reason and tailor the topics it covers.</li>
+<li>To reply to your messages and, with your permission, answer your question in a guide.</li>
+<li>To see which guides are useful, fix problems and improve the site.</li>
+<li>To keep the site secure and comply with the law.</li>
+</ul>
+
+<h2>Who we share it with</h2>
+<p><strong>We do not sell your personal information, and we don't share it for cross-context behavioral advertising.</strong> We don't run ads on the site. We use a small number of service providers who process information for us:</p>
+<ul>
+<li><strong>Wix</strong>, which stores newsletter subscribers and sends The Weekly Reason.</li>
+<li><strong>Google</strong>, for Google Analytics and Google Tag Manager, the fonts used on the site (Google Fonts, which receives your IP address when the fonts load) and our Gmail inbox.</li>
+<li><strong>GitHub</strong>, which hosts the site.</li>
+</ul>
+<p>Each provider handles data under its own privacy policy. We may also disclose information if required by law or to protect our rights or the safety of others.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li><strong>Unsubscribe</strong> from The Weekly Reason at any time using the link at the bottom of every email.</li>
+<li><strong>Access, correct or delete</strong> your information by emailing <a href="mailto:richwreason@gmail.com">richwreason@gmail.com</a>. We'll respond within a reasonable time, and within any deadline the law in your state sets.</li>
+<li><strong>Analytics.</strong> You can block or delete cookies in your browser settings, or install Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</li>
+<li><strong>Do Not Track.</strong> Browsers handle Do Not Track signals inconsistently, so the site doesn't currently respond to them. The choices above still apply.</li>
+</ul>
+
+<h2>State privacy rights</h2>
+<p>Depending on where you live, including California, you may have the right to know what personal information we hold about you, to get a copy, to correct it, to delete it and to opt out of its sale or sharing. We don't sell or share personal information, but you can use any of these rights by emailing us. We won't treat you differently for doing so.</p>
+
+<h2>How long we keep it</h2>
+<p>We keep subscriber information until you unsubscribe or ask us to delete it. We keep emails as long as needed to respond and keep a record of the conversation. Google Analytics data is kept according to the retention setting in our account, after which Google deletes it.</p>
+
+<h2>Children</h2>
+<p>Rich With Reason is written for adults and isn't directed to children under 13. We don't knowingly collect personal information from children under 13. If you believe a child has given us information, email us and we'll delete it.</p>
+
+<h2>Security</h2>
+<p>We use reputable providers and reasonable safeguards to protect information, but no website or email service is completely secure.</p>
+
+<h2>Visitors outside the United States</h2>
+<p>Rich With Reason is run from the United States, and information is processed there by us and our providers.</p>
+
+<h2>Changes and contact</h2>
+<p>If we change this policy, we'll update the date at the top of this page. Questions? Email <a href="mailto:richwreason@gmail.com">richwreason@gmail.com</a>.</p>
+`},
+
+  terms: { h1:"Terms of Use", dek:"The ground rules for using Rich With Reason, its guides, calculators and newsletter.", body:`
+<p>Rich With Reason (richwithreason.com) is owned and operated by Jordan Noel ("we," "us"). By using the site or subscribing to The Weekly Reason, you agree to these terms. If you don't agree, please don't use the site.</p>
+
+<h2>Education, not advice</h2>
+<p>Everything on Rich With Reason, including articles, the Buzzword of the Day, calculators and the newsletter, is general information for educational purposes only. It is not financial, investment, tax, insurance, accounting or legal advice, and it isn't a recommendation to buy or sell any security, product or service. Rich With Reason is not a registered investment adviser, broker-dealer, insurance agency or tax preparer. Using the site doesn't create an adviser-client or any other professional relationship. Before making a financial decision, consider your own situation and speak with a qualified professional. See our <a href="/disclaimer/">Disclaimer and Disclosures</a> for more.</p>
+
+<h2>Accuracy</h2>
+<p>We work hard to keep guides accurate and to note the date of figures like rates, limits and fees. Financial rules and numbers change often, though, and we can't promise that everything is complete, current or error-free. Always confirm important details with the provider or an official source. If you spot a mistake, please <a href="/contact/">let us know</a>.</p>
+
+<h2>Calculators</h2>
+<p>Our calculators give estimates based on the numbers you enter and simplified assumptions, such as steady returns. Results are hypothetical, aren't guaranteed and may differ from what a bank, lender or investment actually produces.</p>
+
+<h2>Our content</h2>
+<p>The text, graphics, logo, calculators and design of Rich With Reason are owned by Jordan Noel and protected by copyright and other laws. You're welcome to read, print and share links to our guides for your own personal, non-commercial use, and to quote a short excerpt with credit and a link back. Please don't copy, republish, sell or create derivative works from substantial parts of the site, or scrape or harvest its content, including to train AI models, without our written permission.</p>
+<p>"Rich With Reason," "The Weekly Reason" and "Buzzword Brief" are names we use for this site and its features. Other company, product and fund names mentioned on the site belong to their owners and are used only to identify them. A mention doesn't mean that company endorses us or that we endorse it.</p>
+
+<h2>Links to other sites</h2>
+<p>We link to news reports, government sites and other resources so you can check our sources and learn more. We don't control those sites and aren't responsible for their content, accuracy or privacy practices.</p>
+
+<h2>Questions and messages you send</h2>
+<p>If you send us a question, idea or other message, you allow us to use it, edited for length and clarity, to create guides or newsletter content. We won't publish your name or identifying details without your permission.</p>
+
+<h2>The Weekly Reason</h2>
+<p>The newsletter is free. You can unsubscribe at any time using the link in every email. Our <a href="/privacy/">Privacy Policy</a> explains how we handle subscriber information.</p>
+
+<h2>Acceptable use</h2>
+<p>Please don't use the site in a way that breaks the law, interferes with its operation or security, or tries to access systems or data you're not authorized to use.</p>
+
+<h2>No warranties</h2>
+<p>The site and its content are provided "as is" and "as available," without warranties of any kind, express or implied, to the fullest extent the law allows.</p>
+
+<h2>Limitation of liability</h2>
+<p>To the fullest extent the law allows, Rich With Reason and Jordan Noel aren't liable for any loss or damage, including financial losses, arising from your use of the site or reliance on its content. You're responsible for your own financial decisions.</p>
+
+<h2>Changes and contact</h2>
+<p>We may update these terms from time to time; the date at the top shows the latest version, and continuing to use the site means you accept the changes. Questions? Email <a href="mailto:richwreason@gmail.com">richwreason@gmail.com</a>.</p>
+`},
+
+  disclaimer: { h1:"Disclaimer and Disclosures", dek:"What Rich With Reason is, what it isn't, and how it's paid for.", body:`
+<h2>For education only</h2>
+<p>Rich With Reason explains how money works in plain English. Everything on the site and in The Weekly Reason is general information for educational purposes. It is not personalized financial, investment, tax, insurance, accounting or legal advice, and nothing here is an offer or recommendation to buy or sell any security, insurance policy or other product. Rich With Reason is not a registered investment adviser, broker-dealer, insurance agency or tax preparer. Your situation is unique, so consider speaking with a qualified, licensed professional before making decisions.</p>
+
+<h2>Investing involves risk</h2>
+<p>All investing involves risk, including the possible loss of the money you invest. Past performance doesn't guarantee future results. Examples that use an average return, such as 7% a year, are hypothetical illustrations, not predictions or promises.</p>
+
+<h2>Figures, rates and calculators</h2>
+<p>Rates, contribution limits, fees and other figures are accurate to the best of our knowledge as of the date shown on each guide, and they change often. Calculator results are estimates based on simplified assumptions. Always confirm current terms with the bank, lender, insurer or official source.</p>
+
+<h2>How Rich With Reason makes money</h2>
+<p>Right now, Rich With Reason doesn't earn money from affiliate links, ads, sponsored posts or paid placements, and no company pays us to mention or rank its products. When we name a bank, fund, card or app, it's to give a real-world example, not an endorsement.</p>
+<p>If that ever changes, we'll follow the Federal Trade Commission's endorsement guidelines: affiliate links and sponsored content will be clearly labeled on the page where they appear, and compensation will never change what we say about a product.</p>
+
+<h2>Views are the author's own</h2>
+<p>Rich With Reason is written by Jordan Noel. Opinions on the site are the author's own and don't represent the views of any employer or other organization.</p>
+
+<h2>News and sources</h2>
+<p>The Buzzword of the Day, Buzzword Briefs and trending posts explain money news in our own words and link to the original reporting or official source so you can read more. Headlines, articles and trademarks of news organizations and companies belong to their owners. We don't republish their articles.</p>
+
+<h2>Reader questions</h2>
+<p>Reader questions are edited for length and clarity, and identifying details may be changed or combined to protect privacy.</p>
+
+<h2>Corrections</h2>
+<p>We fix errors as soon as we find them. If you spot something wrong or out of date, please <a href="/contact/">tell us</a>.</p>
+
+<p>See also our <a href="/terms/">Terms of Use</a> and <a href="/privacy/">Privacy Policy</a>. Questions? Email <a href="mailto:richwreason@gmail.com">richwreason@gmail.com</a>.</p>
+`},
+};
+function renderLegal(p){
+  const L = LEGAL[p.path];
+  $("#page-legal").innerHTML = `
+  <div class="art-hero about-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a> › ${L.h1}</div>
+      <div class="eyebrow" style="color:var(--gold);margin-top:14px">Legal</div>
+      <h1>${L.h1}</h1>
+      <p class="dek">${L.dek}</p>
+    </div>
+  </div>
+  <section class="legal">
+    <div class="article">
+      <p class="legal-date"><strong>Last updated:</strong> ${LEGAL_UPDATED}</p>
+      ${L.body}
+    </div>
   </section>`;
 }
 
@@ -3603,7 +3752,7 @@ function route(){
   document.querySelectorAll(".menu a").forEach(a=>a.classList.toggle("active",a.dataset.slug===navSlug));
   $("#menu").classList.remove("open");
   const sp = !aslug && STATIC_PAGES.find(p=>p.path===slug);
-  if(sp){ ({about:renderAbout, contact:renderContact, tools:renderToolsHub, tool:p=>renderToolPage(p.tool)})[sp.page](sp); show(sp.page); setMeta(sp.title, sp.desc); }
+  if(sp){ ({about:renderAbout, contact:renderContact, legal:renderLegal, tools:renderToolsHub, tool:p=>renderToolPage(p.tool)})[sp.page](sp); show(sp.page); setMeta(sp.title, sp.desc); }
   else if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug), A = ARTICLES[aslug]||{}; show("art"); setMeta((A.seo||t)+" — Rich With Reason", A.dek); }
   else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
   else {
