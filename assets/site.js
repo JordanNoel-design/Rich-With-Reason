@@ -37,7 +37,7 @@ const CATS = [
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
    steps:[["Catch the Buzzword Brief","One term, decoded in 30 seconds."],["Scan the week's money news","What happened and why it matters to you."],["Read the most-shared post","See what other readers found useful."],["Ask us a question","We answer reader questions every week."]],
-   posts:["Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
+   posts:["Buzzword Brief: what does 'AI bubble' mean?","Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
   {slug:"personal-finance", name:"Personal Finance", ico:ICON["personal-finance"], color:"#7a4b12", tint:"#fbf3dd",
    blurb:"Budgeting, saving and everyday money habits that add up.",
@@ -2484,6 +2484,69 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
+  "buzzword-brief-what-does-ai-bubble-mean": {
+    cat:"trending",
+    title:"Buzzword Brief: what does 'AI bubble' mean?",
+    dek:"Fed officials, a former SEC chair and a Nasdaq correction have put 'AI bubble' in every money headline. Here's what it means, how bubbles work and how to protect your portfolio.",
+    date:"Nov 18, 2026", read:"6 min read",
+    seo:"What Is an AI Bubble? What It Means for Your Money",
+    faq:[["What is an AI bubble?","It's the worry that prices for AI stocks, and the money being spent to build AI, have run far ahead of the profits AI will actually earn, so they could fall sharply."],["Is the stock market in an AI bubble?","No one can say for sure until afterward. Fed officials have warned that stocks could drop sharply if AI investments don't pay off, but they also say AI could boost growth."],["How would an AI bubble affect my 401(k)?","If you own an S&P 500 or total-market index fund, you already own the biggest AI companies, so a sharp AI selloff would pull your balance down. A diversified mix of stocks and bonds limits the damage."],["What is the difference between a correction and a bubble bursting?","A correction is a drop of at least 10% from a recent high, and many recover within months. A bubble bursting is a deeper, longer fall after prices ran far beyond what earnings can support."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>An <strong>AI bubble</strong> is the worry that prices for AI stocks, and the money being spent to build AI, have run far ahead of the profits AI will actually earn.</li>
+<li>Bubbles are only certain in hindsight. The concern now is the speed of AI borrowing and spending, not proof that a crash is coming.</li>
+<li>Top Federal Reserve officials, including Chair Kevin Warsh, have warned this month that a sharp stock drop is possible if AI returns disappoint.</li>
+</ul></div>
+
+<p>Two weeks ago the Nasdaq Composite slid into a correction, and the phrase "AI bubble" has been everywhere since. A former top Wall Street regulator says we are already in one. The Fed's latest financial stability check named AI as the top risk on investors' minds. Here's what the term means, how a bubble works and what it could mean for your money.</p>
+
+<h2>What is an AI bubble?</h2>
+<p>A bubble happens when an asset's price climbs far above what its future earnings can justify, mostly because people expect prices to keep rising. Nobel Prize-winning economist Robert Shiller described a speculative bubble as "a situation in which news of price increases spurs investor enthusiasm which spreads by psychological contagion" in his <a href="https://www.econ.queensu.ca/sites/econ.queensu.ca/files/Econ%20870/Shiller%20nobel%20lecture%202013.pdf" target="_blank" rel="noopener">2013 Nobel lecture</a>.</p>
+<p>An "AI bubble" applies that idea to artificial intelligence: the chipmakers, cloud companies and startups whose share prices have soared on AI hopes, plus the data centers being built to power it. The question is not whether AI is useful. It is whether today's prices and spending assume more profit than AI will deliver, and how soon.</p>
+
+<h2>How the mechanism works</h2>
+<p>Bubbles tend to inflate and pop through a feedback loop:</p>
+<ul>
+<li><strong>A real breakthrough draws money.</strong> Investors bid up the companies most likely to benefit.</li>
+<li><strong>Rising prices attract more buyers.</strong> Newcomers pile in so they don't miss out.</li>
+<li><strong>Borrowing amplifies it.</strong> Companies borrow to build capacity for demand they expect, not demand they already have.</li>
+<li><strong>Reality checks the story.</strong> If profits arrive slower than promised, prices fall, lenders pull back and the spending slows.</li>
+</ul>
+<p>The borrowing piece is what worries regulators now. The Fed's <a href="https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf" target="_blank" rel="noopener">November Financial Stability Report</a> says debt issued for advanced computing topped $680 billion by October 2026, about five times the $130 billion raised in 2023. It rose from under 6% of investment-grade corporate bond sales in 2023 to about 31% this year. The largest U.S. banks have close to $1 trillion of exposure to tech firms, data center developers and related lenders.</p>
+<p>The Fed also flags "circular financing," where big chip and cloud companies invest in or lend to smaller firms that then buy their products. That can make demand look stronger than it is.</p>
+
+<h2>Why it's in the news this week</h2>
+<ul>
+<li><strong>The Fed is sounding the alarm.</strong> In a <a href="https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm" target="_blank" rel="noopener">Nov. 10 speech</a>, Fed Vice Chair for Supervision Michelle Bowman listed "a large correction in equity valuations, if returns on AI investment fall short of expectations" as a key risk. She said business investment is growing at a pace like the 1990s tech boom and AI-related debt is on track to top $800 billion this year.</li>
+<li><strong>The Fed chair weighed in.</strong> On Nov. 16, Warsh said AI could "supercharge idea generation" but warned that disappointing returns could hit stock prices and jobs, <a href="https://cp24.com/news/world/2026/11/16/us-fed-chairman-warsh-grapples-with-ais-potential-economic-impact-steers-clear-of-its-inflation-risk" target="_blank" rel="noopener">the Associated Press reported</a>.</li>
+<li><strong>A former regulator called it.</strong> Former SEC Chair Gary Gensler told CNN the AI sector is already in a bubble that could cause a recession before the November 2028 election, <a href="https://www.aa.com.tr/en/economy/former-wall-street-regulator-warns-ai-bubble-could-burst-trigger-recession/4127550" target="_blank" rel="noopener">Anadolu Agency reported</a>.</li>
+<li><strong>Markets wobbled.</strong> The Nasdaq hit a record 27,599 on Oct. 6, then fell 12% to 24,315 by Nov. 5, <a href="https://www.fool.com/investing/2026/11/16/nasdaq-stock-market-correction-these-6-words-from-warren-buffett-are-more-relevant-than-ever/" target="_blank" rel="noopener">The Motley Fool noted</a>, amid worries about data center regulation and Nvidia's Nov. 12 leadership change.</li>
+</ul>
+
+<h2>What history tells us</h2>
+<p>The closest comparison is the dot-com bubble. The Nasdaq peaked at 5,048 on March 10, 2000, then fell about 78% to 1,114 by October 2002. Fifteen years later it still hadn't fully recovered, <a href="https://kiplinger.com/article/investing/t058-c016-s002-3-lessons-for-investors-from-the-tech-bubble.html" target="_blank" rel="noopener">Kiplinger reported in 2015</a>. Yet the internet itself turned out to be enormously valuable. A technology can be real and its stock prices can still be too high.</p>
+<p>Not every scare is a bubble bursting, either. A CNBC review of 10 Nasdaq corrections over the past decade found the index was higher six months later in every case but 2022, with an average gain of about 17% from the low, <a href="https://finance.yahoo.com/markets/stocks/articles/nasdaq-entered-correction-territory-history-182358681.html" target="_blank" rel="noopener">Yahoo Finance reported</a>. Nobody knows in advance which kind of drop they're living through.</p>
+
+<h2>What it means for your wallet</h2>
+<ul>
+<li><strong>Know what you own.</strong> If you hold an S&amp;P 500 or total-market index fund in your 401(k), you already own the biggest AI companies. Check how much of your portfolio leans on tech before adding more AI-focused funds.</li>
+<li><strong>Diversify instead of predicting.</strong> A simple mix of U.S. stocks, international stocks and bonds, like a <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a>, means no single theme can sink your plan.</li>
+<li><strong>Keep investing steadily.</strong> <a href="/investing/dollar-cost-averaging-explained/">Dollar-cost averaging</a> means a falling market buys you more shares at lower prices instead of tempting you to guess the top or bottom.</li>
+<li><strong>Protect your short-term money.</strong> Cash you'll need within a few years, especially your <a href="/personal-finance/how-much-should-be-in-your-emergency-fund/">emergency fund</a>, doesn't belong in stocks, AI or otherwise.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Correction:</strong> a drop of at least 10% from a recent high. A 20% drop is a bear market.</li>
+<li><strong>Circular financing:</strong> when big companies fund their own customers, who then buy their products.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>"AI bubble" is a warning, not a forecast. Even the Fed officials raising it say AI could boost growth. No one can time a bubble, but you can make sure one popping wouldn't derail you: stay diversified, keep investing on a schedule and keep your emergency cash out of the market.</p>
+
+<p class="art-note">Figures cited are from the Federal Reserve and news reports as of November 17, 2026, and will change. This post is for education only and is not investment advice.</p>
+`},
   "buzzword-brief-what-does-rate-hike-mean": {
     cat:"trending",
     title:"Buzzword Brief: what does 'rate hike' mean?",
@@ -2970,6 +3033,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "buzzword-brief-what-does-ai-bubble-mean": ["how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","buzzword-brief-what-does-rate-hike-mean","compound"],
   "buzzword-brief-what-does-rate-hike-mean": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","buzzword-brief-what-does-soft-landing-mean","debt"],
   "buzzword-brief-what-does-soft-landing-mean": ["buzzword-brief-what-does-rate-hike-mean","how-much-should-be-in-your-emergency-fund","what-the-latest-jobs-report-means-for-your-wallet","emergency"],
   "the-3-account-system-that-makes-saving-automatic": ["high-yield-savings-vs-money-market-accounts","sinking-funds-the-stress-free-way-to-save","why-your-savings-rate-matters-more-than-returns","compound"],
