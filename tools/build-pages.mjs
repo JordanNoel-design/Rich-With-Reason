@@ -108,7 +108,8 @@ let n = 1;
 const AUTHOR = { "@type": "Person", name: "Jordan Noel", url: `${SITE}/about/`,
   jobTitle: "Founder, Rich With Reason", alumniOf: { "@type": "CollegeOrUniversity", name: "Temple University" },
   knowsAbout: ["Personal finance", "Investing", "Private equity accounting"] };
-const PUBLISHER = { "@type": "Organization", name: "Rich With Reason", url: `${SITE}/`, logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } };
+const ALT_NAMES = ["RichWithReason", "richwithreason.com"];
+const PUBLISHER = { "@type": "Organization", name: "Rich With Reason", alternateName: ALT_NAMES, url: `${SITE}/`, logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } };
 const crumbs = list => ({ "@context": "https://schema.org", "@type": "BreadcrumbList",
   itemListElement: list.map(([name, path], i) => ({ "@type": "ListItem", position: i + 1, name, item: SITE + path })) });
 const faqLd = faq => faq && faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage",
@@ -117,7 +118,7 @@ const isoDate = d => { const t = new Date(d); return isNaN(t) ? undefined : t.to
 
 // Home page gets WebSite + Organization data
 write("index.html", build({ pathname: "/", desc: HOME_DESC, ld: [
-  { "@context": "https://schema.org", "@type": "WebSite", name: "Rich With Reason", url: `${SITE}/`, publisher: PUBLISHER },
+  { "@context": "https://schema.org", "@type": "WebSite", name: "Rich With Reason", alternateName: ALT_NAMES, url: `${SITE}/`, publisher: PUBLISHER },
   { "@context": "https://schema.org", ...PUBLISHER, founder: AUTHOR, email: "richwreason@gmail.com" } ] }));
 
 // Static pages: About, Contact, Tools hub and each calculator
