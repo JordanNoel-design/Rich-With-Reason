@@ -12,7 +12,8 @@ After any edit (articles, design, copy, images, tags):
 4. Update the project copy: run `node tools/single-file.mjs <path outside repo>/rich-with-reason.html`
    and save that file over `rich-with-reason.html` in the claude.ai "Rich With Reason" project.
    GitHub and the project copy must always match.
-5. Check the live page loads, then tell the owner what changed.
+5. Sync the Wix copy (see "Wix copy" below). It must match GitHub after every push to `main`.
+6. Check the live page loads, then tell the owner what changed (and whether the Wix sync worked).
 
 Before editing, pull the latest from GitHub. GitHub is the source of truth; never rebuild the site
 from the project copy alone.
@@ -26,6 +27,37 @@ Site notes:
   Topic icons are the line icons in `ICON` in `assets/site.js`.
 - The site is verified in Google Search Console by `google326d43f13534df04.html` in the repo root.
   Never delete or change that file.
+
+Wix copy (step 5):
+The same site also runs on Wix as a mirror: Wix site "Rich With Reason" (Wix Headless, uploaded
+files), site ID `fea00c88-5cb8-40a0-8fc2-7737fde49e94`, live at
+https://headless-kgxameghwen-jnoel113-1408.wix-site-host.com . This is NOT the owner's old
+editor-built Wix site (27c4bbd3-…); never upload site files there. richwithreason.com stays on
+GitHub Pages. Only sync what is on `main` (never a branch or unmerged pull request).
+Run it after every push to `main`, using the Wix connector (call WixREADME once first):
+1. Note the commit you pushed: `git rev-parse HEAD`.
+2. UploadImageToWixSite with siteId above and imageUrls
+   `["https://github.com/JordanNoel-design/Rich-With-Reason/archive/<sha>.zip"]`.
+   Keep the returned file ID (ends in `.zip`). Wix's sandbox can't reach GitHub directly; this is how
+   the code gets into Wix.
+3. ExecuteWixAPI (siteId above) in ONE call:
+   - POST `https://www.wixapis.com/site-media/v1/files/generate-download-url` body
+     `{ fileIds: ["<zip file ID>"] }` → `data.downloadUrl`; GET it with `responseType: "base64"`.
+   - `wix.unzip()` it (if the result is a single inner .zip, unzip that too). Strip the one top
+     folder (`Rich-With-Reason-<sha>/`). Skip folders/empty entries and leave out `tools/`,
+     `README.md`, `CLAUDE.md`, `NEWSLETTER.md`, `CNAME`, `.nojekyll`, `google326d43f13534df04.html`.
+     Stop if there is no `index.html`.
+   - Drop the full set (a drop replaces every file, so always send the whole site):
+     `wix.multipart(files)` → POST
+     `https://www.wixapis.com/headless-business-setup/v1/headless-business/<siteId>/drop?campaign=mcp&agent=claude-code/cli/opus-5.5`
+     (account scope, Content-Type from multipart).
+   - Clean up: POST `https://www.wixapis.com/site-media/v1/bulk/files/delete` body
+     `{ fileIds: ["<zip file ID>"], permanent: true }` (only that zip; never other media).
+4. Check: fetch the Wix home page and confirm it carries the change (e.g. today's Buzzword).
+   Wix serves only exact file names, so `/topic/` addresses 404 on a direct visit; that's expected,
+   test inner pages as `/topic/index.html`.
+If any step fails, GitHub stays live as normal: report the exact error (with the Wix request id)
+and don't work around it.
 
 Newsletter:
 - The Weekly Reason rules live in `NEWSLETTER.md`. Follow them for every issue.
@@ -48,7 +80,7 @@ Buzzword of the Day:
   news today, with facts from the cited `source` (a real article or official page you opened).
   Never invent numbers or quotes. Stay politically neutral.
 - `link`: the closest published Rich With Reason guide (clean URL), otherwise `/trending/`.
-- The daily update needs no approval: set it, build, commit, push, update the project copy.
+- The daily update needs no approval: set it, build, commit, push, update the project copy, sync the Wix copy.
 
 SEO (a priority for every article):
 - Target a specific question people type into Google (e.g. "how long does a late payment stay on
