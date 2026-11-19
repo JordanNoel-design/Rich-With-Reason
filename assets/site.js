@@ -37,7 +37,7 @@ const CATS = [
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
    steps:[["Catch the Buzzword Brief","One term, decoded in 30 seconds."],["Scan the week's money news","What happened and why it matters to you."],["Read the most-shared post","See what other readers found useful."],["Ask us a question","We answer reader questions every week."]],
-   posts:["Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
+   posts:["Buzzword Brief: what does 'IPO' mean?","Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
   {slug:"personal-finance", name:"Personal Finance", ico:ICON["personal-finance"], color:"#7a4b12", tint:"#fbf3dd",
    blurb:"Budgeting, saving and everyday money habits that add up.",
@@ -2484,6 +2484,68 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
+  "buzzword-brief-what-does-ipo-mean": {
+    cat:"trending",
+    title:"Buzzword Brief: what does 'IPO' mean?",
+    dek:"Anthropic just set a record for the biggest stock market debut ever. Here's what an IPO is, how one actually works, what history says about buying new stocks, and what it means for your money.",
+    date:"Nov 19, 2026", read:"6 min read",
+    seo:"What Is an IPO? How It Works and What It Means for You",
+    faq:[["What is an IPO?","An IPO, or initial public offering, is the first time a private company sells its shares to the public, so anyone can buy and sell them on a stock exchange like the Nasdaq or the New York Stock Exchange."],["Can regular investors buy shares at the IPO price?","Usually not. The SEC notes that underwriters typically direct most IPO shares to institutional investors and wealthy clients, so most everyday investors buy after trading starts, when prices can swing hard in both directions."],["Do IPO stocks go up on the first day?","Often. From 1980 to 2025, U.S. IPOs closed their first day an average of about 19% above the IPO price, according to Professor Jay Ritter's data, but that gain mostly goes to investors who got shares at the IPO price."],["What is an IPO lock-up period?","It's the stretch after an IPO, typically 180 days according to the SEC, when insiders agree not to sell their shares. When it ends, a wave of selling can push the price down."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>An <strong>IPO</strong>, or initial public offering, is the first time a private company sells its shares to the public, so anyone can buy and sell them on a stock exchange.</li>
+<li>Anthropic priced the largest IPO on record this week: 980 million shares at $83 each, raising $81.3 billion. Its stock is set to start trading on the Nasdaq on November 19 under the ticker ANT.</li>
+<li>Most everyday investors can't buy at the IPO price. They buy after trading starts, when prices can swing hard in both directions.</li>
+</ul></div>
+
+<p>If you've seen "IPO" in every money headline this week, there's a reason. Anthropic, the AI company, just set a record for the biggest stock market debut ever. Here's what an IPO is, how one actually works, what history says about buying new stocks, and what it means for your money.</p>
+
+<h2>What is an IPO?</h2>
+<p>An initial public offering is, in the words of the <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-17" target="_blank" rel="noopener">SEC's investor bulletin</a>, the first time a company offers its shares "to the general public." Before an IPO, a company is owned by its founders, employees and private investors such as venture capital funds. After it, its shares trade on an exchange like the Nasdaq or the New York Stock Exchange, and the company has to publish regular financial reports.</p>
+<p>Companies go public mainly to raise money to grow, and to give early investors and employees a way to sell some of their shares.</p>
+
+<h2>How an IPO works, step by step</h2>
+<ul>
+<li><strong>Filing:</strong> The company files a registration statement with the SEC, usually a Form S-1. It includes a prospectus describing the business, its finances and its risks. The SEC reviews the filing for disclosure problems, but it does not judge whether the stock is a good investment.</li>
+<li><strong>Underwriters:</strong> Investment banks, called underwriters, manage the sale. For Anthropic, Goldman Sachs and Morgan Stanley led the deal, <a href="https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html" target="_blank" rel="noopener">according to Yahoo Finance</a>.</li>
+<li><strong>The roadshow and the price range:</strong> The company and its bankers pitch big investors and collect orders at a proposed price range. Strong demand can push the final price above that range.</li>
+<li><strong>Pricing and allocation:</strong> The night before trading, the company sets the final IPO price and hands out shares. The SEC notes that underwriters typically direct most IPO shares to institutional investors, like mutual funds and pension funds, and to wealthy clients.</li>
+<li><strong>First trade:</strong> The next morning, the stock opens on the exchange. From then on, the market sets the price, which can be far above or below the IPO price.</li>
+</ul>
+
+<h2>The Anthropic deal, by the numbers</h2>
+<p>Anthropic first planned to sell 825 million shares at $70 to $78 each. Demand was strong enough that it priced at $83 and sold 980 million shares, raising $81.3 billion, <a href="https://www.forbes.com/sites/fionariley/2026/11/18/anthropic-ipo-live-updates-81-billion-raised-breaking-spacexs-record/" target="_blank" rel="noopener">Forbes reported</a>. That values the company at about $1.5 trillion and tops SpaceX's $75 billion IPO in June, the previous record. A separate private placement brought the total amount raised to $107.3 billion, <a href="https://www.aljazeera.com/economy/2026/11/19/anthropic-raises-81-3bn-in-biggest-ipo-of-all-time" target="_blank" rel="noopener">according to Al Jazeera</a>.</p>
+<p>Not everyone is convinced. One wealth manager told <a href="https://www.newsweek.com/anthropic-ipo-price-expectations-markets-ahead-debut-12738498" target="_blank" rel="noopener">Newsweek</a> the opening valuation was "too rich" for his firm, and investor Ken Fisher advised people to think twice before buying right after the debut.</p>
+
+<h2>What history says about buying IPOs</h2>
+<p>University of Florida finance professor Jay Ritter has tracked thousands of U.S. IPOs for decades. Two findings stand out in his <a href="https://site.warrington.ufl.edu/ritter/files/IPO-Statistics.pdf" target="_blank" rel="noopener">latest IPO statistics</a>:</p>
+<ul>
+<li><strong>The first-day pop:</strong> From 1980 to 2025, U.S. IPOs closed their first day an average of about 19% above the IPO price. That gain mostly goes to the investors who got shares at the IPO price.</li>
+<li><strong>The long-run lag:</strong> For IPOs from 2012 to 2024, the average three-year return was 7.6%, which trailed the overall stock market by 25.5 percentage points.</li>
+</ul>
+<p>Big, hyped debuts are no exception. <a href="https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html" target="_blank" rel="noopener">Yahoo Finance noted</a> that Meta and Rivian, both heavily oversubscribed IPOs, were down roughly 40% to 70% a year after their first-day open. Some traders are already <a href="https://www.aol.com/articles/pre-ipo-trading-anthropic-already-112002000.html" target="_blank" rel="noopener">betting on a first-day jump</a> for Anthropic, but the SEC warns that the offering price "may bear little relationship" to where a stock trades later.</p>
+
+<h2>What it means for everyday investors</h2>
+<ul>
+<li><strong>You probably already own a slice.</strong> Once a big company is added to the major indexes, low-cost <a href="/investing/index-funds-vs-etfs-whats-the-difference/">index funds and ETFs</a> buy it for you. There's no need to chase the opening bell.</li>
+<li><strong>Watch out for the first-day price.</strong> If you buy at the open, you're often paying after the pop. Using a limit order, which caps the price you'll pay, protects you from a wild opening swing.</li>
+<li><strong>Know about the lock-up.</strong> Insiders usually agree not to sell for a period, typically 180 days, according to the SEC. When that ends, a wave of selling can push the price down.</li>
+<li><strong>Keep it small.</strong> If you want to own a new stock, treat it as a small slice of a diversified portfolio, like the <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a>, and consider <a href="/investing/dollar-cost-averaging-explained/">dollar-cost averaging</a> into it over time.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>IPO pop:</strong> how much a new stock rises on its first day of trading versus its IPO price.</li>
+<li><strong>Oversubscribed:</strong> when investors ask for more shares than the company is selling.</li>
+<li><strong>Lock-up period:</strong> the stretch after an IPO, often 180 days, when insiders agree not to sell.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>An IPO is how a private company becomes a public one, and Anthropic's deal is the biggest IPO on record. The excitement is real, but so is the data: first-day gains mostly go to big investors who got in at the IPO price, and new stocks have often lagged the market over the next few years. For most people, a diversified, low-cost portfolio is still the simplest way to own the companies shaping the economy.</p>
+
+<p class="art-note">Figures cited are from the SEC, Professor Jay Ritter's IPO data and news reports as of November 19, 2026, before Anthropic's shares began trading, and will change. This post is for education only and is not investment advice.</p>
+`},
   "buzzword-brief-what-does-rate-hike-mean": {
     cat:"trending",
     title:"Buzzword Brief: what does 'rate hike' mean?",
@@ -2970,6 +3032,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "buzzword-brief-what-does-ipo-mean": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "buzzword-brief-what-does-rate-hike-mean": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","buzzword-brief-what-does-soft-landing-mean","debt"],
   "buzzword-brief-what-does-soft-landing-mean": ["buzzword-brief-what-does-rate-hike-mean","how-much-should-be-in-your-emergency-fund","what-the-latest-jobs-report-means-for-your-wallet","emergency"],
   "the-3-account-system-that-makes-saving-automatic": ["high-yield-savings-vs-money-market-accounts","sinking-funds-the-stress-free-way-to-save","why-your-savings-rate-matters-more-than-returns","compound"],
