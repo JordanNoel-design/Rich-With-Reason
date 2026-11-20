@@ -65,7 +65,9 @@
   .link-more{font-weight:600;color:var(--green);font-size:.92rem}
 
   /* Category tiles */
-  .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:860px){.cats{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cats{grid-template-columns:1fr}}
   .cat{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column;gap:8px}
   .cat:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
   .cat .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem}
