@@ -3371,6 +3371,14 @@ function renderBuzz(){ const el=$("#buzzCard"); if(el) el.innerHTML = buzzHtml()
 renderBuzz();
 
 // Category pages
+// Sticky topic sidebar: if it's taller than the screen, pin it by its bottom edge so nothing gets cut off.
+function fitSticky(){
+  const a=document.querySelector(".layout > aside"); if(!a) return;
+  a.style.top = Math.min(96, window.innerHeight - a.offsetHeight - 24) + "px";
+}
+window.addEventListener("resize", fitSticky);
+window.addEventListener("load", fitSticky);
+
 function renderCat(c){
   const others = CATS.filter(o=>o.slug!==c.slug);
   $("#page-cat").innerHTML = `
@@ -3755,7 +3763,7 @@ function route(){
   const sp = !aslug && STATIC_PAGES.find(p=>p.path===slug);
   if(sp){ ({about:renderAbout, contact:renderContact, legal:renderLegal, tools:renderToolsHub, tool:p=>renderToolPage(p.tool)})[sp.page](sp); show(sp.page); setMeta(sp.title, sp.desc); }
   else if(bySlug[slug] && aslug){ const t = renderArticle(bySlug[slug], aslug), A = ARTICLES[aslug]||{}; show("art"); setMeta((A.seo||t)+" — Rich With Reason", A.dek); }
-  else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
+  else if(bySlug[slug]){ renderCat(bySlug[slug]); show("cat"); fitSticky(); setMeta(bySlug[slug].name+" — Rich With Reason", bySlug[slug].blurb); }
   else {
     // Topic/article pages are built without the home sections; load the real home page.
     const ph = $("#page-home"); if(ph && ph.children && !ph.children.length){ location.reload(); return; }
