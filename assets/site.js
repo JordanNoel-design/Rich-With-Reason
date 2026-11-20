@@ -36,7 +36,7 @@ const CATS = [
    blurb:"The money stories and buzzwords everyone's searching this week.",
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
-   posts:["Buzzword Brief: what does 'IPO' mean?","Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
+   posts:["Buzzword Brief: what does 'correction' mean?","Buzzword Brief: what does 'IPO' mean?","Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
   {slug:"personal-finance", name:"Personal Finance", ico:ICON["personal-finance"], color:"#7a4b12", tint:"#fbf3dd",
    blurb:"Budgeting, saving and everyday money habits that add up.",
@@ -2483,6 +2483,70 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
+  "buzzword-brief-what-does-correction-mean": {
+    cat:"trending",
+    title:"Buzzword Brief: what does 'correction' mean?",
+    dek:"Stocks just had their longest losing streak since June, and the Dow is nearing correction territory. Here's what a correction is, why markets have them, what history says, and what it means for your money.",
+    date:"Nov 20, 2026", read:"5 min read",
+    seo:"What Is a Stock Market Correction? Meaning and What to Do",
+    faq:[["What is a stock market correction?","A correction is a drop of roughly 10% to 20% from a recent high in a major index like the S&P 500 or the Dow. There's no official definition, and a decline of 20% or more is called a bear market."],["How long do stock market corrections usually last?","Corrections have lasted about 115 days on average, according to Yardeni Research data cited by Fidelity. Nasdaq counts 27 S&P 500 corrections since World War II, taking about four months on average to get back to the old high."],["How often do market corrections happen?","Often. Nearly half of calendar years since 1980 included a correction, yet the S&P 500's average annual return over that period was more than 13%, according to Fidelity."],["What should I do during a market correction?","Many experts suggest sticking with a long-term plan instead of selling in a panic, which can lock in losses. Keep an emergency fund in cash, stay diversified and keep investing on a regular schedule."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>A <strong>correction</strong> is a drop of roughly 10% to 20% from a recent market high. A fall of 20% or more is called a bear market.</li>
+<li>Stocks slid for days this week as AI stocks tumbled and rate-hike fears grew. The Dow fell about 1,100 points on November 19 and was nearing correction territory, and the S&P 500 had already dropped as much as 7.1% from its October high.</li>
+<li>Corrections are common and usually short. For long-term investors, the bigger risk is often selling in a panic.</li>
+</ul></div>
+
+<p>If "correction" keeps popping up in market headlines this week, there's a reason. Wall Street had its longest losing streak since June, and on Thursday the Dow sank about 1,100 points. Here's what a correction is, why markets have them, what history says, and what it means for your money.</p>
+
+<h2>What is a correction?</h2>
+<p>There's no official rule, but <a href="https://www.fidelity.com/learning-center/smart-money/stock-market-correction" target="_blank" rel="noopener">Fidelity</a> describes a stock market correction as a drop of at least 10% from recent highs. <a href="https://www.schwab.com/learn/story/market-correction-what-does-it-mean" target="_blank" rel="noopener">Charles Schwab</a> puts it as a decline of more than 10% but less than 20% from a major index's most recent peak, such as the S&P 500 or the Dow. A drop of 20% or more is a bear market.</p>
+<p>The word itself hints at the idea: after a long run-up, prices "correct" back toward levels investors feel better about. Smaller dips of around 5% are usually called pullbacks.</p>
+
+<h2>How a correction happens</h2>
+<p>Stock prices reflect what investors expect companies to earn in the future, and how much they're willing to pay for those earnings today. When those expectations change quickly, prices can fall fast. A few forces usually play a part:</p>
+<ul>
+<li><strong>High prices to start with.</strong> When stocks are expensive compared with their profits, it takes less bad news to knock them down.</li>
+<li><strong>Higher interest rates.</strong> When safer investments like Treasury bonds pay more, stocks have to compete harder for investors' money.</li>
+<li><strong>A shock or a change in the story.</strong> A disappointing forecast, a policy change or a scandal can make investors rethink what a company or a whole sector is worth.</li>
+<li><strong>Selling feeds on itself.</strong> As prices drop, some investors sell to limit losses or to raise cash, which pushes prices down further.</li>
+</ul>
+
+<h2>Why it's in the news this week</h2>
+<p>All of those forces showed up at once. The S&P 500 fell as much as 7.1% from its October 6 high and on November 17 closed at its lowest level since late July, after four straight losses, <a href="https://www.mitrade.com/insights/news/live-news/article-3-2262467-20261118" target="_blank" rel="noopener">according to figures from Creative Planning's Charlie Bilello</a>. A fifth straight drop on November 18 gave the index its longest losing streak since June, <a href="https://www.ajc.com/news/2026/11/wall-street-zigzags-as-nvidia-and-other-ai-stocks-keep-swinging/" target="_blank" rel="noopener">the AP reported</a>.</p>
+<p>The <a href="https://www.wfsb.com/2026/11/17/another-wipeout-hits-wall-street-nvidia-other-jittery-ai-stocks-swing-lower/" target="_blank" rel="noopener">AP</a> pointed to worries that AI stocks had grown too expensive, high interest rates and the risk of tougher rules on data centers, with the 10-year Treasury yield near 5.10%. Inflation added pressure: producer prices rose 6.5% over the past year, the fastest pace since November 2022, and markets expect the Federal Reserve to raise rates in December, <a href="https://krdo.com/news/2026/11/13/wholesale-inflation-rose-in-october-to-highest-annual-rate-in-nearly-four-years/" target="_blank" rel="noopener">CNN reported</a>. Then on November 19, the Dow fell about 2.2% to roughly 49,097, and <a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html" target="_blank" rel="noopener">Yahoo Finance</a> noted it was nearing a correction.</p>
+
+<h2>What history says</h2>
+<p>Corrections feel scary, but they're a normal part of investing:</p>
+<ul>
+<li><strong>They happen often.</strong> Nearly half of calendar years since 1980 included a correction, yet the S&P 500's average annual return over that stretch was more than 13%, <a href="https://www.fidelity.com/learning-center/smart-money/stock-market-correction" target="_blank" rel="noopener">Fidelity notes</a>.</li>
+<li><strong>They're usually short.</strong> Corrections have lasted about 115 days on average, according to Yardeni Research data cited by Fidelity. The <a href="https://www.nasdaq.com/articles/what-is-a-market-correction" target="_blank" rel="noopener">Nasdaq</a> counts 27 S&P 500 corrections since World War II, with an average decline of 13.7% and about four months to get back to the old high.</li>
+<li><strong>Most don't become bear markets.</strong> Schwab counts 27 corrections since November 1974, and only a handful turned into bear markets.</li>
+<li><strong>Smaller drops usually stop short of 10%.</strong> Bilello counts 34 pullbacks of more than 5% since March 2009. Only 10 went past 10%, and the median drop was 7.6%. As he put it, they "all seemed like the end of the world at the time."</li>
+</ul>
+<p>None of this predicts what happens next. This drop could stop where it is or turn into something deeper. That uncertainty is exactly why a plan matters more than a prediction.</p>
+
+<h2>What it means for everyday investors</h2>
+<ul>
+<li><strong>Think in years, not days.</strong> The <a href="https://www.sec.gov/investor/pubs/assetallocation.htm" target="_blank" rel="noopener">SEC's guide for beginners</a> says a longer time horizon lets investors "wait out" the inevitable ups and downs of the market. Selling during a slump can lock in losses.</li>
+<li><strong>Keep cash for emergencies.</strong> Money you'll need soon shouldn't be in stocks. Fidelity suggests building a cushion of 3 to 6 months of essential expenses. Here's <a href="/personal-finance/how-much-should-be-in-your-emergency-fund/">how much should be in your emergency fund</a>.</li>
+<li><strong>Stay diversified.</strong> A mix of stocks, bonds and cash, like a simple <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a>, spreads your risk. The SEC notes that rebalancing back to your target mix "forces you to buy low and sell high."</li>
+<li><strong>Keep investing on schedule.</strong> If you add money every paycheck, a correction means you buy more shares for the same dollars. That's the idea behind <a href="/investing/dollar-cost-averaging-explained/">dollar-cost averaging</a>.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Pullback:</strong> a smaller drop, often around 5%, from a recent high.</li>
+<li><strong>Bear market:</strong> a decline of 20% or more from a recent peak.</li>
+<li><strong>VIX:</strong> Wall Street's "fear gauge," which tends to jump when stocks fall quickly.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>A correction is a 10% to 20% drop from a recent high, and stocks spent this week edging toward one as AI worries, high interest rates and hot inflation data piled up. Corrections are common, usually short and rarely the end of the story. The best defense is a plan you set before the headlines turn scary: an emergency fund, a diversified mix and steady investing over time.</p>
+
+<p class="art-note">Figures cited are from Fidelity, Charles Schwab, the SEC, Nasdaq, Charlie Bilello's data and news reports as of November 20, 2026, and will change. This post is for education only and is not investment advice.</p>
+`},
   "buzzword-brief-what-does-ipo-mean": {
     cat:"trending",
     title:"Buzzword Brief: what does 'IPO' mean?",
@@ -3031,6 +3095,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "buzzword-brief-what-does-correction-mean": ["buzzword-brief-what-does-rate-hike-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
   "buzzword-brief-what-does-ipo-mean": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "buzzword-brief-what-does-rate-hike-mean": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","buzzword-brief-what-does-soft-landing-mean","debt"],
   "buzzword-brief-what-does-soft-landing-mean": ["buzzword-brief-what-does-rate-hike-mean","how-much-should-be-in-your-emergency-fund","what-the-latest-jobs-report-means-for-your-wallet","emergency"],
