@@ -3,16 +3,16 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-19",
-  "term": "Fed minutes",
-  "def": "The official written record of a Federal Reserve policy meeting, released about three weeks later. It shows what officials discussed and how they are leaning on interest rates.",
-  "why": "Minutes of the Fed's Oct. 27-28 meeting show almost all officials expect further rate increases, and a couple floated a hike bigger than a quarter point next time.",
+  "date": "2026-11-20",
+  "term": "IPO",
+  "def": "An initial public offering, or IPO, is the first time a private company sells its shares to the public, so anyone with a brokerage account can buy them on a stock exchange.",
+  "why": "AI lab Anthropic's stock debuted on Wall Street Thursday to a strong welcome, even as the S&P 500 fell 2% for its sixth straight loss, AP reported.",
   "source": {
-    "name": "Federal Reserve",
-    "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20261028.pdf"
+    "name": "AP (via ABC News)",
+    "url": "https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-thursday-11192026-138303454"
   },
-  "link": "/trending/buzzword-brief-what-does-rate-hike-mean/",
-  "linkText": "Related: what a 'rate hike' means"
+  "link": "/trending/buzzword-brief-what-does-ipo-mean/",
+  "linkText": "Related: What does IPO mean?"
 };
 /* BUZZWORD:END */
 
