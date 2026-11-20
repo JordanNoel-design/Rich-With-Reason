@@ -36,42 +36,41 @@ const CATS = [
    blurb:"The money stories and buzzwords everyone's searching this week.",
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
-   steps:[["Catch the Buzzword Brief","One term, decoded in 30 seconds."],["Scan the week's money news","What happened and why it matters to you."],["Read the most-shared post","See what other readers found useful."],["Ask us a question","We answer reader questions every week."]],
    posts:["Buzzword Brief: what does 'IPO' mean?","Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
   {slug:"personal-finance", name:"Personal Finance", ico:ICON["personal-finance"], color:"#7a4b12", tint:"#fbf3dd",
    blurb:"Budgeting, saving and everyday money habits that add up.",
    intro:"Start here if you're new. Budgeting, emergency funds, taxes and everyday money habits — explained step by step, with no judgment and no jargon.",
    sub:["Budgeting","Emergency Fund","Taxes","Saving Money","Money Habits"],
-   steps:[["Track one month of spending","You can't change what you can't see."],["Build a starter emergency fund","Aim for $1,000, then 3–6 months of expenses."],["Choose a budget style","50/30/20, zero-based or pay-yourself-first."],["Set one money goal","Specific, dated and automated."]],
+   steps:[["Track one month of spending","You can't change what you can't see.","/personal-finance/the-50-30-20-budget-explained-with-examples/"],["Build a starter emergency fund","Aim for $1,000, then 3–6 months of expenses.","/personal-finance/how-much-should-be-in-your-emergency-fund/"],["Choose a budget style","50/30/20, zero-based or pay-yourself-first.","/trending/the-3-account-system-that-makes-saving-automatic/"],["Set one money goal","Specific, dated and automated.","/personal-finance/sinking-funds-the-stress-free-way-to-save/"]],
    posts:["The 50/30/20 budget, explained with examples","How much should be in your emergency fund?","Sinking funds: the stress-free way to save","Tax refunds vs. adjusting your withholding","20 painless ways to cut monthly bills","How to talk about money with your partner"],
    terms:[["Net worth","What you own minus what you owe."],["Sinking fund","Saving monthly for a known future expense."],["Zero-based budget","Every dollar gets a job before the month begins."]]},
   {slug:"financial-freedom", name:"Financial Freedom", ico:ICON["financial-freedom"], color:"#0f5b3f", tint:"#e7f2ec",
    blurb:"FIRE, side income and the path to choosing how you spend your time.",
    intro:"Financial freedom means your money supports the life you want — not the other way around. Explore FIRE, passive income, side hustles and the mindset shifts that get you there sooner.",
    sub:["FIRE Movement","Side Hustles","Passive Income","Mindset","Early Retirement"],
-   steps:[["Find your freedom number","Annual expenses × 25 — your starting target."],["Raise your savings rate","The single biggest lever on your timeline."],["Add a second income stream","Even $300/month changes the math."],["Invest the gap automatically","Make progress the default."]],
+   steps:[["Find your freedom number","Annual expenses × 25 — your starting target.","/financial-freedom/how-to-calculate-your-financial-independence-number/"],["Raise your savings rate","The single biggest lever on your timeline.","/financial-freedom/why-your-savings-rate-matters-more-than-returns/"],["Add a second income stream","Even $300/month changes the math.","/financial-freedom/12-side-hustles-you-can-start-this-weekend/"],["Invest the gap automatically","Make progress the default.","/compound-calculator/"]],
    posts:["What is FIRE? Lean, Fat and Coast explained","The 4% rule in plain English","12 side hustles you can start this weekend","How to calculate your financial independence number","Passive income ideas that actually work","Why your savings rate matters more than returns"],
    terms:[["FIRE","Financial Independence, Retire Early."],["Savings rate","The share of your income you keep and invest."],["Coast FI","Having enough invested that growth alone covers retirement."]]},
   {slug:"banking-credit", name:"Banking & Credit", ico:ICON["banking-credit"], color:"#1d4e89", tint:"#e6eef8",
    blurb:"Checking, savings, credit scores and cards — the foundation of every money move.",
    intro:"Your bank account and credit score quietly shape the price you pay for almost everything. Learn how to pick the right accounts, build credit from scratch, and use cards without paying a cent in interest.",
    sub:["Credit Scores","Credit Cards","Savings Accounts","Checking","Debt Payoff"],
-   steps:[["Know your score","Where to check it for free and what the number means."],["Pick a high-yield savings account","Stop letting your emergency fund earn almost nothing."],["Use one card, pay it in full","The simplest way to build credit without debt."],["Automate your bills","Never pay a late fee again."]],
+   steps:[["Know your score","Where to check it for free and what the number means.","/banking-credit/how-credit-scores-are-actually-calculated/"],["Pick a high-yield savings account","Stop letting your emergency fund earn almost nothing.","/banking-credit/high-yield-savings-vs-money-market-accounts/"],["Use one card, pay it in full","The simplest way to build credit without debt.","/banking-credit/how-to-build-credit-with-no-credit-history/"],["Automate your bills","Never pay a late fee again.","/banking-credit/overdraft-fees-how-to-avoid-them-for-good/"]],
    posts:["How credit scores are actually calculated","High-yield savings vs. money market accounts","Balance transfer cards: when they're worth it","Debt snowball vs. avalanche: which wins?","How to build credit with no credit history","Overdraft fees: how to avoid them for good"],
    terms:[["APR","The yearly cost of borrowing, including interest."],["Credit utilization","How much of your available credit you're using — keep it under 30%."],["APY","What your savings actually earn in a year with compounding."]]},
   {slug:"investing", name:"Investing", ico:ICON["investing"], color:"#3b3a8f", tint:"#ecebfa",
    blurb:"Index funds, retirement accounts and growing money for the long run.",
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
-   steps:[["Grab any employer match","It's an instant return on your money."],["Open a Roth or traditional IRA","Know the difference before you choose."],["Pick a low-cost index fund","Broad, diversified and cheap."],["Invest on autopilot","Dollar-cost averaging beats market timing."]],
+   steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
    posts:["Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
    intro:"Insurance protects everything else you're building. Understand what coverage you actually need, how to compare policies, and where people commonly overpay.",
    sub:["Life Insurance","Health Insurance","Auto Insurance","Home & Renters","Disability"],
-   steps:[["List what you need to protect","Income, home, car, family."],["Learn the key terms","Premium, deductible, out-of-pocket max."],["Compare at least three quotes","Prices vary more than you'd think."],["Review coverage every year","Life changes; your policy should too."]],
+   steps:[["List what you need to protect","Income, home, car, family.","/insurance/how-much-life-insurance-is-enough/"],["Learn the key terms","Premium, deductible, out-of-pocket max.","/insurance/hsa-vs-fsa-explained/"],["Compare at least three quotes","Prices vary more than you'd think.","/insurance/how-to-lower-your-car-insurance-premium/"],["Review coverage every year","Life changes; your policy should too.","/insurance/disability-insurance-the-coverage-most-people-skip/"]],
    posts:["Term vs. whole life insurance: which do you need?","How much life insurance is enough?","Why renters insurance is the best deal in finance","How to lower your car insurance premium","HSA vs. FSA explained","Disability insurance: the coverage most people skip"],
    terms:[["Premium","What you pay for coverage, monthly or yearly."],["Deductible","What you pay before insurance kicks in."],["Term life","Coverage for a set period, usually 10–30 years."]]},
 ];
@@ -3357,18 +3356,18 @@ $("#chips").innerHTML = CATS.filter(c=>c.slug!=="trending").map(c=>`<label><inpu
 if($("#trendList")) $("#trendList").innerHTML = bySlug.trending.posts.slice(0,5).map((t,i)=>`<li><a href="${artUrl(bySlug.trending,t)}"><small>${["Buzzword Brief","Financial Freedom","Banking & Credit","Money News","Personal Finance"][i]}</small><strong>${t}</strong></a></li>`).join("");
 if($("#latestGrid")) $("#latestGrid").innerHTML = ["investing","banking-credit","insurance","trending","personal-finance","financial-freedom"].map((s,i)=>card(bySlug[s],bySlug[s].posts[i%6],i)).join("");
 
-// Buzzword of the Day card (home page)
-function renderBuzz(){
-  const el=$("#buzzCard"); if(!el) return;
+// Buzzword of the Day card (home page and Trending page)
+function buzzHtml(){
   const b=BUZZWORD, esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
   const d=new Date(b.date+"T12:00:00Z").toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:"UTC"});
-  el.innerHTML = `<span class="tag">BUZZWORD OF THE DAY · ${d.toUpperCase()}</span>
+  return `<span class="tag">BUZZWORD OF THE DAY · ${d.toUpperCase()}</span>
           <h3>${esc(b.term)}</h3>
           <p>The money word everyone's using, explained in 30 seconds.</p>
           <div class="def"><strong>What it means:</strong> ${esc(b.def)}</div>
           <p class="buzz-why"><strong>Why it's buzzing:</strong> ${esc(b.why)}${b.source&&b.source.url?` <a href="${esc(b.source.url)}" target="_blank" rel="noopener">(${esc(b.source.name)})</a>`:""}</p>
           <a href="${esc(b.link||"/trending/")}" class="link-more" style="display:inline-block;margin-top:14px">${esc(b.linkText||"More trending money news")} →</a>`;
 }
+function renderBuzz(){ const el=$("#buzzCard"); if(el) el.innerHTML = buzzHtml(); }
 renderBuzz();
 
 // Category pages
@@ -3387,9 +3386,11 @@ function renderCat(c){
   <section>
     <div class="wrap layout">
       <div>
-        <div class="eyebrow" style="color:${c.color}">New here? Start with these</div>
+        ${c.steps ? `<div class="eyebrow" style="color:${c.color}">New here? Start with these</div>
         <h2 style="margin:6px 0 20px">${c.name} in four steps</h2>
-        <div class="start">${c.steps.map((s,i)=>`<div class="step"><div class="n" style="color:${c.color}">0${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("")}</div>
+        <div class="start">${c.steps.map((s,i)=>`<a class="step" href="${s[2]}"><div class="n" style="color:${c.color}">0${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p><span class="step-go" style="color:${c.color}">Read the guide →</span></a>`).join("")}</div>` : `<div class="eyebrow" style="color:${c.color}">Today's money word</div>
+        <h2 style="margin:6px 0 20px">Buzzword of the Day</h2>
+        <div class="hero-card cat-buzz">${buzzHtml()}</div>`}
 
         <div class="eyebrow" style="color:${c.color}">Featured</div>
         <h2 style="margin:6px 0 20px">Popular ${c.name.toLowerCase()} guides</h2>
