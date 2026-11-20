@@ -95,8 +95,8 @@ function write(rel, html) {
 
 // Topic and article data, for the list of pages to build.
 const ctx = {};
-vm.runInNewContext(js.slice(0, js.indexOf("const bySlug")) + "\nthis.CATS = CATS; this.ARTICLES = ARTICLES; this.STATIC_PAGES = STATIC_PAGES; this.TOOLS = TOOLS; this.TOOL_PAGES = TOOL_PAGES; this.PHOTOS = PHOTOS;", ctx);
-const { CATS, ARTICLES, STATIC_PAGES, TOOLS, TOOL_PAGES, PHOTOS } = ctx;
+vm.runInNewContext(js.slice(0, js.indexOf("const bySlug")) + "\nthis.CATS = CATS; this.ARTICLES = ARTICLES; this.STATIC_PAGES = STATIC_PAGES; this.TOOLS = TOOLS; this.TOOL_PAGES = TOOL_PAGES; this.PHOTOS = PHOTOS; this.REDIRECTS = typeof REDIRECTS === \"undefined\" ? {} : REDIRECTS;", ctx);
+const { CATS, ARTICLES, STATIC_PAGES, TOOLS, TOOL_PAGES, PHOTOS, REDIRECTS } = ctx;
 // Article share image: its Unsplash photo cropped to 1200x630 (the size social sites expect).
 const shareImg = s => PHOTOS[s] ? `https://images.unsplash.com/${PHOTOS[s].id}?auto=format&fit=crop&w=1200&h=630&q=80` : null;
 const slugify = t => t.toLowerCase().replace(/&/g, " and ").replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -161,6 +161,20 @@ for (const c of CATS) {
     if (a) urls.push(`${SITE}/${c.slug}/${s}/`);
     n++;
   }
+}
+// Redirect pages at old article addresses (REDIRECTS in assets/site.js), so old links keep working.
+// They are left out of the sitemap and marked noindex; the canonical points search engines to the new address.
+for (const [from, to] of Object.entries(REDIRECTS || {})) {
+  const target = SITE + to;
+  write(`${from.replace(/^\/|\/$/g, "")}/index.html`, `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Moved — Rich With Reason</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="${target}">
+<meta http-equiv="refresh" content="0; url=${to}">
+<script>location.replace(${JSON.stringify(to)} + location.search + location.hash);</script>
+</head><body><p>This page has moved to <a href="${to}">${target}</a>.</p></body></html>
+`);
 }
 const today = new Date().toISOString().slice(0, 10);
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc><lastmod>${today}</lastmod></url>`).join("\n")}\n</urlset>\n`);

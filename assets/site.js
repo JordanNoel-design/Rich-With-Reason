@@ -36,7 +36,7 @@ const CATS = [
    blurb:"The money stories and buzzwords everyone's searching this week.",
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
-   posts:["Buzzword Brief: what does 'correction' mean?","Buzzword Brief: what does 'IPO' mean?","Buzzword Brief: what does 'rate hike' mean?","Buzzword Brief: what does 'soft landing' mean?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
+   posts:["What is a stock market correction, and should you worry?","How does an IPO work, and can you buy at the IPO price?","What happens when the Fed raises interest rates?","What is a soft landing in economics?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
   {slug:"personal-finance", name:"Personal Finance", ico:ICON["personal-finance"], color:"#7a4b12", tint:"#fbf3dd",
    blurb:"Budgeting, saving and everyday money habits that add up.",
@@ -2483,9 +2483,9 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
-  "buzzword-brief-what-does-correction-mean": {
+  "what-is-a-stock-market-correction-and-should-you-worry": {
     cat:"trending",
-    title:"Buzzword Brief: what does 'correction' mean?",
+    title:"What is a stock market correction, and should you worry?",
     dek:"Stocks just had their longest losing streak since June, and the Dow is nearing correction territory. Here's what a correction is, why markets have them, what history says, and what it means for your money.",
     date:"Nov 20, 2026", read:"5 min read",
     seo:"What Is a Stock Market Correction? Meaning and What to Do",
@@ -2547,9 +2547,9 @@ const ARTICLES = {
 
 <p class="art-note">Figures cited are from Fidelity, Charles Schwab, the SEC, Nasdaq, Charlie Bilello's data and news reports as of November 20, 2026, and will change. This post is for education only and is not investment advice.</p>
 `},
-  "buzzword-brief-what-does-ipo-mean": {
+  "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": {
     cat:"trending",
-    title:"Buzzword Brief: what does 'IPO' mean?",
+    title:"How does an IPO work, and can you buy at the IPO price?",
     dek:"Anthropic just set a record for the biggest stock market debut ever. Here's what an IPO is, how one actually works, what history says about buying new stocks, and what it means for your money.",
     date:"Nov 19, 2026", read:"6 min read",
     seo:"What Is an IPO? How It Works and What It Means for You",
@@ -2609,12 +2609,12 @@ const ARTICLES = {
 
 <p class="art-note">Figures cited are from the SEC, Professor Jay Ritter's IPO data and news reports as of November 19, 2026, before Anthropic's shares began trading, and will change. This post is for education only and is not investment advice.</p>
 `},
-  "buzzword-brief-what-does-rate-hike-mean": {
+  "what-happens-when-the-fed-raises-interest-rates": {
     cat:"trending",
-    title:"Buzzword Brief: what does 'rate hike' mean?",
+    title:"What happens when the Fed raises interest rates?",
     dek:"With inflation heating up again, the Fed is widely expected to raise rates in December. Here's what a 'rate hike' is, how it reaches your credit card and savings account, and what to do about it.",
     date:"Nov 17, 2026", read:"6 min read",
-    seo:"What Does a Fed Rate Hike Mean for You? Buzzword Brief",
+    seo:"What Happens When the Fed Raises Interest Rates?",
     faq:[["What does a rate hike mean?", "The Federal Reserve raises its benchmark interest rate, the federal funds rate, to cool the economy and bring inflation down. Borrowing gets more expensive and saving pays more."], ["How does a Fed rate hike affect credit cards?", "Most cards have variable rates tied to the prime rate, so a quarter-point hike usually raises your card's APR by about a quarter point within a billing cycle or two."], ["Do rate hikes raise mortgage rates?", "Not directly. Fixed mortgage rates follow longer-term bond yields like the 10-year Treasury more than the Fed's overnight rate, though both often move in the same direction."], ["When is the next Fed meeting?", "The Fed's next policy meeting is December 8 and 9, 2026, with the decision announced on December 9."]],
     body:`
 <div class="tldr"><b>The short version</b>
@@ -2642,7 +2642,7 @@ const ARTICLES = {
 <p>The goal is to make borrowing and spending less attractive, so demand cools and price increases slow. Rate changes take months to work through the economy, so the Fed often moves before inflation is fully under control.</p>
 
 <h2>A quick history</h2>
-<p>Rate hikes come in cycles. In 1994, the Fed surprised markets with a series of increases, including a 75-basis-point move that stayed the largest single hike until <a href="https://www.bankrate.com/banking/federal-reserve/fomc-meeting-recap-june-2022" target="_blank" rel="noopener">June 2022</a>. In 2022, facing the highest inflation in about 40 years, the Fed raised rates at the <a href="https://www.chicagofed.org/publications/chicago-fed-letter/2023/476" target="_blank" rel="noopener">fastest pace since the 1980s</a>, including several 75-basis-point hikes, and kept going into 2023.</p>
+<p>Rate hikes come in cycles. In 1994, the Fed surprised markets with a series of increases, including a 75-basis-point move that stayed the largest single hike until <a href="https://www.nbcnewyork.com/news/business/money-report/fed-hikes-its-benchmark-interest-rate-by-three-quarters-of-a-point-the-biggest-increase-since-1994/" target="_blank" rel="noopener">June 2022</a>. In 2022, facing the highest inflation in about 40 years, the Fed raised rates at the <a href="https://www.chicagofed.org/publications/chicago-fed-letter/2023/476" target="_blank" rel="noopener">fastest pace since the 1980s</a>, including several 75-basis-point hikes, and kept going into 2023.</p>
 <p>After cutting rates in 2024 and 2025, the Fed reversed course this fall. On September 16, 2026, it raised its target range by a quarter point to 3.75% to 4%, its first hike since 2023, <a href="https://www.npr.org/2026/09/16/nx-s1-5968724/federal-reserve-interest-rates-inflation-economy" target="_blank" rel="noopener">NPR reported</a>. At the October meeting it held steady, but two officials, Governors Lisa Cook and Beth Hammack, voted for another increase right away.</p>
 
 <h2>Why it's in the news this week</h2>
@@ -2673,12 +2673,12 @@ const ARTICLES = {
 
 <p class="art-note">Rates and economic data cited are from the Federal Reserve, the Bureau of Labor Statistics and news reports as of November 17, 2026, and will change. This post is for education only and is not investment advice.</p>
 `},
-  "buzzword-brief-what-does-soft-landing-mean": {
+  "what-is-a-soft-landing-in-economics": {
     cat:"trending",
-    title:"Buzzword Brief: what does 'soft landing' mean?",
+    title:"What is a soft landing in economics?",
     dek:"You'll hear it on the news whenever the Fed meets. Here's what a 'soft landing' is, why it's so hard to pull off, and where the U.S. economy stands in late 2026.",
     date:"Nov 17, 2026", read:"5 min read",
-    seo:"What Is a Soft Landing in Economics? Buzzword Brief",
+    seo:"What Is a Soft Landing in Economics? Simply Explained",
     faq:[["What is a soft landing?", "When the Federal Reserve slows inflation without pushing the economy into a recession. A hard landing is when the fight against inflation causes a recession and big job losses."], ["Has the U.S. ever had a soft landing?", "Economists usually point to the mid-1990s, when the Fed raised rates and inflation stayed in check without a recession. True soft landings are historically rare."], ["What is a no-landing scenario?", "When the economy keeps growing strongly and inflation stays stubbornly high, so the Fed has to keep rates high for longer or raise them again."]],
     body:`
 <div class="tldr"><b>The short version</b>
@@ -3095,13 +3095,13 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
-  "buzzword-brief-what-does-correction-mean": ["buzzword-brief-what-does-rate-hike-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
-  "buzzword-brief-what-does-ipo-mean": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
-  "buzzword-brief-what-does-rate-hike-mean": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","buzzword-brief-what-does-soft-landing-mean","debt"],
-  "buzzword-brief-what-does-soft-landing-mean": ["buzzword-brief-what-does-rate-hike-mean","how-much-should-be-in-your-emergency-fund","what-the-latest-jobs-report-means-for-your-wallet","emergency"],
+  "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
+  "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
+  "what-happens-when-the-fed-raises-interest-rates": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","what-is-a-soft-landing-in-economics","debt"],
+  "what-is-a-soft-landing-in-economics": ["what-happens-when-the-fed-raises-interest-rates","how-much-should-be-in-your-emergency-fund","what-the-latest-jobs-report-means-for-your-wallet","emergency"],
   "the-3-account-system-that-makes-saving-automatic": ["high-yield-savings-vs-money-market-accounts","sinking-funds-the-stress-free-way-to-save","why-your-savings-rate-matters-more-than-returns","compound"],
-  "are-high-yield-savings-rates-still-worth-it": ["high-yield-savings-vs-money-market-accounts","how-much-should-be-in-your-emergency-fund","buzzword-brief-what-does-rate-hike-mean","emergency"],
-  "what-the-latest-jobs-report-means-for-your-wallet": ["how-much-should-be-in-your-emergency-fund","12-side-hustles-you-can-start-this-weekend","buzzword-brief-what-does-soft-landing-mean","emergency"],
+  "are-high-yield-savings-rates-still-worth-it": ["high-yield-savings-vs-money-market-accounts","how-much-should-be-in-your-emergency-fund","what-happens-when-the-fed-raises-interest-rates","emergency"],
+  "what-the-latest-jobs-report-means-for-your-wallet": ["how-much-should-be-in-your-emergency-fund","12-side-hustles-you-can-start-this-weekend","what-is-a-soft-landing-in-economics","emergency"],
   "loud-budgeting-explained": ["the-50-30-20-budget-explained-with-examples","20-painless-ways-to-cut-monthly-bills","how-to-talk-about-money-with-your-partner"],
   "reader-q-should-i-pay-off-debt-or-invest-first": ["debt-snowball-vs-avalanche-which-wins","roth-ira-vs-traditional-ira-simply-explained","how-much-should-be-in-your-emergency-fund","debt"],
   "the-50-30-20-budget-explained-with-examples": ["sinking-funds-the-stress-free-way-to-save","20-painless-ways-to-cut-monthly-bills","the-3-account-system-that-makes-saving-automatic"],
@@ -3428,9 +3428,9 @@ const PHOTOS = {
   "how-to-lower-your-car-insurance-premium": { id: "photo-1449965408869-eaa3f722e40d", alt: "Person driving a car" },
   "hsa-vs-fsa-explained": { id: "photo-1576091160550-2173dba999ef", alt: "Laptop on a desk next to a stethoscope" },
   "disability-insurance-the-coverage-most-people-skip": { id: "photo-1758691462863-9e1b8a863140", alt: "Doctor talking with a patient in an office" },
-  "buzzword-brief-what-does-ipo-mean": { id: "photo-1579532537598-459ecdaf39cc", alt: "Newspaper business section with stock market charts" },
-  "buzzword-brief-what-does-rate-hike-mean": { id: "photo-1730875492072-f385713efae9", alt: "Small model house on top of a pile of money" },
-  "buzzword-brief-what-does-soft-landing-mean": { id: "photo-1556388158-158ea5ccacbd", alt: "Airplane landing on a runway" },
+  "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": { id: "photo-1579532537598-459ecdaf39cc", alt: "Newspaper business section with stock market charts" },
+  "what-happens-when-the-fed-raises-interest-rates": { id: "photo-1730875492072-f385713efae9", alt: "Small model house on top of a pile of money" },
+  "what-is-a-soft-landing-in-economics": { id: "photo-1556388158-158ea5ccacbd", alt: "Airplane landing on a runway" },
   "the-3-account-system-that-makes-saving-automatic": { id: "photo-1773702787707-d7a790aa9f5e", alt: "Piggy bank with three colorful sticky notes" },
   "are-high-yield-savings-rates-still-worth-it": { id: "photo-1768839721719-c5ed97c1fd58", alt: "Coins falling into a white piggy bank" },
   "what-the-latest-jobs-report-means-for-your-wallet": { id: "photo-1635350736475-c8cef4b21906", alt: "Sign reading we are hiring, apply today" },
@@ -3438,6 +3438,16 @@ const PHOTOS = {
   "reader-q-should-i-pay-off-debt-or-invest-first": { id: "photo-1725258080098-727051947997", alt: "Calculator sitting on a pile of money" }
 };
 const photoUrl = (k, w, h) => `https://images.unsplash.com/${PHOTOS[k].id}?auto=format&fit=crop&w=${w}${h?`&h=${h}`:""}&q=70`;
+
+/* ============ REDIRECTS ============
+   Old article addresses that moved. tools/build-pages.mjs writes a small redirect page at each old
+   address so existing links keep working. Add an entry whenever an article's title (and so its URL) changes. */
+const REDIRECTS = {
+  "/trending/buzzword-brief-what-does-correction-mean/": "/trending/what-is-a-stock-market-correction-and-should-you-worry/",
+  "/trending/buzzword-brief-what-does-ipo-mean/": "/trending/how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price/",
+  "/trending/buzzword-brief-what-does-rate-hike-mean/": "/trending/what-happens-when-the-fed-raises-interest-rates/",
+  "/trending/buzzword-brief-what-does-soft-landing-mean/": "/trending/what-is-a-soft-landing-in-economics/"
+};
 
 const bySlug = Object.fromEntries(CATS.map(c=>[c.slug,c]));
 const $ = s=>document.querySelector(s);
