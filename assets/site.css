@@ -79,7 +79,10 @@
   .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s}
   .card:hover{box-shadow:var(--shadow)}
   .thumb{height:170px;position:relative;display:grid;place-items:center;font-size:3rem}
-  .thumb .pill{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.03em}
+  .thumb{overflow:hidden}
+  .thumb img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .card:hover .thumb img.ph{transform:scale(1.03)} .thumb img.ph{transition:transform .35s}
+  .thumb .pill{z-index:1;position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.03em}
   .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
   .card-body h3{font-size:1.12rem}
   .card-body p{font-size:.9rem;color:var(--ink-soft)}
@@ -196,6 +199,10 @@
   .art-hero h1{margin:12px 0 14px;font-size:clamp(1.9rem,4vw,2.9rem)}
   .art-hero .dek{font-size:1.15rem;opacity:.92;max-width:700px}
   .art-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;opacity:.85;margin-top:20px}
+  .art-photo{max-width:868px;margin:-28px auto 0;padding:0 24px;position:relative;z-index:2}
+  .art-photo img{display:block;width:100%;height:auto;aspect-ratio:7/3;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);background:var(--line)}
+  .art-photo figcaption{font-size:.75rem;color:#7b8a82;margin-top:8px;text-align:right}
+  .art-photo figcaption a{color:inherit;text-decoration:underline}
   .article{max-width:740px;margin:0 auto;padding:44px 24px 12px;font-size:1.06rem;line-height:1.75}
   .article h2{font-size:1.6rem;margin:40px 0 12px}
   .article h3{font-size:1.2rem;margin:28px 0 8px}

@@ -3328,6 +3328,52 @@ const TOOL_PAGES = {
   },
 };
 
+/* ============ PHOTOS ============
+   One photo per article, keyed by article slug. Every photo is from Unsplash and was checked
+   to be under the free Unsplash License (free for commercial use, no permission needed).
+   Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
+const PHOTOS = {
+  "how-credit-scores-are-actually-calculated": { id: "photo-1653330963134-329a61aedc68", alt: "Person holding a credit card and a phone" },
+  "high-yield-savings-vs-money-market-accounts": { id: "photo-1633158829585-23ba8f7c8caf", alt: "Hand stacking coins on a table" },
+  "balance-transfer-cards-when-theyre-worth-it": { id: "photo-1673837552444-7a90431588fe", alt: "Person holding a credit card next to a calculator" },
+  "debt-snowball-vs-avalanche-which-wins": { id: "photo-1768207450151-30c0bf8e8091", alt: "Stacks of coins growing taller from left to right" },
+  "how-to-build-credit-with-no-credit-history": { id: "photo-1624811532681-e58a7e25f273", alt: "Person holding a brown leather wallet" },
+  "overdraft-fees-how-to-avoid-them-for-good": { id: "photo-1764231467896-73f0ef4438aa", alt: "Hand using a phone calculator over cash" },
+  "what-is-fire-lean-fat-and-coast-explained": { id: "photo-1508963493744-76fce69379c0", alt: "Couple sitting on a bench facing the sea" },
+  "the-4-rule-in-plain-english": { id: "photo-1562557082-7f2785d741e7", alt: "Two people sitting on the grass facing a lake" },
+  "12-side-hustles-you-can-start-this-weekend": { id: "photo-1573183205228-df337e65dab0", alt: "Man working on a laptop at a table" },
+  "how-to-calculate-your-financial-independence-number": { id: "photo-1554224155-6726b3ff858f", alt: "Person holding a paper next to a pen and calculator" },
+  "passive-income-ideas-that-actually-work": { id: "photo-1579621970563-ebec7560ff3e", alt: "Small plant growing from a pile of coins" },
+  "why-your-savings-rate-matters-more-than-returns": { id: "photo-1634474588707-de99f09285c0", alt: "Woman holding a jar labeled savings" },
+  "the-50-30-20-budget-explained-with-examples": { id: "photo-1763730512449-f1a505f432a9", alt: "Hand writing in a notebook next to a calculator and cash" },
+  "how-much-should-be-in-your-emergency-fund": { id: "photo-1607863680198-23d4b2565df0", alt: "Pink piggy bank on a wooden table" },
+  "sinking-funds-the-stress-free-way-to-save": { id: "photo-1633158829556-6ea20ad39b4f", alt: "Man holding a jar with a savings label" },
+  "tax-refunds-vs-adjusting-your-withholding": { id: "photo-1772588627342-5ec373e236d8", alt: "Hands holding tax forms next to a calculator and laptop" },
+  "20-painless-ways-to-cut-monthly-bills": { id: "photo-1698587173600-7c393b980627", alt: "Scissors cutting a strip of hundred dollar bills" },
+  "how-to-talk-about-money-with-your-partner": { id: "photo-1758523418820-a492bf647c63", alt: "Couple going over bills at a kitchen table" },
+  "index-funds-vs-etfs-whats-the-difference": { id: "photo-1611974789855-9c2a0a7236a3", alt: "Stock market chart on a dark screen" },
+  "roth-ira-vs-traditional-ira-simply-explained": { id: "photo-1758612898691-afe3e1d08a0a", alt: "Smiling older man using a laptop" },
+  "how-to-start-investing-with-100": { id: "photo-1518458028785-8fbcd101ebb9", alt: "Person counting dollar bills" },
+  "what-is-an-expense-ratio-and-why-it-matters": { id: "photo-1709534486708-fb8f94150d0a", alt: "Phone calculator on top of financial reports" },
+  "dollar-cost-averaging-explained": { id: "photo-1745270917449-c2e2c5806586", alt: "Stock chart trending upward" },
+  "how-to-build-a-three-fund-portfolio": { id: "photo-1614028674026-a65e31bfd27c", alt: "Laptop showing a stock chart on a desk" },
+  "term-vs-whole-life-insurance-which-do-you-need": { id: "photo-1543342384-1f1350e27861", alt: "Parents smiling while holding their baby" },
+  "how-much-life-insurance-is-enough": { id: "photo-1609220136736-443140cffec6", alt: "Father carrying his young daughter" },
+  "why-renters-insurance-is-the-best-deal-in-finance": { id: "photo-1554995207-c18c203602cb", alt: "Bright apartment living room" },
+  "how-to-lower-your-car-insurance-premium": { id: "photo-1449965408869-eaa3f722e40d", alt: "Person driving a car" },
+  "hsa-vs-fsa-explained": { id: "photo-1576091160550-2173dba999ef", alt: "Laptop on a desk next to a stethoscope" },
+  "disability-insurance-the-coverage-most-people-skip": { id: "photo-1758691462863-9e1b8a863140", alt: "Doctor talking with a patient in an office" },
+  "buzzword-brief-what-does-ipo-mean": { id: "photo-1579532537598-459ecdaf39cc", alt: "Newspaper business section with stock market charts" },
+  "buzzword-brief-what-does-rate-hike-mean": { id: "photo-1730875492072-f385713efae9", alt: "Small model house on top of a pile of money" },
+  "buzzword-brief-what-does-soft-landing-mean": { id: "photo-1556388158-158ea5ccacbd", alt: "Airplane landing on a runway" },
+  "the-3-account-system-that-makes-saving-automatic": { id: "photo-1773702787707-d7a790aa9f5e", alt: "Piggy bank with three colorful sticky notes" },
+  "are-high-yield-savings-rates-still-worth-it": { id: "photo-1768839721719-c5ed97c1fd58", alt: "Coins falling into a white piggy bank" },
+  "what-the-latest-jobs-report-means-for-your-wallet": { id: "photo-1635350736475-c8cef4b21906", alt: "Sign reading we are hiring, apply today" },
+  "loud-budgeting-explained": { id: "photo-1634733988138-bf2c3a2a13fa", alt: "Payment terminal printing a long receipt" },
+  "reader-q-should-i-pay-off-debt-or-invest-first": { id: "photo-1725258080098-727051947997", alt: "Calculator sitting on a pile of money" }
+};
+const photoUrl = (k, w, h) => `https://images.unsplash.com/${PHOTOS[k].id}?auto=format&fit=crop&w=${w}${h?`&h=${h}`:""}&q=70`;
+
 const bySlug = Object.fromEntries(CATS.map(c=>[c.slug,c]));
 const $ = s=>document.querySelector(s);
 const readTime = i => (4 + (i*3)%7) + " min read";
@@ -3336,9 +3382,15 @@ const slugify = t => t.toLowerCase().replace(/&/g," and ").replace(/['’]/g,"")
 const artUrl = (c,t) => `/${c.slug}/${slugify(t)}/`;
 const artMeta = (t,i,off=0) => { const a = ARTICLES[slugify(t)]; return a ? [a.date, a.read] : [dates[(i+off)%6]+", 2026", readTime(i+off)]; };
 
+// Photo inside a card thumbnail. If it ever fails to load, it hides itself and the topic icon shows instead.
+function photoImg(k,w,h){
+  if(!PHOTOS[k]) return "";
+  return `<img class="ph" src="${photoUrl(k,w,h)}" alt="${PHOTOS[k].alt.replace(/"/g,"&quot;")}" loading="lazy" decoding="async" width="${w}" height="${h}" onerror="this.remove()">`;
+}
+
 function card(c,title,i){
   const a = ARTICLES[slugify(title)], [d,r] = artMeta(title,i);
-  return `<a class="card" href="${artUrl(c,title)}"><div class="thumb" style="background:${c.tint};color:${c.color}"><span class="pill" style="color:${c.color}">${c.name}</span>${c.ico}</div>
+  return `<a class="card" href="${artUrl(c,title)}"><div class="thumb" style="background:${c.tint};color:${c.color}">${c.ico}${photoImg(slugify(title),640,340)}<span class="pill" style="color:${c.color}">${c.name}</span></div>
   <div class="card-body"><h3>${title}</h3><p>${a ? a.dek : "A clear, step-by-step guide that explains what it is, why it matters and what to do next."}</p>
   <div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`;
 }
@@ -3406,7 +3458,7 @@ function renderCat(c){
 
         <div class="eyebrow" style="color:${c.color}">Latest</div>
         <h2 style="margin:6px 0 20px">Recently published</h2>
-        <div class="rows">${c.posts.slice(3).map((p,i)=>{const [d,r]=artMeta(p,i,3); return `<a class="row card" href="${artUrl(c,p)}"><div class="thumb" style="background:${c.tint};color:${c.color}">${c.ico}</div><div class="card-body"><h3>${p}</h3><p>Everything you need to know, with real examples and a simple next step.</p><div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`}).join("")}</div>
+        <div class="rows">${c.posts.slice(3).map((p,i)=>{const [d,r]=artMeta(p,i,3); return `<a class="row card" href="${artUrl(c,p)}"><div class="thumb" style="background:${c.tint};color:${c.color}">${c.ico}${photoImg(slugify(p),300,240)}</div><div class="card-body"><h3>${p}</h3><p>Everything you need to know, with real examples and a simple next step.</p><div class="meta"><span>${d}</span><span>${r}</span></div></div></a>`}).join("")}</div>
       </div>
       <aside>
         <div class="box side-nl">
@@ -3458,6 +3510,7 @@ function renderArticle(c, aslug){
       <div class="art-meta"><span>By <a href="/about/" rel="author" style="text-decoration:underline">Jordan Noel</a></span><span>${a.date}</span><span>${a.read}</span></div>
     </div>
   </div>
+  ${PHOTOS[aslug]?`<figure class="art-photo"><img src="${photoUrl(aslug,1400,600)}" alt="${PHOTOS[aslug].alt.replace(/"/g,"&quot;")}" width="1400" height="600" decoding="async" fetchpriority="high" onerror="this.parentNode.remove()"><figcaption>Photo via <a href="https://unsplash.com/?utm_source=rich_with_reason&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></figcaption></figure>`:""}
   <article class="article">${body}</article>
   ${relatedHtml}`;
   return a.title;

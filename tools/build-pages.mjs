@@ -62,7 +62,7 @@ function fill(page, rendered) {
 }
 
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
-function build({ pathname, desc, type = "website", page: pageId, ld = [], author }) {
+function build({ pathname, desc, type = "website", page: pageId, ld = [], author, image, imageAlt }) {
   const { html, title } = renderPath(pathname);
   const url = SITE + pathname;
   let page = fill(shell, html);
@@ -82,6 +82,9 @@ function build({ pathname, desc, type = "website", page: pageId, ld = [], author
     .replace(/(<meta property="og:url" content=")[^"]*/, (_, a) => a + url)
     .replace(/(<meta name="twitter:title" content=")[^"]*/, (_, a) => a + t)
     .replace(/(<meta name="twitter:description" content=")[^"]*/, (_, a) => a + d)
+    .replace(/(<meta property="og:image" content=")[^"]*/, (_, a) => a + (image ? esc(image) : `${SITE}/og-image.png`))
+    .replace(/(<meta name="twitter:image" content=")[^"]*/, (_, a) => a + (image ? esc(image) : `${SITE}/og-image.png`))
+    .replace(/(<meta property="og:image:alt" content=")[^"]*/, (_, a) => a + (imageAlt ? esc(imageAlt) : "Rich With Reason logo"))
     .replace("</head>", () => (author ? `<meta name="author" content="${esc(author)}">\n` : "")
       + ld.map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`).join("\n") + (ld.length ? "\n" : "") + "</head>");
 }
@@ -92,8 +95,10 @@ function write(rel, html) {
 
 // Topic and article data, for the list of pages to build.
 const ctx = {};
-vm.runInNewContext(js.slice(0, js.indexOf("const bySlug")) + "\nthis.CATS = CATS; this.ARTICLES = ARTICLES; this.STATIC_PAGES = STATIC_PAGES; this.TOOLS = TOOLS; this.TOOL_PAGES = TOOL_PAGES;", ctx);
-const { CATS, ARTICLES, STATIC_PAGES, TOOLS, TOOL_PAGES } = ctx;
+vm.runInNewContext(js.slice(0, js.indexOf("const bySlug")) + "\nthis.CATS = CATS; this.ARTICLES = ARTICLES; this.STATIC_PAGES = STATIC_PAGES; this.TOOLS = TOOLS; this.TOOL_PAGES = TOOL_PAGES; this.PHOTOS = PHOTOS;", ctx);
+const { CATS, ARTICLES, STATIC_PAGES, TOOLS, TOOL_PAGES, PHOTOS } = ctx;
+// Article share image: its Unsplash photo cropped to 1200x630 (the size social sites expect).
+const shareImg = s => PHOTOS[s] ? `https://images.unsplash.com/${PHOTOS[s].id}?auto=format&fit=crop&w=1200&h=630&q=80` : null;
 const slugify = t => t.toLowerCase().replace(/&/g, " and ").replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 const HOME_DESC = "Clear, honest guides on banking, credit, investing and insurance.";
 
@@ -144,9 +149,10 @@ for (const c of CATS) {
       desc: a ? a.dek : `${c.name} guide from Rich With Reason.`,
       type: a ? "article" : "website",
       author: a ? "Jordan Noel" : undefined,
+      image: a ? shareImg(s) : null, imageAlt: a && PHOTOS[s] ? PHOTOS[s].alt : null,
       ld: a ? [{ "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.dek,
           datePublished: isoDate(a.date), dateModified: isoDate(a.updated || a.date), author: AUTHOR, publisher: PUBLISHER,
-          mainEntityOfPage: `${SITE}/${c.slug}/${s}/`, image: `${SITE}/og-image.png`, articleSection: c.name },
+          mainEntityOfPage: `${SITE}/${c.slug}/${s}/`, image: shareImg(s) || `${SITE}/og-image.png`, articleSection: c.name },
         crumbs([["Home", "/"], [c.name, `/${c.slug}/`], [a.title, `/${c.slug}/${s}/`]]), ...faqLd(a.faq)] : [],
     });
     // "Coming soon" placeholders stay out of search results until the article exists.
