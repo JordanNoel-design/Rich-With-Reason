@@ -30,6 +30,9 @@ const norm = t => t.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filt
 const dup = hist.find(h => h.date !== b.date && norm(h.term) === norm(b.term));
 if (dup) throw new Error(`"${b.term}" was already the Buzzword of the Day on ${dup.date}. Pick a different term.`);
 const js = fs.readFileSync("assets/site.js", "utf8");
+// If the link points at an old address that moved (REDIRECTS in assets/site.js), use the new address.
+const redir = js.match(/const REDIRECTS = (\{[\s\S]*?\});/);
+if (redir) { const map = JSON.parse(redir[1]); if (map[out.link]) out.link = map[out.link]; }
 const re = /\/\* BUZZWORD:START \*\/[\s\S]*?\/\* BUZZWORD:END \*\//;
 if (!re.test(js)) throw new Error("BUZZWORD markers not found in assets/site.js");
 fs.writeFileSync("assets/site.js", js.replace(re, () =>

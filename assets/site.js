@@ -11,7 +11,7 @@ const BUZZWORD = {
     "name": "AP (via ABC News)",
     "url": "https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-thursday-11192026-138303454"
   },
-  "link": "/trending/buzzword-brief-what-does-ipo-mean/",
+  "link": "/trending/how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price/",
   "linkText": "Related: What does IPO mean?"
 };
 /* BUZZWORD:END */
