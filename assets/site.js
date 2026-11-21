@@ -36,7 +36,7 @@ const CATS = [
    blurb:"The money stories and buzzwords everyone's searching this week.",
    intro:"The most-read posts on Rich With Reason, plus fresh takes on the money headlines and buzzwords people are searching right now — updated every week.",
    sub:["This Week","Buzzword Brief","Money News","Most Read","Reader Questions"],
-   posts:["What is a stock market correction, and should you worry?","How does an IPO work, and can you buy at the IPO price?","What happens when the Fed raises interest rates?","What is a soft landing in economics?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
+   posts:["Buzzword Brief: what does 'circular financing' mean?","What is a stock market correction, and should you worry?","How does an IPO work, and can you buy at the IPO price?","What happens when the Fed raises interest rates?","What is a soft landing in economics?","The 3-account system that makes saving automatic","Are high-yield savings rates still worth it?","What the latest jobs report means for your wallet","'Loud budgeting' explained","Reader Q: Should I pay off debt or invest first?"],
    terms:[["Soft landing","When an economy slows without falling into recession."],["Loud budgeting","Openly saying no to spending that doesn't fit your goals."],["Recession","A significant, widespread decline in economic activity."]]},
   {slug:"personal-finance", name:"Personal Finance", ico:ICON["personal-finance"], color:"#7a4b12", tint:"#fbf3dd",
    blurb:"Budgeting, saving and everyday money habits that add up.",
@@ -2483,6 +2483,70 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
+  "buzzword-brief-what-does-circular-financing-mean": {
+    cat:"trending",
+    title:"Buzzword Brief: what does 'circular financing' mean?",
+    dek:"AI stocks just had a brutal week, and 'circular financing' is the phrase behind a lot of the worry. Here's what it means, how the money loops, what the Fed and IMF are saying, and what it means for your money.",
+    date:"Nov 21, 2026", read:"6 min read",
+    seo:"What Is Circular Financing? AI Deals Explained Simply",
+    faq:[["What is circular financing?","Circular financing is when a company invests in or lends to a customer, and that customer uses the money to buy the investor's own products or services. The cash ends up looping back to where it started."],["Is circular financing illegal?","Not by itself. Investing in or lending to a customer is a common business practice. The concern raised by the IMF and the Federal Reserve is risk: the deals tie companies together, so trouble at one can spread to the others."],["Why are AI companies accused of circular financing?","Chipmakers and cloud providers have invested in AI labs that then buy their computing power. Fed Governor Michael Barr said in November 2026 that these firms have over $100 billion in cumulative equity investments in AI labs and cloud-computing start-ups, which he called a form of circular financing."],["How big are AI circular financing deals?","An IMF review of 14 such deals since 2023 found about $300 billion in equity investments and $650 billion in debt, in exchange for $1.4 trillion in future revenue commitments, according to an October 2026 IMF blog post."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li><strong>Circular financing</strong> is when a company invests in or lends to a customer, and that customer spends the money on the investor's own products. The cash loops back.</li>
+<li>It's in the news because Anthropic's record IPO came with a $26.0 billion private placement from seven companies, several of them its suppliers, and because a Federal Reserve governor called these kinds of AI deals "a form of 'circular financing'" on November 16.</li>
+<li>The deals aren't automatically bad, but they can make demand look stronger than it is and tie companies' fortunes together.</li>
+</ul></div>
+
+<p>If "circular financing" kept showing up in the headlines this week, there's a reason. AI stocks tumbled, and on Friday the Dow and S&P 500 fell into correction territory while the Nasdaq had its worst week since March 2020, <a href="https://www.marketscreener.com/news/nasdaq-has-its-worst-week-since-2020-dow-s-p-500-in-correction-ce785ed3dc80f620" target="_blank" rel="noopener">Reuters reported</a>. Here's what the term means and why it matters to you.</p>
+
+<h2>What is circular financing?</h2>
+<p>Circular financing describes a loop. Company A invests in, lends to or guarantees debt for Company B. Company B then uses that money to buy products or services from Company A. Company A reports the sale as revenue, and its stake in Company B may rise in value too.</p>
+<p>In AI, the loop usually runs between chipmakers and cloud providers and the AI labs that need their computing power.</p>
+
+<h2>How the loop works, step by step</h2>
+<ul>
+<li><strong>The investment.</strong> A supplier buys shares in an AI lab or lends it money.</li>
+<li><strong>The purchase.</strong> The lab signs long-term contracts to buy the supplier's chips, cloud computing or data center space.</li>
+<li><strong>The revenue.</strong> The supplier reports those sales, which can lift its earnings and its stock price.</li>
+<li><strong>The valuation.</strong> The lab grows and looks well funded, which raises its value, and with it the value of the supplier's stake.</li>
+</ul>
+<p>This works as long as the businesses and people actually paying for AI keep growing. The <a href="https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks" target="_blank" rel="noopener">IMF warned in October</a> that with these arrangements, "stress at key companies receiving investment would lower revenue forecasts and investment valuations" for the companies on the other side of the deals.</p>
+
+<h2>Why it's in the news this week</h2>
+<p>Anthropic <a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering" target="_blank" rel="noopener">priced its IPO at $83 per share</a> on November 18. Its underwriters later bought extra shares through their greenshoe option, lifting total proceeds to about $93.5 billion, <a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-ipo-haul-rises-93-125302553.html" target="_blank" rel="noopener">Reuters reported</a>.</p>
+<p>Anthropic's <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm" target="_blank" rel="noopener">SEC filing</a> describes a $26.0 billion private placement at the IPO price from AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC Partners. It says the holders of those shares "are primarily strategic business partners." It also lists about $900.9 billion in committed spending, "substantially all of which is related to compute and infrastructure." <a href="https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/" target="_blank" rel="noopener">TechCrunch reported</a> that, apart from TSMC, Anthropic has announced partnerships to buy products from these investors.</p>
+<p>Days before the IPO priced, Fed Governor Michael Barr said in a <a href="https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm" target="_blank" rel="noopener">speech on AI and financial stability</a> that big cloud companies and chipmakers "have over $100 billion in cumulative equity investments" in AI labs and cloud-computing start-ups, calling it "a form of 'circular financing.'"</p>
+
+<h2>What the data and history say</h2>
+<ul>
+<li><strong>The sums are huge.</strong> An IMF review of 14 such deals since 2023 found about $300 billion in equity investments and $650 billion in debt, in exchange for $1.4 trillion in future revenue commitments, according to the <a href="https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks" target="_blank" rel="noopener">IMF</a>.</li>
+<li><strong>Debt is growing fast.</strong> In his <a href="https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm" target="_blank" rel="noopener">speech</a>, Barr said on-balance-sheet debt at the seven largest AI firms is expected to exceed $800 billion before year's end. He put the potential maximum value of off-balance-sheet obligations, such as data center leases and energy contracts, at more than $3 trillion.</li>
+<li><strong>There's an echo of the 1990s.</strong> Barr said the debt buildup "brings to mind" the telecom investment cycle of the late 1990s and early 2000s, and said AI spending could rival or even exceed past investment booms in railroads, highways and fiber-optic cable.</li>
+<li><strong>It isn't a crisis call.</strong> Barr said that, given "the still-limited amount of debt backing the current boom," he is "less concerned about direct losses." His bigger worry was that high leverage at hedge funds could turn a sharp reversal into rapid forced selling.</li>
+</ul>
+<p>Not everyone sees the loop as a red flag. One analyst quoted by <a href="https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/" target="_blank" rel="noopener">TechCrunch</a> called Anthropic's financing "additive to the ecosystem" rather than purely circular.</p>
+
+<h2>What it means for everyday investors</h2>
+<ul>
+<li><strong>You may already be in the loop.</strong> If you own a broad U.S. stock index fund, you likely own shares of several of the chip, cloud and software companies involved. That's a reason to stay diversified, for example with a simple <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a>, rather than piling more into one hot theme.</li>
+<li><strong>Ask where the revenue comes from.</strong> Fast sales growth is less impressive when a big customer is spending money the seller gave it.</li>
+<li><strong>Be careful chasing new listings.</strong> Here's <a href="/trending/how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price/">how an IPO works and who gets the IPO price</a>.</li>
+<li><strong>Expect swings and plan for them.</strong> Keep money you'll need soon out of stocks, and read up on <a href="/trending/what-is-a-stock-market-correction-and-should-you-worry/">what a stock market correction is</a> before selling in a panic.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Vendor financing:</strong> when a seller lends money to a buyer so the buyer can purchase the seller's products.</li>
+<li><strong>Hyperscaler:</strong> a giant cloud-computing company that runs huge networks of data centers.</li>
+<li><strong>Off-balance-sheet obligation:</strong> a commitment, such as a long-term lease or a guarantee, that isn't counted as regular debt on a company's balance sheet.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>Circular financing is money that loops from a supplier to its customer and back again as sales. In AI, those loops now run into the hundreds of billions of dollars, and the Fed and the IMF are watching them closely. For everyday investors, the takeaway is simple: stay diversified, look past headline growth numbers, and don't bet your plan on one theme.</p>
+
+<p class="art-note">Figures cited are from the Federal Reserve, the IMF, Anthropic's SEC filing and announcement, and news reports as of November 21, 2026, and will change. This post is for education only and is not investment advice.</p>
+`},
   "what-is-a-stock-market-correction-and-should-you-worry": {
     cat:"trending",
     title:"What is a stock market correction, and should you worry?",
@@ -3095,6 +3159,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "buzzword-brief-what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
   "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-happens-when-the-fed-raises-interest-rates": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","what-is-a-soft-landing-in-economics","debt"],
