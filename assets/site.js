@@ -4,15 +4,15 @@
 /* BUZZWORD:START */
 const BUZZWORD = {
   "date": "2026-11-21",
-  "term": "Correction",
-  "def": "A correction is when a stock index or a single stock falls at least 10% from its most recent high. It's smaller than a bear market, which is a drop of 20% or more.",
-  "why": "The S&P 500 fell 3.7% Friday and is now in a correction, down more than 10% from its Oct. 6 all-time high, AP reported.",
+  "term": "Circular financing",
+  "def": "When a company invests in or lends to a customer, and that customer uses the money to buy the investor's own products, so the cash loops back to where it started.",
+  "why": "Fed Governor Michael Barr said Nov. 16 that big cloud and chip firms have over $100 billion invested in AI labs and start-ups, calling it a form of circular financing.",
   "source": {
-    "name": "AP (via Yakima Herald-Republic)",
-    "url": "https://www.yakimaherald.com/news/nation_and_world/business/how-major-us-stock-indexes-fared-friday-11-20-2026/article_963ce6d2-85a3-5fd6-981d-e60b72a58fbb.html"
+    "name": "Federal Reserve",
+    "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm"
   },
-  "link": "/trending/what-is-a-stock-market-correction-and-should-you-worry/",
-  "linkText": "Related: What is a stock market correction?"
+  "link": "/investing/what-does-circular-financing-mean/",
+  "linkText": "Related: What does 'circular financing' mean?"
 };
 /* BUZZWORD:END */
 
