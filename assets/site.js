@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["Buzzword Brief: what does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -2483,9 +2483,9 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
-  "buzzword-brief-what-does-circular-financing-mean": {
+  "what-does-circular-financing-mean": {
     cat:"investing",
-    title:"Buzzword Brief: what does 'circular financing' mean?",
+    title:"What does 'circular financing' mean?",
     dek:"AI stocks just had a brutal week, and 'circular financing' is the phrase behind a lot of the worry. Here's what it means, how the money loops, what the Fed and IMF are saying, and what it means for your money.",
     date:"Nov 21, 2026", read:"6 min read",
     seo:"What Is Circular Financing? AI Deals Explained Simply",
@@ -3159,7 +3159,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
-  "buzzword-brief-what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
+  "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
   "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-happens-when-the-fed-raises-interest-rates": ["balance-transfer-cards-when-theyre-worth-it","are-high-yield-savings-rates-still-worth-it","what-is-a-soft-landing-in-economics","debt"],
@@ -3508,6 +3508,7 @@ const photoUrl = (k, w, h) => `https://images.unsplash.com/${PHOTOS[k].id}?auto=
    Old article addresses that moved. tools/build-pages.mjs writes a small redirect page at each old
    address so existing links keep working. Add an entry whenever an article's title (and so its URL) changes. */
 const REDIRECTS = {
+  "/investing/buzzword-brief-what-does-circular-financing-mean/": "/investing/what-does-circular-financing-mean/",
   "/trending/buzzword-brief-what-does-correction-mean/": "/trending/what-is-a-stock-market-correction-and-should-you-worry/",
   "/trending/buzzword-brief-what-does-ipo-mean/": "/trending/how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price/",
   "/trending/buzzword-brief-what-does-rate-hike-mean/": "/trending/what-happens-when-the-fed-raises-interest-rates/",
