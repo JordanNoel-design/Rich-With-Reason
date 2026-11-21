@@ -134,4 +134,4 @@ Newest first. One line per issue: Sunday date · Buzzword · Market topic · Act
 
 | Sunday | Buzzword | Market thing | Action |
 |---|---|---|---|
-| 2026-11-22 | Correction | AI-stock sell-off: S&P 500 six straight losses, down 5.1% for the week through Thu (AP) | Five-minute calm check of retirement contributions, investment mix and emergency fund |
+| 2026-11-22 | Correction | AI-stock sell-off: S&P 500 and Dow close in correction; S&P 500 down 3.7% Fri to 6,910.39, down 8.6% for the week (AP, Reuters) | Five-minute calm check of retirement contributions, investment mix and emergency fund |
