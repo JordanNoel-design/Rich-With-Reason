@@ -94,3 +94,14 @@ SEO (a priority for every article):
   is added by tools/build-pages.mjs; don't hand-write it.
 - Link to 2-3 related Rich With Reason guides inside the body text, using clean URLs.
 - Calculators live in `TOOLS` / `TOOL_PAGES` in assets/site.js and are listed at /calculators/.
+
+Photos (required for every blog post):
+- Every ARTICLES entry must have a matching entry in `PHOTOS` in assets/site.js, keyed by the article
+  slug: `{ id: "photo-<digits>-<hex>", alt: "<short plain description>" }`. Add it in the same change
+  that adds the article; never publish or open a pull request for a post without one.
+- Only Unsplash photos under the free Unsplash License. Open the photo's unsplash.com page and confirm
+  it says "Free to use under the Unsplash License". Never use Unsplash+ (plus.unsplash.com,
+  `premium_photo-` ids, a lock icon), illustrations of a real brand, or photos of public figures.
+  The id is the images.unsplash.com `photo-...` id from the page's og:image. Don't reuse a photo
+  another post already uses.
+- After building, check the generated article page contains the photo id.
