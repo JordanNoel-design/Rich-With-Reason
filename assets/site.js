@@ -3,16 +3,16 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-21",
-  "term": "Circular financing",
-  "def": "When a company invests in or lends to a customer, and that customer uses the money to buy the investor's own products, so the cash loops back to where it started.",
-  "why": "Fed Governor Michael Barr said Nov. 16 that big cloud and chip firms have over $100 billion invested in AI labs and start-ups, calling it a form of circular financing.",
+  "date": "2026-11-22",
+  "term": "Correction",
+  "def": "A drop of 10% or more from a recent high in a stock, an index like the S&P 500, or the market as a whole. It's smaller than a bear market, which is a fall of 20% or more.",
+  "why": "The S&P 500 and the Dow closed Friday more than 10% below their record closing highs, confirming both are in a correction amid an AI stock selloff, Reuters reported.",
   "source": {
-    "name": "Federal Reserve",
-    "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm"
+    "name": "Reuters via Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-slip-anthropic-104746137.html"
   },
-  "link": "/investing/what-does-circular-financing-mean/",
-  "linkText": "Related: What does 'circular financing' mean?"
+  "link": "/trending/what-is-a-stock-market-correction-and-should-you-worry/",
+  "linkText": "Related: What is a stock market correction?"
 };
 /* BUZZWORD:END */
 
