@@ -2622,19 +2622,19 @@ const ARTICLES = {
   "what-is-a-stock-market-correction-and-should-you-worry": {
     cat:"trending",
     title:"What is a stock market correction, and should you worry?",
-    dek:"Stocks just had their longest losing streak since June, and the Dow is nearing correction territory. Here's what a correction is, why markets have them, what history says, and what it means for your money.",
-    date:"Nov 20, 2026", read:"5 min read",
+    dek:"The S&P 500 and the Dow are now officially in a correction after the S&P's longest losing streak since February 2020. Here's what a correction is, why markets have them, what history says, and what it means for your money.",
+    date:"Nov 20, 2026", updated:"Nov 22, 2026", read:"5 min read",
     seo:"What Is a Stock Market Correction? Meaning and What to Do",
-    faq:[["What is a stock market correction?","A correction is a drop of roughly 10% to 20% from a recent high in a major index like the S&P 500 or the Dow. There's no official definition, and a decline of 20% or more is called a bear market."],["How long do stock market corrections usually last?","Corrections have lasted about 115 days on average, according to Yardeni Research data cited by Fidelity. Nasdaq counts 27 S&P 500 corrections since World War II, taking about four months on average to get back to the old high."],["How often do market corrections happen?","Often. Nearly half of calendar years since 1980 included a correction, yet the S&P 500's average annual return over that period was more than 13%, according to Fidelity."],["What should I do during a market correction?","Many experts suggest sticking with a long-term plan instead of selling in a panic, which can lock in losses. Keep an emergency fund in cash, stay diversified and keep investing on a regular schedule."]],
+    faq:[["What is a stock market correction?","A correction is a drop of roughly 10% to 20% from a recent high in a major index like the S&P 500 or the Dow. There's no official definition, and a decline of 20% or more is called a bear market."],["How long do stock market corrections usually last?","Corrections have lasted about 115 days on average, according to Yardeni Research data cited by Fidelity. A 2022 Forbes Advisor analysis published by Nasdaq counted 27 S&P 500 corrections since World War II, taking about four months on average to get back to the old high."],["How often do market corrections happen?","Often. Nearly half of calendar years since 1980 included a correction, yet the S&P 500's average annual return over that period was more than 13%, according to Fidelity."],["What should I do during a market correction?","Many experts suggest sticking with a long-term plan instead of selling in a panic, which can lock in losses. Keep an emergency fund in cash, stay diversified and keep investing on a regular schedule."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
 <li>A <strong>correction</strong> is a drop of roughly 10% to 20% from a recent market high. A fall of 20% or more is called a bear market.</li>
-<li>Stocks slid for days this week as AI stocks tumbled and rate-hike fears grew. The Dow fell about 1,100 points on November 19 and was nearing correction territory, and the S&P 500 had already dropped as much as 7.1% from its October high.</li>
+<li>Stocks slid for days this week as AI stocks tumbled and rate-hike fears grew. The Dow fell about 1,100 points on November 19 and was nearing correction territory, and the S&P 500 had already dropped as much as 7.1% from its October high. On November 20, the S&P 500 and the Dow both closed more than 10% below their record closing highs, confirming a correction, <a href="https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-slip-anthropic-104746137.html" target="_blank" rel="noopener">Reuters reported</a>.</li>
 <li>Corrections are common and usually short. For long-term investors, the bigger risk is often selling in a panic.</li>
 </ul></div>
 
-<p>If "correction" keeps popping up in market headlines this week, there's a reason. Wall Street had its longest losing streak since June, and on Thursday the Dow sank about 1,100 points. Here's what a correction is, why markets have them, what history says, and what it means for your money.</p>
+<p>If "correction" keeps popping up in market headlines this week, there's a reason. The S&P 500 fell seven days in a row, and on Friday, November 20, it and the Dow officially entered a correction. Here's what a correction is, why markets have them, what history says, and what it means for your money.</p>
 
 <h2>What is a correction?</h2>
 <p>There's no official rule, but <a href="https://www.fidelity.com/learning-center/smart-money/stock-market-correction" target="_blank" rel="noopener">Fidelity</a> describes a stock market correction as a drop of at least 10% from recent highs. <a href="https://www.schwab.com/learn/story/market-correction-what-does-it-mean" target="_blank" rel="noopener">Charles Schwab</a> puts it as a decline of more than 10% but less than 20% from a major index's most recent peak, such as the S&P 500 or the Dow. A drop of 20% or more is a bear market.</p>
@@ -2652,12 +2652,13 @@ const ARTICLES = {
 <h2>Why it's in the news this week</h2>
 <p>All of those forces showed up at once. The S&P 500 fell as much as 7.1% from its October 6 high and on November 17 closed at its lowest level since late July, after four straight losses, <a href="https://www.mitrade.com/insights/news/live-news/article-3-2262467-20261118" target="_blank" rel="noopener">according to figures from Creative Planning's Charlie Bilello</a>. A fifth straight drop on November 18 gave the index its longest losing streak since June, <a href="https://www.ajc.com/news/2026/11/wall-street-zigzags-as-nvidia-and-other-ai-stocks-keep-swinging/" target="_blank" rel="noopener">the AP reported</a>.</p>
 <p>The <a href="https://www.wfsb.com/2026/11/17/another-wipeout-hits-wall-street-nvidia-other-jittery-ai-stocks-swing-lower/" target="_blank" rel="noopener">AP</a> pointed to worries that AI stocks had grown too expensive, high interest rates and the risk of tougher rules on data centers, with the 10-year Treasury yield near 5.10%. Inflation added pressure: producer prices rose 6.5% over the past year, the largest 12-month rise since November 2022, <a href="https://www.bls.gov/news.release/ppi.nr0.htm" target="_blank" rel="noopener">the Bureau of Labor Statistics reported</a>, and markets expect the Federal Reserve to raise rates in December, <a href="https://www.ajc.com/news/2026/11/wall-street-zigzags-as-nvidia-and-other-ai-stocks-keep-swinging/" target="_blank" rel="noopener">according to the AP</a>. Then on November 19, the Dow fell about 2.2% to roughly 49,097, and <a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html" target="_blank" rel="noopener">Yahoo Finance</a> noted it was nearing a correction.</p>
+<p><strong>Update, November 22:</strong> On Friday, November 20, the S&P 500 and the Dow both closed more than 10% below their record closing highs, confirming that both are in a correction, <a href="https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-slip-anthropic-104746137.html" target="_blank" rel="noopener">Reuters reported</a>. The S&P 500's seventh straight drop was its longest losing streak since February 2020.</p>
 
 <h2>What history says</h2>
 <p>Corrections feel scary, but they're a normal part of investing:</p>
 <ul>
 <li><strong>They happen often.</strong> Nearly half of calendar years since 1980 included a correction, yet the S&P 500's average annual return over that stretch was more than 13%, <a href="https://www.fidelity.com/learning-center/smart-money/stock-market-correction" target="_blank" rel="noopener">Fidelity notes</a>.</li>
-<li><strong>They're usually short.</strong> Corrections have lasted about 115 days on average, according to Yardeni Research data cited by Fidelity. The <a href="https://www.nasdaq.com/articles/what-is-a-market-correction" target="_blank" rel="noopener">Nasdaq</a> counts 27 S&P 500 corrections since World War II, with an average decline of 13.7% and about four months to get back to the old high.</li>
+<li><strong>They're usually short.</strong> Corrections have lasted about 115 days on average, according to Yardeni Research data cited by Fidelity. A <a href="https://www.nasdaq.com/articles/what-is-a-market-correction" target="_blank" rel="noopener">2022 Forbes Advisor analysis published by Nasdaq</a> counted 27 S&P 500 corrections since World War II, with an average decline of 13.7% and about four months to get back to the old high.</li>
 <li><strong>Most don't become bear markets.</strong> Schwab counts 27 corrections since November 1974, and only a handful turned into bear markets.</li>
 <li><strong>Smaller drops usually stop short of 10%.</strong> Bilello counts 34 pullbacks of more than 5% since March 2009. Only 10 went past 10%, and the median drop was 7.6%. As he put it, they "all seemed like the end of the world at the time."</li>
 </ul>
@@ -2679,9 +2680,9 @@ const ARTICLES = {
 </ul>
 
 <h2>The bottom line</h2>
-<p>A correction is a 10% to 20% drop from a recent high, and stocks spent this week edging toward one as AI worries, high interest rates and hot inflation data piled up. Corrections are common, usually short and rarely the end of the story. The best defense is a plan you set before the headlines turn scary: an emergency fund, a diversified mix and steady investing over time.</p>
+<p>A correction is a 10% to 20% drop from a recent high, and on November 20 the S&P 500 and the Dow both fell into one as AI worries, high interest rates and hot inflation data piled up. Corrections are common, usually short and rarely the end of the story. The best defense is a plan you set before the headlines turn scary: an emergency fund, a diversified mix and steady investing over time.</p>
 
-<p class="art-note">Figures cited are from Fidelity, Charles Schwab, the SEC, Nasdaq, Charlie Bilello's data and news reports as of November 20, 2026, and will change. This post is for education only and is not investment advice.</p>
+<p class="art-note">Figures cited are from Fidelity, Charles Schwab, the SEC, Nasdaq (a 2022 Forbes Advisor analysis), Charlie Bilello's data and news reports as of November 22, 2026, and will change. This post is for education only and is not investment advice.</p>
 `},
   "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": {
     cat:"trending",
@@ -3721,7 +3722,7 @@ function renderArticle(c, aslug){
       <span class="pill" style="display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:.75rem;font-weight:700">${c.name}</span>
       <h1>${a.title}</h1>
       <p class="dek">${a.dek}</p>
-      <div class="art-meta"><span>By <a href="/about/" rel="author" style="text-decoration:underline">Jordan Noel</a></span><span>${a.date}</span><span>${a.read}</span></div>
+      <div class="art-meta"><span>By <a href="/about/" rel="author" style="text-decoration:underline">Jordan Noel</a></span><span>${a.date}</span>${a.updated ? `<span>Updated ${a.updated}</span>` : ""}<span>${a.read}</span></div>
     </div>
   </div>
   ${PHOTOS[aslug]?`<figure class="art-photo"><img src="${photoUrl(aslug,1400,600)}" alt="${PHOTOS[aslug].alt.replace(/"/g,"&quot;")}" width="1400" height="600" decoding="async" fetchpriority="high" onerror="this.parentNode.remove()"><figcaption>Photo via <a href="https://unsplash.com/?utm_source=rich_with_reason&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></figcaption></figure>`:""}
