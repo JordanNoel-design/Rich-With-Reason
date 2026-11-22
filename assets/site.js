@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -2483,6 +2483,78 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
+  "what-does-vix-mean": {
+    cat:"investing",
+    title:"What does 'VIX' mean?",
+    dek:"Wall Street's 'fear gauge' jumped this week as stocks slid. Here's what the VIX measures, how it works, what history says about high readings, and what it means for your money.",
+    date:"Nov 22, 2026", read:"6 min read",
+    seo:"What Is the VIX? The Stock Market Fear Gauge Explained",
+    faq:[["What does the VIX measure?", "The VIX measures the 30-day expected volatility of the S&P 500, calculated from the prices of S&P 500 index put and call options. Cboe introduced it in 1993 and updated the method in 2003."], ["What does a VIX of 16 mean?", "Cboe explains that a VIX of 16 means traders expect the S&P 500 to move about 16% up or down over a year, or about 1% a day. The VIX shows the expected size of moves, not their direction."], ["What is the highest the VIX has ever been?", "The VIX closed at a record 82.69 on March 16, 2020, as the pandemic hit markets. Its highest intraday reading was 89.53 on October 24, 2008, according to Cboe."], ["Can you invest in the VIX?", "Not directly. FINRA notes the VIX itself is not investible, and products linked to VIX futures generally aren't designed to be buy-and-hold investments and can lose value quickly."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>The <strong>VIX</strong> is the Cboe Volatility Index. It uses S&amp;P 500 option prices to estimate how much traders expect the index to swing over the next 30 days.</li>
+<li>It's often called Wall Street's "fear gauge" because it tends to jump when stocks fall fast. It rose from 19.30 on November 13 to 28.44 on November 19, 2026, and climbed again as stocks sank on November 20.</li>
+<li>A high VIX signals uncertainty, not a forecast of where stocks go next. For most long-term investors, it's a reason to check your plan, not to panic.</li>
+</ul></div>
+
+<p>If you heard the words "fear gauge" a lot this week, you were hearing about the VIX. Stocks had a rough week: on Friday, November 20, the S&amp;P 500 fell 3.70% and closed in correction territory, while the Nasdaq Composite dropped 5.28%, <a href="https://www.schwab.com/learn/story/market-volatility" target="_blank" rel="noopener">Charles Schwab reported</a>. Here's what the VIX means and what it does and doesn't tell you.</p>
+
+<h2>What is the VIX?</h2>
+<p>The VIX is an index run by Cboe Global Markets, the options exchange company. According to <a href="https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf" target="_blank" rel="noopener">Cboe's methodology</a>, "The VIX Index measures 30-day expected volatility of the S&amp;P 500 Index." In plain English, it's the market's best guess about how bumpy the next month will be for large U.S. stocks.</p>
+<p>Cboe introduced the VIX in 1993. In 2003 it worked with Goldman Sachs to update how the index is calculated, and that newer method is the basis for the VIX quoted today, <a href="https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf" target="_blank" rel="noopener">Cboe says</a>.</p>
+
+<h2>How the VIX works</h2>
+<p>The VIX doesn't look at past stock prices. It looks at what people pay right now for S&amp;P 500 options.</p>
+<ul>
+<li><strong>Options are a kind of insurance.</strong> A put option pays off if stocks fall, and a call option pays off if they rise. When investors get nervous, they pay more for that protection.</li>
+<li><strong>Prices reveal expectations.</strong> Cboe calculates the VIX "by aggregating the weighted prices of S&amp;P 500 Index puts and calls" over a wide range of strike prices, according to its <a href="https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf" target="_blank" rel="noopener">methodology</a>. Pricier options mean a higher VIX.</li>
+<li><strong>It's an annual number.</strong> Cboe <a href="https://www.cboe.com/insights/posts/what-the-vix-and-vix-1-d-indices-attempt-to-measure-and-how-they-differ" target="_blank" rel="noopener">explains</a> that a VIX of 16 means an expected move of about 16% up or down over a year, which works out to a daily range of about 1%.</li>
+<li><strong>It has no direction.</strong> Cboe calls the reading "non-directional." The VIX tells you how big traders expect moves to be, not whether stocks will go up or down.</li>
+</ul>
+<p>A quick rule of thumb follows from Cboe's example: divide the VIX by 16 to estimate the expected daily move. A VIX of 32 suggests traders expect the S&amp;P 500 to move about 2% a day, up or down.</p>
+
+<h2>Why it's in the news this week</h2>
+<p>The VIX climbed steadily as the week's selloff in AI and chip stocks deepened. Official Cboe closing values published by the <a href="https://fred.stlouisfed.org/series/VIXCLS" target="_blank" rel="noopener">St. Louis Fed's FRED database</a> show:</p>
+<ul>
+<li><strong>Friday, November 13:</strong> 19.30</li>
+<li><strong>Monday, November 16:</strong> 22.91</li>
+<li><strong>Tuesday, November 17:</strong> 25.46</li>
+<li><strong>Wednesday, November 18:</strong> 24.56</li>
+<li><strong>Thursday, November 19:</strong> 28.44</li>
+</ul>
+<p>On Friday, November 20, the VIX jumped again. Yahoo Finance's market data showed a close of 35.89, and <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-plunge-131303598.html" target="_blank" rel="noopener">Investopedia reported</a> it was the highest mark since last year's tariff turmoil. Cboe's official figure for that day had not yet been posted to FRED when this was written.</p>
+<p>Behind the fear is a mix of worries. Kevin Gordon, head of macro research at the Schwab Center for Financial Research, said investors "are increasingly pricing in both a Fed that has to battle sticky inflation and an economy that might see slower growth if AI spending declines," <a href="https://www.schwab.com/learn/story/market-volatility" target="_blank" rel="noopener">Schwab reported</a>.</p>
+
+<h2>What history says</h2>
+<p>Readings in the mid-30s are high, but they're far from the VIX's extremes.</p>
+<ul>
+<li><strong>Calm years sit in the teens.</strong> The VIX averaged 15.39 in 2019, according to <a href="https://www.sifma.org/wp-content/uploads/2020/04/SIFMA-Insights-Spotlight-VIX_final.pdf" target="_blank" rel="noopener">SIFMA research</a>.</li>
+<li><strong>Crises push it much higher.</strong> During the 2008 financial crisis, the VIX averaged 32.69 for the year, SIFMA found. It hit an intraday high of 89.53 on October 24, 2008, <a href="https://certification.cboe.com/insights/posts/inside-volatility-trading-extraordinary-times" target="_blank" rel="noopener">according to Cboe</a>.</li>
+<li><strong>The record close came in 2020.</strong> As the pandemic hit markets, the VIX closed at a record 82.69 on March 16, 2020, <a href="https://www.cnbc.com/2020/03/16/wall-streets-fear-gauge-hits-highest-level-ever.html" target="_blank" rel="noopener">CNBC reported</a>.</li>
+</ul>
+<p>Spikes like these have tended to fade, but on no set timeline. Cboe itself says the VIX does not, "nor is it intended to, offer insight into tomorrow's market movement."</p>
+
+<h2>What it means for everyday investors</h2>
+<ul>
+<li><strong>Treat it as a weather report.</strong> A high VIX means rough conditions are expected. It doesn't tell you to sell, and selling after a big drop can lock in losses.</li>
+<li><strong>Check your timeline.</strong> Money you'll need within a few years belongs in safer places, like an <a href="/personal-finance/how-much-should-be-in-your-emergency-fund/">emergency fund</a>, not in stocks.</li>
+<li><strong>Keep investing on schedule.</strong> If you invest a set amount each month, <a href="/investing/dollar-cost-averaging-explained/">dollar-cost averaging</a> means volatile months buy more shares at lower prices.</li>
+<li><strong>Be wary of "VIX" products.</strong> You can't buy the VIX itself. Exchange-traded products linked to VIX futures "generally aren't designed to be used as buy-and-hold investments" and can "quickly lose some or all of their value in a very short time," <a href="https://www.finra.org/investors/insights/volatility-linked-exchange-traded-products" target="_blank" rel="noopener">FINRA warns</a>.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Implied volatility:</strong> how much movement the price of an option suggests traders expect.</li>
+<li><strong>Correction:</strong> a drop of 10% or more from a recent high. Here's <a href="/trending/what-is-a-stock-market-correction-and-should-you-worry/">what a stock market correction means for you</a>.</li>
+<li><strong>Bear market:</strong> a drop of 20% or more from a recent high.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>The VIX turns options prices into one number that shows how nervous traders are about the next 30 days. This week it rose sharply as stocks fell, which is exactly what the "fear gauge" is built to do. A high reading is a cue to review your plan and timeline, not a prediction of tomorrow.</p>
+
+<p class="art-note">VIX readings change every trading day; figures cited are as of November 20, 2026, from Cboe, FRED, SIFMA, FINRA and news reports. This post is for education only and is not investment advice.</p>
+`},
   "what-does-circular-financing-mean": {
     cat:"investing",
     title:"What does 'circular financing' mean?",
@@ -3159,6 +3231,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
   "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
   "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
