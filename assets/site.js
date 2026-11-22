@@ -2488,8 +2488,8 @@ const ARTICLES = {
     title:"What does 'VIX' mean?",
     dek:"Wall Street's 'fear gauge' jumped this week as stocks slid. Here's what the VIX measures, how it works, what history says about high readings, and what it means for your money.",
     date:"Nov 22, 2026", read:"6 min read",
-    seo:"What Is the VIX? The Stock Market Fear Gauge Explained",
-    faq:[["What does the VIX measure?", "The VIX measures the 30-day expected volatility of the S&P 500, calculated from the prices of S&P 500 index put and call options. Cboe introduced it in 1993 and updated the method in 2003."], ["What does a VIX of 16 mean?", "Cboe explains that a VIX of 16 means traders expect the S&P 500 to move about 16% up or down over a year, or about 1% a day. The VIX shows the expected size of moves, not their direction."], ["What is the highest the VIX has ever been?", "The VIX closed at a record 82.69 on March 16, 2020, as the pandemic hit markets. Its highest intraday reading was 89.53 on October 24, 2008, according to Cboe."], ["Can you invest in the VIX?", "Not directly. FINRA notes the VIX itself is not investible, and products linked to VIX futures generally aren't designed to be buy-and-hold investments and can lose value quickly."]],
+    seo:"What Is the VIX Index? The Stock Market Fear Gauge Explained",
+    faq:[["What is the VIX index?", "The VIX, or Cboe Volatility Index, measures the 30-day expected volatility of the S&P 500, calculated from the prices of S&P 500 index put and call options. Cboe introduced it in 1993 and updated the method in 2003."], ["What is a normal VIX level?", "There is no official normal level. The VIX averaged 15.39 in calm 2019 and 32.69 in crisis-year 2008, according to SIFMA, and Cboe explains that a reading of 16 means an expected move of about 1% a day."], ["What is the highest the VIX has ever been?", "The VIX closed at a record 82.69 on March 16, 2020, as the pandemic hit markets. Its highest intraday reading was 89.53 on October 24, 2008, according to Cboe."], ["Can you invest in the VIX?", "Not directly. FINRA notes the VIX itself is not investible, and products linked to VIX futures generally aren't designed to be buy-and-hold investments and can lose value quickly."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
@@ -2500,7 +2500,7 @@ const ARTICLES = {
 
 <p>If you heard the words "fear gauge" a lot this week, you were hearing about the VIX. Stocks had a rough week: on Friday, November 20, the S&amp;P 500 fell 3.70% and closed in correction territory, while the Nasdaq Composite dropped 5.28%, <a href="https://www.schwab.com/learn/story/market-volatility" target="_blank" rel="noopener">Charles Schwab reported</a>. Here's what the VIX means and what it does and doesn't tell you.</p>
 
-<h2>What is the VIX?</h2>
+<h2>What is the VIX index?</h2>
 <p>The VIX is an index run by Cboe Global Markets, the options exchange company. According to <a href="https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf" target="_blank" rel="noopener">Cboe's methodology</a>, "The VIX Index measures 30-day expected volatility of the S&amp;P 500 Index." In plain English, it's the market's best guess about how bumpy the next month will be for large U.S. stocks.</p>
 <p>Cboe introduced the VIX in 1993. In 2003 it worked with Goldman Sachs to update how the index is calculated, and that newer method is the basis for the VIX quoted today, <a href="https://cdn.cboe.com/resources/vix/VIX_Methodology.pdf" target="_blank" rel="noopener">Cboe says</a>.</p>
 
@@ -2526,8 +2526,8 @@ const ARTICLES = {
 <p>On Friday, November 20, the VIX jumped again. Yahoo Finance's market data showed a close of 35.89, and <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-plunge-131303598.html" target="_blank" rel="noopener">Investopedia reported</a> it was the highest mark since last year's tariff turmoil. Cboe's official figure for that day had not yet been posted to FRED when this was written.</p>
 <p>Behind the fear is a mix of worries. Kevin Gordon, head of macro research at the Schwab Center for Financial Research, said investors "are increasingly pricing in both a Fed that has to battle sticky inflation and an economy that might see slower growth if AI spending declines," <a href="https://www.schwab.com/learn/story/market-volatility" target="_blank" rel="noopener">Schwab reported</a>.</p>
 
-<h2>What history says</h2>
-<p>Readings in the mid-30s are high, but they're far from the VIX's extremes.</p>
+<h2>What is a normal VIX level?</h2>
+<p>There's no official "normal" level, but history gives a range. Readings in the mid-30s are high, yet far from the extremes.</p>
 <ul>
 <li><strong>Calm years sit in the teens.</strong> The VIX averaged 15.39 in 2019, according to <a href="https://www.sifma.org/wp-content/uploads/2020/04/SIFMA-Insights-Spotlight-VIX_final.pdf" target="_blank" rel="noopener">SIFMA research</a>.</li>
 <li><strong>Crises push it much higher.</strong> During the 2008 financial crisis, the VIX averaged 32.69 for the year, SIFMA found. It hit an intraday high of 89.53 on October 24, 2008, <a href="https://certification.cboe.com/insights/posts/inside-volatility-trading-extraordinary-times" target="_blank" rel="noopener">according to Cboe</a>.</li>
