@@ -3537,6 +3537,9 @@ const TOOL_PAGES = {
    to be under the free Unsplash License (free for commercial use, no permission needed).
    Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
 const PHOTOS = {
+  "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
+  "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
+  "what-is-a-stock-market-correction-and-should-you-worry": { id: "photo-1744782211816-c5224434614f", alt: "Stock charts displayed on multiple screens" },
   "how-credit-scores-are-actually-calculated": { id: "photo-1653330963134-329a61aedc68", alt: "Person holding a credit card and a phone" },
   "high-yield-savings-vs-money-market-accounts": { id: "photo-1633158829585-23ba8f7c8caf", alt: "Hand stacking coins on a table" },
   "balance-transfer-cards-when-theyre-worth-it": { id: "photo-1673837552444-7a90431588fe", alt: "Person holding a credit card next to a calculator" },
