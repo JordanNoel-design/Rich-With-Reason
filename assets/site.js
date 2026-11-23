@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -2483,6 +2483,67 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
+  "nvidia-brings-back-jensen-huang-what-it-means-for-investors": {
+    cat:"investing",
+    title:"Nvidia brings back Jensen Huang: what it means for investors",
+    dek:"Nvidia's board reinstated Jensen Huang as CEO less than two weeks after he resigned, and the stock jumped before the bell. Here's what happened, how markets reacted, and what key person risk means for your money.",
+    date:"Nov 23, 2026", read:"5 min read",
+    seo:"Nvidia Reinstates Jensen Huang: What It Means for Investors",
+    faq:[["Why did Jensen Huang resign from Nvidia?", "Nvidia's board accepted his resignation on November 11, 2026, and the company's announcement gave no reason. Reuters reported he resigned after revelations of extramarital affairs, including one with a businesswoman U.S. authorities suspect of spying for China, an allegation Beijing denies."], ["Is Jensen Huang back as Nvidia CEO?", "Yes. Nvidia's board unanimously reinstated him as president, CEO and board member, effective immediately, on November 22, 2026, and announced it on November 23. An independent board committee's investigation will continue."], ["Why is Nvidia stock up today?", "Investors welcomed Huang's return. Nvidia shares were up 27% at $159.48 in premarket trading as of 9 a.m. ET on November 23, according to 24/7 Wall St., after closing at $125.53 on November 20."], ["What is key person risk?", "Key person risk is the chance that a company loses value because it depends heavily on one person, such as a founder or CEO. Nvidia's stock fell about 28% between Huang's exit on November 11 and November 20, then jumped when he was reinstated."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>Nvidia's board brought back Jensen Huang as president, CEO and board member, effective immediately, less than two weeks after accepting his resignation.</li>
+<li>Investors cheered. Nvidia shares were up about 27% before the market opened on Monday, November 23, and stock futures rose broadly.</li>
+<li>The episode is a real-world lesson in <strong>key person risk</strong>: how much a company's value can depend on one leader.</li>
+</ul></div>
+
+<p>Few companies have had a stranger two weeks than Nvidia. Its longtime CEO left, its stock fell hard, and then the board asked him back. Here's what happened, how markets reacted, and what it means for everyday investors.</p>
+
+<h2>Why did Jensen Huang resign?</h2>
+<p>On November 11, Nvidia's board accepted Huang's resignation as president, CEO and director, effective immediately, according to the company's <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm" target="_blank" rel="noopener">SEC filing</a>. The company's <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm" target="_blank" rel="noopener">announcement</a> gave no reason. It named Chief Financial Officer Colette Kress interim CEO, made director Harvey C. Jones the board's first-ever chair and said it would search for a permanent CEO.</p>
+<p><a href="https://www.investing.com/news/stock-market-news/nvidia-reinstates-jensen-huang-as-ceo-5045809" target="_blank" rel="noopener">Reuters reported</a> that Huang resigned after revelations of extramarital affairs, including one with a businesswoman U.S. authorities suspect of spying for China, an allegation Beijing denies.</p>
+
+<h2>Is Jensen Huang back as Nvidia's CEO?</h2>
+<p>Yes. On November 22, the board reinstated Huang as president, CEO and board member, effective immediately, according to an <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nvda-20261122.htm" target="_blank" rel="noopener">SEC filing</a> released Monday. Reuters called it a sharp reversal from the board's decision just days earlier to rule out his return.</p>
+<p>In its <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm" target="_blank" rel="noopener">press release</a>, Nvidia said:</p>
+<ul>
+<li><strong>The vote was unanimous.</strong> The board said it was "satisfied with respect to Mr. Huang's candor and ability to lead NVIDIA."</li>
+<li><strong>Washington weighed in.</strong> The board said it "received input from senior levels of the United States government" and is confident his return "poses no national security risk."</li>
+<li><strong>The investigation continues.</strong> A committee of independent directors, working with independent counsel, will see its investigation through to the end. Huang said he fully supports it.</li>
+<li><strong>New guardrails.</strong> Nvidia is creating a National Security and Export Control Committee of independent directors and is searching for a chief compliance officer. Jones stays on as chair, and Kress continues as CFO.</li>
+</ul>
+
+<h2>Why is Nvidia stock up today?</h2>
+<p>Because investors are betting the company is better off with its founder in charge. Before the bell, Nvidia was up 27% at $159.48 as of 9 a.m. ET, <a href="https://247wallst.com/investing/2026/11/23/nvidia-stock-soars-27-before-the-bell-after-its-board-reinstated-jensen-huang-as-ceo-it-still-needs-50-to-get-back-to-its-record/" target="_blank" rel="noopener">24/7 Wall St. reported</a>. Premarket prices can change sharply once regular trading starts.</p>
+<p>That bounce follows a steep slide. According to <a href="https://finance.yahoo.com/quote/NVDA/history" target="_blank" rel="noopener">Yahoo Finance price data</a>:</p>
+<ul>
+<li>Nvidia closed at $173.73 on November 11, the day the board accepted Huang's resignation.</li>
+<li>It closed at $125.53 on Friday, November 20, down about 28% from November 11. Friday alone it fell 14%.</li>
+<li>Its October 6 close was $239.24, so even after Monday's early jump the stock would need to rise about 50% to get back there.</li>
+</ul>
+<p>Not all of that drop was about Huang. Friday's selloff came after Reuters reported that the SEC was probing Nvidia's accounting, and the whole AI trade was under pressure. Nvidia's release says the company "will continue to cooperate with ongoing government investigations and inquiries."</p>
+
+<h2>How did the broader market react?</h2>
+<p>The relief spread. By 7:29 a.m. ET, Nasdaq 100 futures were up 3.1%, S&P 500 futures 2.5% and Dow futures 1.8%, <a href="https://za.investing.com/news/stock-market-news/tsx-futures-rise-as-wall-street-bounces-following-ai-selloff-4592158" target="_blank" rel="noopener">Investing.com reported</a>. That came after a brutal Friday, when the S&P 500 fell 3.7% to 6,910.39 and the Nasdaq Composite fell 5.3% to 22,617.73. Deutsche Bank strategists wrote that "a lot of bad news is already being priced."</p>
+<p>One morning doesn't make a trend. The AI selloff had several causes, and the <a href="/investing/what-does-circular-financing-mean/">worries about AI financing</a> haven't gone away.</p>
+
+<h2>What is key person risk?</h2>
+<p>Key person risk is the danger that a company loses value because it depends heavily on one person, often a founder or CEO. When that person leaves suddenly, investors have to guess how the business will run without them. Nvidia's two weeks show both sides: the stock fell after Huang left and jumped when he came back.</p>
+
+<h2>What it means for everyday investors</h2>
+<ul>
+<li><strong>Single stocks can swing wildly.</strong> Nvidia lost more than a quarter of its value in under two weeks. That's why a <a href="/investing/how-to-build-a-three-fund-portfolio/">diversified portfolio</a> beats betting on one company.</li>
+<li><strong>You probably own some Nvidia already.</strong> Broad U.S. index funds hold it, so its swings show up in your account even if you never bought it directly.</li>
+<li><strong>Don't chase headlines.</strong> Buying after a 27% jump, or selling after a 14% drop, means trading on news that's already priced in. Steady investing, like <a href="/investing/dollar-cost-averaging-explained/">dollar-cost averaging</a>, takes the guesswork out.</li>
+<li><strong>Watch governance, not just growth.</strong> Boards, succession plans and compliance matter, and Nvidia's new committees are a sign investors noticed.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>Nvidia's board reversed course and brought Jensen Huang back, and the stock surged before Monday's open. But the investigation continues, the AI trade is still shaky, and the stock remains far below its October level. For most people, the lesson is the one markets keep teaching: diversify, think long term, and don't let one company's drama run your plan.</p>
+
+<p class="art-note">Figures are from Nvidia's SEC filings, Yahoo Finance price data and news reports as of the morning of November 23, 2026, before the market opened, and will change. This post is for education only and is not investment advice.</p>
+`},
   "what-does-vix-mean": {
     cat:"investing",
     title:"What does 'VIX' mean?",
@@ -3232,6 +3293,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "nvidia-brings-back-jensen-huang-what-it-means-for-investors": ["what-does-circular-financing-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
   "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
@@ -3537,6 +3599,7 @@ const TOOL_PAGES = {
    to be under the free Unsplash License (free for commercial use, no permission needed).
    Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
 const PHOTOS = {
+  "nvidia-brings-back-jensen-huang-what-it-means-for-investors": { id: "photo-1431540015161-0bf868a2d407", alt: "Empty boardroom with an oval wooden table and chairs" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
   "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
   "what-is-a-stock-market-correction-and-should-you-worry": { id: "photo-1744782211816-c5224434614f", alt: "Stock charts displayed on multiple screens" },
