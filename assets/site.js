@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["What does 'PCE' mean?","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -2483,6 +2483,74 @@ const ARTICLES = {
 
 <p class="art-note">Policy features and costs vary by insurer and state. This article is for education only and isn't insurance or financial advice.</p>
 `},
+  "what-does-pce-mean": {
+    cat:"investing",
+    title:"What does 'PCE' mean?",
+    dek:"The Fed's favorite inflation gauge comes out this Thanksgiving week. Here's what the PCE price index measures, how it differs from CPI, what the latest numbers show, and what it means for your money.",
+    date:"Nov 23, 2026", read:"6 min read",
+    seo:"What Is the PCE Price Index? The Fed's Inflation Gauge Explained",
+    faq:[["What is the PCE price index?", "The PCE (personal consumption expenditures) price index is a monthly measure from the Bureau of Economic Analysis of the prices that people living in the U.S., or those buying on their behalf, pay for goods and services. When it rises, that's inflation."], ["What is the difference between PCE and CPI?", "CPI counts only what households pay out of pocket, while PCE also covers goods and services bought on people's behalf. PCE also updates its spending weights monthly instead of yearly, and its formula better captures shoppers switching to cheaper items, so CPI has usually run higher."], ["Why does the Fed use PCE instead of CPI?", "Federal Reserve economists describe PCE as a broader measure of inflation that picks up changes in what people buy more quickly. The Fed's longer-run goal, first spelled out in January 2012, is 2% inflation as measured by the annual change in the PCE price index."], ["What is core PCE?", "Core PCE is the PCE price index without food and energy, which can swing a lot from month to month. In September 2026 it was up 3.1% from a year earlier, compared with 3.6% for overall PCE, according to the BEA."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>The <strong>PCE price index</strong> is the government's measure of how much prices are rising for the goods and services people in the U.S. buy. It is the inflation gauge the Federal Reserve uses for its 2% goal.</li>
+<li>It's in the news because the October report comes out on Wednesday, November 25, and the latest reading showed prices up 3.6% from a year earlier.</li>
+<li>When PCE inflation runs hot, the Fed is more likely to raise interest rates, which affects what you pay on loans and earn on savings.</li>
+</ul></div>
+
+<p>Stocks just had a rough week, and this Thanksgiving week the market's attention turns to one number: the PCE price index. The October report is due at 8:30 a.m. ET on Wednesday, November 25, according to the <a href="https://www.bea.gov/news/schedule" target="_blank" rel="noopener">Bureau of Economic Analysis release schedule</a>. Here's what PCE means and why it matters to you.</p>
+
+<h2>What is the PCE price index?</h2>
+<p>PCE stands for personal consumption expenditures. The <a href="https://www.bea.gov/data/personal-consumption-expenditures-price-index" target="_blank" rel="noopener">Bureau of Economic Analysis (BEA)</a> defines the PCE price index as "a measure of the prices that people living in the United States, or those buying on their behalf, pay for goods and services."</p>
+<p>In plain English, it tracks how the cost of the things we spend money on changes over time. When the index rises, that's inflation. The BEA publishes it each month in its Personal Income and Outlays report.</p>
+
+<h2>What is core PCE?</h2>
+<p>Core PCE is the same index with food and energy prices taken out. Gas and grocery prices can jump around from month to month, so leaving them out gives a steadier read on the underlying trend. The BEA reports both numbers side by side.</p>
+
+<h2>What did the latest PCE report show?</h2>
+<p>The most recent report covers September 2026 and came out on October 29. According to the <a href="https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026" target="_blank" rel="noopener">BEA release</a>:</p>
+<ul>
+<li><strong>Headline PCE</strong> rose 0.5% from August and 3.6% from a year earlier.</li>
+<li><strong>Core PCE</strong> rose 0.3% from August and 3.1% from a year earlier.</li>
+</ul>
+<p>Both are well above the Fed's 2% goal. Wednesday's report will add October's numbers.</p>
+
+<h2>Why does the Fed use PCE instead of CPI?</h2>
+<p>The Federal Reserve's longer-run goal is inflation of 2%, "as measured by the annual change in the price index for personal consumption expenditures," according to the <a href="https://www.federalreserve.gov/faqs/economy_14400.htm" target="_blank" rel="noopener">Fed's own explainer</a>. The Fed first spelled out that target on January 25, 2012, when it published its <a href="https://www.federalreserve.gov/monetarypolicy/timeline-statement-on-longer-run-goals-and-monetary-policy-strategy.htm" target="_blank" rel="noopener">Statement on Longer-Run Goals and Monetary Policy Strategy</a>, and it reaffirmed the statement in January 2026.</p>
+<p>The shift away from the better-known Consumer Price Index (CPI) started earlier. The <a href="https://www.atlantafed.org/research-and-data/2026/05/20/what-is-pce-explaining-the-feds-preferred-inflation-measure" target="_blank" rel="noopener">Atlanta Fed</a> says the Fed moved away from CPI informally around 2000. Its reasons come down to a few differences between the two measures.</p>
+
+<h2>PCE vs. CPI: what's the difference?</h2>
+<ul>
+<li><strong>Scope.</strong> CPI counts only what households pay out of pocket, as <a href="https://usafacts.org/articles/what-the-personal-consumption-expenditures-index-says-about-the-us/" target="_blank" rel="noopener">USAFacts</a> explains. PCE is broader: as the BEA's definition says, it also counts goods and services bought on people's behalf.</li>
+<li><strong>Weights.</strong> PCE updates the weights it gives each item every month, while CPI updates its weights once a year, according to the <a href="https://www.atlantafed.org/research-and-data/2026/05/20/what-is-pce-explaining-the-feds-preferred-inflation-measure" target="_blank" rel="noopener">Atlanta Fed</a>.</li>
+<li><strong>Substitution.</strong> The PCE formula better captures how shoppers switch to cheaper options when prices rise, like buying a cheaper cut of meat instead of steak.</li>
+</ul>
+<p>Because of these differences, CPI has usually shown higher inflation. A <a href="https://www.clevelandfed.org/publications/economic-trends/2014/et-20140417-pce-and-cpi-inflation-difference" target="_blank" rel="noopener">Cleveland Fed analysis</a> found that from 2000 to early 2014, CPI inflation averaged 2.4% a year and PCE inflation 1.9%, a gap of about half a percentage point.</p>
+
+<h2>Why this week's report matters</h2>
+<p>The Fed has already started raising rates again. On September 16 it <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" target="_blank" rel="noopener">raised its target range by a quarter point</a> to 3.75% to 4%. On October 28 it <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" target="_blank" rel="noopener">held rates there</a>, saying "inflation remains elevated," while two officials voted for another quarter-point increase.</p>
+<p>The Fed's next decision is in December, and futures traders are betting heavily on another hike, <a href="https://www.coindesk.com/markets/2026/11/23/u-s-inflation-thanksgiving-trading-crypto-week-ahead" target="_blank" rel="noopener">CoinDesk reported</a>. A hotter-than-expected PCE reading would support that view. A cooler one could ease some pressure on rates.</p>
+
+<h2>What PCE means for your money</h2>
+<ul>
+<li><strong>Borrowing costs.</strong> When the Fed raises rates, credit card rates, adjustable-rate loans and new car loans tend to rise too. Here's <a href="/trending/what-happens-when-the-fed-raises-interest-rates/">what happens when the Fed raises interest rates</a>.</li>
+<li><strong>Savings rates.</strong> Higher rates can mean better yields on savings. Compare your options in <a href="/banking-credit/high-yield-savings-vs-money-market-accounts/">high-yield savings vs. money market accounts</a>.</li>
+<li><strong>Your budget.</strong> PCE is an average across the whole country. Your own inflation depends on what you buy, so track your biggest costs and keep an <a href="/personal-finance/how-much-should-be-in-your-emergency-fund/">emergency fund</a> that keeps up with them.</li>
+<li><strong>Market swings.</strong> Inflation reports can move stocks and bonds on the day they come out. If you invest for the long term, one report is not a reason to change your plan.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>CPI (Consumer Price Index):</strong> the Labor Department's measure of prices households pay out of pocket.</li>
+<li><strong>Core inflation:</strong> inflation with volatile food and energy prices left out.</li>
+<li><strong>Rate hike:</strong> when the Fed raises its target range for short-term interest rates.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>The PCE price index is the Fed's favorite way to measure inflation, and right now it shows prices rising well above the 2% goal. That's why Wednesday's report matters: it helps decide whether the Fed keeps raising rates. For everyday readers, the takeaway is simple: watch your borrowing costs, make your savings earn a competitive rate, and don't let one month's data shake a long-term plan.</p>
+
+<p class="art-note">Figures cited are from the Bureau of Economic Analysis, the Federal Reserve, the Atlanta and Cleveland Feds and news reports as of November 23, 2026, and will change. This post is for education only and is not investment advice.</p>
+`},
   "what-does-vix-mean": {
     cat:"investing",
     title:"What does 'VIX' mean?",
@@ -3232,6 +3300,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "what-does-pce-mean": ["what-happens-when-the-fed-raises-interest-rates","high-yield-savings-vs-money-market-accounts","how-much-should-be-in-your-emergency-fund","emergency"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
   "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
@@ -3537,6 +3606,7 @@ const TOOL_PAGES = {
    to be under the free Unsplash License (free for commercial use, no permission needed).
    Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
 const PHOTOS = {
+  "what-does-pce-mean": { id: "photo-1764083079459-ddb9a615d50e", alt: "Person shopping in a grocery store aisle" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
   "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
   "what-is-a-stock-market-correction-and-should-you-worry": { id: "photo-1744782211816-c5224434614f", alt: "Stock charts displayed on multiple screens" },
