@@ -100,7 +100,9 @@ const { CATS, ARTICLES, STATIC_PAGES, TOOLS, TOOL_PAGES, PHOTOS, REDIRECTS } = c
 // Article share image: its Unsplash photo cropped to 1200x630 (the size social sites expect).
 const shareImg = s => PHOTOS[s] ? `https://images.unsplash.com/${PHOTOS[s].id}?auto=format&fit=crop&w=1200&h=630&q=80` : null;
 const slugify = t => t.toLowerCase().replace(/&/g, " and ").replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-const HOME_DESC = "Clear, honest guides on banking, credit, investing and insurance.";
+const HOME_DESC = "Rich With Reason is a free personal finance education site with plain-English guides on budgeting, credit, investing and insurance, plus free money calculators.";
+const ORG_DESC = "Rich With Reason is a free personal finance education website founded by Jordan Noel. It explains personal finance, banking and credit, investing, insurance and financial freedom in plain English, with a daily Buzzword of the Day, free money calculators and The Weekly Reason newsletter.";
+const TOPICS = ["Personal finance", "Banking and credit", "Investing", "Insurance", "Financial freedom", "Financial literacy"];
 
 // Clear out previously generated topic folders so removed articles disappear.
 for (const c of CATS) fs.rmSync(c.slug, { recursive: true, force: true });
@@ -123,8 +125,8 @@ const isoDate = d => { const t = new Date(d); return isNaN(t) ? undefined : t.to
 
 // Home page gets WebSite + Organization data
 write("index.html", build({ pathname: "/", desc: HOME_DESC, ld: [
-  { "@context": "https://schema.org", "@type": "WebSite", name: "Rich With Reason", alternateName: ALT_NAMES, url: `${SITE}/`, publisher: PUBLISHER },
-  { "@context": "https://schema.org", ...PUBLISHER, founder: AUTHOR, email: "richwreason@gmail.com" } ] }));
+  { "@context": "https://schema.org", "@type": "WebSite", name: "Rich With Reason", alternateName: ALT_NAMES, url: `${SITE}/`, description: ORG_DESC, inLanguage: "en-US", about: TOPICS, publisher: PUBLISHER },
+  { "@context": "https://schema.org", ...PUBLISHER, description: ORG_DESC, slogan: "Money, explained with reason", knowsAbout: TOPICS, founder: AUTHOR, email: "richwreason@gmail.com" } ] }));
 
 // Static pages: About, Contact, Tools hub and each calculator
 for (const p of STATIC_PAGES) {
