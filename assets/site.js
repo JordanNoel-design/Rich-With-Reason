@@ -3,13 +3,13 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-23",
-  "term": "Bear market",
-  "def": "A drop of 20% or more from a recent high in a stock or a market index like the Nasdaq or S&P 500, usually with widespread pessimism. A smaller fall of 10% to 20% is called a correction.",
-  "why": "The Nasdaq 100 closed Friday just shy of a bear market, or a 20% drop from its record closing high, as chip stocks had their worst week since 2001, Yahoo Finance reported.",
+  "date": "2026-11-24",
+  "term": "Relief rally",
+  "def": "A quick jump in stock prices after a stretch of losses, when a big worry eases or news turns out better than investors feared. It can be short-lived and doesn't always mean the slide is over.",
+  "why": "The S&P 500 and Nasdaq surged 4.7% and 6.5% Monday after Jensen Huang's return to Nvidia sparked a relief rally in the battered AI trade, Reuters reported.",
   "source": {
-    "name": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/markets/article/chips-are-crashing-like-its-2008-as-the-nasdaq-100-nears-a-bear-market-192805534.html"
+    "name": "Reuters (via Yahoo Finance)",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/asian-stocks-rally-huangs-nvidia-013042563.html"
   },
   "link": "/trending/what-is-a-stock-market-correction-and-should-you-worry/",
   "linkText": "Related: What is a stock market correction?"
