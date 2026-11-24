@@ -57,7 +57,7 @@ const CATS = [
    intro:"Your bank account and credit score quietly shape the price you pay for almost everything. Learn how to pick the right accounts, build credit from scratch, and use cards without paying a cent in interest.",
    sub:["Credit Scores","Credit Cards","Savings Accounts","Checking","Debt Payoff"],
    steps:[["Know your score","Where to check it for free and what the number means.","/banking-credit/how-credit-scores-are-actually-calculated/"],["Pick a high-yield savings account","Stop letting your emergency fund earn almost nothing.","/banking-credit/high-yield-savings-vs-money-market-accounts/"],["Use one card, pay it in full","The simplest way to build credit without debt.","/banking-credit/how-to-build-credit-with-no-credit-history/"],["Automate your bills","Never pay a late fee again.","/banking-credit/overdraft-fees-how-to-avoid-them-for-good/"]],
-   posts:["How credit scores are actually calculated","High-yield savings vs. money market accounts","Balance transfer cards: when they're worth it","Debt snowball vs. avalanche: which wins?","How to build credit with no credit history","Overdraft fees: how to avoid them for good"],
+   posts:["What does 'buy now, pay later' mean?","How credit scores are actually calculated","High-yield savings vs. money market accounts","Balance transfer cards: when they're worth it","Debt snowball vs. avalanche: which wins?","How to build credit with no credit history","Overdraft fees: how to avoid them for good"],
    terms:[["APR","The yearly cost of borrowing, including interest."],["Credit utilization","How much of your available credit you're using — keep it under 30%."],["APY","What your savings actually earn in a year with compounding."]]},
   {slug:"investing", name:"Investing", ico:ICON["investing"], color:"#3b3a8f", tint:"#ecebfa",
    blurb:"Index funds, retirement accounts and growing money for the long run.",
@@ -80,6 +80,72 @@ const CATS = [
    dashes, e.g. "how-to-build-credit-with-no-credit-history"). Any card whose title has
    no entry here opens a "coming soon" page instead of a dead link. */
 const ARTICLES = {
+  "what-does-buy-now-pay-later-mean": {
+    cat:"banking-credit",
+    title:"What does 'buy now, pay later' mean?",
+    dek:"Shoppers are expected to put a record $21.3 billion on buy now, pay later this holiday season. Here's how 'pay in four' works, whether it affects your credit score, what happens if you miss a payment, and when it makes sense.",
+    date:"Nov 24, 2026", read:"6 min read",
+    seo:"How Does Buy Now, Pay Later Work? Does It Affect Credit?",
+    faq:[["How does buy now, pay later work?", "The most common plan, pay in four, splits a purchase into four equal interest-free installments. You pay the first at checkout and the other three every two weeks, so the purchase is paid off in about six weeks."], ["Does buy now, pay later affect your credit score?", "It depends on the lender and the score. The Federal Reserve noted that most BNPL providers were not reporting loans to the credit bureaus at the time of its 2025 survey. FICO has since introduced FICO Score 10 BNPL and FICO Score 10 T BNPL, which factor in BNPL loans for lenders that choose to use them."], ["What happens if you miss a buy now, pay later payment?", "You may be charged a late fee; the CFPB found fees were often around $7 per missed payment in 2021. An automatic payment can also overdraw your bank account, and unpaid loans can be charged off and sent to collections."], ["Is buy now, pay later a good idea?", "It can be for planned purchases you could pay for anyway, since pay-in-four plans usually charge no interest. It's riskier when used to stretch a tight budget or when several plans are open at once, because fees and overlapping due dates add up."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li><strong>Buy now, pay later (BNPL)</strong> is a short-term loan at checkout that splits a purchase into a few payments, usually four interest-free installments over about six weeks.</li>
+<li>It's in the news because Adobe expects shoppers to put a record $21.3 billion on BNPL this holiday season, and new Block data shows even high earners using it.</li>
+<li>It can be a handy, interest-free tool, but missed payments can bring fees, bank overdrafts and debt that's easy to lose track of.</li>
+</ul></div>
+
+<p>If you've seen "Pay in 4" at checkout lately, you're not alone. Adobe forecasts that U.S. shoppers will spend a record $21.3 billion online with buy now, pay later from November 1 to December 31, up 6.6% from last year, according to its <a href="https://www.businesswire.com/news/home/20260928285775/en/Adobe-U.S.-Holiday-Shopping-Season-to-Hit-Record-$275.1-Billion-Online-Rising-6.7-YoY" target="_blank" rel="noopener">holiday forecast</a>. Here's how it works and what to watch out for.</p>
+
+<h2>What is buy now, pay later?</h2>
+<p>BNPL is a type of loan offered when you check out, online or in a store. Instead of paying the full price up front, you pay part of it now and the rest over the next few weeks or months. Apps such as Affirm, Afterpay, Klarna and PayPal offer it, often right on the retailer's checkout page.</p>
+
+<h2>How does buy now, pay later work?</h2>
+<p>The most common version is "pay in four." The Consumer Financial Protection Bureau (CFPB) <a href="https://files.consumerfinance.gov/f/documents/cfpb_buy-now-pay-later-market-trends-consumer-impacts_report_2022-09.pdf" target="_blank" rel="noopener">describes it</a> as a no-interest loan that splits a purchase into four equal installments: the first is paid at checkout, and the other three are due every two weeks over six weeks.</p>
+<ul>
+<li><strong>Example:</strong> a $200 jacket becomes four $50 payments. You pay $50 today and $50 every two weeks after that.</li>
+<li><strong>Automatic payments:</strong> the remaining installments are usually charged to your debit or credit card on schedule.</li>
+<li><strong>Longer plans exist.</strong> Some BNPL loans for bigger purchases run for months and can charge interest, so read the terms before you agree.</li>
+</ul>
+
+<h2>How popular is it?</h2>
+<p>Sixteen percent of U.S. adults used BNPL in the prior 12 months, up from 10% in 2021, the Federal Reserve found in its <a href="https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-credit.htm" target="_blank" rel="noopener">2025 survey of household finances</a>, published in May 2026. Nearly half of users bought clothing and accessories with it, and one in five used it for groceries or food delivery.</p>
+<p>It isn't only for people short on cash. Among people who use deferred payments, 69% of households earning $100,000 or more had used BNPL or checkout financing in the past 12 months, compared with 61% of those earning under $50,000, according to Block data <a href="https://www.cp24.com/news/money/2026/11/23/even-affluent-shoppers-are-embracing-buy-now-pay-later-block-data-shows/" target="_blank" rel="noopener">reported by Reuters</a> on November 23.</p>
+<p>Why do people use it? In the Fed survey, the top reasons were wanting to spread out payments (31%) and that it was the only way they could afford the purchase (29%).</p>
+
+<h2>Does buy now, pay later affect your credit score?</h2>
+<p>It depends on the lender and the score. The Fed noted that when it ran its survey, most BNPL providers were not reporting loans to the credit bureaus, so on-time payments generally didn't help credit scores. Yet 53% of BNPL users wrongly believed that paying on time helps their score.</p>
+<p>That's starting to change. In June 2025, FICO <a href="https://www.businesswire.com/news/home/20250623623014/en/FICO-Unveils-Groundbreaking-Credit-Scores-That-Incorporate-Buy-Now-Pay-Later-Data" target="_blank" rel="noopener">announced</a> two new scores, FICO Score 10 BNPL and FICO Score 10 T BNPL, that factor in BNPL loans. Lenders choose which score to use, so whether your BNPL history counts depends on who's checking. Our guide to <a href="/banking-credit/how-credit-scores-are-actually-calculated/">how credit scores are calculated</a> explains what matters most.</p>
+
+<h2>What happens if you miss a BNPL payment?</h2>
+<ul>
+<li><strong>Late fees.</strong> The CFPB found late fees were often around $7 per missed payment on an average loan of $135, based on 2021 data. In the Fed survey, slightly more than a quarter of BNPL users had paid late at least once, and 64% of those were charged extra for it.</li>
+<li><strong>Bank fees.</strong> Because payments are pulled automatically, a short balance can trigger an overdraft. Eleven percent of BNPL users had a payment cause an overdraft or non-sufficient funds fee in the prior year, the <a href="https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-credit.htm" target="_blank" rel="noopener">Fed found</a>. Here's <a href="/banking-credit/overdraft-fees-how-to-avoid-them-for-good/">how to avoid overdraft fees</a>.</li>
+<li><strong>Collections.</strong> Unpaid loans can be charged off and sent to collections. The <a href="https://files.consumerfinance.gov/f/documents/cfpb_buy-now-pay-later-market-trends-consumer-impacts_report_2022-09.pdf" target="_blank" rel="noopener">CFPB</a> found 3.8% of borrowers had a BNPL loan charged off in 2021.</li>
+</ul>
+
+<h2>Is buy now, pay later a good idea?</h2>
+<p>It can be, if you'd have paid cash anyway. Spreading a planned purchase over six weeks with no interest costs nothing extra, and it can beat a credit card balance that charges interest.</p>
+<p>The risk is "loan stacking": several small plans from different apps, each due on a different day. Each one looks affordable, but together they can crowd your budget. A few habits help:</p>
+<ul>
+<li><strong>Use it only for things you'd buy anyway</strong>, not to stretch for something you can't afford.</li>
+<li><strong>Track every plan</strong> and its due dates in one place.</li>
+<li><strong>Keep a cushion</strong> in checking so automatic payments don't bounce.</li>
+<li><strong>For big holiday costs, save ahead.</strong> A <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/">sinking fund</a> lets you pay in full without borrowing.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Pay in four:</strong> the standard BNPL plan of four payments over about six weeks.</li>
+<li><strong>Loan stacking:</strong> having several BNPL loans open at once, often with different lenders.</li>
+<li><strong>Charge-off:</strong> when a lender gives up on collecting a debt and writes it off as a loss, often passing it to collections.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>Buy now, pay later splits a purchase into a few short-term payments, often with no interest. Used for planned purchases and paid on time, it's a convenient tool. Used to stretch a tight budget, it can lead to fees, overdrafts and more debt than you meant to take on. Treat every plan like the loan it is.</p>
+
+<p class="art-note">Figures cited are from the Federal Reserve, the CFPB, FICO, Adobe and news reports as of November 24, 2026, and will change. This post is for education only and is not investment advice.</p>
+`},
   "how-credit-scores-are-actually-calculated": {
     cat:"banking-credit",
     title:"How credit scores are actually calculated",
@@ -3393,6 +3459,7 @@ const RELATED = {
   "balance-transfer-cards-when-theyre-worth-it": ["debt-snowball-vs-avalanche-which-wins","how-credit-scores-are-actually-calculated","reader-q-should-i-pay-off-debt-or-invest-first","debt"],
   "debt-snowball-vs-avalanche-which-wins": ["balance-transfer-cards-when-theyre-worth-it","reader-q-should-i-pay-off-debt-or-invest-first","the-50-30-20-budget-explained-with-examples","debt"],
   "how-to-build-credit-with-no-credit-history": ["how-credit-scores-are-actually-calculated","overdraft-fees-how-to-avoid-them-for-good","balance-transfer-cards-when-theyre-worth-it"],
+  "what-does-buy-now-pay-later-mean": ["overdraft-fees-how-to-avoid-them-for-good","how-credit-scores-are-actually-calculated","sinking-funds-the-stress-free-way-to-save","debt"],
   "overdraft-fees-how-to-avoid-them-for-good": ["the-3-account-system-that-makes-saving-automatic","how-much-should-be-in-your-emergency-fund","20-painless-ways-to-cut-monthly-bills","emergency"],
   "index-funds-vs-etfs-whats-the-difference": ["how-to-build-a-three-fund-portfolio","what-is-an-expense-ratio-and-why-it-matters","how-to-start-investing-with-100","compound"],
   "roth-ira-vs-traditional-ira-simply-explained": ["how-to-start-investing-with-100","hsa-vs-fsa-explained","reader-q-should-i-pay-off-debt-or-invest-first","millionaire"],
@@ -3675,6 +3742,7 @@ const PHOTOS = {
   "what-does-ai-bubble-mean": { id: "photo-1560981266-6bf9e7a88280", alt: "Colorful soap bubbles floating over a city square" },
   "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
   "what-is-a-stock-market-correction-and-should-you-worry": { id: "photo-1744782211816-c5224434614f", alt: "Stock charts displayed on multiple screens" },
+  "what-does-buy-now-pay-later-mean": { id: "photo-1758524943857-de2839355a93", alt: "Man shopping online with a phone and a credit card" },
   "how-credit-scores-are-actually-calculated": { id: "photo-1653330963134-329a61aedc68", alt: "Person holding a credit card and a phone" },
   "high-yield-savings-vs-money-market-accounts": { id: "photo-1633158829585-23ba8f7c8caf", alt: "Hand stacking coins on a table" },
   "balance-transfer-cards-when-theyre-worth-it": { id: "photo-1673837552444-7a90431588fe", alt: "Person holding a credit card next to a calculator" },
