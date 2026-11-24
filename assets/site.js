@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["What does 'AI bubble' mean?","Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -2616,6 +2616,76 @@ const ARTICLES = {
 
 <p class="art-note">VIX readings change every trading day; figures cited are as of November 20, 2026, from Cboe, FRED, SIFMA, FINRA and news reports. This post is for education only and is not investment advice.</p>
 `},
+  "what-does-ai-bubble-mean": {
+    cat:"investing",
+    title:"What does 'AI bubble' mean?",
+    dek:"The Nasdaq just had its worst week since 2020, and 'AI bubble' is the phrase behind the fear. Here's what a bubble is, how one inflates and pops, what the dot-com crash teaches, and what it means for your money.",
+    date:"Nov 24, 2026", read:"6 min read",
+    seo:"What Is the AI Bubble? What Happens If It Bursts, Explained",
+    faq:[["What is the AI bubble?", "The AI bubble is the worry that prices of stocks tied to artificial intelligence, such as chipmakers and cloud companies, have risen far beyond what their future profits can justify. It describes a concern, not a proven fact; a bubble is usually only confirmed after it pops."], ["Will the AI bubble burst?", "No one can know in advance. The Federal Reserve said in November 2026 that stock valuations remained well above their historical median, partly on AI enthusiasm, but also that rising earnings expectations have pushed the forward price-to-earnings ratio down over the past year."], ["What happens if the AI bubble bursts?", "AI-linked stocks would fall, and broad index funds that own them would likely fall too. Companies could cut data center spending, which would hurt their suppliers, and debt used to fund the buildout could come under strain."], ["Is the AI bubble like the dot-com bubble?", "The dot-com bust is the closest comparison. The Nasdaq Composite closed at a record 5,048.62 on March 10, 2000, and fell to 1,114.11 by October 9, 2002, a drop of about 78%, according to Nasdaq data on FRED."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>The <strong>AI bubble</strong> is the worry that prices of AI-linked stocks have climbed far beyond what those companies' future profits can justify, and could fall hard.</li>
+<li>It's in the news because the Nasdaq fell 10% in the week ending November 20, its biggest weekly drop since March 2020, then jumped 6.5% on Monday.</li>
+<li>Nobody can know in advance whether a bubble will burst. A diversified plan works either way.</li>
+</ul></div>
+
+<p>If "AI bubble" was everywhere in your news feed this week, there's a reason. AI stocks sold off so hard that the Nasdaq posted its biggest weekly fall since March 2020 and Wall Street's "fear gauge" topped 40 for the first time since April 2025, <a href="https://live.euronext.com/en/financial-news/us-futures-rally-ai-selloff-pauses-asian-authorities-support-stocks" target="_blank" rel="noopener">Reuters reported</a>. Here's what the phrase means and what it means for your money. (Our <a href="/investing/what-does-vix-mean/">VIX guide</a> explains the fear gauge.)</p>
+
+<h2>What is the AI bubble?</h2>
+<p>A market bubble is when the price of an asset rises far above what it's realistically worth, usually because buyers expect prices to keep rising, not because the underlying business supports them. "AI bubble" is shorthand for the concern that this has happened to stocks tied to artificial intelligence: chipmakers, cloud companies and the firms building AI models.</p>
+<p>The term describes a worry, not a proven fact. A bubble is usually only confirmed after it pops.</p>
+
+<h2>How does a stock market bubble work?</h2>
+<p>Bubbles tend to follow a pattern:</p>
+<ul>
+<li><strong>A real story.</strong> A new technology promises big changes, and early investors earn large gains.</li>
+<li><strong>Rising prices pull in more buyers.</strong> People buy because prices have been going up, and fear missing out.</li>
+<li><strong>Prices outrun profits.</strong> Investors pay more and more for each dollar of expected earnings.</li>
+<li><strong>A trigger.</strong> Disappointing results, higher interest rates or a shock make buyers rethink.</li>
+<li><strong>Selling feeds on itself.</strong> Falling prices force borrowers and nervous holders to sell, pushing prices lower.</li>
+</ul>
+<p>The hard part is the third step. A high price can mean a bubble, or it can mean investors correctly expect fast profit growth.</p>
+
+<h2>Why is everyone talking about an AI bubble now?</h2>
+<p>The Nasdaq Composite closed at 25,136.27 on November 13, according to <a href="https://fred.stlouisfed.org/series/NASDAQCOM" target="_blank" rel="noopener">Nasdaq data on FRED</a>. A week later it was about 10% lower. On Monday, November 23, it rebounded 6.5% to 24,089.56 after Nvidia reinstated Jensen Huang as CEO, leaving it 13.1% below its all-time high, <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-nov-24-080800306.html" target="_blank" rel="noopener">Zacks reported on Yahoo Finance</a>.</p>
+<p>Regulators have been flagging the risk too. In its November <a href="https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf" target="_blank" rel="noopener">Financial Stability Report</a>, the Federal Reserve said the forward price-to-earnings ratio for stocks "remained well above its historical median, partly driven by market enthusiasm" for "super intelligence." AI topped the list of risks most often cited by the market contacts the Fed surveyed in September and October. The report also noted that bond issuance by the largest investment-grade firms involved in operating data centers "was greater than $150 billion year to date."</p>
+
+<h2>Is AI really a bubble?</h2>
+<p>There are serious arguments on both sides.</p>
+<ul>
+<li><strong>The case for worry:</strong> valuations are high by historical standards and a lot of the spending is funded with debt. Some of the money also loops between partners, a pattern explained in our guide to <a href="/investing/what-does-circular-financing-mean/">circular financing</a>.</li>
+<li><strong>The case against:</strong> profits are growing too. The Fed noted that rising earnings expectations have "pushed down the forward price-to-earnings ratio over the past year," meaning profits have partly caught up with prices.</li>
+</ul>
+
+<h2>What happened when the dot-com bubble burst?</h2>
+<p>The closest comparison is the late-1990s internet boom. The Nasdaq Composite closed at a record 5,048.62 on March 10, 2000. By October 9, 2002, it had fallen to 1,114.11, a drop of about 78%, according to <a href="https://fred.stlouisfed.org/series/NASDAQCOM" target="_blank" rel="noopener">FRED</a>.</p>
+<p>The internet still changed the world. That's the lesson: a technology can be real and still be overpriced for a while. Someone who bought the index at the 2000 peak lost most of that money, on paper, within two and a half years.</p>
+
+<h2>What happens if the AI bubble bursts?</h2>
+<p>If AI stocks fell sharply, broad stock index funds would likely fall too, since they own AI companies alongside everything else. Companies could cut spending on data centers, which would hit their suppliers. Debt taken on to fund the buildout could also come under strain, which is one reason the Fed is watching it.</p>
+<p>It wouldn't necessarily mean a recession or the end of AI. It would most likely mean lower prices and slower spending until profits catch up.</p>
+
+<h2>What it means for everyday investors</h2>
+<ul>
+<li><strong>Don't try to time it.</strong> This week showed how fast markets swing both ways. Read up on <a href="/trending/what-is-a-stock-market-correction-and-should-you-worry/">what a stock market correction is</a> before selling in a panic.</li>
+<li><strong>Diversify.</strong> The SEC's <a href="https://www.investor.gov/introduction-investing/getting-started/asset-allocation" target="_blank" rel="noopener">Investor.gov</a> sums it up as "Don't put all your eggs in one basket," and warns that a fund "won't necessarily provide diversification, especially if it is narrowly focused." A simple <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a> spreads your money across U.S. stocks, international stocks and bonds.</li>
+<li><strong>Keep short-term money out of stocks.</strong> Cash you'll need in the next few years belongs in savings, not in a hot theme.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Dot-com bubble:</strong> the late-1990s run-up in internet stocks that collapsed from 2000 to 2002.</li>
+<li><strong>Price-to-earnings (P/E) ratio:</strong> a stock's price divided by its earnings per share; higher means investors are paying more for each dollar of profit.</li>
+<li><strong>Hyperscaler capex:</strong> what the giant cloud companies spend on data centers, chips and equipment.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>"AI bubble" is the fear that AI stock prices have run ahead of the profits behind them. It may prove right, or the profits may catch up. You don't need to know which. A diversified portfolio, an emergency fund and a long time horizon let you ride out either outcome.</p>
+
+<p class="art-note">Figures cited are from the Federal Reserve, FRED (Nasdaq data) and news reports as of November 24, 2026, and will change. This post is for education only and is not investment advice.</p>
+`},
   "what-does-circular-financing-mean": {
     cat:"investing",
     title:"What does 'circular financing' mean?",
@@ -3295,6 +3365,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
 const RELATED = {
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": ["what-does-circular-financing-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
+  "what-does-ai-bubble-mean": ["what-does-circular-financing-mean","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
   "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
@@ -3601,6 +3672,7 @@ const TOOL_PAGES = {
 const PHOTOS = {
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": { id: "photo-1431540015161-0bf868a2d407", alt: "Empty boardroom with an oval wooden table and chairs" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
+  "what-does-ai-bubble-mean": { id: "photo-1560981266-6bf9e7a88280", alt: "Colorful soap bubbles floating over a city square" },
   "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
   "what-is-a-stock-market-correction-and-should-you-worry": { id: "photo-1744782211816-c5224434614f", alt: "Stock charts displayed on multiple screens" },
   "how-credit-scores-are-actually-calculated": { id: "photo-1653330963134-329a61aedc68", alt: "Person holding a credit card and a phone" },
