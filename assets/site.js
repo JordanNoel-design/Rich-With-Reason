@@ -3,16 +3,16 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-24",
-  "term": "Relief rally",
-  "def": "A quick jump in stock prices after a stretch of losses, when a big worry eases or news turns out better than investors feared. It can be short-lived and doesn't always mean the slide is over.",
-  "why": "The S&P 500 and Nasdaq surged 4.7% and 6.5% Monday after Jensen Huang's return to Nvidia sparked a relief rally in the battered AI trade, Reuters reported.",
+  "date": "2026-11-25",
+  "term": "Consumer confidence",
+  "def": "A monthly survey score of how upbeat Americans feel about business conditions, jobs and income, both now and in the months ahead. Economists watch it because confident people tend to spend more.",
+  "why": "The Conference Board's Consumer Confidence Index rose 11.4 points to 103.3 in November, up from 91.9 in October, the group reported Tuesday.",
   "source": {
-    "name": "Reuters (via Yahoo Finance)",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/asian-stocks-rally-huangs-nvidia-013042563.html"
+    "name": "The Conference Board (PR Newswire)",
+    "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
   },
-  "link": "/trending/what-is-a-stock-market-correction-and-should-you-worry/",
-  "linkText": "Related: What is a stock market correction?"
+  "link": "/trending/",
+  "linkText": "More trending money news"
 };
 /* BUZZWORD:END */
 
