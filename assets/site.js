@@ -144,7 +144,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>Buy now, pay later splits a purchase into a few short-term payments, often with no interest. Used for planned purchases and paid on time, it's a convenient tool. Used to stretch a tight budget, it can lead to fees, overdrafts and more debt than you meant to take on. Treat every plan like the loan it is.</p>
 
-<p class="art-note">Figures cited are from the Federal Reserve, the CFPB, FICO, Adobe and news reports as of November 24, 2026, and will change. This post is for education only and is not investment advice.</p>
+<p class="art-note">Figures cited are from the Federal Reserve, the CFPB, FICO, Adobe and news reports as of November 24, 2026, and will change. This post is for education only and is not financial advice.</p>
 `},
   "how-credit-scores-are-actually-calculated": {
     cat:"banking-credit",
@@ -647,7 +647,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>You don't have to retire at 40 to benefit from FIRE thinking. Knowing your number, spending on purpose and investing the gap gives you options, whether that's retiring early, switching careers or simply sleeping better.</p>
 
-<p class="art-note">Examples are simplified and assume steady returns. Real markets go up and down, and your situation may differ. This article is for education only and isn't financial advice.</p>
+<p class="art-note">Examples are simplified and assume steady returns. Real markets go up and down, and your situation may differ. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't financial advice.</p>
 `},
   "the-4-rule-in-plain-english": {
     cat:"financial-freedom",
@@ -717,7 +717,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>The 4% rule is a useful, research-backed rule of thumb. It turns "how much do I need?" into a number you can work toward. Just remember it describes a cautious starting point, not a promise. Pair it with flexibility and an annual check-up, and it's a solid foundation for a retirement plan.</p>
 
-<p class="art-note">Withdrawal research is based on historical data and forecasts that may not repeat. This article is for education only and isn't financial, tax or investment advice.</p>
+<p class="art-note">Withdrawal research is based on historical data and forecasts that may not repeat. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't financial, tax or investment advice.</p>
 `},
   "12-side-hustles-you-can-start-this-weekend": {
     cat:"financial-freedom",
@@ -804,7 +804,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>The best side hustle is the one you'll actually start. Keep it simple, take care of the taxes and point every extra dollar at a goal. That's how a few weekend hours turn into real financial progress.</p>
 
-<p class="art-note">Platform rules, pay and availability vary by location. Tax rules summarized here are general and for 2026; check with a tax professional about your situation. This article is for education only.</p>
+<p class="art-note">Platform rules, pay and availability vary by location. Tax rules summarized here are general and for 2026; check with a tax professional about your situation. This article is for education only and isn't financial or tax advice.</p>
 `},
   "how-to-calculate-your-financial-independence-number": {
     cat:"financial-freedom",
@@ -901,7 +901,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>Your FI number turns a fuzzy dream into a measurable goal. Calculate it, write it down and check it once a year. Watching that "percent of the way there" number climb is one of the most motivating things in personal finance.</p>
 
-<p class="art-note">Calculations are simplified and assume steady growth; real returns vary. This article is for education only and isn't financial advice.</p>
+<p class="art-note">Calculations are simplified and assume steady growth; real returns vary. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't financial advice.</p>
 `},
   "passive-income-ideas-that-actually-work": {
     cat:"financial-freedom",
@@ -989,7 +989,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>The most reliable passive income isn't a clever trick. It's a growing pile of invested money that pays you back. Every other idea on this list works best as a way to feed that pile faster.</p>
 
-<p class="art-note">Rates cited are approximate as of November 2026 and change often. Investments can lose value. This article is for education only and isn't financial or investment advice.</p>
+<p class="art-note">Rates cited are approximate as of November 2026 and change often. Investments can lose value. Past performance doesn't guarantee future results. This article is for education only and isn't financial or investment advice.</p>
 `},
   "why-your-savings-rate-matters-more-than-returns": {
     cat:"financial-freedom",
@@ -1071,7 +1071,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>You can't control the market. You can control your savings rate, and for most people it's the number that decides how soon they're free. Calculate yours today, write it down and try to nudge it up a little every few months.</p>
 
-<p class="art-note">Examples assume steady returns for illustration; real returns vary year to year and are not guaranteed. This article is for education only and isn't financial advice.</p>
+<p class="art-note">Examples assume steady returns for illustration; real returns vary year to year and are not guaranteed. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't financial advice.</p>
 `},
   "the-50-30-20-budget-explained-with-examples": {
     cat:"personal-finance",
@@ -1588,7 +1588,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>Talking about money is a skill, and like any skill it gets easier with practice. Start with values, share the full picture, pick a fair system and check in regularly. The goal isn't to agree on everything. It's to make decisions as a team.</p>
 
-<p class="art-note">If you're in a relationship where money is used to control or limit you, that's a form of financial abuse. Support is available through the National Domestic Violence Hotline at 1-800-799-7233. This article is for education only.</p>
+<p class="art-note">If you're in a relationship where money is used to control or limit you, that's a form of financial abuse. Support is available through the National Domestic Violence Hotline at 1-800-799-7233. This article is for education only and isn't financial advice.</p>
 `},
   "index-funds-vs-etfs-whats-the-difference": {
     cat:"investing",
@@ -1748,7 +1748,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>Roth means pay tax now and none later. Traditional means a possible tax break now and pay tax later. If you're unsure and eligible, a Roth is a great default for many younger savers. Most importantly, open one, contribute regularly and invest the money.</p>
 
-<p class="art-note">Limits shown are for 2026 and change annually. Tax situations vary, so consider consulting a tax professional. This article is for education only and isn't tax or investment advice.</p>
+<p class="art-note">Limits shown are for 2026 and change annually. Tax situations vary, so consider consulting a tax professional. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't tax or investment advice.</p>
 `},
   "how-to-start-investing-with-100": {
     cat:"investing",
@@ -1834,7 +1834,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>$100 is enough to become an investor today. Open the right account, buy a broad, low-cost fund, automate small contributions and leave it alone. The amount will grow with your income. The habit is what makes the difference.</p>
 
-<p class="art-note">Return figures are hypothetical and assume a steady 7% annual return for illustration; actual returns vary and aren't guaranteed. Investing involves risk, including loss of principal. This article is for education only and isn't investment advice.</p>
+<p class="art-note">Return figures are hypothetical and assume a steady 7% annual return for illustration; actual returns vary and aren't guaranteed. Investing involves risk, including loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't investment advice.</p>
 `},
   "what-is-an-expense-ratio-and-why-it-matters": {
     cat:"investing",
@@ -1914,7 +1914,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>You can't control the market, but you can control what you pay. Choosing low-cost funds is one of the simplest, most reliable ways to keep more of your returns, and over decades it can be worth as much as years of extra saving.</p>
 
-<p class="art-note">Examples are hypothetical and assume steady returns; actual results vary. This article is for education only and isn't investment advice.</p>
+<p class="art-note">Examples are hypothetical and assume steady returns; actual results vary. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't investment advice.</p>
 `},
   "dollar-cost-averaging-explained": {
     cat:"investing",
@@ -2067,7 +2067,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>Three low-cost index funds, a mix you can live with and a yearly rebalance: that's a complete investment plan. It's not exciting, and that's exactly why it works.</p>
 
-<p class="art-note">Sample allocations are illustrative, not recommendations. Investing involves risk, including loss of principal. This article is for education only and isn't investment advice.</p>
+<p class="art-note">Sample allocations are illustrative, not recommendations. Investing involves risk, including loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't investment advice.</p>
 `},
   "term-vs-whole-life-insurance-which-do-you-need": {
     cat:"insurance",
@@ -2608,7 +2608,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>Nvidia's board reversed course and brought Jensen Huang back, and the stock surged before Monday's open. But the investigation continues, the AI trade is still shaky, and the stock remains far below its October level. For most people, the lesson is the one markets keep teaching: diversify, think long term, and don't let one company's drama run your plan.</p>
 
-<p class="art-note">Figures are from Nvidia's SEC filings, Yahoo Finance price data and news reports as of the morning of November 23, 2026, before the market opened, and will change. This post is for education only and is not investment advice.</p>
+<p class="art-note">Figures are from Nvidia's SEC filings, Yahoo Finance price data and news reports as of the morning of November 23, 2026, before the market opened, and will change. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
 `},
   "what-does-vix-mean": {
     cat:"investing",
@@ -2680,7 +2680,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>The VIX turns options prices into one number that shows how nervous traders are about the next 30 days. This week it rose sharply as stocks fell, which is exactly what the "fear gauge" is built to do. A high reading is a cue to review your plan and timeline, not a prediction of tomorrow.</p>
 
-<p class="art-note">VIX readings change every trading day; figures cited are as of November 20, 2026, from Cboe, FRED, SIFMA, FINRA and news reports. This post is for education only and is not investment advice.</p>
+<p class="art-note">VIX readings change every trading day; figures cited are as of November 20, 2026, from Cboe, FRED, SIFMA, FINRA and news reports. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
 `},
   "what-does-circular-financing-mean": {
     cat:"investing",
@@ -2744,7 +2744,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>Circular financing is money that loops from a supplier to its customer and back again as sales. In AI, those loops now run into the hundreds of billions of dollars, and the Fed and the IMF are watching them closely. For everyday investors, the takeaway is simple: stay diversified, look past headline growth numbers, and don't bet your plan on one theme.</p>
 
-<p class="art-note">Figures cited are from the Federal Reserve, the IMF, Anthropic's SEC filing and announcement, and news reports as of November 21, 2026, and will change. This post is for education only and is not investment advice.</p>
+<p class="art-note">Figures cited are from the Federal Reserve, the IMF, Anthropic's SEC filing and announcement, and news reports as of November 21, 2026, and will change. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
 `},
   "what-is-a-stock-market-correction-and-should-you-worry": {
     cat:"trending",
@@ -2809,7 +2809,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>A correction is a 10% to 20% drop from a recent high, and on November 20 the S&P 500 and the Dow both fell into one as AI worries, high interest rates and hot inflation data piled up. Corrections are common, usually short and rarely the end of the story. The best defense is a plan you set before the headlines turn scary: an emergency fund, a diversified mix and steady investing over time.</p>
 
-<p class="art-note">Figures cited are from Fidelity, Charles Schwab, the SEC, Nasdaq (a 2022 Forbes Advisor analysis), Charlie Bilello's data and news reports as of November 22, 2026, and will change. This post is for education only and is not investment advice.</p>
+<p class="art-note">Figures cited are from Fidelity, Charles Schwab, the SEC, Nasdaq (a 2022 Forbes Advisor analysis), Charlie Bilello's data and news reports as of November 22, 2026, and will change. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
 `},
   "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": {
     cat:"trending",
@@ -2871,7 +2871,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>An IPO is how a private company becomes a public one, and Anthropic's deal is the biggest IPO on record. The excitement is real, but so is the data: first-day gains mostly go to big investors who got in at the IPO price, and new stocks have often lagged the market over the next few years. For most people, a diversified, low-cost portfolio is still the simplest way to own the companies shaping the economy.</p>
 
-<p class="art-note">Figures cited are from the SEC, Professor Jay Ritter's IPO data and news reports as of November 19, 2026, before Anthropic's shares began trading, and will change. This post is for education only and is not investment advice.</p>
+<p class="art-note">Figures cited are from the SEC, Professor Jay Ritter's IPO data and news reports as of November 19, 2026, before Anthropic's shares began trading, and will change. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
 `},
   "what-happens-when-the-fed-raises-interest-rates": {
     cat:"trending",
@@ -2935,7 +2935,7 @@ const ARTICLES = {
 <h2>The bottom line</h2>
 <p>A rate hike is the Fed's way of tapping the brakes on inflation by making money more expensive to borrow. You can't control what the Fed does on December 9, but you can control your exposure: shrink variable-rate debt, keep your savings in an account that pays a real yield, and stick to your long-term investing plan.</p>
 
-<p class="art-note">Rates and economic data cited are from the Federal Reserve, the Bureau of Labor Statistics and news reports as of November 17, 2026, and will change. This post is for education only and is not investment advice.</p>
+<p class="art-note">Rates and economic data cited are from the Federal Reserve, the Bureau of Labor Statistics and news reports as of November 17, 2026, and will change. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
 `},
   "what-is-a-soft-landing-in-economics": {
     cat:"trending",
@@ -3351,7 +3351,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
 
 <p><em>Have a money question? Join The Weekly Reason and reply to any issue. We answer reader questions every week.</em></p>
 
-<p class="art-note">Reader questions are edited for length and clarity, and identifying details may be changed or combined to protect privacy. This article is for education only and isn't financial advice. Your situation may differ, so consider speaking with a licensed professional.</p>
+<p class="art-note">Reader questions are edited for length and clarity, and identifying details may be changed or combined to protect privacy. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This article is for education only and isn't financial advice. Your situation may differ, so consider speaking with a licensed professional.</p>
 `},
 };
 
@@ -3426,7 +3426,7 @@ const TOOLS = {
     slug:"compound-calculator", name:"Compound interest calculator", icon:"compound",
     blurb:"See what steady monthly investing could grow into, and how much comes from growth.",
     fields:{ m:fld("Monthly contribution","usd",0,2500,25,300), y:fld("Years invested","years",1,50,1,20), r:fld("Average annual return","pct",0,15,0.25,7) },
-    note:"Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, and returns aren't guaranteed.",
+    note:"Illustration only. Assumes a deposit at the end of each month and monthly compounding at a steady return, before taxes, fees and inflation. Real markets go up and down, returns aren't guaranteed, and past performance doesn't guarantee future results.",
     compute(v){
       const r=v.r/1200, fvAt=n=> r ? v.m*((Math.pow(1+r,n)-1)/r) : v.m*n;
       const fv=fvAt(v.y*12), c=v.m*v.y*12;
@@ -3468,7 +3468,7 @@ const TOOLS = {
     slug:"millionaire-calculator", name:"How long until I'm a millionaire?", icon:"millionaire",
     blurb:"See the age you'd hit $1 million with your current savings and monthly investing.",
     fields:{ age:fld("Your age","age",16,80,1,25), s:fld("Invested so far","usd",0,1000000,1000,5000), m:fld("Monthly investing","usd",0,10000,25,500), r:fld("Average annual return","pct",0,15,0.25,7) },
-    note:"Illustration only. Assumes monthly investing and compounding at a steady return, before taxes and fees. Because of inflation, $1 million in the future will buy less than $1 million today.",
+    note:"Illustration only. Assumes monthly investing and compounding at a steady return, before taxes and fees. Because of inflation, $1 million in the future will buy less than $1 million today. Real returns vary and aren't guaranteed.",
     compute(v){
       const r=v.r/1200; let b=v.s,n=0; const path=[b];
       while(b<1e6 && n<1200){ b=b*(1+r)+v.m; n++; path.push(b); }
@@ -3813,7 +3813,8 @@ function renderCat(c){
         <div class="box side-nl">
           <h3>Get ${c.name} tips weekly</h3>
           <p style="font-size:.86rem;color:var(--ink-soft)">Join The Weekly Reason and we'll include the best new ${c.name.toLowerCase()} guides every Sunday.</p>
-          <form class="side-form" data-topic="${c.slug}" novalidate><input type="email" placeholder="Email address"><button class="btn btn-primary" type="submit">Subscribe free</button></form>
+          <form class="side-form" data-topic="${c.slug}" novalidate><input type="email" placeholder="Email address" aria-label="Email address"><button class="btn btn-primary" type="submit">Subscribe free</button></form>
+          <div class="fine">Free. Unsubscribe anytime. See our <a href="/privacy/">Privacy Policy</a>.</div>
         </div>
         <div class="box">
           <h3>Key terms</h3>
@@ -3947,7 +3948,7 @@ function renderContact(){
 }
 
 // Legal pages: Privacy Policy, Terms of Use, Disclaimer and Disclosures
-const LEGAL_UPDATED = "November 19, 2026";
+const LEGAL_UPDATED = "November 25, 2026";
 const LEGAL = {
   privacy: { h1:"Privacy Policy", dek:"What information Rich With Reason collects, why, and the choices you have.", body:`
 <p>Rich With Reason (richwithreason.com) is owned and operated by Jordan Noel ("we," "us"). This policy explains what information we collect when you visit the site, subscribe to The Weekly Reason or email us, and how we use it. We keep it short and plain on purpose.</p>
@@ -3957,6 +3958,8 @@ const LEGAL = {
 <li><strong>Newsletter signups.</strong> When you subscribe, we collect your email address and, if you choose to give them, your first name and the topics you're interested in.</li>
 <li><strong>Emails you send us.</strong> If you write to us, we receive your email address, your message and anything else you choose to include.</li>
 <li><strong>Usage data.</strong> We use Google Analytics (loaded through Google Tag Manager) to understand how the site is used. It uses cookies and similar technology to collect information such as the pages you view, how you arrived at the site, your device and browser type, and your approximate location (city or region level). Google processes your IP address to provide this service.</li>
+<li><strong>Newsletter activity.</strong> Like most email newsletters, The Weekly Reason is sent through Wix, which can record whether an email was opened and which links were clicked. We use this only to see which topics are useful.</li>
+<li><strong>Photos.</strong> Article photos load from Unsplash (images.unsplash.com), which receives your IP address and basic browser details when an image loads, like any website you visit.</li>
 <li><strong>Server logs.</strong> Our hosting provider, GitHub Pages, may log your IP address and basic request details for security and to keep the site running.</li>
 <li><strong>Browser storage.</strong> To send your newsletter signup, the site stores a short-lived visitor token from our email provider, Wix, in your browser's local storage. It is not used to track you across other sites.</li>
 </ul>
@@ -3976,6 +3979,7 @@ const LEGAL = {
 <li><strong>Wix</strong>, which stores newsletter subscribers and sends The Weekly Reason.</li>
 <li><strong>Google</strong>, for Google Analytics and Google Tag Manager, the fonts used on the site (Google Fonts, which receives your IP address when the fonts load) and our Gmail inbox.</li>
 <li><strong>GitHub</strong>, which hosts the site.</li>
+<li><strong>Unsplash</strong>, which serves the photos on our articles.</li>
 </ul>
 <p>Each provider handles data under its own privacy policy. We may also disclose information if required by law or to protect our rights or the safety of others.</p>
 
@@ -4019,7 +4023,7 @@ const LEGAL = {
 <p>Our calculators give estimates based on the numbers you enter and simplified assumptions, such as steady returns. Results are hypothetical, aren't guaranteed and may differ from what a bank, lender or investment actually produces.</p>
 
 <h2>Our content</h2>
-<p>The text, graphics, logo, calculators and design of Rich With Reason are owned by Jordan Noel and protected by copyright and other laws. You're welcome to read, print and share links to our guides for your own personal, non-commercial use, and to quote a short excerpt with credit and a link back. Please don't copy, republish, sell or create derivative works from substantial parts of the site, or scrape or harvest its content, including to train AI models, without our written permission.</p>
+<p>The text, graphics, logo, calculators and design of Rich With Reason are owned by Jordan Noel and protected by copyright and other laws. Article photos come from Unsplash, are used under the free Unsplash License and belong to their photographers; they aren't covered by the permissions below. You're welcome to read, print and share links to our guides for your own personal, non-commercial use, and to quote a short excerpt with credit and a link back. Please don't copy, republish, sell or create derivative works from substantial parts of the site, or scrape or harvest its content, including to train AI models, without our written permission.</p>
 <p>"Rich With Reason," "The Weekly Reason" and "Buzzword Brief" are names we use for this site and its features. Other company, product and fund names mentioned on the site belong to their owners and are used only to identify them. A mention doesn't mean that company endorses us or that we endorse it.</p>
 
 <h2>Links to other sites</h2>
@@ -4049,7 +4053,7 @@ const LEGAL = {
 <p>Rich With Reason explains how money works in plain English. Everything on the site and in The Weekly Reason is general information for educational purposes. It is not personalized financial, investment, tax, insurance, accounting or legal advice, and nothing here is an offer or recommendation to buy or sell any security, insurance policy or other product. Rich With Reason is not a registered investment adviser, broker-dealer, insurance agency or tax preparer. Your situation is unique, so consider speaking with a qualified, licensed professional before making decisions.</p>
 
 <h2>Investing involves risk</h2>
-<p>All investing involves risk, including the possible loss of the money you invest. Past performance doesn't guarantee future results. Examples that use an average return, such as 7% a year, are hypothetical illustrations, not predictions or promises.</p>
+<p>All investing involves risk, including the possible loss of the money you invest. Past performance doesn't guarantee future results. Examples that use an average return, such as 7% a year, are hypothetical illustrations, not predictions or promises. Mentions of a specific company, stock or fund are for explanation only and aren't a recommendation to buy, sell or hold it.</p>
 
 <h2>Figures, rates and calculators</h2>
 <p>Rates, contribution limits, fees and other figures are accurate to the best of our knowledge as of the date shown on each guide, and they change often. Calculator results are estimates based on simplified assumptions. Always confirm current terms with the bank, lender, insurer or official source.</p>
@@ -4152,7 +4156,7 @@ function renderToolPage(key){
   <article class="article">${c.body}
     ${faqHTML(c.faq)}
     <div class="more-tools"><b>More free tools</b>${others}</div>
-    <p class="art-note">Results are estimates for education only and assume steady rates. This page isn't financial advice.</p>
+    <p class="art-note">Results are hypothetical estimates for education only and assume steady rates; real results vary and aren't guaranteed. Investing involves risk, including possible loss of principal, and past performance doesn't guarantee future results. This page isn't financial advice.</p>
   </article>`;
 }
 
