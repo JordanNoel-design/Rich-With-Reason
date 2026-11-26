@@ -43,7 +43,7 @@ const CATS = [
    intro:"Start here if you're new. Budgeting, emergency funds, taxes and everyday money habits — explained step by step, with no judgment and no jargon.",
    sub:["Budgeting","Emergency Fund","Taxes","Saving Money","Money Habits"],
    steps:[["Track one month of spending","You can't change what you can't see.","/personal-finance/the-50-30-20-budget-explained-with-examples/"],["Build a starter emergency fund","Aim for $1,000, then 3–6 months of expenses.","/personal-finance/how-much-should-be-in-your-emergency-fund/"],["Choose a budget style","50/30/20, zero-based or pay-yourself-first.","/trending/the-3-account-system-that-makes-saving-automatic/"],["Set one money goal","Specific, dated and automated.","/personal-finance/sinking-funds-the-stress-free-way-to-save/"]],
-   posts:["The 50/30/20 budget, explained with examples","How much should be in your emergency fund?","Sinking funds: the stress-free way to save","Tax refunds vs. adjusting your withholding","20 painless ways to cut monthly bills","How to talk about money with your partner"],
+   posts:["How much does Thanksgiving cost in 2026?","The 50/30/20 budget, explained with examples","How much should be in your emergency fund?","Sinking funds: the stress-free way to save","Tax refunds vs. adjusting your withholding","20 painless ways to cut monthly bills","How to talk about money with your partner"],
    terms:[["Net worth","What you own minus what you owe."],["Sinking fund","Saving monthly for a known future expense."],["Zero-based budget","Every dollar gets a job before the month begins."]]},
   {slug:"financial-freedom", name:"Financial Freedom", ico:ICON["financial-freedom"], color:"#0f5b3f", tint:"#e7f2ec",
    blurb:"FIRE, side income and the path to choosing how you spend your time.",
@@ -80,6 +80,77 @@ const CATS = [
    dashes, e.g. "how-to-build-credit-with-no-credit-history"). Any card whose title has
    no entry here opens a "coming soon" page instead of a dead link. */
 const ARTICLES = {
+  "how-much-does-thanksgiving-cost-in-2026": {
+    cat:"personal-finance",
+    title:"How much does Thanksgiving cost in 2026?",
+    dek:"Thanksgiving dinner costs more this year, mostly because of turkey, and then come Black Friday and Cyber Monday. Here's what the meal costs, what shoppers are expected to spend and how to keep the holiday on budget.",
+    date:"Nov 26, 2026", read:"5 min read",
+    seo:"How Much Does Thanksgiving Dinner Cost in 2026?",
+    faq:[["How much does Thanksgiving dinner cost in 2026?","A classic Thanksgiving dinner for 10 costs $58.63 in 2026, or about $5.86 per person, according to the American Farm Bureau Federation's annual survey. That is up 6% from 2025 but more than 8% below the 2022 record."],["How much does a turkey cost for Thanksgiving 2026?","A 16-pound frozen turkey averages $23.68 in the Farm Bureau's 2026 survey, up $2.38, or 10%, from 2025. That is about $1.48 a pound, though some shoppers found sales as low as 69 cents a pound."],["Why is Thanksgiving dinner more expensive this year?","The Farm Bureau points to higher turkey prices from strong demand and tight inventories, plus costs beyond the farm such as fuel, record diesel prices, fertilizer and labor. About one-third of the menu items actually fell in price."],["How much will people spend on Black Friday 2026?","Adobe forecast in September that U.S. shoppers would spend $12.9 billion online on Black Friday 2026, up 9.2%, and $47.5 billion over Cyber Week from Thanksgiving through Cyber Monday. These are forecasts, not final totals."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>A classic Thanksgiving dinner for 10 costs <strong>$58.63</strong> in 2026, up 6% from last year, according to the American Farm Bureau Federation's annual survey. That's about $5.86 per person.</li>
+<li>Turkey is the big driver: a 16-pound frozen bird averages $23.68, up 10%.</li>
+<li>The shopping weekend adds more. Adobe forecast $47.5 billion in U.S. online spending from Thanksgiving through Cyber Monday, while the National Retail Federation expects slightly fewer shoppers than last year.</li>
+</ul></div>
+
+<p>Thanksgiving week can get pricey: a big meal, maybe travel, and then the deals of Black Friday and Cyber Monday. Here's what the numbers say about Thanksgiving spending in 2026, and how to keep the holiday from blowing up your budget.</p>
+
+<h2>How much does Thanksgiving dinner cost in 2026?</h2>
+<p>The American Farm Bureau Federation's 41st annual survey puts the cost of a classic Thanksgiving dinner for 10 people at <strong>$58.63</strong>, <a href="https://www.fb.org/intel/markets/thanksgiving-dinner-cost-ticks-upward-in-2026" target="_blank" rel="noopener">up 6% from a year ago</a>. That's still more than 8% below the record high in 2022. Farm Bureau economist Faith Parum put it at "about $5.86 per person," <a href="https://www.fb.org/newsline/farm-bureau-survey-shows-thanksgiving-cost-higher-in-2026" target="_blank" rel="noopener">in a Farm Bureau interview</a>.</p>
+<p>The survey uses volunteer shoppers from all 50 states and Puerto Rico who price the items in a classic menu: turkey, stuffing, sweet potatoes, rolls, peas, cranberries, a veggie tray, pumpkin pie with whipped cream, milk, and more.</p>
+
+<h2>How much does a turkey cost this year?</h2>
+<p>The centerpiece costs more. A 16-pound frozen turkey averages <strong>$23.68</strong>, an increase of $2.38, or 10%, from 2025, <a href="https://www.fb.org/intel/markets/thanksgiving-dinner-cost-ticks-upward-in-2026" target="_blank" rel="noopener">the Farm Bureau says</a>. That works out to about $1.48 a pound. The Farm Bureau points to strong demand and tight inventories as the flock recovers from disease pressure.</p>
+<p>Sales can beat the average by a lot. The Farm Bureau says some shoppers found turkey for as low as 69 cents a pound.</p>
+
+<h2>Why is Thanksgiving dinner more expensive?</h2>
+<p>It isn't just the bird. The Farm Bureau lists costs beyond the farm, including fuel for processing and transportation, record diesel costs, elevated fertilizer prices and higher labor expenses. It also notes that less than 6 cents of every dollar spent on food goes back to the farm.</p>
+<p>Not everything went up. About one-third of the items fell in price:</p>
+<ul>
+<li><strong>Cheaper:</strong> the celery and carrot veggie tray (down 3.7%), frozen pie crusts (down 9 cents) and heavy whipping cream.</li>
+<li><strong>Pricier:</strong> turkey, milk and cranberries had the biggest percentage increases. A 12-ounce bag of cranberries costs nearly 9% more.</li>
+</ul>
+<p>Where you live matters too. The Farm Bureau's regional averages:</p>
+<ul>
+<li><strong>Northeast:</strong> $61.57</li>
+<li><strong>West:</strong> $58.74</li>
+<li><strong>Midwest:</strong> $56.89</li>
+<li><strong>South:</strong> $54.33</li>
+</ul>
+
+<h2>How much will people spend on Black Friday and Cyber Monday?</h2>
+<p>Once the plates are cleared, the shopping starts. In its September forecast, Adobe projected these U.S. online sales, <a href="https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record" target="_blank" rel="noopener">according to its announcement</a>:</p>
+<ul>
+<li><strong>Thanksgiving Day:</strong> $6.9 billion, up 8.5% from last year.</li>
+<li><strong>Black Friday:</strong> $12.9 billion, up 9.2%.</li>
+<li><strong>Cyber Monday:</strong> $15.1 billion, up 6.2%.</li>
+<li><strong>Cyber Week</strong> (Thanksgiving through Cyber Monday): $47.5 billion, up 7.4%.</li>
+</ul>
+<p>Adobe also expects shoppers to put $21.3 billion of November and December online spending on buy now, pay later plans, including $807 million on Black Friday alone. If you're tempted, read our guide to <a href="/banking-credit/what-does-buy-now-pay-later-mean/">how buy now, pay later works</a> first.</p>
+<p>The crowds may be a little smaller. The National Retail Federation <a href="https://nrf.com/media-center/press-releases/183-million-consumers-expected-to-shop-during-thanksgiving-weekend" target="_blank" rel="noopener">expects 182.7 million people</a> to shop from Thanksgiving through Cyber Monday, down slightly from 186.9 million last year. About 69% of them plan to shop on Black Friday and 36% on Cyber Monday. One reason: 60% of consumers had started holiday shopping by early November, NRF's survey of 7,956 adults found.</p>
+
+<h2>What it means for your wallet</h2>
+<ul>
+<li><strong>Set a holiday number first.</strong> Decide what the meal, travel and gifts can cost before you shop. A plan like the <a href="/personal-finance/the-50-30-20-budget-explained-with-examples/">50/30/20 budget</a> shows where the money can come from.</li>
+<li><strong>Share the meal.</strong> At about $5.86 a person for the basics, a potluck where guests bring sides can cut the host's bill sharply.</li>
+<li><strong>Shop the sales, not the headlines.</strong> A "deal" on something you didn't plan to buy is still spending. Make a list and compare prices before Black Friday.</li>
+<li><strong>Save for next year now.</strong> A small monthly <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/">sinking fund</a> turns next year's holiday into something you've already paid for.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Cyber Week:</strong> the five days from Thanksgiving through Cyber Monday, the year's biggest stretch for online deals.</li>
+<li><strong>Food inflation:</strong> the rise in grocery and restaurant prices over time.</li>
+<li><strong>Doorbuster:</strong> a deeply discounted item meant to draw shoppers into a store, often in limited supply.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>Thanksgiving dinner costs a bit more this year, mostly because of turkey, but it's still below its 2022 peak. The bigger budget risk is often the shopping weekend that follows. Decide your spending limit ahead of time, split the cooking, and let a sinking fund do the work for next year.</p>
+
+<p class="art-note">Figures are from the American Farm Bureau Federation, the National Retail Federation and Adobe as of November 26, 2026. Adobe's figures are forecasts made in September, and actual spending may differ. Prices vary by store and region. This post is for education only and is not investment advice.</p>
+`},
   "what-does-buy-now-pay-later-mean": {
     cat:"banking-credit",
     title:"What does 'buy now, pay later' mean?",
@@ -3359,6 +3430,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "how-much-does-thanksgiving-cost-in-2026": ["what-does-buy-now-pay-later-mean","sinking-funds-the-stress-free-way-to-save","the-50-30-20-budget-explained-with-examples","emergency"],
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": ["what-does-circular-financing-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
   "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
@@ -3666,6 +3738,7 @@ const TOOL_PAGES = {
    to be under the free Unsplash License (free for commercial use, no permission needed).
    Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
 const PHOTOS = {
+  "how-much-does-thanksgiving-cost-in-2026": { id: "photo-1605926637412-b0cd5a3e3543", alt: "Plate of cooked Thanksgiving food" },
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": { id: "photo-1431540015161-0bf868a2d407", alt: "Empty boardroom with an oval wooden table and chairs" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
   "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
