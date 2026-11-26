@@ -127,7 +127,7 @@ const ARTICLES = {
 <li><strong>Mortgages.</strong> The average 30-year fixed rate fell 7 basis points this week, to 7.21% from 7.28%, according to <a href="https://www.globenewswire.com/news-release/2026/11/25/3410486/0/en/mortgage-rates-dip-to-7-21.html" target="_blank" rel="noopener">Freddie Mac</a>. On a $400,000 loan, the monthly principal and interest at 7.21% is about $2,718. Just 25 basis points higher, at 7.46%, it's about $2,786. That's roughly $68 more a month, or about $24,500 over 30 years.</li>
 <li><strong>Savings.</strong> Banks set their own savings rates, but a 25 basis point bump, say from 4.00% to 4.25%, would earn about $25 more a year on $10,000. Here's whether <a href="/trending/are-high-yield-savings-rates-still-worth-it/">high-yield savings rates are still worth it</a>.</li>
 <li><strong>Fund fees.</strong> Fund costs are often quoted in basis points too. An expense ratio of 0.03% (3 basis points) costs $3 a year per $10,000 invested. One of 0.75% (75 basis points) costs $75. Learn more about <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why an expense ratio matters</a>.</li>
-<li><strong>Credit cards and loans.</strong> Many credit cards have variable rates tied to a benchmark, so a Fed hike can push them up. See <a href="/trending/what-happens-when-the-fed-raises-interest-rates/">what happens when the Fed raises interest rates</a>.</li>
+<li><strong>Credit cards and loans.</strong> Rate moves measured in basis points can also show up in what you pay to borrow. See <a href="/trending/what-happens-when-the-fed-raises-interest-rates/">what happens when the Fed raises interest rates</a>.</li>
 </ul>
 
 <h2>Related buzzwords</h2>
