@@ -1842,13 +1842,13 @@ const ARTICLES = {
     dek:"It's a fee you never see on a bill, and that's exactly why it's easy to ignore. Over a lifetime of investing, the difference between a cheap fund and an expensive one can reach tens of thousands of dollars.",
     date:"Nov 17, 2026", read:"5 min read",
     seo:"What Is an Expense Ratio? What's Good and Why It Matters",
-    faq:[["What is a good expense ratio?", "For broad stock or bond index funds, under 0.10% is excellent and under 0.20% is good. Actively managed funds often charge 0.50% to 1% or more."], ["How is an expense ratio charged?", "It's taken automatically from the fund's assets throughout the year, so you never get a bill. The returns you see are already after the fee."], ["Is a 1% expense ratio high?", "Yes, by today's standards. Investing $500 a month for 30 years, a 1% fund could leave you about $87,000 less than a 0.05% fund, assuming the same 7% market return."]],
+    faq:[["What is a good expense ratio?", "For broad stock or bond index funds, under 0.10% is excellent and under 0.20% is good. Actively managed funds often charge 0.50% to 1% or more."], ["How is an expense ratio charged?", "It's taken automatically from the fund's assets throughout the year, so you never get a bill. The returns you see are already after the fee."], ["Is a 1% expense ratio high?", "Yes, by today's standards. Investing $500 a month for 30 years, a 1% fund could leave you about $92,000 less than a 0.05% fund, assuming the same 7% market return."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
 <li>An expense ratio is the yearly fee a fund charges, as a percentage of your investment.</li>
 <li>It's taken automatically from the fund's returns, so you never see a bill.</li>
-<li>Investing $500 a month for 30 years, the difference between a 0.05% fund and a 1% fund could be about <strong>$87,000</strong>.</li>
+<li>Investing $500 a month for 30 years, the difference between a 0.05% fund and a 1% fund could be about <strong>$92,000</strong>.</li>
 </ul></div>
 
 <p>When you buy a mutual fund or ETF, you pay the fund company to run it. That cost is the <strong>expense ratio</strong>. It's one of the few things in investing you can control completely, and one of the best predictors of how much of the market's return you'll actually keep.</p>
@@ -1869,11 +1869,11 @@ const ARTICLES = {
 <table class="weights">
 <thead><tr><th>Expense ratio</th><th>Ending balance</th><th style="width:34%"></th></tr></thead>
 <tbody>
-<tr><td>0.05%</td><td class="pct">~$562,000</td><td><div class="wbar"><i style="width:100%"></i></div></td></tr>
-<tr><td>0.40%</td><td class="pct">~$528,000</td><td><div class="wbar"><i style="width:94%"></i></div></td></tr>
-<tr><td>1.00%</td><td class="pct">~$474,000</td><td><div class="wbar"><i style="width:84%"></i></div></td></tr>
+<tr><td>0.05%</td><td class="pct">~$579,000</td><td><div class="wbar"><i style="width:100%"></i></div></td></tr>
+<tr><td>0.40%</td><td class="pct">~$543,000</td><td><div class="wbar"><i style="width:94%"></i></div></td></tr>
+<tr><td>1.00%</td><td class="pct">~$487,000</td><td><div class="wbar"><i style="width:84%"></i></div></td></tr>
 </tbody></table>
-<p>Same deposits, same market. The only difference is the fee, and the gap between the cheapest and the most expensive is about <strong>$87,000</strong>.</p>
+<p>Same deposits, same market. The only difference is the fee, and the gap between the cheapest and the most expensive is about <strong>$92,000</strong>.</p>
 
 <h2>What's a "good" expense ratio?</h2>
 <p>Fees have fallen dramatically. According to the Investment Company Institute, the average expense ratio investors paid for equity mutual funds dropped from 1.04% in 1996 to 0.40% in 2025. Index equity mutual funds averaged just 0.05%. A rough guide:</p>
