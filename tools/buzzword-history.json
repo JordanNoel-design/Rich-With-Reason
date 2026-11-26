@@ -43,5 +43,10 @@
     "date": "2026-11-25",
     "term": "Consumer confidence",
     "source": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
+  },
+  {
+    "date": "2026-11-26",
+    "term": "PCE price index",
+    "source": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
   }
 ]

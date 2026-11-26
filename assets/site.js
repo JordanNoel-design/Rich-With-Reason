@@ -3,16 +3,16 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-25",
-  "term": "Consumer confidence",
-  "def": "A monthly survey score of how upbeat Americans feel about business conditions, jobs and income, both now and in the months ahead. Economists watch it because confident people tend to spend more.",
-  "why": "The Conference Board's Consumer Confidence Index rose 11.4 points to 103.3 in November, up from 91.9 in October, the group reported Tuesday.",
+  "date": "2026-11-26",
+  "term": "PCE price index",
+  "def": "A government measure of how the prices people in the U.S. pay for goods and services are changing, used to track inflation. It is the inflation gauge the Federal Reserve prefers.",
+  "why": "The Commerce Department reported Wednesday that the PCE price index rose 0.3% in October and was up 3.8% from a year earlier.",
   "source": {
-    "name": "The Conference Board (PR Newswire)",
-    "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
+    "name": "U.S. Bureau of Economic Analysis",
+    "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
   },
-  "link": "/trending/",
-  "linkText": "More trending money news"
+  "link": "/trending/what-happens-when-the-fed-raises-interest-rates/",
+  "linkText": "Related: What happens when the Fed raises rates"
 };
 /* BUZZWORD:END */
 
