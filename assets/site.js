@@ -3,16 +3,16 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-25",
-  "term": "Consumer confidence",
-  "def": "A monthly survey score of how upbeat Americans feel about business conditions, jobs and income, both now and in the months ahead. Economists watch it because confident people tend to spend more.",
-  "why": "The Conference Board's Consumer Confidence Index rose 11.4 points to 103.3 in November, up from 91.9 in October, the group reported Tuesday.",
+  "date": "2026-11-26",
+  "term": "PCE price index",
+  "def": "A government measure of how the prices people in the U.S. pay for goods and services are changing, used to track inflation. It is the inflation gauge the Federal Reserve prefers.",
+  "why": "The Commerce Department reported Wednesday that the PCE price index rose 0.3% in October and was up 3.8% from a year earlier.",
   "source": {
-    "name": "The Conference Board (PR Newswire)",
-    "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
+    "name": "U.S. Bureau of Economic Analysis",
+    "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
   },
-  "link": "/trending/",
-  "linkText": "More trending money news"
+  "link": "/trending/what-happens-when-the-fed-raises-interest-rates/",
+  "linkText": "Related: What happens when the Fed raises rates"
 };
 /* BUZZWORD:END */
 
@@ -43,7 +43,7 @@ const CATS = [
    intro:"Start here if you're new. Budgeting, emergency funds, taxes and everyday money habits — explained step by step, with no judgment and no jargon.",
    sub:["Budgeting","Emergency Fund","Taxes","Saving Money","Money Habits"],
    steps:[["Track one month of spending","You can't change what you can't see.","/personal-finance/the-50-30-20-budget-explained-with-examples/"],["Build a starter emergency fund","Aim for $1,000, then 3–6 months of expenses.","/personal-finance/how-much-should-be-in-your-emergency-fund/"],["Choose a budget style","50/30/20, zero-based or pay-yourself-first.","/trending/the-3-account-system-that-makes-saving-automatic/"],["Set one money goal","Specific, dated and automated.","/personal-finance/sinking-funds-the-stress-free-way-to-save/"]],
-   posts:["What does 'Section 301' mean?","The 50/30/20 budget, explained with examples","How much should be in your emergency fund?","Sinking funds: the stress-free way to save","Tax refunds vs. adjusting your withholding","20 painless ways to cut monthly bills","How to talk about money with your partner"],
+   posts:["How much does Thanksgiving cost in 2026?","The 50/30/20 budget, explained with examples","How much should be in your emergency fund?","Sinking funds: the stress-free way to save","Tax refunds vs. adjusting your withholding","20 painless ways to cut monthly bills","How to talk about money with your partner"],
    terms:[["Net worth","What you own minus what you owe."],["Sinking fund","Saving monthly for a known future expense."],["Zero-based budget","Every dollar gets a job before the month begins."]]},
   {slug:"financial-freedom", name:"Financial Freedom", ico:ICON["financial-freedom"], color:"#0f5b3f", tint:"#e7f2ec",
    blurb:"FIRE, side income and the path to choosing how you spend your time.",
@@ -80,74 +80,76 @@ const CATS = [
    dashes, e.g. "how-to-build-credit-with-no-credit-history"). Any card whose title has
    no entry here opens a "coming soon" page instead of a dead link. */
 const ARTICLES = {
-  "what-does-section-301-mean": {
+  "how-much-does-thanksgiving-cost-in-2026": {
     cat:"personal-finance",
-    title:"What does 'Section 301' mean?",
-    dek:"The U.S. just proposed new Section 301 tariffs on 14 trading partners, from China to the EU. Here's what Section 301 means, how the process works, who pays tariffs and what it could mean for your money.",
+    title:"How much does Thanksgiving cost in 2026?",
+    dek:"Thanksgiving dinner costs more this year, mostly because of turkey, and then come Black Friday and Cyber Monday. Here's what the meal costs, what shoppers are expected to spend and how to keep the holiday on budget.",
     date:"Nov 26, 2026", read:"5 min read",
-    seo:"What Is a Section 301 Tariff? New U.S. Tariffs Explained",
-    faq:[["What is a Section 301 tariff?","A Section 301 tariff is a tax on imports that the U.S. Trade Representative can impose under Section 301 of the Trade Act of 1974. It is used when an investigation finds that a foreign government's act, policy or practice is unjustifiable and burdens or restricts U.S. commerce."],["Are the new Section 301 tariffs in effect?","No. The tariffs the USTR announced on November 25, 2026, for 14 economies are proposals. Written comments are due January 5, 2027, and public hearings begin January 25, 2027."],["Who pays Section 301 tariffs?","Research on the 2018 tariffs on Chinese goods found the costs were largely passed through to U.S. prices. A 2020 study by Amiti, Redding and Weinstein found the tariffs were almost entirely borne by U.S. firms and consumers."],["What is the difference between Section 301 and IEEPA tariffs?","Section 301 tariffs follow an investigation, a determination and a public comment period run by the USTR. In February 2026, the Supreme Court ruled that IEEPA, an emergency powers law, does not authorize the President to impose tariffs; Section 301 tariffs were not affected."]],
+    seo:"How Much Does Thanksgiving Dinner Cost in 2026?",
+    faq:[["How much does Thanksgiving dinner cost in 2026?","A classic Thanksgiving dinner for 10 costs $58.63 in 2026, or about $5.86 per person, according to the American Farm Bureau Federation's annual survey. That is up 6% from 2025 but more than 8% below the 2022 record."],["How much does a turkey cost for Thanksgiving 2026?","A 16-pound frozen turkey averages $23.68 in the Farm Bureau's 2026 survey, up $2.38, or 10%, from 2025. That is about $1.48 a pound, though some shoppers found sales as low as 69 cents a pound."],["Why is Thanksgiving dinner more expensive this year?","The Farm Bureau points to higher turkey prices from strong demand and tight inventories, plus costs beyond the farm such as fuel, record diesel prices, fertilizer and labor. About one-third of the menu items actually fell in price."],["How much will people spend on Black Friday 2026?","Adobe forecast in September that U.S. shoppers would spend $12.9 billion online on Black Friday 2026, up 9.2%, and $47.5 billion over Cyber Week from Thanksgiving through Cyber Monday. These are forecasts, not final totals."]],
     body:`
 <div class="tldr"><b>The short version</b>
 <ul>
-<li><strong>Section 301</strong> is a part of U.S. trade law that lets the U.S. Trade Representative (USTR) respond, often with tariffs, when another country's policies are found to be unfair and to hurt American businesses.</li>
-<li>It's in the news because on November 25, 2026, the USTR proposed new Section 301 tariffs on goods from 14 economies, including China, the European Union, Japan, India and Vietnam.</li>
-<li>The tariffs are only proposed. Public comments are due January 5, 2027, and nothing has taken effect yet.</li>
+<li>A classic Thanksgiving dinner for 10 costs <strong>$58.63</strong> in 2026, up 6% from last year, according to the American Farm Bureau Federation's annual survey. That's about $5.86 per person.</li>
+<li>Turkey is the big driver: a 16-pound frozen bird averages $23.68, up 10%.</li>
+<li>The shopping weekend adds more. Adobe forecast $47.5 billion in U.S. online spending from Thanksgiving through Cyber Monday, while the National Retail Federation expects slightly fewer shoppers than last year.</li>
 </ul></div>
 
-<p>If "Section 301" showed up in your news feed this week, here's why. On November 25, the USTR <a href="https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural" target="_blank" rel="noopener">announced findings in 14 trade investigations</a> and proposed tariffs as high as 35%. The same day, stocks swung sharply, with the S&amp;P 500 down as much as 3.2% before closing 0.3% lower, as investors weighed AI stocks, inflation and plans to escalate the trade war, <a href="https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-wednesday-11252026-138453529" target="_blank" rel="noopener">the Associated Press reported</a>.</p>
+<p>Thanksgiving is one of the most expensive weeks of the year for many households: a big meal, maybe travel, and then the deals of Black Friday and Cyber Monday. Here's what the numbers say about Thanksgiving spending in 2026, and how to keep the holiday from blowing up your budget.</p>
 
-<h2>What is a Section 301 tariff?</h2>
-<p>A tariff is a tax on imported goods. Section 301 of the Trade Act of 1974 is one of the laws that lets the U.S. government impose one. According to the <a href="https://www.congress.gov/crs_external_products/IF/PDF/IF11346/IF11346.28.pdf" target="_blank" rel="noopener">Congressional Research Service</a>, it allows an investigation when a foreign government's act, policy or practice is "unjustifiable" and "burdens or restricts" U.S. commerce, or when U.S. rights under a trade agreement are being denied.</p>
-<p>The USTR, the agency that leads U.S. trade policy, runs the process. If it finds a problem, the remedies can include tariffs, other import limits or a binding agreement with the other country.</p>
+<h2>How much does Thanksgiving dinner cost in 2026?</h2>
+<p>The American Farm Bureau Federation's 41st annual survey puts the cost of a classic Thanksgiving dinner for 10 people at <strong>$58.63</strong>, <a href="https://www.fb.org/intel/markets/thanksgiving-dinner-cost-ticks-upward-in-2026" target="_blank" rel="noopener">up 6% from a year ago</a>. That's still more than 8% below the record high in 2022. Farm Bureau economist Faith Parum put it at "about $5.86 per person," <a href="https://www.fb.org/newsline/farm-bureau-survey-shows-thanksgiving-cost-higher-in-2026" target="_blank" rel="noopener">in a Farm Bureau interview</a>.</p>
+<p>The survey uses volunteer shoppers from all 50 states and Puerto Rico who price the items in a classic menu: turkey, stuffing, sweet potatoes, rolls, peas, cranberries, a veggie tray, pumpkin pie with whipped cream, milk, and more.</p>
 
-<h2>How the process works</h2>
+<h2>How much does a turkey cost this year?</h2>
+<p>The centerpiece costs more. A 16-pound frozen turkey averages <strong>$23.68</strong>, an increase of $2.38, or 10%, from 2025, <a href="https://www.fb.org/intel/markets/thanksgiving-dinner-cost-ticks-upward-in-2026" target="_blank" rel="noopener">the Farm Bureau says</a>. That works out to about $1.48 a pound. The Farm Bureau points to strong demand and tight inventories as the flock recovers from disease pressure.</p>
+<p>Sales can beat the average by a lot. The Farm Bureau says some shoppers found turkey for as low as 69 cents a pound.</p>
+
+<h2>Why is Thanksgiving dinner more expensive?</h2>
+<p>It isn't just the bird. The Farm Bureau lists costs beyond the farm, including fuel for processing and transportation, record diesel costs, elevated fertilizer prices and higher labor expenses. It also notes that less than 6 cents of every dollar spent on food goes back to the farm.</p>
+<p>Not everything went up. About one-third of the items fell in price:</p>
 <ul>
-<li><strong>An investigation opens.</strong> The USTR can start one itself or respond to a petition, and it consults with the foreign government involved.</li>
-<li><strong>The public weighs in.</strong> Businesses, workers and other groups file comments and testify at hearings.</li>
-<li><strong>The USTR makes a determination.</strong> CRS says this generally happens within 12 months.</li>
-<li><strong>Action follows.</strong> If the finding is affirmative, the USTR can impose tariffs or other measures. CRS notes these actions end after four years unless they are reviewed and continued.</li>
+<li><strong>Cheaper:</strong> the celery and carrot veggie tray (down 3.7%), frozen pie crusts (down 9 cents) and heavy whipping cream.</li>
+<li><strong>Pricier:</strong> turkey, milk and cranberries had the biggest percentage increases. A 12-ounce bag of cranberries costs nearly 9% more.</li>
+</ul>
+<p>Where you live matters too. The Farm Bureau's regional averages:</p>
+<ul>
+<li><strong>Northeast:</strong> $61.57</li>
+<li><strong>West:</strong> $58.74</li>
+<li><strong>Midwest:</strong> $56.89</li>
+<li><strong>South:</strong> $54.33</li>
 </ul>
 
-<h2>Why Section 301 is in the news now</h2>
-<p>The current investigations began on March 11, 2026, when the USTR <a href="https://ustr.gov/about/policy-offices/press-office/press-releases/2026/march/ustr-initiates-section-301-investigations-relating-structural-excess-capacity-and-production" target="_blank" rel="noopener">opened cases on 16 economies</a> over "structural excess capacity" in manufacturing: the concern that some countries' policies lead factories to produce far more than their own markets need.</p>
-<p>On November 25, it made determinations for 14 of them. Mexico and Norway were not included. The <a href="https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural" target="_blank" rel="noopener">proposed rates</a> include:</p>
+<h2>How much will people spend on Black Friday and Cyber Monday?</h2>
+<p>Once the plates are cleared, the shopping starts. In its September forecast, Adobe projected these U.S. online sales, <a href="https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record" target="_blank" rel="noopener">according to its announcement</a>:</p>
 <ul>
-<li><strong>Up to 15%:</strong> the European Union, Japan, South Korea, Switzerland and Taiwan.</li>
-<li><strong>Up to 18%:</strong> Bangladesh, Cambodia, Indonesia, Malaysia and Thailand.</li>
-<li><strong>Up to 20%:</strong> Singapore, and China on goods not listed in special annexes. Some Chinese goods face up to 10%, and others are exempt.</li>
-<li><strong>Up to 25%:</strong> India. <strong>Up to 35%:</strong> Vietnam.</li>
+<li><strong>Thanksgiving Day:</strong> $6.9 billion, up 8.5% from last year.</li>
+<li><strong>Black Friday:</strong> $12.9 billion, up 9.2%.</li>
+<li><strong>Cyber Monday:</strong> $15.1 billion, up 6.2%.</li>
+<li><strong>Cyber Week</strong> (Thanksgiving through Cyber Monday): $47.5 billion, up 7.4%.</li>
 </ul>
-<p>The USTR says the rates for Singapore, India and Vietnam could be lower if agreements are reached. The law firm Wiley stresses that the tariffs "are proposed measures and are not yet in effect," <a href="https://www.wiley.law/alert-USTR-Announces-Affirmative-Section-301-Determinations-and-Proposes-New-Tariffs-on-14-Trading-Partners-to-Address-Structural-Excess-Capacity" target="_blank" rel="noopener">in its summary</a>. Written comments are due January 5, 2027, and hearings start January 25, 2027.</p>
+<p>Adobe also expects shoppers to put $21.3 billion of November and December online spending on buy now, pay later plans, including $807 million on Black Friday alone. If you're tempted, read our guide to <a href="/banking-credit/what-does-buy-now-pay-later-mean/">how buy now, pay later works</a> first.</p>
+<p>The crowds may be a little smaller. The National Retail Federation <a href="https://nrf.com/media-center/press-releases/183-million-consumers-expected-to-shop-during-thanksgiving-weekend" target="_blank" rel="noopener">expects 182.7 million people</a> to shop from Thanksgiving through Cyber Monday, down slightly from 186.9 million last year. About 69% of them plan to shop on Black Friday and 36% on Cyber Monday. One reason: 60% of consumers had started holiday shopping by early November, NRF's survey of 7,956 adults found.</p>
 
-<h2>Section 301 vs. IEEPA tariffs: what's the difference?</h2>
-<p>Section 301 matters more this year because of a court ruling. On February 20, 2026, the Supreme Court held in <em>Learning Resources, Inc. v. Trump</em> that the International Emergency Economic Powers Act (IEEPA) "does not authorize the President to impose tariffs," <a href="https://www.dlapiper.com/en/insights/publications/2026/02/us-supreme-court-holds-ieepa-does-not-authorize-tariffs" target="_blank" rel="noopener">according to DLA Piper's summary</a>. That struck down the so-called reciprocal tariffs. Tariffs under Sections 232 and 301 were not affected. <a href="https://uk.finance.yahoo.com/news/us-proposes-tariffs-14-major-144207027.html" target="_blank" rel="noopener">Euronews reported</a> that the new duties would help replace revenue lost after the ruling.</p>
-<p>The key difference is process. IEEPA is an emergency powers law. Section 301 tariffs come only after an investigation, a determination and a public comment period.</p>
-
-<h2>A short history: the 2018 China tariffs</h2>
-<p>Section 301 is best known for the trade war with China. In 2018, the USTR imposed tariffs ranging from 7.5% to 25% on around $370 billion worth of U.S. imports from China, <a href="https://www.congress.gov/crs_external_products/IF/PDF/IF11346/IF11346.28.pdf" target="_blank" rel="noopener">CRS reports</a>.</p>
-
-<h2>Who pays Section 301 tariffs?</h2>
-<p>Research on the 2018 tariffs found that the costs were "largely passed through" to U.S. prices, <a href="https://www.nber.org/digest/may19/us-consumers-have-borne-brunt-current-trade-war" target="_blank" rel="noopener">the National Bureau of Economic Research summarized</a>. A <a href="https://www.nber.org/papers/w26610" target="_blank" rel="noopener">follow-up study</a> by economists Mary Amiti, Stephen Redding and David Weinstein found the tariffs "continue to be almost entirely borne by U.S. firms and consumers." Results for the new tariffs could differ, and they depend on rates that aren't final.</p>
-
-<h2>What it means for everyday readers</h2>
+<h2>What it means for your wallet</h2>
 <ul>
-<li><strong>Nothing changes at the register yet.</strong> These are proposals. Watch for final decisions after the January hearings.</li>
-<li><strong>Some prices could rise later.</strong> If imported goods get pricier, a flexible budget helps. Our guide to <a href="/personal-finance/20-painless-ways-to-cut-monthly-bills/">cutting monthly bills</a> is a good place to start.</li>
-<li><strong>Keep a cushion.</strong> Trade news can move prices and jobs in some industries. A solid <a href="/personal-finance/how-much-should-be-in-your-emergency-fund/">emergency fund</a> gives you room.</li>
-<li><strong>Don't trade on headlines.</strong> Markets swing on trade news, as Wednesday showed. A diversified plan, like a <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a>, is built to ride that out.</li>
+<li><strong>Set a holiday number first.</strong> Decide what the meal, travel and gifts can cost before you shop. A plan like the <a href="/personal-finance/the-50-30-20-budget-explained-with-examples/">50/30/20 budget</a> shows where the money can come from.</li>
+<li><strong>Share the meal.</strong> At about $5.86 a person for the basics, a potluck where guests bring sides can cut the host's bill sharply.</li>
+<li><strong>Shop the sales, not the headlines.</strong> A "deal" on something you didn't plan to buy is still spending. Make a list and compare prices before Black Friday.</li>
+<li><strong>Save for next year now.</strong> A small monthly <a href="/personal-finance/sinking-funds-the-stress-free-way-to-save/">sinking fund</a> turns next year's holiday into something you've already paid for.</li>
 </ul>
 
 <h2>Related buzzwords</h2>
 <ul>
-<li><strong>Excess capacity:</strong> when factories can make far more than buyers want, often pushing prices down and exports up.</li>
-<li><strong>Section 232:</strong> a different trade law that allows tariffs on national security grounds.</li>
+<li><strong>Cyber Week:</strong> the five days from Thanksgiving through Cyber Monday, the year's biggest stretch for online deals.</li>
+<li><strong>Food inflation:</strong> the rise in grocery and restaurant prices over time.</li>
+<li><strong>Doorbuster:</strong> a deeply discounted item meant to draw shoppers into a store, often in limited supply.</li>
 </ul>
 
 <h2>The bottom line</h2>
-<p>Section 301 is the trade law the U.S. uses to answer what it sees as unfair foreign practices. The new tariffs are proposals, not final, and the public comment period runs into January. For your money, the takeaway is simple: don't panic over headlines, keep your budget flexible and stay diversified.</p>
+<p>Thanksgiving dinner costs a bit more this year, mostly because of turkey, but it's still below its 2022 peak. The bigger budget risk is often the shopping weekend that follows. Decide your spending limit ahead of time, split the cooking, and let a sinking fund do the work for next year.</p>
 
-<p class="art-note">Figures cited are from the USTR, the Congressional Research Service, the National Bureau of Economic Research and news reports as of November 26, 2026, and may change. Proposed tariff rates are not final. This post is for education only and is not investment advice.</p>
+<p class="art-note">Figures are from the American Farm Bureau Federation, the National Retail Federation and Adobe as of November 26, 2026. Adobe's figures are forecasts made in September, and actual spending may differ. Prices vary by store and region. This post is for education only and is not investment advice.</p>
 `},
   "what-does-buy-now-pay-later-mean": {
     cat:"banking-credit",
@@ -3428,7 +3430,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
-  "what-does-section-301-mean": ["what-happens-when-the-fed-raises-interest-rates","20-painless-ways-to-cut-monthly-bills","how-much-should-be-in-your-emergency-fund","emergency"],
+  "how-much-does-thanksgiving-cost-in-2026": ["what-does-buy-now-pay-later-mean","sinking-funds-the-stress-free-way-to-save","the-50-30-20-budget-explained-with-examples","emergency"],
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": ["what-does-circular-financing-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
   "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
@@ -3736,7 +3738,7 @@ const TOOL_PAGES = {
    to be under the free Unsplash License (free for commercial use, no permission needed).
    Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
 const PHOTOS = {
-  "what-does-section-301-mean": { id: "photo-1635851801927-44c4d1c555af", alt: "Cargo ship loaded with shipping containers" },
+  "how-much-does-thanksgiving-cost-in-2026": { id: "photo-1605926637412-b0cd5a3e3543", alt: "Plate of cooked Thanksgiving food" },
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": { id: "photo-1431540015161-0bf868a2d407", alt: "Empty boardroom with an oval wooden table and chairs" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
   "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
