@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["What does 'basis point' mean?","Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -80,6 +80,68 @@ const CATS = [
    dashes, e.g. "how-to-build-credit-with-no-credit-history"). Any card whose title has
    no entry here opens a "coming soon" page instead of a dead link. */
 const ARTICLES = {
+  "what-does-basis-point-mean": {
+    cat:"investing",
+    title:"What does 'basis point' mean?",
+    dek:"The Fed's next move is being argued in basis points: 25 or 50. Here's what a basis point is, how to convert it, why Wall Street uses it, and what a few basis points mean for your mortgage, savings and fund fees.",
+    date:"Nov 26, 2026", read:"5 min read",
+    seo:"What Is a Basis Point? 25 vs. 50 Basis Points Explained",
+    faq:[["What is a basis point?", "A basis point is one-hundredth of a percentage point, or 0.01%. That means 100 basis points equal 1 percentage point, and 25 basis points equal 0.25%."], ["How much is 50 basis points?", "50 basis points is half a percentage point, or 0.50%. A 50 basis point Fed hike in December 2026 would lift the federal funds target range from 3.75% to 4% up to 4.25% to 4.5%."], ["What does a 25 basis point rate hike mean?", "It means the Federal Reserve raises its target range for the federal funds rate by a quarter of a percentage point. The Fed did that on September 16, 2026, lifting the range to 3.75% to 4%."], ["Why do people say basis points instead of percent?", "Basis points avoid confusion. If a 4% rate rises 1%, it could mean 4.04% or 5%. Saying it rose 100 basis points makes clear the new rate is 5%."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>A <strong>basis point</strong> is one-hundredth of a percentage point (0.01%). So 25 basis points is 0.25%, and 100 basis points is 1 percentage point.</li>
+<li>It's in the news because the Fed is debating whether to raise rates by 25 or 50 basis points at its December 8–9 meeting.</li>
+<li>A few basis points sound tiny, but on a mortgage, a savings account or a fund fee they add up to real dollars.</li>
+</ul></div>
+
+<p>If you've heard "basis points" on the news a lot this month, that's because the Federal Reserve's next move is being argued in them. Fed Governor Christopher Waller said in a <a href="https://www.federalreserve.gov/newsevents/speech/files/waller20261110a.pdf" target="_blank" rel="noopener">November 10 speech</a> that a 50 basis point hike "should be considered" in December, while others favor 25. Here's what the term means and why it matters for your money.</p>
+
+<h2>What is a basis point?</h2>
+<p>A basis point is "a unit of measure equal to one-hundredth of a percentage point (0.01%)," as the <a href="https://www.alliancebernstein.com/us/en-us/investments/glossary/basis-point.html" target="_blank" rel="noopener">AllianceBernstein glossary</a> puts it. It's commonly used to describe changes in interest rates, bond yields and other financial percentages.</p>
+<p>Malta's financial regulator gives a simple example in its <a href="https://www.mfsa.mt/jargon-buster/basis-point/" target="_blank" rel="noopener">jargon buster</a>: a yield that moves from 12.83% to 12.88% has risen 5 basis points, or 0.05%. It's often shortened to "bps."</p>
+
+<h2>How many basis points is 1%?</h2>
+<p>One hundred. Here's a quick conversion chart:</p>
+<ul>
+<li><strong>1 basis point</strong> = 0.01%</li>
+<li><strong>10 basis points</strong> = 0.10%</li>
+<li><strong>25 basis points</strong> = 0.25%, a "quarter point"</li>
+<li><strong>50 basis points</strong> = 0.50%, a "half point"</li>
+<li><strong>75 basis points</strong> = 0.75%</li>
+<li><strong>100 basis points</strong> = 1.00%, one full percentage point</li>
+</ul>
+<p>To convert, multiply a percentage by 100 to get basis points, or divide basis points by 100 to get a percentage.</p>
+
+<h2>Why it's in the news: 25 or 50 basis points?</h2>
+<p>The Fed <a href="https://www.federalreserve.gov/monetarypolicy/files/monetary20260916a1.pdf" target="_blank" rel="noopener">raised its target range</a> for the federal funds rate by a quarter percentage point to 3.75% to 4% on September 16, 2026. It held there in October, but the <a href="https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20261028.pdf" target="_blank" rel="noopener">minutes of that meeting</a> show two members voted against holding, "preferring an increase of 25 basis points." The minutes also say "a couple of participants" thought a hike of more than 25 basis points "could warrant consideration" at the next meeting if inflation data were unfavorable.</p>
+<p>Waller went further. In his <a href="https://www.federalreserve.gov/newsevents/speech/files/waller20261110a.pdf" target="_blank" rel="noopener">speech</a>, he said he was "leaning toward" a 25 basis point increase. But if October's core CPI inflation came in around 0.3% or higher, like the two months before it, a stronger move may be needed. In his words, "Hiking only 25 basis points would put our credibility at risk." He said inflation is "well above the FOMC's 2 percent goal."</p>
+<p>Markets still see the smaller move as more likely. As of November 18, futures pricing showed only about a 5% chance of a half-point hike in December, <a href="https://finance.yahoo.com/economy/policy/articles/fed-officials-wanted-hike-october-150826488.html" target="_blank" rel="noopener">24/7 Wall St. reported</a>. A 25 basis point hike would lift the range to 4% to 4.25%. A 50 basis point hike would take it to 4.25% to 4.5%.</p>
+
+<h2>Why finance uses basis points instead of percent</h2>
+<p>Basis points avoid a common mix-up. If a 4% rate "rises 1%," does it become 4.04% (1% of 4%) or 5% (one more percentage point)? Saying it rose 100 basis points makes clear it's 5%.</p>
+<p>They also make big moves easy to compare. In June 2022, the Fed <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm" target="_blank" rel="noopener">raised its target range</a> to 1.5% to 1.75%. One official dissented, preferring a 0.5 percentage point increase to 1.25% to 1.5%. That means the Fed's actual move was 75 basis points, a "three-quarter-point" hike.</p>
+
+<h2>What basis points mean for your money</h2>
+<ul>
+<li><strong>Mortgages.</strong> The average 30-year fixed rate fell 7 basis points this week, to 7.21% from 7.28%, according to <a href="https://www.globenewswire.com/news-release/2026/11/25/3410486/0/en/mortgage-rates-dip-to-7-21.html" target="_blank" rel="noopener">Freddie Mac</a>. On a $400,000 loan, the monthly principal and interest at 7.21% is about $2,718. Just 25 basis points higher, at 7.46%, it's about $2,786. That's roughly $68 more a month, or about $24,500 over 30 years.</li>
+<li><strong>Savings.</strong> Banks set their own savings rates, but a 25 basis point bump, say from 4.00% to 4.25%, would earn about $25 more a year on $10,000. Here's whether <a href="/trending/are-high-yield-savings-rates-still-worth-it/">high-yield savings rates are still worth it</a>.</li>
+<li><strong>Fund fees.</strong> Fund costs are often quoted in basis points too. An expense ratio of 0.03% (3 basis points) costs $3 a year per $10,000 invested. One of 0.75% (75 basis points) costs $75. Learn more about <a href="/investing/what-is-an-expense-ratio-and-why-it-matters/">why an expense ratio matters</a>.</li>
+<li><strong>Credit cards and loans.</strong> Rate moves measured in basis points can also show up in what you pay to borrow. See <a href="/trending/what-happens-when-the-fed-raises-interest-rates/">what happens when the Fed raises interest rates</a>.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Percentage point:</strong> the simple difference between two percentages. Going from 4% to 5% is one percentage point, or 100 basis points.</li>
+<li><strong>Federal funds rate:</strong> the interest rate banks charge each other for overnight loans, which the Fed steers with its target range.</li>
+<li><strong>Quarter point:</strong> Wall Street shorthand for 25 basis points.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>A basis point is just 0.01%, a way to talk about small changes in rates without confusion. Whether the Fed moves 25 or 50 basis points in December, the takeaway for everyday readers is the same: small rate changes add up on big balances. Shop around for loan rates, make your savings earn a competitive yield, and keep investment fees low.</p>
+
+<p class="art-note">Figures cited are from the Federal Reserve, Freddie Mac and news reports as of November 26, 2026, and will change. Mortgage payment and savings examples are simplified estimates. This post is for education only and is not investment advice.</p>
+`},
   "how-much-does-thanksgiving-cost-in-2026": {
     cat:"personal-finance",
     title:"How much does Thanksgiving cost in 2026?",
@@ -3430,6 +3492,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "what-does-basis-point-mean": ["what-happens-when-the-fed-raises-interest-rates","are-high-yield-savings-rates-still-worth-it","what-is-an-expense-ratio-and-why-it-matters","compound"],
   "how-much-does-thanksgiving-cost-in-2026": ["what-does-buy-now-pay-later-mean","sinking-funds-the-stress-free-way-to-save","the-50-30-20-budget-explained-with-examples","emergency"],
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": ["what-does-circular-financing-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
@@ -3738,6 +3801,7 @@ const TOOL_PAGES = {
    to be under the free Unsplash License (free for commercial use, no permission needed).
    Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
 const PHOTOS = {
+  "what-does-basis-point-mean": { id: "photo-1649209979970-f01d950cc5ed", alt: "A calculator on a wooden table" },
   "how-much-does-thanksgiving-cost-in-2026": { id: "photo-1605926637412-b0cd5a3e3543", alt: "Plate of cooked Thanksgiving food" },
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": { id: "photo-1431540015161-0bf868a2d407", alt: "Empty boardroom with an oval wooden table and chairs" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
