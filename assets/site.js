@@ -120,7 +120,7 @@ const ARTICLES = {
 <p>There are real differences. Barr said the extra return investors demand for owning stocks is low today, "though not nearly as low as the levels reached during the dot-com stock market boom." And the internet changed the world even though many dot-com stocks collapsed.</p>
 
 <h2>Is the AI bubble going to burst?</h2>
-<p>No one knows, and forecasters disagree. Capital Economics' James Reilly called an "AI bust in 2027" his central forecast, AFP reported, while others see this fall's drop as a reset within a longer boom. Bubbles are usually only confirmed after they pop.</p>
+<p>No one knows, and forecasters disagree. Capital Economics' James Reilly called an "AI bust in 2027" his central forecast, AFP reported, while Gartner's forecasts show AI spending still climbing fast. Bubbles are usually only confirmed after they pop.</p>
 
 <h2>What happens to your money if it bursts?</h2>
 <ul>
