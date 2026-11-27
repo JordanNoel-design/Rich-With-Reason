@@ -3,16 +3,16 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-26",
-  "term": "PCE price index",
-  "def": "A government measure of how the prices people in the U.S. pay for goods and services are changing, used to track inflation. It is the inflation gauge the Federal Reserve prefers.",
-  "why": "The Commerce Department reported Wednesday that the PCE price index rose 0.3% in October and was up 3.8% from a year earlier.",
+  "date": "2026-11-27",
+  "term": "Buy now, pay later",
+  "def": "A short-term loan offered at checkout that splits a purchase into a few smaller payments, often four interest-free installments over about six weeks. Missed payments can bring late fees.",
+  "why": "Adobe forecasts shoppers will spend $21.3 billion online with buy now, pay later in November and December, up 6.6% from last year, including $807 million on Black Friday.",
   "source": {
-    "name": "U.S. Bureau of Economic Analysis",
-    "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+    "name": "Adobe",
+    "url": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
   },
-  "link": "/trending/what-happens-when-the-fed-raises-interest-rates/",
-  "linkText": "Related: What happens when the Fed raises rates"
+  "link": "/banking-credit/what-does-buy-now-pay-later-mean/",
+  "linkText": "Related: What does 'buy now, pay later' mean?"
 };
 /* BUZZWORD:END */
 
