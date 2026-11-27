@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["What does 'AI bubble' mean?","Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -80,6 +80,68 @@ const CATS = [
    dashes, e.g. "how-to-build-credit-with-no-credit-history"). Any card whose title has
    no entry here opens a "coming soon" page instead of a dead link. */
 const ARTICLES = {
+  "what-does-ai-bubble-mean": {
+    cat:"investing",
+    title:"What does 'AI bubble' mean?",
+    dek:"AI stocks just had their roughest stretch of the year, and 'AI bubble' is the phrase on everyone's lips. Here's what it means, how bubbles inflate and pop, what the Fed is saying, and what it means for your money.",
+    date:"Nov 27, 2026", read:"6 min read",
+    seo:"What Is the AI Bubble? Will It Burst? Explained Simply",
+    faq:[["What is the AI bubble?", "It's the worry that prices of AI-linked stocks, such as chipmakers, cloud providers and AI software firms, have risen far beyond what those companies' future profits can justify, so they could fall sharply."], ["Is the AI bubble going to burst?", "No one knows for sure, and forecasters disagree. Bubbles are usually only confirmed after prices have already fallen, so it's safer to plan for big swings than to try to time them."], ["Is the AI bubble like the dot-com bubble?", "There are similarities, but Fed Governor Michael Barr said in November 2026 that the extra return investors demand for owning stocks is low, though not nearly as low as during the dot-com boom. In that era the Nasdaq lost 78.4% from its March 2000 peak to its 2002 low."], ["How can I protect my money from an AI bubble?", "Diversify across many investments, rebalance if one theme grows too large in your portfolio, and keep money you'll need soon out of stocks. The SEC's Investor.gov says diversification may help limit your losses."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>The <strong>AI bubble</strong> is the worry that prices of AI-linked stocks have run far ahead of the profits those companies can realistically earn, so they could fall hard.</li>
+<li>It's in the news because AI stocks just had a brutal stretch: on November 20 the S&amp;P 500 fell 3.7% and slipped into a correction, and the Federal Reserve's latest survey found AI was the top-cited risk to the financial system.</li>
+<li>Nobody knows whether this is a bubble until afterward. Diversifying and keeping a plan matters more than guessing.</li>
+</ul></div>
+
+<p>If "AI bubble" was the phrase you kept hearing over Thanksgiving week, there's a reason. On Friday, November 20, the S&amp;P 500 fell 3.7% and entered a correction, the Nasdaq Composite dropped more than 5%, and Nvidia slid about 14%, <a href="https://www.sbs.com.au/news/article/global-stocks-tumble-as-ai-bubble-fears-prompt-market-sell-off-with-anthropic-shares-falling/mhzp6bpkf" target="_blank" rel="noopener">AFP reported</a>. The selling spread to Asia the next Monday, <a href="https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount" target="_blank" rel="noopener">Al Jazeera reported</a>.</p>
+
+<h2>What is the AI bubble?</h2>
+<p>A market bubble is when the price of an asset rises well beyond what it's fundamentally worth, usually on hype and heavy demand, and then eventually crashes, as <a href="https://builtin.com/artificial-intelligence/ai-bubble" target="_blank" rel="noopener">Built In explains</a>. "The AI bubble" applies that idea to companies tied to artificial intelligence: chipmakers, cloud providers, data center builders and AI software firms.</p>
+<p>Calling it a bubble is a claim, not a fact. People who use the term believe today's prices assume more future profit than AI will deliver. People who reject it argue AI is a real technology with real revenue, so high prices can be justified.</p>
+
+<h2>How a bubble inflates, and how it pops</h2>
+<ul>
+<li><strong>A real story.</strong> Bubbles usually start with something genuinely new. AI qualifies: Gartner <a href="https://gartner.com/en/newsroom/press-releases/2026-09-16-gartner-forecasts-worldwide-ai-spending-to-grow-49-point-5-percent-in-2026" target="_blank" rel="noopener">forecast in September</a> that worldwide AI spending will total $2.7 trillion in 2026, up 49.5% from 2025.</li>
+<li><strong>Rising prices pull in buyers.</strong> Gains attract more money and push prices higher.</li>
+<li><strong>Spending runs ahead of profits.</strong> Companies borrow and build on the expectation of future demand. Gartner's <a href="https://www.gartner.com/en/newsroom/press-releases/2026-11-12-gartner-forecasts-artificial-intelligence-infrastructure-spending-to-represent-59-percent-of-total-global-artificial-intelligence-spending-in-2027" target="_blank" rel="noopener">November forecast</a> expects AI spending to reach $4 trillion in 2027.</li>
+<li><strong>Something breaks the spell.</strong> Disappointing results, rising interest rates or a scandal can make investors question the story. When many sell at once, prices fall fast.</li>
+</ul>
+<p>Part of the money flowing between AI firms also loops back as sales, a pattern we explain in <a href="/investing/what-does-circular-financing-mean/">what "circular financing" means</a>.</p>
+
+<h2>What the Fed is saying</h2>
+<p>The Federal Reserve's <a href="https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf" target="_blank" rel="noopener">November 2026 Financial Stability Report</a>, which reflects data as of October 28, said the ratio of S&amp;P 500 prices to earnings "stayed well above its historical median." In its fall survey of market contacts, "AI was the top-cited risk," and respondents "widely cited the risk of a sharp correction in AI-related equities."</p>
+<p>The report also tracks the borrowing behind the boom. Debt issuance tied to advanced computing rose to more than $680 billion by October 2026, roughly five times the $130 billion issued in all of 2023. The largest U.S. bank holding companies have close to $1 trillion of exposure to large technology firms, data center developers, special financing vehicles and utilities tied to the buildout.</p>
+<p>Fed Governor Michael Barr struck a measured tone in a <a href="https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm" target="_blank" rel="noopener">November 16 speech</a>. He noted that Fed policymakers "do not target levels of financial markets," and said that "given the still-limited amount of debt backing the current boom, I'm less concerned about direct losses."</p>
+
+<h2>Is the AI bubble like the dot-com bubble?</h2>
+<p>The dot-com era is the comparison everyone reaches for. The Nasdaq rose 86% in 1999 alone, according to <a href="https://www.goldmansachs.com/our-firm/history/moments/2000-dot-com-bubble" target="_blank" rel="noopener">Goldman Sachs' history</a>. It hit a record close of 5,048.62 on March 10, 2000, then lost 78.4% of its value by its 2002 low, and didn't set a new record until April 23, 2015, <a href="https://fortune.com/2015/04/23/nasdaq-supasses-internet-bubble-peak-to-set-new-record/" target="_blank" rel="noopener">Reuters reported</a>.</p>
+<p>There are real differences. Barr said the extra return investors demand for owning stocks is low today, "though not nearly as low as the levels reached during the dot-com stock market boom." And the internet changed the world even though many dot-com stocks collapsed.</p>
+
+<h2>Is the AI bubble going to burst?</h2>
+<p>No one knows, and forecasters disagree. Capital Economics' James Reilly called an "AI bust in 2027" his central forecast, AFP reported, while Gartner's forecasts show AI spending still climbing fast. Bubbles are usually only confirmed after they pop.</p>
+
+<h2>What happens to your money if it bursts?</h2>
+<ul>
+<li><strong>You probably own AI stocks already.</strong> A broad U.S. index fund holds many of the biggest AI names, so a sharp AI drop would hit most portfolios.</li>
+<li><strong>Diversify.</strong> The SEC's <a href="https://www.investor.gov/additional-resources/general-resources/publications-research/info-sheets/beginners-guide-asset" target="_blank" rel="noopener">Investor.gov guide</a> calls spreading money among different investments to reduce risk "diversification," and says it may help "limit your losses." A simple <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a> is one way to do it.</li>
+<li><strong>Rebalance instead of chasing.</strong> If a hot theme has grown into a bigger slice of your portfolio than you planned, trim it back to your target mix.</li>
+<li><strong>Keep near-term money out of stocks.</strong> Cash you'll need in the next few years belongs in savings, not in a volatile sector.</li>
+<li><strong>Don't panic-sell.</strong> Read up on <a href="/trending/what-is-a-stock-market-correction-and-should-you-worry/">what a stock market correction is</a> and consider steady investing through <a href="/investing/dollar-cost-averaging-explained/">dollar-cost averaging</a>.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Correction:</strong> a drop of 10% or more from a recent high.</li>
+<li><strong>Bear market:</strong> a drop of 20% or more from a recent high.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>"AI bubble" is shorthand for the fear that AI stock prices have outrun reality. The Fed is watching the valuations and the debt closely, but whether this is a bubble, and when it might deflate, can't be known in advance. For everyday investors, the takeaway is the same in booms and busts: stay diversified, keep your emergency money safe, and stick to a plan you set when markets were calm.</p>
+
+<p class="art-note">Figures cited are from the Federal Reserve, Gartner, Goldman Sachs and news reports as of November 27, 2026, and will change. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
+`},
   "how-much-does-thanksgiving-cost-in-2026": {
     cat:"personal-finance",
     title:"How much does Thanksgiving cost in 2026?",
@@ -3430,6 +3492,7 @@ That's $8,400 a year saved and invested without a single decision.</div>
    Three hand-picked related articles for each post (ARTICLES keys), plus an optional calculator.
    Add an entry for every new article. */
 const RELATED = {
+  "what-does-ai-bubble-mean": ["what-does-circular-financing-mean","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","compound"],
   "how-much-does-thanksgiving-cost-in-2026": ["what-does-buy-now-pay-later-mean","sinking-funds-the-stress-free-way-to-save","the-50-30-20-budget-explained-with-examples","emergency"],
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": ["what-does-circular-financing-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
@@ -3738,6 +3801,7 @@ const TOOL_PAGES = {
    to be under the free Unsplash License (free for commercial use, no permission needed).
    Never use Unsplash+ (plus.unsplash.com) or premium photos. Images load from Unsplash's CDN. */
 const PHOTOS = {
+  "what-does-ai-bubble-mean": { id: "photo-1541261376025-872d4f4dd733", alt: "Soap bubbles floating against a dark background" },
   "how-much-does-thanksgiving-cost-in-2026": { id: "photo-1605926637412-b0cd5a3e3543", alt: "Plate of cooked Thanksgiving food" },
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": { id: "photo-1431540015161-0bf868a2d407", alt: "Empty boardroom with an oval wooden table and chairs" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
