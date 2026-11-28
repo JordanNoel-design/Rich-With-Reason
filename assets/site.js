@@ -3,16 +3,16 @@
    `node tools/set-buzzword.mjs <file.json>`. Don't hand-edit between the markers. */
 /* BUZZWORD:START */
 const BUZZWORD = {
-  "date": "2026-11-27",
-  "term": "Buy now, pay later",
-  "def": "A short-term loan offered at checkout that splits a purchase into a few smaller payments, often four interest-free installments over about six weeks. Missed payments can bring late fees.",
-  "why": "Adobe forecasts shoppers will spend $21.3 billion online with buy now, pay later in November and December, up 6.6% from last year, including $807 million on Black Friday.",
+  "date": "2026-11-28",
+  "term": "Black Friday",
+  "def": "The Friday after Thanksgiving, when U.S. retailers offer big discounts to kick off the holiday shopping season. It is one of the busiest shopping days of the year, both in stores and online.",
+  "why": "Adobe data cited by Reuters showed U.S. shoppers spent $9.7 billion online on Black Friday through 6:30 p.m. ET, up 12.8% from last year.",
   "source": {
-    "name": "Adobe",
-    "url": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record"
+    "name": "Reuters",
+    "url": "https://wkzo.com/2026/11/27/us-black-friday-online-sales-to-cross-13-billion-adobe-says/"
   },
-  "link": "/banking-credit/what-does-buy-now-pay-later-mean/",
-  "linkText": "Related: What does 'buy now, pay later' mean?"
+  "link": "/trending/",
+  "linkText": "More trending money news"
 };
 /* BUZZWORD:END */
 
