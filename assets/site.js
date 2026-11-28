@@ -64,7 +64,7 @@ const CATS = [
    intro:"Investing doesn't have to be complicated. Learn how index funds, 401(k)s and IRAs work, how to think about risk, and how to build a simple portfolio you can stick with.",
    sub:["Index Funds","Retirement (401k/IRA)","Stocks","ETFs","Beginner Investing"],
    steps:[["Grab any employer match","It's an instant return on your money.","/trending/reader-q-should-i-pay-off-debt-or-invest-first/"],["Open a Roth or traditional IRA","Know the difference before you choose.","/investing/roth-ira-vs-traditional-ira-simply-explained/"],["Pick a low-cost index fund","Broad, diversified and cheap.","/investing/index-funds-vs-etfs-whats-the-difference/"],["Invest on autopilot","Dollar-cost averaging beats market timing.","/investing/dollar-cost-averaging-explained/"]],
-   posts:["What does 'AI bubble' mean?","Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
+   posts:["What does 'lockup period' mean?","What does 'AI bubble' mean?","Nvidia brings back Jensen Huang: what it means for investors","What does 'VIX' mean?","What does 'circular financing' mean?","Index funds vs. ETFs: what's the difference?","Roth IRA vs. traditional IRA, simply explained","How to start investing with $100","What is an expense ratio and why it matters","Dollar-cost averaging, explained","How to build a three-fund portfolio"],
    terms:[["Index fund","A fund that tracks a market index like the S&P 500."],["Expense ratio","The yearly fee a fund charges, as a % of your investment."],["Diversification","Spreading money across investments to reduce risk."]]},
   {slug:"insurance", name:"Insurance", ico:ICON["insurance"], color:"#0e6b73", tint:"#e3f3f4",
    blurb:"Life, health, auto and home coverage — protect what you've built.",
@@ -2815,6 +2815,75 @@ const ARTICLES = {
 
 <p class="art-note">VIX readings change every trading day; figures cited are as of November 20, 2026, from Cboe, FRED, SIFMA, FINRA and news reports. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
 `},
+  "what-does-lockup-period-mean": {
+    cat:"investing",
+    title:"What does 'lockup period' mean?",
+    dek:"Anthropic's new stock put a spotlight on the day insiders are allowed to sell. Here's what a lockup period is, how long it usually lasts, what research says happens when it ends, and what it means for your money.",
+    date:"Nov 28, 2026", read:"5 min read",
+    seo:"What Is an IPO Lockup Period? What Happens When It Ends",
+    faq:[["What is a lockup period?","A lockup period is a set amount of time after an IPO when company insiders, such as founders, employees, their friends and family, and large shareholders, have agreed not to sell their shares. It keeps a flood of insider shares from hitting the market right after a company goes public."],["How long is an IPO lockup period?","Terms vary, but most lockups prevent insiders from selling for 180 days, or about six months, according to the SEC's Investor.gov. Some companies release shares in stages instead of all at once."],["What happens when a lockup period ends?","Insiders are allowed to sell, though they don't have to. A study of 1,948 lockups published in the Journal of Finance in 2001 found an average abnormal return of about -1.5% over the three days around the expiration and a lasting 40% increase in average trading volume."],["Are lockup periods required by law?","Usually not. A lockup is typically an agreement between the company and the investment banks that underwrite its IPO, though the SEC notes that some states require them. Federal securities laws do require a company with a lockup to disclose its terms in the prospectus."]],
+    body:`
+<div class="tldr"><b>The short version</b>
+<ul>
+<li>A <strong>lockup period</strong> is a stretch of time after an IPO when company insiders have agreed not to sell their shares. Most last 180 days.</li>
+<li>It's in the news because Anthropic, which began trading on November 19, uses staggered unlock dates instead of a single lockup, and investors are watching when insiders can sell.</li>
+<li>When a lockup ends, more shares can hit the market. A classic study found prices dipped about 1.5% on average around the expiration.</li>
+</ul></div>
+
+<p>Anthropic <a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering" target="_blank" rel="noopener">priced 980 million shares at $83 each</a> on November 18 and began trading on the Nasdaq under the ticker ANT the next day. This week, attention shifted from the debut to a quieter question: when can the people who already own shares sell them? The answer is set by something called a lockup period.</p>
+
+<h2>What is a lockup period?</h2>
+<p>A lockup period is a set amount of time after an initial public offering (IPO) when insiders can't sell their shares. The SEC's investor site, <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/initial-public-offerings-ipos-lockup-agreements" target="_blank" rel="noopener">Investor.gov</a>, says lockup agreements "prohibit company insiders—including employees, their friends and family, and large shareholders—from selling their shares for a set period of time after an IPO."</p>
+<p>If you're new to how companies go public, start with our guide on <a href="/trending/how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price/">how an IPO works and who gets the IPO price</a>.</p>
+
+<h2>How long is an IPO lockup period?</h2>
+<p>"The terms of lockup agreements may vary, but most prevent insiders from selling their shares for 180 days," <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/initial-public-offerings-ipos-lockup-agreements" target="_blank" rel="noopener">Investor.gov</a> says. That's about six months.</p>
+<p>Not every deal uses one cutoff date. Some release shares in stages, letting different groups of insiders sell at different times.</p>
+
+<h2>Why lockups exist</h2>
+<ul>
+<li><strong>They're usually a contract, not a law.</strong> Before a company goes public, "the company and its underwriter typically enter into a lockup agreement to ensure that shares owned by these insiders don't enter the public market too soon after the offering," the <a href="https://www.sec.gov/answers/lockup.htm" target="_blank" rel="noopener">SEC explains</a>. The underwriter is the investment bank that runs the IPO. The SEC adds that some states require lockups under their "blue-sky" laws.</li>
+<li><strong>The terms must be disclosed.</strong> Federal securities laws require a company with a lockup to spell out its terms in its registration documents, including its prospectus.</li>
+<li><strong>They steady the early days.</strong> Holding insiders' shares back keeps a wave of selling from hitting a brand-new stock.</li>
+</ul>
+
+<h2>How Anthropic's lockup works</h2>
+<p>Instead of one 180-day lockup, Anthropic's filing sets staggered lockup periods for different groups of insiders, with release dates spread over the next year, <a href="https://fool.com/investing/2026/11/22/when-can-anthropic-insiders-sell-what-the-lockup-means-for-shareholders/" target="_blank" rel="noopener">The Motley Fool reported</a>. The first release took place within days of the debut, and more are scheduled over the coming months.</p>
+<p>That's why each unlock date is getting so much attention. Every release adds shares that can be sold on the open market. The full schedule is in the company's prospectus, which anyone can read for free on the SEC's EDGAR database.</p>
+
+<h2>What happens when a lockup period ends?</h2>
+<p>When a lockup ends, insiders are allowed to sell. They don't have to. But if many do at once, the extra supply can push the price down. Investor.gov warns that "a company's stock price may drop in anticipation that locked up shares will be sold into the market when the lockup ends."</p>
+<p>Research backs that up. A <a href="https://ideas.repec.org/a/bla/jfinan/v56y2001i2p471-500.html" target="_blank" rel="noopener">2001 study in the Journal of Finance</a> by Laura Casares Field and Gordon Hanka looked at 1,948 lockup agreements. It found:</p>
+<ul>
+<li>An average abnormal return of about -1.5% over the three days around the expiration. An abnormal return is how a stock did compared with what would normally be expected.</li>
+<li>A permanent 40% increase in average trading volume after the lockup ended.</li>
+<li>Bigger effects at companies backed by venture capital, whose investors sold more aggressively than executives and other shareholders.</li>
+</ul>
+
+<h2>Does the stock price always drop after a lockup ends?</h2>
+<p>No. The study's -1.5% is an average across many companies, and any single stock can do better or worse. Because unlock dates are public, some of the selling pressure may already be priced in before the day arrives.</p>
+
+<h2>What it means for everyday investors</h2>
+<ul>
+<li><strong>Check the calendar.</strong> If you own or are thinking about buying a newly public stock, Investor.gov suggests finding out whether insiders have a lockup and when it expires.</li>
+<li><strong>Expect bumpy days.</strong> Unlock dates can bring big swings in price and trading volume. Our guide to <a href="/investing/what-does-vix-mean/">the VIX</a> explains how markets measure that kind of nervousness.</li>
+<li><strong>Don't read too much into one sale.</strong> Insiders sell for many reasons, such as paying taxes or spreading out their wealth. A sale isn't automatically a verdict on the company.</li>
+<li><strong>Keep new stocks a small slice.</strong> A brand-new stock has a short track record. A diversified base, like a <a href="/investing/how-to-build-a-three-fund-portfolio/">three-fund portfolio</a>, helps you ride out the swings.</li>
+</ul>
+
+<h2>Related buzzwords</h2>
+<ul>
+<li><strong>Float:</strong> the shares that are actually available for the public to trade.</li>
+<li><strong>Underwriter:</strong> the investment bank that buys shares from the company in an IPO and sells them to investors.</li>
+<li><strong>Over-allotment option:</strong> a right for underwriters to buy extra shares, also called a greenshoe. Anthropic gave its underwriters a 30-day option to buy up to 147 million more shares.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>A lockup period is a waiting room for insiders' shares. It usually lasts about six months, and when it ends, more stock can flow into the market. Prices sometimes dip around that date, but an unlock is a supply event, not a verdict on the business. Know the dates, expect some swings, and keep any new stock a small part of a diversified plan.</p>
+
+<p class="art-note">Figures cited are from Anthropic's IPO announcement, the SEC, a peer-reviewed study and news reports as of November 28, 2026. Investing involves risk, including possible loss of principal. Past performance doesn't guarantee future results. This post is for education only and is not investment advice.</p>
+`
+  },
   "what-does-circular-financing-mean": {
     cat:"investing",
     title:"What does 'circular financing' mean?",
@@ -3496,6 +3565,7 @@ const RELATED = {
   "how-much-does-thanksgiving-cost-in-2026": ["what-does-buy-now-pay-later-mean","sinking-funds-the-stress-free-way-to-save","the-50-30-20-budget-explained-with-examples","emergency"],
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": ["what-does-circular-financing-mean","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
   "what-does-vix-mean": ["what-is-a-stock-market-correction-and-should-you-worry","dollar-cost-averaging-explained","how-much-should-be-in-your-emergency-fund","emergency"],
+  "what-does-lockup-period-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","compound"],
   "what-does-circular-financing-mean": ["how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price","what-is-a-stock-market-correction-and-should-you-worry","how-to-build-a-three-fund-portfolio","emergency"],
   "what-is-a-stock-market-correction-and-should-you-worry": ["what-happens-when-the-fed-raises-interest-rates","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","emergency"],
   "how-does-an-ipo-work-and-can-you-buy-at-the-ipo-price": ["index-funds-vs-etfs-whats-the-difference","how-to-build-a-three-fund-portfolio","dollar-cost-averaging-explained","compound"],
@@ -3805,6 +3875,7 @@ const PHOTOS = {
   "how-much-does-thanksgiving-cost-in-2026": { id: "photo-1605926637412-b0cd5a3e3543", alt: "Plate of cooked Thanksgiving food" },
   "nvidia-brings-back-jensen-huang-what-it-means-for-investors": { id: "photo-1431540015161-0bf868a2d407", alt: "Empty boardroom with an oval wooden table and chairs" },
   "what-does-vix-mean": { id: "photo-1634097538301-5d5f8b09eb84", alt: "Phone showing a stock chart on a red background" },
+  "what-does-lockup-period-mean": { id: "photo-1624228481297-00d7352459d7", alt: "Brass padlock on a green metal bar" },
   "what-does-circular-financing-mean": { id: "photo-1758549885423-819fd86e04f0", alt: "Close-up of a computer processor chip on a circuit board" },
   "what-is-a-stock-market-correction-and-should-you-worry": { id: "photo-1744782211816-c5224434614f", alt: "Stock charts displayed on multiple screens" },
   "what-does-buy-now-pay-later-mean": { id: "photo-1758524943857-de2839355a93", alt: "Man shopping online with a phone and a credit card" },
