@@ -134,4 +134,5 @@ Newest first. One line per issue: Sunday date · Buzzword · Market topic · Act
 
 | Sunday | Buzzword | Market thing | Action |
 |---|---|---|---|
+| 2026-11-29 | Relief rally | Wall Street's best week in more than a year: S&P 500 up 1.6% Fri to 7,297.49, up 5.6% for the week, biggest weekly gain since April 2025 (AP) | Set a Cyber Monday spending cap: budget, subtract spent, short list, spending alert, BNPL dates in calendar |
 | 2026-11-22 | Correction | AI-stock sell-off: S&P 500 and Dow close in correction; S&P 500 down 3.7% Fri to 6,910.39, down 8.6% for the week (AP, Reuters) | Five-minute calm check of retirement contributions, investment mix and emergency fund |
